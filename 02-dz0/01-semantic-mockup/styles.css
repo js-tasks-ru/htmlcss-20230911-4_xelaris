@@ -1,0 +1,44 @@
+body {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  color: white;
+}
+body a {
+  color: white;
+}
+header {
+  background: red;
+}
+header h1 {
+  margin: 0;
+  padding: 5px;
+  font-size: 3em;
+}
+header nav {
+  background: orange;
+  padding: 10px;
+}
+header nav > ul {
+  display: inline;
+}
+header nav > ul > li {
+  display: inline;
+  font-size: 1.5em;
+  margin: 0 5px;
+}
+main {
+  background: green;
+  text-align: left;
+  padding: 10px;
+}
+main article {
+  background: blue;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+footer {
+  background: purple;
+  padding: 5px;
+  font-size: 3em;
+}
