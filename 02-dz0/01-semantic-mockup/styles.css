@@ -4,7 +4,7 @@ body {
   text-align: center;
   color: white;
 }
-body a {
+a {
   color: white;
 }
 header {
@@ -15,14 +15,14 @@ header h1 {
   padding: 5px;
   font-size: 3em;
 }
-header nav {
+nav {
   background: orange;
   padding: 10px;
 }
-header nav > ul {
+nav > ul {
   display: inline;
 }
-header nav > ul > li {
+nav > ul > li {
   display: inline;
   font-size: 1.5em;
   margin: 0 5px;
@@ -32,7 +32,7 @@ main {
   text-align: left;
   padding: 10px;
 }
-main article {
+article {
   background: blue;
   padding: 10px;
   margin-bottom: 5px;
