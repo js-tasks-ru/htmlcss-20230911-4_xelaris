@@ -1,14 +1,15 @@
 .footer {
-  padding: 2.5em 0;
+  padding: 72px 0;
   text-align: center;
-  background: greenyellow;
+  background: burlywood;
 }
 .footer__caption {
-  font-size: 2em;
-  margin: 0 0 1em;
-  font-weight: normal;
+  font-size: 38px;
+  font-weight: 50;
+  margin: 0 0 32px;
 }
 .footer__desc {
-  padding: 0 20% 2em;
-  font-size: 0.85em;
+  padding: 0 257px 60px 223px;
+  font-size: 16px;
+  line-height: 24px;
 }

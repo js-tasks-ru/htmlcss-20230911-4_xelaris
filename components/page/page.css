@@ -1,34 +1,11 @@
 .page {
-  padding: 0 20px;
-  background: lightgoldenrodyellow;
 }
 .page__container {
-  max-width: 1100px;
-  min-width: 330px;
-  width: 100%;
   margin: 0 auto;
-  background: gainsboro;
-  min-height: calc(100vh - 222px);
-}
-.page__header {
-}
-.page__content {
-  padding: 20px 0;
+  background: #f9fafc;
+  min-height: calc(100vh - 384px);
 }
 .page__footer {
-  max-width: 1100px;
-  min-width: 330px;
-  margin: 0 auto;
   box-sizing: border-box;
-  height: 222px;
-}
-@media (max-width: 760px) {
-  .page {
-    padding: 0 10px;
-  }
-}
-@media (max-width: 360px) {
-  .page {
-    padding: 0 5px;
-  }
+  height: 384px;
 }

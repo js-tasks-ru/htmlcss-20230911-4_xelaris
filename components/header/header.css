@@ -1,9 +1,10 @@
 .header {
-  padding: 2em 0;
-  background: burlywood;
+  padding: 96px 0 77px;
+  background: lightgoldenrodyellow;
 }
 .header__caption {
-  font-size: 3em;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 64px;
   margin: 0;
-  font-weight: normal;  
 }
