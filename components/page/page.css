@@ -1,11 +1,3 @@
-.page {
-}
-.page__container {
-  margin: 0 auto;
+.page__content {
   background: #f9fafc;
-  min-height: calc(100vh - 384px);
-}
-.page__footer {
-  box-sizing: border-box;
-  height: 384px;
 }
