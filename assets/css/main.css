@@ -1,5 +1,9 @@
 @import 'normalize.css';
 @import '../fonts/fonts.css';
+@import '../../components/page/page.css';
+@import '../../components/header/header.css';
+@import '../../components/footer/footer.css';
+@import '../../components/tileList/tileList.css';
 
 :root {
     --white: #ffffff;
@@ -20,6 +24,8 @@
     --secondary: var(--purple);
 }
 
-* {
-    font-family: 'Roboto', sans-serif;
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }

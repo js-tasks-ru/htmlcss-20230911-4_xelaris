@@ -1,0 +1,10 @@
+.header {
+  padding: 96px 0 77px;
+  background: lightgoldenrodyellow;
+}
+.header__caption {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 64px;
+  margin: 0;
+}
