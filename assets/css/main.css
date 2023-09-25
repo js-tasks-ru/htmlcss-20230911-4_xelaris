@@ -29,7 +29,10 @@
   --bg-color: var(--grey-0);
   --border-color: var(--grey-3);
 }
-
+html,
+body {
+  height: 100%;
+}
 body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
