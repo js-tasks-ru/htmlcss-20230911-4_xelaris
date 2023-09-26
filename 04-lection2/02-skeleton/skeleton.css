@@ -6,7 +6,6 @@
 .skeleton__header {
   display: flex;
   align-items: center;
-  padding-right: 35%;
 }
 .skeleton__picture {
   width: 64px;
@@ -21,13 +20,13 @@
   background: var(--grey-2, #dde2e5);
   margin: 8px 0;
 }
-.skeleton__textline--len_short {
+.skeleton__textline_length_short {
   width: 65%;
 }
-.skeleton__textline--len_middle {
+.skeleton__textline_length_middle {
   width: 90%;
 }
-.skeleton__textline--len_long {
+.skeleton__textline_length_long {
   width: 100%;
 }
 .skeleton__title {
