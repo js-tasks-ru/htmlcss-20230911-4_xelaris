@@ -13,7 +13,9 @@
   --black: #212429;
   --pink: #f784ad;
   --purple: #7048e8;
-  --blue: #374fc7;
+  --blue: #4263eb;
+  --purple-darker: #5028c6;
+  --blue-darker: #2342c0;
   --red: #f03d3e;
   --orange: #d84910;
   --grey-0: #f9fafc;
@@ -28,6 +30,8 @@
 
   --primary: var(--blue);
   --secondary: var(--purple);
+  --primary-active: var(--blue-darker);
+  --secondary-active: var(--purple-darker);
 
   --border-color: var(--grey-3);
   --bg-color: var(--grey-0);
