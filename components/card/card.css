@@ -1,0 +1,30 @@
+.previewCard {
+  width: 350px;
+  padding: 32px;
+  border-radius: 12px;
+  background: var(--white, white);
+  box-shadow: 0px 2px 4px 0px rgba(33, 36, 41, 0.05);
+  box-sizing: border-box;
+}
+.previewCard__placeholder {
+  height: 222px;
+  display: flex;
+}
+.previewCard__preview {
+  margin: auto;
+}
+.previewCard__title {
+  margin: 0;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: normal;
+}
+.previewCard__desc {
+  margin: 6px 0 0;
+  text-align: center;
+  color: var(--gray-4, #495057);
+  font-family: Roboto;
+  line-height: normal;
+}

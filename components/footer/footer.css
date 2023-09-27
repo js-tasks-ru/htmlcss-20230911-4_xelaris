@@ -1,9 +1,9 @@
 .footer {
   padding: 72px 0;
   text-align: center;
-  background: burlywood;
+  border-top: 2px solid var(--grey-2, #dde2e5);
 }
-.footer__caption {
+.footer__title {
   font-size: 38px;
   font-weight: 50;
   margin: 0 0 32px;

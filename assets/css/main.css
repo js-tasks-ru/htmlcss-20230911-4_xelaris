@@ -1,9 +1,11 @@
 @import 'normalize.css';
 @import '../fonts/fonts.css';
+@import '../../components/layoutContainer/layoutContainer.css';
 @import '../../components/page/page.css';
 @import '../../components/header/header.css';
 @import '../../components/footer/footer.css';
 @import '../../components/tileList/tileList.css';
+@import '../../components/card/card.css';
 
 :root {
   --white: #ffffff;
@@ -14,6 +16,7 @@
   --purple-darker: #5028c6;
   --blue-darker: #2342c0;
   --red: #f03d3e;
+  --grey-0: #f9fafc;
   --grey-1: #f8f9fa;
   --grey-2: #dde2e5;
   --grey-3: #acb5bd;
@@ -28,8 +31,12 @@
   --secondary-active: var(--purple-darker);
 
   --border-color: var(--grey-3);
+  --bg-color: var(--grey-0);
 }
-
+html,
+body {
+  height: 100%;
+}
 body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
