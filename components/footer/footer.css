@@ -4,7 +4,7 @@
   border-top: 2px solid var(--grey-2, #dde2e5);
 }
 .footer_compact {
-  padding: 0;
+  padding: 20px 0 24px;
   border: none;
 }
 .footer__title {
