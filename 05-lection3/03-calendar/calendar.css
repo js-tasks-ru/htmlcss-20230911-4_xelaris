@@ -4,7 +4,7 @@
 
   border: 1px solid var(--border-color, #acb5bd);
   border-radius: 8px;
-  padding: 28px 26px 26px;
+  padding: 28px 26px 32px;
 }
 .calendar__month {
   color: var(--grey-dark, #334d6e);
