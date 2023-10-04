@@ -1,0 +1,19 @@
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.avatar_size_normal {
+  width: 116px;
+  height: 116px;
+}
+.avatar_size_small {
+  width: 102px;
+  height: 102px;
+}
+.avatar__img {
+  object-fit: cover;
+  width: 100%;
+}
