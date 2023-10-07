@@ -3,10 +3,10 @@
   vertical-align: baseline;
   position: relative;
 }
-/* .tooltip__trigger {
-  position: relative;
-  z-index: 1;
-} */
+.tooltip__trigger {
+  width: 24px;
+  height: 24px;
+}
 .tooltip__bubble {
   display: none;
   border-radius: 10px;
@@ -17,7 +17,6 @@
   font-size: 16px;
   min-height: 24px;
   position: absolute;
-  /* z-index: 0; */
   padding: 13px 21px 8px;
   width: 87px;
 }
@@ -30,10 +29,6 @@
 .tooltip__trigger:hover ~ .tooltip__bubble {
   display: block;
 }
-/* .tooltip:hover ~ .tooltip__bubble ,
-.tooltip__bubble:hover {
-  display: block;
-} */
 .tooltip__bubble_pos_top {
   bottom: calc(100% + 6px);
   left: 50%;

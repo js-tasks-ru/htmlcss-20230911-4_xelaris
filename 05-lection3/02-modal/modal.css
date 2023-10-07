@@ -39,3 +39,7 @@
   border: 0;
   font-size: 0;
 }
+.modal__closeButtonIcon {
+  width: 16px;
+  height: 16px;
+}
