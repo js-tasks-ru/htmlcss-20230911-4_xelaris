@@ -20,19 +20,17 @@
 }
 .page__content {
   background: var(--bg-color, #f9fafc);
-  padding: 68px 0 92px;
+  padding: 24px 0 96px;
   flex-grow: 1;
 }
 .page_component .page__content {
   background: transparent;
   padding: 32px 0;
-  /* border-radius: 12px;
-  box-shadow: 0px 2px 4px 0px rgba(33, 36, 41, 0.05); */
   height: 100%;
   box-sizing: border-box;
 }
 .page__title {
-  color: var(--Gray-4, #495057);
+  color: var(--grey-4, #495057);
   font-size: 20px;
   font-weight: 400;
   line-height: 26px;
@@ -63,5 +61,15 @@
     font-size: 28px;
     line-height: 38px;
     margin-bottom: 58px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .page__content {
+    padding-top: 32px;
+  }
+}
+@media screen and (min-width: 1175px) {
+  .page__content {
+    padding-top: 68px;
   }
 }

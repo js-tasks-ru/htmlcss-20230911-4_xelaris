@@ -3,6 +3,9 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--tiles-gap);
+  margin-right: calc(
+    -1 * var(--tiles-gap)
+  ); /* gap on right side compensation */
 }
 .tileList__item {
   width: max(164px, calc(50% - var(--tiles-gap)));
