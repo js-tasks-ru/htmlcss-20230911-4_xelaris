@@ -6,7 +6,6 @@
 .page_component {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  /* row-gap: 36px; */
   background: var(--bg-color, #f9fafc);
 }
 .page__container {

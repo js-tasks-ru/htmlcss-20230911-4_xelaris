@@ -1,5 +1,5 @@
 .header {
-  padding-bottom: 77px;
+  padding-bottom: 69px;
   border-bottom: 2px solid var(--grey-2, #dde2e5);
 }
 .header_compact {
@@ -11,14 +11,16 @@
   box-sizing: border-box;
   padding-top: 16px;
   padding-bottom: 16px;
+  display: flex;
 }
 .header__logo {
   width: 110px;
   height: 32px;
   color: var(--black, black);
+  margin: 0 auto;
 }
 .header__title {
-  margin: 17px 0 0;
+  margin: 24px 0 0;
   font-size: 28px;
   font-weight: 400;
   line-height: 38px;
@@ -29,12 +31,21 @@
     padding-top: 24px;
     padding-bottom: 24px;
   }
+  .header__logo {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 768px) {
 }
 @media screen and (min-width: 992px) {
+  .header:not(.header_compact) {
+    padding-bottom: 77px;
+  }
   .header__title {
     font-size: 50px;
     font-weight: 500;
     line-height: 64px;
     color: var(--black, black);
+    margin-top: 17px;
   }
 }
