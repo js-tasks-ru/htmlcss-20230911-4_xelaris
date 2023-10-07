@@ -1,5 +1,5 @@
 .menu {
-  display: grid;
+  display: none;
   grid-auto-flow: row;
   row-gap: 32px;
   align-content: start;
@@ -12,6 +12,7 @@
 }
 .menu__title {
   font-size: 20px;
+  font-weight: 400;
   line-height: 26px;
   margin: 0;
 }
@@ -27,4 +28,9 @@
 }
 .menu__item:visited:not(.menu__item_active) {
   color: var(--black, black);
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    display: grid;
+  }
 }
