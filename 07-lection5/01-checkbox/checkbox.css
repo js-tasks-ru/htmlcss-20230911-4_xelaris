@@ -35,7 +35,7 @@
   width: 15px;
   height: 13px;
 }
-.checkbox__input:checked:not(:disabled) ~ .checkbox__state .checkbox__control {
+.checkbox__input:checked ~ .checkbox__state .checkbox__control {
   border-color: var(--primary, var(--blue, #4263eb));
   background: var(--primary, var(--blue, #4263eb));
 }
@@ -45,7 +45,7 @@
 .checkbox__input:focus ~ .checkbox__state .checkbox__title {
   text-decoration: underline;
 }
-.checkbox__input:active:not(:disabled) ~ .checkbox__state .checkbox__control {
+.checkbox__input:active ~ .checkbox__state .checkbox__control {
   border-color: var(--grey-3, #acb5bd);
   background: var(--grey-1, #f8f9fa);
 }
