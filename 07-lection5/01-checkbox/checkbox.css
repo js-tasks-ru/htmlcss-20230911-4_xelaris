@@ -19,6 +19,7 @@
   border-radius: 4px;
   width: 28px;
   height: 28px;
+  box-sizing: border-box;
   display: flex;
 }
 .checkbox__title {
@@ -41,10 +42,6 @@
 .checkbox__input:checked ~ .checkbox__state .checkbox__icon {
   visibility: visible;
 }
-/* .checkbox__input:focus ~ .checkbox__state {
-  outline: 1px solid var(--blue-light);
-  outline-offset: 5px;
-} */
 .checkbox__input:focus ~ .checkbox__state .checkbox__title {
   text-decoration: underline;
 }
