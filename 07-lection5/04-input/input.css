@@ -1,0 +1,25 @@
+@import url(../../components/formField/formField.css);
+
+.textInput {
+  border: 1px solid var(--grey-2, #dde2e5);
+  border-radius: 8px;
+  color: var(--grey-4, #495057);
+  padding: 17px 48px 13px 24px;
+  font-size: 20px;
+  line-height: 26px;
+  outline: none;
+  box-sizing: border-box;
+}
+.textInput::placeholder {
+  color: var(--grey-2, #dde2e5);
+}
+.textInput:disabled {
+  background-color: var(--grey-1, #f8f9fa);
+  color: var(--grey-3, #acb5bd);
+}
+.textInput:focus {
+  border-color: var(--primary, var(--blue, #4263eb));
+}
+.formField_validity_error .formField__control.textInput {
+  border-color: var(--error, var(--red, #f03d3e));
+}

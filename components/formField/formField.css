@@ -1,0 +1,40 @@
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+}
+.formField__title {
+  display: inline-block;
+  color: var(--grey-3, #acb5bd);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
+}
+.formField__field {
+  position: relative;
+}
+.formField__title:has(+ .formField__field .formField__control:disabled) {
+  cursor: default;
+}
+.formField__icon {
+  display: none;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+}
+.formField_validity_error .formField__icon_error {
+  display: inline-block;
+  color: var(--error, var(--red, #f03d3e));
+}
+.formField_validity_success .formField__icon_success {
+  display: inline-block;
+  color: var(--success, var(--blue, #4263eb));
+}

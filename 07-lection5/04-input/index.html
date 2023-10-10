@@ -1,11 +1,82 @@
 <!DOCTYPE html>
-<!-- Страница с полем ввода -->
-<html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./input.css">
-    </head>
-    <body>
-
-    </body>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="stylesheet" href="./input.css" />
+    <title>Input component</title>
+  </head>
+  <body class="page">
+    <div class="page__content">
+      <div class="layoutContainer">
+        <h1 class="page__title">Input component</h1>
+        <label class="formField">
+          <div class="formField__title">Label</div>
+          <div class="formField__field">
+            <input
+              type="text"
+              class="textInput formField__control"
+              placeholder="Placeholder"
+            />
+            <svg class="formField__icon formField__icon_error" xmlns="http://www.w3.org/2000/svg">
+              <use href="../../assets/images/icons.svg#warning"></use>
+            </svg>
+            <svg class="formField__icon formField__icon_success" xmlns="http://www.w3.org/2000/svg">
+              <use href="../../assets/images/icons.svg#checkInCircle"></use>
+            </svg>
+          </div>
+        </label><br />
+        <label class="formField formField_validity_success">
+          <div class="formField__title">Success</div>
+          <div class="formField__field">
+            <input
+              type="text"
+              class="textInput formField__control"
+              placeholder="Placeholder"
+              value="Value" 
+            />
+            <svg class="formField__icon formField__icon_error" xmlns="http://www.w3.org/2000/svg">
+              <use href="../../assets/images/icons.svg#warning"></use>
+            </svg>
+            <svg class="formField__icon formField__icon_success" xmlns="http://www.w3.org/2000/svg">
+              <use href="../../assets/images/icons.svg#checkInCircle"></use>
+            </svg>
+          </div>
+        </label><br />
+        <label class="formField formField_validity_error">
+          <div class="formField__title">Error</div>
+          <div class="formField__field">
+            <input
+              type="text"
+              class="textInput formField__control"
+              placeholder="Placeholder"
+              value="Value" 
+            />
+            <svg class="formField__icon formField__icon_error" xmlns="http://www.w3.org/2000/svg">
+              <use href="../../assets/images/icons.svg#warning"></use>
+            </svg>
+            <svg class="formField__icon formField__icon_success" xmlns="http://www.w3.org/2000/svg">
+              <use href="../../assets/images/icons.svg#checkInCircle"></use>
+            </svg>
+          </div>
+        </label><br />
+        <label class="formField">
+          <div class="formField__title">Disabled</div>
+          <div class="formField__field">
+            <input
+              type="text"
+              class="textInput formField__control"
+              placeholder="Placeholder"
+              disabled="disabled"
+              value="Value" 
+            />
+            <svg class="formField__icon formField__icon_error" xmlns="http://www.w3.org/2000/svg">
+              <use href="../../assets/images/icons.svg#warning"></use>
+            </svg>
+            <svg class="formField__icon formField__icon_success" xmlns="http://www.w3.org/2000/svg">
+              <use href="../../assets/images/icons.svg#checkInCircle"></use>
+            </svg>
+          </div>
+        </label>
+      </div>
+  </body>
 </html>
