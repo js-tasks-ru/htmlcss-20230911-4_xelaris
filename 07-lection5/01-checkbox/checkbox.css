@@ -1,5 +1,6 @@
 .checkbox {
   display: inline-block;
+  position: relative;
 }
 .checkbox__input {
   opacity: 0;
@@ -8,7 +9,7 @@
 }
 .checkbox__state {
   display: inline-flex;
-  gap: 10px;
+  gap: 12px;
   align-items: center;
 }
 .checkbox__input:not(:disabled) ~ .checkbox__state {
