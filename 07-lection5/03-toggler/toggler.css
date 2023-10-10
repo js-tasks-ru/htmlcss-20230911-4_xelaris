@@ -1,5 +1,6 @@
 .toggler {
   display: inline-block;
+  position: relative;
 }
 .toggler__input {
   opacity: 0;
