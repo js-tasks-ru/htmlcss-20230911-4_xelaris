@@ -1,0 +1,25 @@
+.componentDetail__tabs {
+  --tabs-padding-top: 22px;
+  margin-top: 52px;
+}
+.componentDetail__tabs .tabs__content {
+  padding-top: var(--tabs-padding-top);
+}
+.componentDetail__tabs .tabs__content::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--grey-2, #dde2e5);
+  position: absolute;
+  left: 0;
+  margin-top: calc(-1 * var(--tabs-padding-top));
+}
+@media screen and (min-width: 768px) {
+  .componentDetail {
+    --tabs-padding-top: 50px;
+  }
+  .componentDetail__tabs {
+    margin-top: 64px;
+  }
+}

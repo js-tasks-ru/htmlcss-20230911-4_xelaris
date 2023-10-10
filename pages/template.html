@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="../components/componentDetail/componentDetail.css"
+    />
     <title>Component page</title>
   </head>
   <body class="page page_component">
@@ -58,8 +62,43 @@
         </section>
       </aside>
       <main class="page__content">
-        <h1 class="page__title">Component page</h1>
-        component here
+        <div class="componentDetail">
+          <h1 class="page__title">Component page</h1>
+          <div class="componentDetail__component">component here</div>
+          <div class="tabs componentDetail__tabs">
+            <input
+              class="tabs__tabControl tabs__tabControl_tabNum_1"
+              type="radio"
+              id="#html-tab"
+              name="tabs"
+              checked="checked"
+            />
+            <input
+              class="tabs__tabControl tabs__tabControl_tabNum_2"
+              type="radio"
+              id="#css-tab"
+              name="tabs"
+            />
+            <div class="tabs__nav">
+              <label class="tabs__tab" for="#html-tab">
+                <span class="tabs__tabTitle tabs__tabTitle_tabNum_1"
+                  >HTML</span
+                ></label
+              >
+              <label class="tabs__tab" for="#css-tab"
+                ><span class="tabs__tabTitle tabs__tabTitle_tabNum_2"
+                  >CSS</span
+                ></label
+              >
+            </div>
+            <div class="tabs__content tabs__content_tabNum_1">
+              html code here
+            </div>
+            <div class="tabs__content tabs__content_tabNum_2">
+              css code here
+            </div>
+          </div>
+        </div>
       </main>
     </div>
     <footer class="footer footer_compact page__footer">
