@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./components/tabs/tabs.css" />
     <title>Reusable component library</title>
   </head>
   <body class="page page_main">
@@ -25,60 +26,118 @@
     </header>
     <main class="page__content">
       <div class="layoutContainer">
-        <div class="tileList">
-          <a href="" class="previewCard tileList__item">
-            <div class="previewCard__placeholder">
-              <div class="previewCard__preview">component here</div>
+        <div class="tabs">
+          <input
+            class="tabs__tabControl tabs__tabControl_tabNum_1"
+            type="radio"
+            id="#all-tab"
+            name="tabs"
+            checked="checked"
+          />
+          <input
+            class="tabs__tabControl tabs__tabControl_tabNum_2"
+            type="radio"
+            id="#elements-tab"
+            name="tabs"
+          />
+          <input
+            class="tabs__tabControl tabs__tabControl_tabNum_3"
+            type="radio"
+            id="#containers-tab"
+            name="tabs"
+          />
+          <input
+            class="tabs__tabControl tabs__tabControl_tabNum_4"
+            type="radio"
+            id="#templates-tab"
+            name="tabs"
+          />
+
+          <div class="tabs__nav">
+            <label class="tabs__tab" for="#all-tab">
+              <span class="tabs__tabTitle tabs__tabTitle_tabNum_1"
+                >All components</span
+              ></label
+            >
+            <label class="tabs__tab" for="#elements-tab"
+              ><span class="tabs__tabTitle tabs__tabTitle_tabNum_2"
+                >Elements</span
+              ></label
+            >
+            <label class="tabs__tab" for="#containers-tab">
+              <span class="tabs__tabTitle tabs__tabTitle_tabNum_3"
+                >Containers</span
+              >
+            </label>
+            <label class="tabs__tab" for="#templates-tab">
+              <span class="tabs__tabTitle tabs__tabTitle_tabNum_4"
+                >Templates</span
+              >
+            </label>
+          </div>
+
+          <div class="tabs__content tabs__content_tabNum_1">
+            <div class="tileList">
+              <a href="" class="previewCard tileList__item">
+                <div class="previewCard__placeholder">
+                  <div class="previewCard__preview">component here</div>
+                </div>
+                <h2 class="previewCard__title">Tooltip</h2>
+                <div class="previewCard__desc">Container</div>
+              </a>
+              <a href="" class="previewCard tileList__item">
+                <div class="previewCard__placeholder">
+                  <div class="previewCard__preview">component here</div>
+                </div>
+                <h2 class="previewCard__title">Custom form elements</h2>
+                <div class="previewCard__desc">Element</div>
+              </a>
+              <a href="" class="previewCard tileList__item">
+                <div class="previewCard__placeholder">
+                  <div class="previewCard__preview">component here</div>
+                </div>
+                <h2 class="previewCard__title">
+                  Some very very very very very long title
+                </h2>
+                <div class="previewCard__desc">
+                  Some case with more text than it would be normal
+                </div>
+              </a>
+              <a href="" class="previewCard tileList__item">
+                <div class="previewCard__placeholder">
+                  <div class="previewCard__preview">component here</div>
+                </div>
+                <h2 class="previewCard__title">Calendar</h2>
+                <div class="previewCard__desc">Container</div>
+              </a>
+              <a href="" class="previewCard tileList__item">
+                <div class="previewCard__placeholder">
+                  <div class="previewCard__preview">component here</div>
+                </div>
+                <h2 class="previewCard__title">Modal dialog</h2>
+                <div class="previewCard__desc">Element</div>
+              </a>
+              <a href="" class="previewCard tileList__item">
+                <div class="previewCard__placeholder">
+                  <div class="previewCard__preview">component here</div>
+                </div>
+                <h2 class="previewCard__title">Histogram</h2>
+                <div class="previewCard__desc">Element</div>
+              </a>
+              <a href="" class="previewCard tileList__item">
+                <div class="previewCard__placeholder">
+                  <div class="previewCard__preview">component here</div>
+                </div>
+                <h2 class="previewCard__title">Avatar</h2>
+                <div class="previewCard__desc">Element</div>
+              </a>
             </div>
-            <h2 class="previewCard__title">Tooltip</h2>
-            <div class="previewCard__desc">Container</div>
-          </a>
-          <a href="" class="previewCard tileList__item">
-            <div class="previewCard__placeholder">
-              <div class="previewCard__preview">component here</div>
-            </div>
-            <h2 class="previewCard__title">Custom form elements</h2>
-            <div class="previewCard__desc">Element</div>
-          </a>
-          <a href="" class="previewCard tileList__item">
-            <div class="previewCard__placeholder">
-              <div class="previewCard__preview">component here</div>
-            </div>
-            <h2 class="previewCard__title">
-              Some very very very very very long title
-            </h2>
-            <div class="previewCard__desc">
-              Some case with more text than it would be normal
-            </div>
-          </a>
-          <a href="" class="previewCard tileList__item">
-            <div class="previewCard__placeholder">
-              <div class="previewCard__preview">component here</div>
-            </div>
-            <h2 class="previewCard__title">Calendar</h2>
-            <div class="previewCard__desc">Container</div>
-          </a>
-          <a href="" class="previewCard tileList__item">
-            <div class="previewCard__placeholder">
-              <div class="previewCard__preview">component here</div>
-            </div>
-            <h2 class="previewCard__title">Modal dialog</h2>
-            <div class="previewCard__desc">Element</div>
-          </a>
-          <a href="" class="previewCard tileList__item">
-            <div class="previewCard__placeholder">
-              <div class="previewCard__preview">component here</div>
-            </div>
-            <h2 class="previewCard__title">Histogram</h2>
-            <div class="previewCard__desc">Element</div>
-          </a>
-          <a href="" class="previewCard tileList__item">
-            <div class="previewCard__placeholder">
-              <div class="previewCard__preview">component here</div>
-            </div>
-            <h2 class="previewCard__title">Avatar</h2>
-            <div class="previewCard__desc">Element</div>
-          </a>
+          </div>
+          <div class="tabs__content tabs__content_tabNum_2">elements here</div>
+          <div class="tabs__content tabs__content_tabNum_3">
+            containers here
+          </div>
+          <div class="tabs__content tabs__content_tabNum_4">templates here</div>
         </div>
       </div>
     </main>
