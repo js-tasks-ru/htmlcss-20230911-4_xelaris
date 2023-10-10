@@ -1,6 +1,6 @@
 .header {
   padding-bottom: 69px;
-  border-bottom: 2px solid var(--grey-2, #dde2e5);
+  border-bottom: 1px solid var(--grey-2, #dde2e5);
 }
 .header_compact {
   padding-bottom: 0;
@@ -36,6 +36,9 @@
   }
 }
 @media screen and (min-width: 768px) {
+  .header {
+    border-bottom-width: 2px;
+  }
 }
 @media screen and (min-width: 992px) {
   .header:not(.header_compact) {

@@ -17,6 +17,7 @@
 }
 .page_component .page__container {
   background: var(--white, white);
+  position: relative;
 }
 .page__content {
   background: var(--bg-color, #f9fafc);
@@ -45,6 +46,7 @@
     padding: 32px;
     border-radius: 12px;
     box-shadow: 0px 2px 4px 0px rgba(33, 36, 41, 0.05);
+    position: relative;
   }
 }
 @media screen and (min-width: 768px) {
