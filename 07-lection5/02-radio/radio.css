@@ -1,5 +1,6 @@
 .radio {
   display: inline-block;
+  position: relative;
 }
 .radio__input {
   opacity: 0;
