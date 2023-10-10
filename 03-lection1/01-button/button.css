@@ -34,7 +34,7 @@
   color: var(--white, white);
 }
 .button_var_alternate {
-  background: var(--white, white);
+  background: transparent;
   border: 1px solid var(--border-color, #acb5bd);
   color: var(--grey-4, #495057);
 }

@@ -20,7 +20,7 @@
 }
 .page__content {
   background: var(--bg-color, #f9fafc);
-  padding: 24px 0 96px;
+  padding: 24px 0 92px;
   flex-grow: 1;
 }
 .page_component .page__content {
@@ -61,15 +61,5 @@
     font-size: 28px;
     line-height: 38px;
     margin-bottom: 58px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .page__content {
-    padding-top: 32px;
-  }
-}
-@media screen and (min-width: 1175px) {
-  .page__content {
-    padding-top: 68px;
   }
 }

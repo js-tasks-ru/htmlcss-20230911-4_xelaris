@@ -1,16 +1,11 @@
-.tabs {
-}
 .tabs__nav {
   display: flex;
-  gap: 40px;
+  gap: 24px;
   width: 100%;
   overflow: hidden;
 }
 .tabs__content {
   display: none;
-}
-.tabs__tab {
-  margin-bottom: 50px;
 }
 .tabs__tabControl {
   position: absolute;
@@ -64,4 +59,9 @@
   color: var(--black, black);
   border-bottom-color: var(--black, black);
   cursor: default;
+}
+@media screen and (min-width: 768px) {
+  .tabs__nav {
+    gap: 40px;
+  }
 }
