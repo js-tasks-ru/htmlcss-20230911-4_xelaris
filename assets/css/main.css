@@ -8,6 +8,7 @@
 @import '../../components/previewCard/previewCard.css';
 @import '../../components/menu/menu.css';
 @import '../../03-lection1/01-button/button.css';
+@import '../../components/formField/formField.css';
 
 :root {
   --white: #ffffff;
