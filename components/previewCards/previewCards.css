@@ -3,3 +3,16 @@
   display: block;
   margin: 64px auto 0;
 }
+.previewCards__previewItem {
+}
+.previewCards__previewItem_modal {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.previewCards__previewModalWindow {
+  transform: translateX(-50%) translateY(-50%) scale(0.6);
+}
+.previewCards__previewModalWindowBtn {
+  width: 175px;
+}

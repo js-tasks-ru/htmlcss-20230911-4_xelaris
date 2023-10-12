@@ -5,6 +5,10 @@
   position: fixed;
   inset: 0;
 }
+.modal_opened {
+  display: block;
+  position: absolute;
+}
 .modal__window {
   width: 348px;
   padding: 30px 40px 33px;
