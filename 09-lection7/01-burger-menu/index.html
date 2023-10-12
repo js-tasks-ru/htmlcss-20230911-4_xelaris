@@ -1,12 +1,98 @@
 <!DOCTYPE html>
-<!-- Страница бургер-меню -->
-<html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./burger-menu.css">
-        <script defer src="./burger-menu.js"></script>
-    </head>
-    <body>
-
-    </body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="stylesheet" href="./burger-menu.css" />
+    <script defer src="./burger-menu.js"></script>
+    <title>Burger menu component</title>
+  </head>
+  <body class="page page_component">
+    <button id="burger-menu-open" class="burgerMenuShowButton">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="burgerMenuShowButton__icon"
+        fill="currentColor"
+      >
+        <use href="../../assets/images/icons.svg#burger"></use>
+      </svg>
+    </button>
+    <div id="burger-menu" class="burgerMenu">
+      <button id="burger-menu-close" class="burgerMenu__closeButton">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="burgerMenu__closeButtonIcon"
+          fill="currentColor"
+        >
+          <use href="../../assets/images/icons.svg#cross"></use>
+        </svg>
+      </button>
+      <div class="burgerMenu__content">
+        <div class="burgerMenu__themeToggler burgerMenu__contentGroup">
+          [theme toggler]
+        </div>
+        <aside class="menu burgerMenu__menu">
+          <section class="menu__group burgerMenu__contentGroup">
+            <h4 class="menu__title burgerMenu__menuTitle">Elements</h4>
+            <nav class="menu__list burgerMenu__menuList">
+              <a class="menu__item burgerMenu__menuItem" href="">Avatar</a>
+              <a
+                class="menu__item burgerMenu__menuItem menu__item_active"
+                href=""
+              >
+                Custom form elements
+              </a>
+              <a class="menu__item burgerMenu__menuItem" href="">Button</a>
+              <a class="menu__item burgerMenu__menuItem" href="">Avatar</a>
+              <a class="menu__item burgerMenu__menuItem" href=""
+                >Custom form elements</a
+              >
+              <a class="menu__item burgerMenu__menuItem" href="">Button</a>
+            </nav>
+          </section>
+          <section class="menu__group burgerMenu__contentGroup">
+            <h4 class="menu__title burgerMenu__menuTitle">Containers</h4>
+            <nav class="menu__list burgerMenu__menuList">
+              <a class="menu__item burgerMenu__menuItem" href="">Avatar</a>
+              <a class="menu__item burgerMenu__menuItem" href=""
+                >Custom form elements</a
+              >
+              <a class="menu__item burgerMenu__menuItem" href="">Button</a>
+              <a class="menu__item burgerMenu__menuItem" href="">Avatar</a>
+              <a class="menu__item burgerMenu__menuItem" href=""
+                >Custom form elements</a
+              >
+              <a class="menu__item burgerMenu__menuItem" href="">Button</a>
+            </nav>
+          </section>
+          <section class="menu__group burgerMenu__contentGroup">
+            <h4 class="menu__title burgerMenu__menuTitle">Templates</h4>
+            <nav class="menu__list burgerMenu__menuList">
+              <a class="menu__item burgerMenu__menuItem" href="">Avatar</a>
+              <a class="menu__item burgerMenu__menuItem" href=""
+                >Custom form elements</a
+              >
+              <a class="menu__item burgerMenu__menuItem" href="">Button</a>
+              <a class="menu__item burgerMenu__menuItem" href="">Avatar</a>
+              <a class="menu__item burgerMenu__menuItem" href=""
+                >Custom form elements</a
+              >
+              <a class="menu__item burgerMenu__menuItem" href="">Button</a>
+            </nav>
+          </section>
+        </aside>
+      </div>
+    </div>
+    <style>
+      @media (max-width: 768px) {
+        .burgerMenuNotify {
+          display: none;
+        }
+      }
+    </style>
+    <div class="burgerMenuNotify">
+      availiable on mobile/tablet screen viewport
+    </div>
+  </body>
 </html>
