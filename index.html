@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./components/previewCards/previewCards.css" />
     <title>Reusable component library</title>
   </head>
   <body class="page page_main">
@@ -23,62 +24,320 @@
         <h1 class="header__title">Reusable component library</h1>
       </div>
     </header>
-    <main class="page__content">
+    <main class="page__content previewCards">
       <div class="layoutContainer">
-        <div class="tileList">
-          <a href="" class="previewCard tileList__item">
-            <div class="previewCard__placeholder">
-              <div class="previewCard__preview">component here</div>
-            </div>
-            <h2 class="previewCard__title">Tooltip</h2>
-            <div class="previewCard__desc">Container</div>
-          </a>
-          <a href="" class="previewCard tileList__item">
-            <div class="previewCard__placeholder">
-              <div class="previewCard__preview">component here</div>
-            </div>
-            <h2 class="previewCard__title">Custom form elements</h2>
-            <div class="previewCard__desc">Element</div>
-          </a>
-          <a href="" class="previewCard tileList__item">
-            <div class="previewCard__placeholder">
-              <div class="previewCard__preview">component here</div>
-            </div>
-            <h2 class="previewCard__title">
-              Some very very very very very long title
-            </h2>
-            <div class="previewCard__desc">
-              Some case with more text than it would be normal
-            </div>
-          </a>
-          <a href="" class="previewCard tileList__item">
-            <div class="previewCard__placeholder">
-              <div class="previewCard__preview">component here</div>
-            </div>
-            <h2 class="previewCard__title">Calendar</h2>
-            <div class="previewCard__desc">Container</div>
-          </a>
-          <a href="" class="previewCard tileList__item">
-            <div class="previewCard__placeholder">
-              <div class="previewCard__preview">component here</div>
-            </div>
-            <h2 class="previewCard__title">Modal dialog</h2>
-            <div class="previewCard__desc">Element</div>
-          </a>
-          <a href="" class="previewCard tileList__item">
-            <div class="previewCard__placeholder">
-              <div class="previewCard__preview">component here</div>
-            </div>
-            <h2 class="previewCard__title">Histogram</h2>
-            <div class="previewCard__desc">Element</div>
-          </a>
-          <a href="" class="previewCard tileList__item">
-            <div class="previewCard__placeholder">
-              <div class="previewCard__preview">component here</div>
-            </div>
-            <h2 class="previewCard__title">Avatar</h2>
-            <div class="previewCard__desc">Element</div>
-          </a>
+        <div class="previewCards">
+          <div class="tileList previewCards__list">
+            <a href="" class="previewCard tileList__item">
+              <div class="previewCard__placeholder">
+                <div class="previewCard__preview">
+                  <span class="tooltip">
+                    <svg
+                      class="tooltip__trigger"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12Z"
+                        fill="#212429"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12.2582 8.02428C11.7927 7.94443 11.314 8.03191 10.9068 8.27123C10.4996 8.51054 10.1902 8.88625 10.0335 9.3318C9.85018 9.85279 9.27926 10.1266 8.75827 9.9433C8.23728 9.76002 7.96351 9.18911 8.14678 8.66812C8.46025 7.77701 9.07898 7.02559 9.89339 6.54696C10.7078 6.06833 11.6653 5.89337 12.5964 6.05307C13.5274 6.21277 14.3719 6.69682 14.9802 7.41949C15.5884 8.14201 15.9214 9.05644 15.9201 10.0009C15.9197 11.5312 14.7851 12.5419 13.9748 13.082C13.5392 13.3724 13.1107 13.586 12.795 13.7263C12.6358 13.7971 12.5016 13.8508 12.405 13.8876C12.3566 13.906 12.3174 13.9203 12.2888 13.9305L12.2541 13.9426L12.243 13.9464L12.2391 13.9477L12.2376 13.9482C12.2373 13.9483 12.2363 13.9486 11.9201 13L12.2363 13.9486C11.7124 14.1233 11.1461 13.8401 10.9714 13.3162C10.7969 12.7926 11.0796 12.2267 11.6028 12.0516L11.6016 12.0521C11.6017 12.052 11.6018 12.052 11.6028 12.0516L11.6188 12.046C11.6342 12.0406 11.6594 12.0314 11.693 12.0186C11.7605 11.9929 11.8607 11.9529 11.9827 11.8986C12.2296 11.7889 12.551 11.6275 12.8654 11.4179C13.555 10.9582 13.9201 10.4691 13.9201 9.99996L13.9201 9.99847C13.9208 9.52615 13.7543 9.06883 13.4502 8.70749C13.146 8.34615 12.7238 8.10413 12.2582 8.02428Z"
+                        fill="#212429"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12 15C12.5523 15 13 15.4477 13 16V16.5C13 17.0523 12.5523 17.5 12 17.5C11.4477 17.5 11 17.0523 11 16.5V16C11 15.4477 11.4477 15 12 15Z"
+                        fill="#212429"
+                      />
+                    </svg>
+                    <span class="tooltip__bubble tooltip__bubble_pos_top"
+                      >Helper text</span
+                    >
+                  </span>
+                </div>
+              </div>
+              <h2 class="previewCard__title">Tooltip</h2>
+              <div class="previewCard__desc">Container</div>
+            </a>
+            <a href="" class="previewCard tileList__item">
+              <div class="previewCard__placeholder">
+                <div class="previewCard__preview">
+                  <div class="formField">
+                    <label class="checkbox">
+                      <input type="checkbox" class="checkbox__input" />
+                      <span class="checkbox__state">
+                        <span class="checkbox__control">
+                          <svg
+                            class="checkbox__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <use
+                              href="../../assets/images/icons.svg#check"
+                            ></use>
+                          </svg>
+                        </span>
+                        <span class="checkbox__title">Default</span>
+                      </span>
+                    </label>
+                    <label class="checkbox">
+                      <input
+                        type="checkbox"
+                        class="checkbox__input"
+                        checked="checked"
+                      />
+                      <span class="checkbox__state">
+                        <span class="checkbox__control">
+                          <svg
+                            class="checkbox__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <use
+                              href="../../assets/images/icons.svg#check"
+                            ></use>
+                          </svg>
+                        </span>
+                        <span class="checkbox__title">Checked</span>
+                      </span>
+                    </label>
+                    <label class="checkbox">
+                      <input
+                        type="checkbox"
+                        class="checkbox__input"
+                        disabled="disabled"
+                      />
+                      <span class="checkbox__state">
+                        <span class="checkbox__control">
+                          <svg
+                            class="checkbox__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <use
+                              href="../../assets/images/icons.svg#check"
+                            ></use>
+                          </svg>
+                        </span>
+                        <span class="checkbox__title">Disabled</span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="formField">
+                    <label class="radio">
+                      <input type="radio" class="radio__input" name="radio" />
+                      <span class="radio__state">
+                        <span class="radio__control"></span>
+                        <span class="radio__title">Default</span>
+                      </span>
+                    </label>
+                    <label class="radio">
+                      <input
+                        type="radio"
+                        class="radio__input"
+                        name="radio"
+                        checked="checked"
+                      />
+                      <span class="radio__state">
+                        <span class="radio__control"></span>
+                        <span class="radio__title">Selected</span>
+                      </span>
+                    </label>
+                    <label class="radio">
+                      <input
+                        type="radio"
+                        class="radio__input"
+                        disabled="disabled"
+                        name="radio"
+                      />
+                      <span class="radio__state">
+                        <span class="radio__control"></span>
+                        <span class="radio__title">Disabled</span>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <h2 class="previewCard__title">Custom form elements</h2>
+              <div class="previewCard__desc">Element</div>
+            </a>
+            <a href="" class="previewCard tileList__item">
+              <div class="previewCard__placeholder">
+                <div class="previewCard__preview">
+                  <div class="calendar calendar_length_4weeks">
+                    <div class="calendar__month">February 2020</div>
+                    <div class="calendar__wrapper">
+                      <div class="calendar__days">
+                        <span class="calendar__day calendar__day_ofweek"
+                          >Mon</span
+                        >
+                        <span class="calendar__day calendar__day_ofweek"
+                          >Tue</span
+                        >
+                        <span class="calendar__day calendar__day_ofweek"
+                          >Wed</span
+                        >
+                        <span class="calendar__day calendar__day_ofweek"
+                          >Thu</span
+                        >
+                        <span class="calendar__day calendar__day_ofweek"
+                          >Fri</span
+                        >
+                        <span class="calendar__day calendar__day_ofweek"
+                          >Sat</span
+                        >
+                        <span class="calendar__day calendar__day_ofweek"
+                          >Sun</span
+                        >
+                        <span class="calendar__day">1</span>
+                        <span class="calendar__day">2</span>
+                        <span class="calendar__day">3</span>
+                        <span class="calendar__day">4</span>
+                        <span class="calendar__day">5</span>
+                        <span class="calendar__day">6</span>
+                        <span class="calendar__day">7</span>
+                        <span class="calendar__day">8</span>
+                        <span class="calendar__day">9</span>
+                        <span class="calendar__day">10</span>
+                        <span class="calendar__day">11</span>
+                        <span class="calendar__day">12</span>
+                        <span class="calendar__day">13</span>
+                        <span class="calendar__day">14</span>
+                        <span class="calendar__day">15</span>
+                        <span class="calendar__day">16</span>
+                        <span class="calendar__day">17</span>
+                        <span class="calendar__day calendar__day_period_edge"
+                          >18</span
+                        >
+                        <span class="calendar__day calendar__day_period_inside"
+                          >19</span
+                        >
+                        <span class="calendar__day calendar__day_period_inside"
+                          >20</span
+                        >
+                        <span class="calendar__day calendar__day_period_inside"
+                          >21</span
+                        >
+                        <span class="calendar__day calendar__day_period_inside"
+                          >22</span
+                        >
+                        <span class="calendar__day calendar__day_period_edge"
+                          >23</span
+                        >
+                        <span class="calendar__day">24</span>
+                        <span class="calendar__day">25</span>
+                        <span class="calendar__day">26</span>
+                        <span class="calendar__day">27</span>
+                        <span class="calendar__day">28</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="previewCard__title">Calendar</h2>
+              <div class="previewCard__desc">Container</div>
+            </a>
+            <a href="" class="previewCard tileList__item">
+              <div class="previewCard__placeholder">
+                <div class="previewCard__preview">
+                  <!-- <button id="modal-open" class="button button_var_primary">
+                    Show modal
+                  </button> -->
+                  <div id="modal" class="modal">
+                    <div class="modal__window">
+                      <h5 class="modal__title">Modal title</h5>
+                      <p class="modal__content">
+                        Amet minim mollit non deserunt ullamco est sit aliqua
+                        dolor do amet sint. Velit officia consequat duis enim
+                        velit mollit. Exercitation veniam consequat sunt nostrud
+                        amet. Amet minim mollit non deserunt ullamco est sit
+                        aliqua dolor do amet sint. Velit officia consequat duis
+                        enim velit mollit. Exercitation veniam consequat sunt
+                        nostrud amet.
+                      </p>
+                      <!-- <button id="modal-close" class="modal__closeButton">
+                        <svg
+                          class="modal__closeButtonIcon"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <use href="../../assets/images/icons.svg#cross"></use>
+                        </svg>
+                      </button> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="previewCard__title">Modal dialog</h2>
+              <div class="previewCard__desc">Container</div>
+            </a>
+            <a href="" class="previewCard tileList__item">
+              <div class="previewCard__placeholder">
+                <div class="previewCard__preview">
+                  <div class="histogram">
+                    <div class="histogram__info">
+                      <div class="histogram__score">
+                        <div class="histogram__scoreCaption">Total orders</div>
+                        <div class="histogram__scoreValue">50254</div>
+                      </div>
+                      <span class="histogram__showAll">View all</span>
+                    </div>
+                    <div class="histogram__columns">
+                      <div class="histogram__column" style="height: 100%"></div>
+                      <div class="histogram__column" style="height: 50%"></div>
+                      <div class="histogram__column" style="height: 30%"></div>
+                      <div class="histogram__column" style="height: 90%"></div>
+                      <div class="histogram__column" style="height: 80%"></div>
+                      <div class="histogram__column" style="height: 20%"></div>
+                      <div class="histogram__column" style="height: 35%"></div>
+                      <div class="histogram__column" style="height: 55%"></div>
+                      <div class="histogram__column" style="height: 23%"></div>
+                      <div class="histogram__column" style="height: 50%"></div>
+                      <div class="histogram__column" style="height: 30%"></div>
+                      <div class="histogram__column" style="height: 90%"></div>
+                      <div class="histogram__column" style="height: 80%"></div>
+                      <div class="histogram__column" style="height: 20%"></div>
+                      <div class="histogram__column" style="height: 35%"></div>
+                      <div class="histogram__column" style="height: 100%"></div>
+                      <div class="histogram__column" style="height: 50%"></div>
+                      <div class="histogram__column" style="height: 30%"></div>
+                      <div class="histogram__column" style="height: 90%"></div>
+                      <div class="histogram__column" style="height: 80%"></div>
+                      <div class="histogram__column" style="height: 20%"></div>
+                      <div class="histogram__column" style="height: 35%"></div>
+                      <div class="histogram__column" style="height: 55%"></div>
+                      <div class="histogram__column" style="height: 23%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="previewCard__title">Histogram</h2>
+              <div class="previewCard__desc">Element</div>
+            </a>
+            <a href="" class="previewCard tileList__item">
+              <div class="previewCard__placeholder">
+                <div class="previewCard__preview">
+                  <div class="avatar avatar_size_big">
+                    <img
+                      src="./assets/images/avatar-200.jpg"
+                      alt="Аватар пользователя Anonimus"
+                      class="avatar__img"
+                    />
+                  </div>
+                </div>
+              </div>
+              <h2 class="previewCard__title">Avatar</h2>
+              <div class="previewCard__desc">Element</div>
+            </a>
+          </div>
+          <button class="button button_var_alternate previewCards__loadMoreBtn">
+            Load more
+          </button>
         </div>
       </div>
     </main>

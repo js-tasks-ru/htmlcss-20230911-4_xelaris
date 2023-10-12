@@ -5,9 +5,17 @@
 @import '../../components/header/header.css';
 @import '../../components/footer/footer.css';
 @import '../../components/tileList/tileList.css';
+@import '../../components/previewCards/previewCards.css';
 @import '../../components/previewCard/previewCard.css';
 @import '../../components/menu/menu.css';
 @import '../../03-lection1/01-button/button.css';
+@import '../../05-lection3/01-tooltip/tooltip.css';
+@import '../../07-lection5/01-checkbox/checkbox.css';
+@import '../../07-lection5/02-radio/radio.css';
+@import '../../05-lection3/03-calendar/calendar.css';
+@import '../../05-lection3/02-modal/modal.css';
+@import '../../04-lection2/01-histogram/histogram.css';
+@import '../../06-lection4/01-avatar/avatar.css';
 
 :root {
   --white: #ffffff;
