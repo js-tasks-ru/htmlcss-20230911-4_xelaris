@@ -5,6 +5,13 @@
 }
 .previewCards__previewItem {
 }
+.previewCards__previewItem_calendar {
+  width: 66%;
+  height: 100%;
+}
+.previewCards__previewCalendar {
+  font-size: 10px;
+}
 .previewCards__previewItem_histogram {
   width: 100%;
 }
