@@ -13,6 +13,9 @@
   padding-bottom: 16px;
   display: flex;
 }
+.header__burgerMenuButton {
+  position: absolute;
+}
 .header__logo {
   width: 110px;
   height: 32px;
@@ -32,10 +35,13 @@
     padding-bottom: 24px;
   }
   .header__logo {
-    margin: 0;
+    margin: 0 0 0 49px;
   }
 }
 @media screen and (min-width: 768px) {
+  .header__logo {
+    margin: 0;
+  }
 }
 @media screen and (min-width: 992px) {
   .header:not(.header_compact) {

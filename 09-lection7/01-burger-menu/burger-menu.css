@@ -1,19 +1,11 @@
 .burgerMenu {
-  position: fixed;
-  width: 100%;
-  inset: 0;
-  padding-top: 64px;
-  background: var(--bg-color, var(--grey-0, #f9fafc));
-  transform: translateX(-100vw);
-  transition: transform 0.25s linear;
+  display: none;
 }
-.burgerMenu__content {
-  padding: 16px;
-  overflow: auto;
-  height: 100%;
-  box-sizing: border-box;
+.burgerMenu_onDesktopAvailiable {
+  display: block;
 }
 .burgerMenu__closeButton {
+  display: none;
   cursor: pointer;
   background: none;
   margin: 0;
@@ -28,6 +20,9 @@
   top: 16px;
   left: 16px;
 }
+.burgerMenu_forHeaderTransparent .burgerMenu__closeButton {
+  top: 24px;
+}
 .burgerMenu__closeButton:active {
   background: var(--grey-3, #acb5bd);
 }
@@ -35,25 +30,8 @@
   width: 24px;
   height: 24px;
 }
-.burgerMenu__contentGroup {
-  padding: 24px 0;
-  border-bottom: 1px solid var(--grey-2, #dde2e5);
-}
-.burgerMenu__contentGroup:last-child {
-  border-bottom: 0;
-}
-.burgerMenu__menu {
-  display: block;
-}
-.burgerMenu__menuTitle {
-  color: var(--grey-3, #acb5bd);
-}
-.burgerMenu__menuList {
-  row-gap: 16px;
-}
-.burgerMenu__menuItem {
-  font-size: 16px;
-  line-height: 24px;
+.burgerMenu__themeToggler {
+  display: none;
 }
 .burgerMenuShowButton {
   display: none;
@@ -78,7 +56,61 @@
   .burgerMenuShowButton {
     display: inline-block;
   }
+  .burgerMenu {
+    position: fixed;
+    display: block;
+    width: 100%;
+    inset: 0;
+    padding-top: 64px;
+    background: var(--bg-color, var(--grey-0, #f9fafc));
+    transform: translateX(-100vw);
+    transition: transform 0.25s linear;
+  }
+  .burgerMenu_forHeaderTransparent {
+    background: transparent;
+  }
   .burgerMenu[data-open] {
     transform: translateX(0);
+  }
+  .burgerMenu__themeToggler {
+    display: block;
+  }
+  .burgerMenu__content {
+    padding: 0 16px;
+    overflow: auto;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .burgerMenu_forHeaderTransparent .burgerMenu__content {
+    background: var(--bg-color, var(--grey-0, #f9fafc));
+  }
+  .burgerMenu__closeButton {
+    display: inline-block;
+  }
+  .burgerMenu__contentGroup {
+    padding: 24px 0;
+    border-top: 1px solid var(--grey-2, #dde2e5);
+  }
+  .burgerMenu_forHeaderTransparent .burgerMenu__themeToggler {
+    border-top: 0;
+  }
+  .burgerMenu__menu {
+    display: block;
+  }
+  .burgerMenu__menuTitle {
+    color: var(--grey-3, #acb5bd);
+  }
+  .burgerMenu__menuList {
+    row-gap: 16px;
+  }
+  .burgerMenu__menuItem {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .burgerMenu_forHeaderTransparent .burgerMenu__closeButton {
+    top: 16px;
+    left: 16px;
   }
 }
