@@ -5,6 +5,22 @@
 }
 .previewCards__previewItem {
 }
+.previewCards__previewItem_histogram {
+  width: 100%;
+}
+.previewCards__previewHistogramScoreCap {
+  font-size: 13px;
+}
+.previewCards__previewHistogramScoreVal {
+  font-weight: 600;
+}
+.previewCards__previewHistogramShowAll {
+  font-size: 13px;
+}
+.previewCards__previewHistogramCols {
+  margin-top: 20px;
+  height: 35px;
+}
 .previewCards__previewItem_modal {
   width: 100%;
   height: 100%;
