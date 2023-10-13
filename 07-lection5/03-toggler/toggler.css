@@ -22,6 +22,7 @@
   height: 28px;
   box-sizing: border-box;
   text-align: left;
+  transition: all 0.5s;
 }
 .toggler__title {
   color: var(--grey-4, #495057);
@@ -37,6 +38,7 @@
   margin: 1px;
   display: inline-block;
   background: var(--grey-2, #dde2e5);
+  transition: all 0.5s;
 }
 .toggler__input:checked ~ .toggler__state .toggler__control {
   border-color: var(--primary, var(--blue, #4263eb));
