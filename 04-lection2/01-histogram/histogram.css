@@ -1,7 +1,8 @@
 .histogram {
   border: 1px solid var(--border-color, #acb5bd);
-  border-radius: 8px;
-  padding: 16px 24px 24px;
+  font-size: 16px;
+  border-radius: 0.5em;
+  padding: 1em 1.5em 1.5em;
 }
 .histogram__info {
   display: flex;
@@ -10,28 +11,28 @@
   flex-grow: 1;
 }
 .histogram__scoreCaption {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1em;
+  line-height: 1.5em;
 }
 .histogram__scoreValue {
-  font-size: 20px;
-  line-height: 26px;
-  margin-top: 6px;
+  font-size: 1.25em;
+  line-height: 1.63em;
+  margin-top: 0.38em;
 }
 .histogram__showAll {
   color: var(--primary, #374fc7);
   text-decoration: none;
-  font-size: 16px;
-  line-height: 24px;
-  margin-top: 3px;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 0.19em;
   flex-shrink: 0;
 }
 .histogram__columns {
   display: flex;
   align-items: flex-end;
-  height: 50px;
+  height: 3.13em;
   gap: 1px;
-  margin-top: 39px;
+  margin-top: 2.44em;
 }
 .histogram__column {
   background: var(--primary, #374fc7);
