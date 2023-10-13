@@ -31,17 +31,17 @@
             <a href="" class="previewCard tileList__item">
               <div class="previewCard__placeholder">
                 <div class="previewCard__preview">
-                  <span class="tooltip">
+                  <span class="tooltip previewCards__previewTooltip">
+                    <span
+                      class="tooltip__bubble tooltip__bubble_primary tooltip__bubble_pos_top tooltip__bubble_opened previewCards__previewTooltipBubble"
+                      >Helper text</span
+                    >
                     <svg
                       class="tooltip__trigger"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <use href="../../assets/images/icons.svg#question"></use>
                     </svg>
-                    <span
-                      class="tooltip__bubble tooltip__bubble_primary tooltip__bubble_pos_top tooltip__bubble_opened"
-                      >Helper text</span
-                    >
                   </span>
                 </div>
               </div>
@@ -148,16 +148,18 @@
               <div class="previewCard__desc">Element</div>
             </a>
             <a href="" class="previewCard tileList__item">
-              <div class="previewCard__placeholder">
+              <div
+                class="previewCard__placeholder previewCards__previewPlaceholder previewCards__previewPlaceholder_calendar"
+              >
                 <div
-                  class="previewCard__preview previewCards__previewItem_calendar"
+                  class="previewCard__preview previewCards__previewItem previewCards__previewItem_calendar"
                 >
                   <div
                     class="calendar calendar_length_5weeks previewCards__previewCalendar"
                   >
-                    <div class="calendar__month">October 2020</div>
                     <div class="calendar__wrapper">
                       <div class="calendar__days">
+                        <div class="calendar__month">October 2019</div>
                         <span class="calendar__day calendar__day_ofweek"
                           >Mon</span
                         >
@@ -235,7 +237,9 @@
               <div class="previewCard__desc">Container</div>
             </a>
             <a href="" class="previewCard tileList__item">
-              <div class="previewCard__placeholder">
+              <div
+                class="previewCard__placeholder previewCards__previewPlaceholder previewCards__previewPlaceholder_modal"
+              >
                 <div
                   class="previewCard__preview previewCards__previewItem previewCards__previewItem_modal"
                 >
@@ -262,7 +266,7 @@
             <a href="" class="previewCard tileList__item">
               <div class="previewCard__placeholder">
                 <div
-                  class="previewCard__preview previewCards__previewItem_histogram"
+                  class="previewCard__preview previewCards__previewItem previewCards__previewItem_histogram"
                 >
                   <div class="histogram previewCards__previewHistogram">
                     <div class="histogram__info">
@@ -319,8 +323,8 @@
             </a>
             <a href="" class="previewCard tileList__item">
               <div class="previewCard__placeholder">
-                <div class="previewCard__preview">
-                  <div class="avatar avatar_size_big">
+                <div class="previewCard__preview previewCards__previewItem">
+                  <div class="avatar previewCards__previewAvatar">
                     <img
                       src="./assets/images/avatar-200.jpg"
                       alt="Аватар пользователя Anonimus"

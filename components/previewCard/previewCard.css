@@ -1,20 +1,23 @@
 .previewCard {
   padding: 8px;
-  border-radius: 12px;
+  border-radius: 8px;
   background: var(--white, white);
   box-shadow: 0px 2px 4px 0px rgba(33, 36, 41, 0.05);
   box-sizing: border-box;
   text-decoration: none;
   color: inherit;
+  overflow: hidden;
 }
 .previewCard__placeholder {
-  height: 148px;
+  height: 177px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 8px;
   margin: -8px -8px 0;
   border-bottom: 1px solid var(--grey-2, #dde2e5);
+  box-sizing: border-box;
+  overflow: hidden;
 }
 .previewCard__preview {
   margin: auto;
@@ -35,12 +38,21 @@
   font-family: Roboto;
   line-height: normal;
 }
+@media screen and (min-width: 576px) {
+  .previewCard__placeholder {
+    height: 222px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .previewCard {
+    border-radius: 12px;
+  }
+}
 @media screen and (min-width: 992px) {
   .previewCard {
     padding: 32px;
   }
   .previewCard__placeholder {
-    height: 222px;
     padding: 0;
     margin: 0;
     border-bottom: 0;
