@@ -1,7 +1,7 @@
 .previewCards__tabs {
   margin-top: -62px;
 }
-.previewCards__tabs .tabs__content {
+.previewCards__tabContent {
   padding-top: 16px;
 }
 .previewCards__loadMoreBtn {
@@ -15,12 +15,12 @@
   }
 }
 @media screen and (min-width: 992px) {
-  .previewCards__tabs .tabs__content {
+  .previewCards__tabContent {
     padding-top: 32px;
   }
 }
 @media screen and (min-width: 1175px) {
-  .previewCards__tabs .tabs__content {
-    margin-top: 68px;
+  .previewCards__tabContent {
+    padding-top: 68px;
   }
 }

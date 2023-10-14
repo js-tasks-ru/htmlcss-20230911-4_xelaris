@@ -2,10 +2,10 @@
   --tabs-padding-top: 22px;
   margin-top: 52px;
 }
-.componentDetail__tabs .tabs__content {
+.componentDetail__tabs .componentDetail__tabContent {
   padding-top: var(--tabs-padding-top);
 }
-.componentDetail__tabs .tabs__content::before {
+.componentDetail__tabs .componentDetail__tabContent::before {
   content: '';
   display: block;
   width: 100%;
