@@ -50,3 +50,7 @@ body {
   font-style: normal;
   color: var(--black, black);
 }
+.preload ._noAnimateOnload {
+  transition: none !important;
+  animation-duration: 0s !important;
+}
