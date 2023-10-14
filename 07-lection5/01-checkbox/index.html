@@ -3,14 +3,15 @@
   <head>
     <link rel="stylesheet" href="../../assets/css/main.css" />
     <link rel="stylesheet" href="./checkbox.css" />
+    <script src="../../assets/js/fixOnloadAnimations.js"></script>
     <title>Checkbox component</title>
   </head>
-  <body>
+  <body class="preload">
     <h1>Checkbox component</h1>
     <label class="checkbox">
       <input type="checkbox" class="checkbox__input" />
       <span class="checkbox__state">
-        <span class="checkbox__control">
+        <span class="checkbox__control _noAnimateOnload">
           <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg">
             <use href="../../assets/images/icons.svg#check"></use>
           </svg>
@@ -19,14 +20,9 @@
       </span>
     </label>
     <label class="checkbox">
-      <input
-        type="checkbox"
-        class="checkbox__input"
-        checked="checked"
-        disabled="disabled"
-      />
+      <input type="checkbox" class="checkbox__input" checked="checked" disabled="disabled" />
       <span class="checkbox__state">
-        <span class="checkbox__control">
+        <span class="checkbox__control _noAnimateOnload">
           <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg">
             <use href="../../assets/images/icons.svg#check"></use>
           </svg>

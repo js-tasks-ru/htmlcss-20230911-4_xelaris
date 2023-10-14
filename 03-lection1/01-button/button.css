@@ -15,6 +15,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: transform 0.2s linear;
+}
+.button:active {
+  transform: translateY(1px);
 }
 .button_var_primary {
   background: var(--primary, #4263eb);

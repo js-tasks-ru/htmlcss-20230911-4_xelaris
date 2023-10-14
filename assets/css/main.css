@@ -55,4 +55,8 @@ body:has(.burgerMenu[data-open]) {
 }
 body:has(.burgerMenu[data-open]) .burgerMenuShowButton {
   opacity: 0;
+}  
+.preload ._noAnimateOnload {
+  transition: none !important;
+  animation-duration: 0s !important;
 }
