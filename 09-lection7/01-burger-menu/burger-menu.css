@@ -17,11 +17,8 @@
   border-radius: 16px;
   background: var(--grey-2, #dde2e5);
   position: absolute;
-  top: 16px;
-  left: 16px;
-}
-.burgerMenu_forHeaderTransparent .burgerMenu__closeButton {
   top: 24px;
+  left: 16px;
 }
 .burgerMenu__closeButton:active {
   background: var(--grey-3, #acb5bd);
@@ -34,37 +31,7 @@
   margin-top: 16px;
   display: none;
 }
-.burgerMenuShowButton {
-  display: none;
-  cursor: pointer;
-  background: none;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 0;
-  width: 32px;
-  height: 32px;
-  border-radius: 16px;
-  opacity: 1;
-  transition: opacity 0.25s linear;
-}
-.burgerMenuShowButton:hover {
-  background: var(--grey-2, #acb5bd);
-}
-.burgerMenuShowButton__icon {
-  width: 24px;
-  height: 24px;
-}
-body:has(.burgerMenu[data-open]) {
-  overflow: hidden;
-}
-body:has(.burgerMenu[data-open]) .burgerMenuShowButton {
-  opacity: 0;
-}
 @media screen and (max-width: 768px) {
-  .burgerMenuShowButton {
-    display: inline-block;
-  }
   .burgerMenu {
     position: fixed;
     display: block;
@@ -105,16 +72,6 @@ body:has(.burgerMenu[data-open]) .burgerMenuShowButton {
   }
   .burgerMenu__menu {
     display: block;
-  }
-  .burgerMenu__menuTitle {
-    color: var(--grey-3, #acb5bd);
-  }
-  .burgerMenu__menuList {
-    row-gap: 16px;
-  }
-  .burgerMenu__menuItem {
-    font-size: 16px;
-    line-height: 24px;
   }
 }
 @media screen and (max-width: 576px) {

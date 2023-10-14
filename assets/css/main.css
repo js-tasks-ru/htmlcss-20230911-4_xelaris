@@ -9,6 +9,7 @@
 @import '../../components/menu/menu.css';
 @import '../../03-lection1/01-button/button.css';
 @import '../../09-lection7/01-burger-menu/burger-menu.css';
+@import '../../components/burgerMenuShowButton/burgerMenuShowButton.css';
 
 :root {
   --white: #ffffff;
@@ -48,4 +49,10 @@ body {
   font-weight: 400;
   font-style: normal;
   color: var(--black, black);
+}
+body:has(.burgerMenu[data-open]) {
+  overflow: hidden;
+}
+body:has(.burgerMenu[data-open]) .burgerMenuShowButton {
+  opacity: 0;
 }
