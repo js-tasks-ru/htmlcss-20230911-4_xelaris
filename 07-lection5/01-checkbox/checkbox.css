@@ -50,11 +50,15 @@
   border-color: var(--grey-3, #acb5bd);
   background: var(--grey-1, #f8f9fa);
 }
+.checkbox__input:checked:not(:disabled) ~ .checkbox__state .checkbox__control {
+  animation: check-animation 0.5s;
+}
 .checkbox__input:checked:active:not(:disabled)
   ~ .checkbox__state
   .checkbox__control {
   border-color: var(--primary-active, var(--blue-darker, #2342c0));
   background: var(--primary-active, var(--blue-darker, #2342c0));
+  /* animation: check-animation 0.5s; */
 }
 .checkbox__input:disabled ~ .checkbox__state .checkbox__control {
   border-color: var(--grey-2, #dde2e5);
@@ -63,13 +67,7 @@
 .checkbox__input:disabled ~ .checkbox__state .checkbox__title {
   color: var(--grey-2, #dde2e5);
 }
-
-
-.checkbox__input:checked ~ .checkbox__state .checkbox__control {
-  animation: pulse 0.5s;
-}
-
-@keyframes pulse {
+@keyframes check-animation {
   0% {
       box-shadow: 0 0 0 0 #bdc3c7;
   }
