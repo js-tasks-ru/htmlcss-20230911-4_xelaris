@@ -15,6 +15,8 @@
 }
 .header__burgerMenuButton {
   position: absolute;
+  top: 16px;
+  left: 16px;
 }
 .header__logo {
   width: 110px;
@@ -33,6 +35,9 @@
   .header__panel {
     padding-top: 24px;
     padding-bottom: 24px;
+  }
+  .header__burgerMenuButton {
+    top: 24px;
   }
   .header__logo {
     margin: 0 0 0 49px;
