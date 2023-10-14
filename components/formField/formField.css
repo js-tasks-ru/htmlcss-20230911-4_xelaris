@@ -1,5 +1,5 @@
 .formField {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   gap: 5px;
   align-items: flex-start;
