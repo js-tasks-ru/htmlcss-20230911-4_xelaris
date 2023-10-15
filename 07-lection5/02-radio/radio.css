@@ -38,6 +38,7 @@
   display: inline-block;
 }
 .radio__input:checked ~ .radio__state .radio__control {
+  border-width: 2px;
   border-color: var(--primary, var(--blue, #4263eb));
 }
 .radio__input:checked ~ .radio__state .radio__control:before {

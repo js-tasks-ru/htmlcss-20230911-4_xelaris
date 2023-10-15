@@ -17,9 +17,6 @@
   border-bottom: 1px solid var(--grey-2, #dde2e5);
   box-sizing: border-box;
 }
-.previewCard__placeholder_fullWidth {
-  width: 100%;
-}
 .previewCard__placeholder_noPaddings {
   padding: 0;
 }
