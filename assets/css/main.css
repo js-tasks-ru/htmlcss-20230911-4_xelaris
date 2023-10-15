@@ -12,6 +12,7 @@
 @import '../../09-lection7/01-burger-menu/burger-menu.css';
 @import '../../components/burgerMenuShowButton/burgerMenuShowButton.css';
 @import '../../components/tabs/tabs.css';
+@import '../../components/formField/formField.css';
 
 :root {
   --white: #ffffff;
