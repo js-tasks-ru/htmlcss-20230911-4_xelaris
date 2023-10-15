@@ -6,7 +6,6 @@
   box-sizing: border-box;
   text-decoration: none;
   color: inherit;
-  overflow: hidden;
 }
 .previewCard__placeholder {
   height: 177px;
@@ -17,7 +16,9 @@
   margin: -8px -8px 0;
   border-bottom: 1px solid var(--grey-2, #dde2e5);
   box-sizing: border-box;
-  overflow: hidden;
+}
+.previewCard__placeholder_fullWidth {
+  width: 100%;
 }
 .previewCard__placeholder_noPaddings {
   padding: 0;
@@ -35,6 +36,9 @@
 .previewCard__preview_fullSize {
   width: 100%;
   height: 100%;
+}
+.previewCard__preview_scaledForMobile {
+  transform: scale(0.6);
 }
 .previewCard__title {
   margin: 12px 0 0;
@@ -56,10 +60,16 @@
   .previewCard__placeholder {
     height: 222px;
   }
+  .previewCard__preview_scaledForMobile {
+    transform: scale(0.8);
+  }
 }
 @media screen and (min-width: 768px) {
   .previewCard {
     border-radius: 12px;
+  }
+  .previewCard__preview_scaledForMobile {
+    transform: scale(0.9);
   }
 }
 @media screen and (min-width: 992px) {
@@ -70,6 +80,9 @@
     padding: 0;
     margin: 0;
     border-bottom: 0;
+  }
+  .previewCard__preview_scaledForMobile {
+    transform: scale(1);
   }
   .previewCard__title {
     font-size: 21px;
