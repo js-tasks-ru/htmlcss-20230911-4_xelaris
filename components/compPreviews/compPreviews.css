@@ -20,8 +20,9 @@
   border: 0;
 }
 .compPreviews__previewModalWindow {
-  width: 100%;
-  transform: translateX(-50%) translateY(-50%) scale(0.7);
+  width: 240px;
+  transform: translateX(-50%) translateY(-50%) scale(0.6);
+  padding: 25px;
 }
 .compPreviews__previewHistogram {
   font-size: 9px;
@@ -41,6 +42,9 @@
     width: 202px;
     border: 1px solid var(--border-color, #acb5bd);
   }
+  .compPreviews__previewModalWindow {
+    width: 100%;
+  }
   .compPreviews__previewHistogram {
     font-size: 12px;
   }
@@ -53,6 +57,9 @@
     padding: 14px;
     width: 100%;
     box-sizing: border-box;
+  }
+  .compPreviews__previewModalWindow {
+    padding: 30px 40px 33px;
   }
   .compPreviews__previewHistogram {
     font-size: 13px;

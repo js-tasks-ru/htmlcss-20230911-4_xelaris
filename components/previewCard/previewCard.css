@@ -6,6 +6,7 @@
   box-sizing: border-box;
   text-decoration: none;
   color: inherit;
+  overflow: hidden;
 }
 .previewCard__placeholder {
   height: 177px;
