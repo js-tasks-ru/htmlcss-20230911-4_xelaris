@@ -1,81 +1,81 @@
-.previewCards__tabs {
+.compPreviews__tabs {
   margin-top: -62px;
 }
-.previewCards__tabContent {
+.compPreviews__tabContent {
   padding-top: 16px;
 }
-.previewCards__previewFormFields {
+.compPreviews__previewFormFields {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 14px;
 }
-.previewCards__previewFormField {
+.compPreviews__previewFormField {
   gap: 14px;
 }
-.previewCards__previewCalendar {
+.compPreviews__previewCalendar {
   width: 164px;
   box-sizing: border-box;
   font-size: 9px;
   border: 0;
 }
-.previewCards__previewModalWindow {
+.compPreviews__previewModalWindow {
   width: 100%;
   transform: translateX(-50%) translateY(-50%) scale(0.7);
 }
-.previewCards__previewHistogram {
+.compPreviews__previewHistogram {
   font-size: 9px;
 }
-.previewCards__previewAvatar {
+.compPreviews__previewAvatar {
   width: 116px;
   height: 116px;
 }
-.previewCards__loadMoreBtn {
+.compPreviews__loadMoreBtn {
   width: 182px;
   display: block;
   margin: 64px auto 0;
 }
 @media screen and (min-width: 576px) {
-  .previewCards__previewCalendar {
+  .compPreviews__previewCalendar {
     font-size: 10px;
     width: 202px;
     border: 1px solid var(--border-color, #acb5bd);
   }
-  .previewCards__previewHistogram {
+  .compPreviews__previewHistogram {
     font-size: 12px;
   }
 }
 @media screen and (min-width: 768px) {
-  .previewCards__tabs {
+  .compPreviews__tabs {
     margin-top: -63px;
   }
-  .previewCards__previewFormFields {
+  .compPreviews__previewFormFields {
     padding: 14px;
     width: 100%;
     box-sizing: border-box;
   }
-  .previewCards__previewHistogram {
+  .compPreviews__previewHistogram {
     font-size: 13px;
   }
-  .previewCards__previewAvatar {
+  .compPreviews__previewAvatar {
     width: 160px;
     height: 160px;
   }
 }
 @media screen and (min-width: 992px) {
-  .previewCards__previewHistogram {
+  .compPreviews__previewHistogram {
     font-size: 14px;
     margin: 0 -7px;
   }
-  .previewCards__tabContent {
+  .compPreviews__tabContent {
     padding-top: 32px;
   }
-  .previewCards__previewFormFields {
+  .compPreviews__previewFormFields {
     gap: 42px;
   }
 }
 @media screen and (min-width: 1175px) {
-  .previewCards__tabContent {
+  .compPreviews__tabContent {
     padding-top: 68px;
   }
 }
