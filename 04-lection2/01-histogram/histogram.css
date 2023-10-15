@@ -32,8 +32,19 @@
   height: 50px;
   gap: 1px;
   margin-top: 39px;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  animation: 0.3s forwards histogramGrow;
 }
 .histogram__column {
   background: var(--primary, #374fc7);
   flex-grow: 1;
+}
+@keyframes histogramGrow {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
 }
