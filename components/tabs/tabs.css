@@ -1,0 +1,67 @@
+.tabs__nav {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  overflow: hidden;
+}
+.tabs__content {
+  display: none;
+}
+.tabs__tabControl {
+  position: absolute;
+  opacity: 0;
+  left: -100vw;
+}
+.tabs__tabTitle {
+  color: var(--grey-3, #acb5bd);
+  font-size: 16px;
+  line-height: 24px;
+  display: inline-block;
+  border-bottom: 5px solid transparent;
+  padding-bottom: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+.tabs__tabTitle:hover {
+  color: var(--grey-4, #495057);
+}
+.tabs__tabControl[class~='tabs__tabControl_allTabs']:checked ~ .tabs__content,
+.tabs__tabControl[class~='tabs__tabControl_tabNum_1']:checked
+  ~ .tabs__content[class~='tabs__content_tabNum_1'],
+.tabs__tabControl[class~='tabs__tabControl_tabNum_2']:checked
+  ~ .tabs__content[class~='tabs__content_tabNum_2'],
+.tabs__tabControl[class~='tabs__tabControl_tabNum_3']:checked
+  ~ .tabs__content[class~='tabs__content_tabNum_3'],
+.tabs__tabControl[class~='tabs__tabControl_tabNum_4']:checked
+  ~ .tabs__content[class~='tabs__content_tabNum_4'],
+.tabs__tabControl[class~='tabs__tabControl_tabNum_5']:checked
+  ~ .tabs__content[class~='tabs__content_tabNum_5'] {
+  display: block;
+}
+.tabs__tabControl[class~='tabs__tabControl_allTabs']:checked
+  ~ .tabs__nav
+  .tabs__tabTitle[class~='tabs__tabTitle_allTabs'],
+.tabs__tabControl[class~='tabs__tabControl_tabNum_1']:checked
+  ~ .tabs__nav
+  .tabs__tabTitle[class~='tabs__tabTitle_tabNum_1'],
+.tabs__tabControl[class~='tabs__tabControl_tabNum_2']:checked
+  ~ .tabs__nav
+  .tabs__tabTitle[class~='tabs__tabTitle_tabNum_2'],
+.tabs__tabControl[class~='tabs__tabControl_tabNum_3']:checked
+  ~ .tabs__nav
+  .tabs__tabTitle[class~='tabs__tabTitle_tabNum_3'],
+.tabs__tabControl[class~='tabs__tabControl_tabNum_4']:checked
+  ~ .tabs__nav
+  .tabs__tabTitle[class~='tabs__tabTitle_tabNum_4'],
+.tabs__tabControl[class~='tabs__tabControl_tabNum_5']:checked
+  ~ .tabs__nav
+  .tabs__tabTitle[class~='tabs__tabTitle_tabNum_5'] {
+  color: var(--black, black);
+  border-bottom-color: var(--black, black);
+  cursor: default;
+}
+@media screen and (min-width: 768px) {
+  .tabs__nav {
+    gap: 40px;
+  }
+}

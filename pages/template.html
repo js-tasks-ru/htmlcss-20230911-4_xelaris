@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="../components/componentDetail/componentDetail.css"
+    />
     <script src="../assets/js/fixOnloadAnimations.js"></script>
     <title>Component page</title>
   </head>
@@ -18,6 +22,14 @@
           <rect x="38" width="32" height="32" rx="16" />
           <path d="M78 0L110 32H78V0Z" />
         </svg>
+        <nav class="header__menu">
+          <a class="header__menuItem header__menuItem_active" href=""
+            >Components</a
+          >
+          <a class="header__menuItem" href="">About</a>
+          <a class="header__menuItem" href="">Contact</a>
+        </nav>
+        <div class="header__themeToggler">[toggler]</div>
       </div>
     </header>
     <div class="page__container layoutContainer">
@@ -59,8 +71,47 @@
         </section>
       </aside>
       <main class="page__content">
-        <h1 class="page__title">Component page</h1>
-        component here
+        <div class="componentDetail">
+          <h1 class="page__title">Component page</h1>
+          <div class="componentDetail__component">component here</div>
+          <div class="tabs componentDetail__tabs">
+            <input
+              class="tabs__tabControl tabs__tabControl_tabNum_1"
+              type="radio"
+              id="#html-tab"
+              name="tabs"
+              checked="checked"
+            />
+            <input
+              class="tabs__tabControl tabs__tabControl_tabNum_2"
+              type="radio"
+              id="#css-tab"
+              name="tabs"
+            />
+            <div class="tabs__nav">
+              <label class="tabs__tab" for="#html-tab">
+                <span class="tabs__tabTitle tabs__tabTitle_tabNum_1"
+                  >HTML</span
+                ></label
+              >
+              <label class="tabs__tab" for="#css-tab"
+                ><span class="tabs__tabTitle tabs__tabTitle_tabNum_2"
+                  >CSS</span
+                ></label
+              >
+            </div>
+            <div class="tabs__content tabs__content_tabNum_1">
+              <div class="componentDetail__tabContent">
+                html code here
+              </div>              
+            </div>
+            <div class="tabs__content tabs__content_tabNum_2">
+              <div class="componentDetail__tabContent">
+                css code here
+              </div>              
+            </div>
+          </div>
+        </div>
       </main>
     </div>
     <footer class="footer footer_compact page__footer">
