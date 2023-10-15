@@ -36,6 +36,9 @@
   height: 3.13em;
   gap: 1px;
   margin-top: 2.44em;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  animation: 0.3s forwards histogramGrow;
 }
 .histogram_compact .histogram__columns {
   margin-top: 1.25em;
@@ -44,4 +47,12 @@
 .histogram__column {
   background: var(--primary, #374fc7);
   flex-grow: 1;
+}
+@keyframes histogramGrow {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
 }

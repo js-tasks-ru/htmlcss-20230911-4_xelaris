@@ -1,7 +1,7 @@
 .footer {
   padding: 42px 0;
   text-align: center;
-  border-top: 2px solid var(--grey-2, #dde2e5);
+  border-top: 1px solid var(--grey-2, #dde2e5);
 }
 .footer_compact {
   padding: 16px 0;
@@ -36,6 +36,7 @@
 @media screen and (min-width: 768px) {
   .footer {
     padding: 56px 0;
+    border-top-width: 2px;
   }
   .footer_compact {
     padding-top: 20px;
