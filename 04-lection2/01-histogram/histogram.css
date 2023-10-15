@@ -19,6 +19,9 @@
   line-height: 1.63em;
   margin-top: 0.38em;
 }
+.histogram_compact .histogram__scoreValue {
+  font-weight: 600;
+}
 .histogram__showAll {
   color: var(--primary, #374fc7);
   text-decoration: none;
@@ -34,6 +37,10 @@
   gap: 1px;
   margin-top: 2.44em;
 }
+.histogram_compact .histogram__columns {
+  margin-top: 1.25em;
+  height: 2.25em;
+} 
 .histogram__column {
   background: var(--primary, #374fc7);
   flex-grow: 1;

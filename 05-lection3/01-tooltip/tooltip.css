@@ -3,6 +3,9 @@
   vertical-align: baseline;
   position: relative;
 }
+.tooltip_opened {
+  text-align: center;
+}
 .tooltip__trigger {
   width: 24px;
   height: 24px;
@@ -21,6 +24,12 @@
   padding: 13px 21px 8px;
   width: 87px;
 }
+.tooltip_opened .tooltip__bubble {
+  position: relative;
+  transform: none;
+  left: auto;
+  margin-bottom: 6px;
+}
 .tooltip__bubble::after {
   content: '';
   border-color: transparent;
@@ -28,7 +37,7 @@
   position: absolute;
 }
 .tooltip__trigger:hover ~ .tooltip__bubble,
-.tooltip__bubble_opened {
+.tooltip_opened .tooltip__bubble {
   display: block;
 }
 .tooltip__bubble_primary {

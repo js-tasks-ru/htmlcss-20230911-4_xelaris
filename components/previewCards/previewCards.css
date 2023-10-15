@@ -3,71 +3,27 @@
   display: block;
   margin: 64px auto 0;
 }
-
-.previewCards__previewItem {
-}
-.previewCards__previewPlaceholder {
-}
-
-.previewCards__previewTooltip {
-  text-align: center;
-}
-.previewCards__previewTooltipBubble {
-  position: relative;
-  transform: none;
-  left: auto;
-  margin-bottom: 6px;
-}
-.previewCards__previewPlaceholder_calendar {
-  padding: 0;
-}
-.previewCards__previewItem_calendar {
-  width: 164px;
-}
 .previewCards__previewCalendar {
+  width: 164px;
+  box-sizing: border-box;
   font-size: 9px;
   border: 0;
-}
-.previewCards__previewPlaceholder_modal {
-  padding: 0;
-  border-bottom: 0;
-}
-.previewCards__previewItem_modal {
-  width: 100%;
-  height: 100%;
-  position: relative;
 }
 .previewCards__previewModalWindow {
   width: 100%;
   transform: translateX(-50%) translateY(-50%) scale(0.7);
 }
-.previewCards__previewModalWindowBtn {
-  width: 175px;
-}
 .previewCards__previewHistogram {
   font-size: 9px;
-}
-.previewCards__previewItem_histogram {
-  width: 100%;
-}
-.previewCards__previewHistogramScoreVal {
-  font-weight: 600;
-}
-.previewCards__previewHistogramCols {
-  margin-top: 1.25em;
-  height: 2.25em;
 }
 .previewCards__previewAvatar {
   width: 116px;
   height: 116px;
 }
-
 @media screen and (min-width: 576px) {
-  .previewCards__previewItem_calendar {
-    width: 200px;
-  }
   .previewCards__previewCalendar {
     font-size: 10px;
+    width: 202px;
     border: 1px solid var(--border-color, #acb5bd);
   }
   .previewCards__previewHistogram {
@@ -87,12 +43,4 @@
   .previewCards__previewHistogram {
     font-size: 14px;
   }
-  .previewCards__previewItem_calendar {
-    width: 220px;
-  }
-  .previewCards__previewCalendar {
-    font-size: 11px;
-  }
-}
-@media screen and (min-width: 1175px) {
 }

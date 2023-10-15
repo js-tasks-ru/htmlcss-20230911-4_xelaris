@@ -19,8 +19,22 @@
   box-sizing: border-box;
   overflow: hidden;
 }
+.previewCard__placeholder_noPaddings {
+  padding: 0;
+}
+.previewCard__placeholder_noBorder {
+  border-bottom: 0;
+}
 .previewCard__preview {
   margin: auto;
+  position: relative;
+}
+.previewCard__preview_fullWidth {
+  width: 100%;
+}
+.previewCard__preview_fullSize {
+  width: 100%;
+  height: 100%;
 }
 .previewCard__title {
   margin: 12px 0 0;

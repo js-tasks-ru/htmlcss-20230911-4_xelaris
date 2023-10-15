@@ -16,6 +16,9 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.button_w_175 {
+  width: 175px;
+}
 .button_var_primary {
   background: var(--primary, #4263eb);
   color: var(--white, white);
