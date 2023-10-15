@@ -3,6 +3,15 @@
   display: block;
   margin: 64px auto 0;
 }
+.previewCards__previewFormFields {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.previewCards__previewFormField {
+  gap: 14px;
+}
 .previewCards__previewCalendar {
   width: 164px;
   box-sizing: border-box;
@@ -31,6 +40,11 @@
   }
 }
 @media screen and (min-width: 768px) {
+  .previewCards__previewFormFields {
+    padding: 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
   .previewCards__previewHistogram {
     font-size: 13px;
   }
