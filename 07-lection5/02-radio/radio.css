@@ -62,7 +62,7 @@
   border-color: var(--grey-2, #dde2e5);
   background: var(--grey-2, #dde2e5);
 }
-.radio__input:disabled ~ .radio__state .radio__control:before {
+.radio__input:checked:disabled ~ .radio__state .radio__control:before {
   background: var(--grey-3, #acb5bd);
 }
 .radio__input:disabled ~ .radio__state .radio__title {
