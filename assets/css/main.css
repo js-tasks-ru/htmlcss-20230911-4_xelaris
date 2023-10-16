@@ -32,11 +32,40 @@
 
   --primary: var(--blue);
   --secondary: var(--purple);
+  --alternate: var(--orange); 
   --primary-active: var(--blue-darker);
   --secondary-active: var(--purple-darker);
+  
+  --text-primary-color: var(--black);
+  --text-contrast-color: var(--text-primary-color);
+  --text-regular-color: var(--grey-4);
+  --text-pale-color: var(--grey-3);
+  --text-mute-color: var(--grey-2);
 
+  --bg-color: var(--grey-0);   
   --border-color: var(--grey-3);
-  --bg-color: var(--grey-0);
+
+  --page-bg-color: var(--grey-0);
+
+  --content-color: var(--grey-2);
+  --content-bg-color: var(--white);
+  --content-border-color: var(--grey-3);
+
+  --control-color: var(--white);
+  --control-bg-color: var(--white);
+  --control-border-color: var(--grey-2);
+  --control-active-color: var(--grey-3);
+  --control-active-bg-color: var(--grey-1);
+  --control-checked-color: var(--primary);
+  --control-checked-active-color: var(--primary-active);
+  --control-disabled-color: var(--grey-3);
+  --control-disabled-bg-color: var(--grey-2);
+}
+:root[data-theme-dark] {
+  --page-bg-color: var(--grey-4);
+  --content-bg-color: var(--black);
+  --text-primary-color: var(--white);
+  --text-contrast-color: var(--grey-4);
 }
 html,
 body {
