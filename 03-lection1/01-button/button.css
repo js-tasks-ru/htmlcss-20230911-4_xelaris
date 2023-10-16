@@ -15,6 +15,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: transform 0.2s linear;
+}
+.button:active {
+  transform: translateY(1px);
 }
 .button_var_primary {
   background: var(--primary, #4263eb);
@@ -34,7 +38,7 @@
   color: var(--white, white);
 }
 .button_var_alternate {
-  background: var(--white, white);
+  background: transparent;
   border: 1px solid var(--border-color, #acb5bd);
   color: var(--grey-4, #495057);
 }

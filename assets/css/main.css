@@ -5,9 +5,14 @@
 @import '../../components/header/header.css';
 @import '../../components/footer/footer.css';
 @import '../../components/tileList/tileList.css';
+@import '../../components/previewCards/previewCards.css';
 @import '../../components/previewCard/previewCard.css';
 @import '../../components/menu/menu.css';
 @import '../../03-lection1/01-button/button.css';
+@import '../../09-lection7/01-burger-menu/burger-menu.css';
+@import '../../components/burgerMenuShowButton/burgerMenuShowButton.css';
+@import '../../components/tabs/tabs.css';
+@import '../../components/formField/formField.css';
 
 :root {
   --white: #ffffff;
@@ -76,4 +81,14 @@ body {
   font-weight: 400;
   font-style: normal;
   color: var(--black, black);
+}
+body:has(.burgerMenu[data-open]) {
+  overflow: hidden;
+}
+body:has(.burgerMenu[data-open]) .burgerMenuShowButton {
+  opacity: 0;
+}  
+.preload ._noAnimateOnload {
+  transition: none !important;
+  animation-duration: 0s !important;
 }
