@@ -50,11 +50,11 @@
   --bg-color: var(--grey-0);   
   --border-color: var(--grey-3);
 
-  --page-bg-color: var(--grey-0);
+  --page-bg-color: var(--bg-color);
 
   --content-color: var(--grey-2);
   --content-bg-color: var(--white);
-  --content-border-color: var(--grey-3);
+  --content-border-color: var(--border-color);
 
   --control-color: var(--white);
   --control-bg-color: var(--white);
@@ -67,10 +67,10 @@
   --control-disabled-bg-color: var(--grey-2);
 }
 :root[data-theme-dark] {
-  --page-bg-color: var(--grey-4);
+  --bg-color: var(--grey-4);
   --content-bg-color: var(--black);
   --text-primary-color: var(--white);
-  --text-contrast-color: var(--grey-4);
+  --text-contrast-color: var(--grey-3);
 }
 html,
 body {
