@@ -13,7 +13,7 @@
   left: -100vw;
 }
 .tabs__tabTitle {
-  color: var(--grey-3, #acb5bd);
+  color: var(--text-pale-color, #acb5bd);
   font-size: 16px;
   line-height: 24px;
   display: inline-block;
@@ -23,7 +23,7 @@
   user-select: none;
 }
 .tabs__tabTitle:hover {
-  color: var(--grey-4, #495057);
+  color: var(--text-primary-color, #495057);
 }
 .tabs__tabControl[class~='tabs__tabControl_allTabs']:checked ~ .tabs__content,
 .tabs__tabControl[class~='tabs__tabControl_tabNum_1']:checked
@@ -56,8 +56,8 @@
 .tabs__tabControl[class~='tabs__tabControl_tabNum_5']:checked
   ~ .tabs__nav
   .tabs__tabTitle[class~='tabs__tabTitle_tabNum_5'] {
-  color: var(--black, black);
-  border-bottom-color: var(--black, black);
+  color: var(--text-primary-color, black);
+  border-bottom-color: var(--text-primary-color, black);
   cursor: default;
 }
 @media screen and (min-width: 768px) {

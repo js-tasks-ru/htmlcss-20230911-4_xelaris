@@ -1,3 +1,7 @@
+
+.componentDetail {
+  color: var(--text-contrast-color, black);
+}
 .componentDetail__tabs {
   --tabs-padding-top: 22px;
   margin-top: 52px;

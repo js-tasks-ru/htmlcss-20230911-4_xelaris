@@ -71,6 +71,7 @@
   --content-bg-color: var(--black);
   --text-primary-color: var(--white);
   --text-contrast-color: var(--grey-3);
+  --text-regular-color: var(--grey-3);
 }
 html,
 body {

@@ -6,7 +6,7 @@
 .page_component {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background: var(--bg-color, #f9fafc);
+  background: var(--page-bg-color, #f9fafc);
 }
 .page__container {
   width: 100%;
@@ -16,11 +16,11 @@
   box-sizing: border-box;
 }
 .page_component .page__container {
-  background: var(--white, white);
+  background: var(--content-bg-color, white);
   position: relative;
 }
 .page__content {
-  background: var(--bg-color, #f9fafc);
+  background: var(--page-bg-color, #f9fafc);
   padding: 24px 0 92px;
   flex-grow: 1;
 }
@@ -31,7 +31,7 @@
   box-sizing: border-box;
 }
 .page__title {
-  color: var(--grey-4, #495057);
+  color: var(--text-contrast-color, #495057);
   font-size: 20px;
   font-weight: 400;
   line-height: 26px;
@@ -42,7 +42,7 @@
     background: transparent;
   }
   .page_component .page__content {
-    background: var(--white, white);
+    background: var(--content-bg-color, white);
     padding: 32px;
     border-radius: 12px;
     box-shadow: 0px 2px 4px 0px rgba(33, 36, 41, 0.05);

@@ -2,16 +2,18 @@
   padding: 42px 0;
   text-align: center;
   border-top: 1px solid var(--grey-2, #dde2e5);
+  background: var(--content-bg-color, white);
 }
 .footer_compact {
   padding: 16px 0;
   border: none;
+  background: transparent;
 }
 .footer__title {
   font-size: 22px;
   font-weight: 400;
   margin: 0;
-  color: var(--grey-4, #495057);
+  color: var(--text-contrast-color, black);
 }
 .footer_compact .footer__title {
   color: var(--grey-3, #acb5bd);
@@ -27,6 +29,7 @@
   max-width: 640px;
   font-size: 14px;
   line-height: normal;
+  color: var(--text-contrast-color, black);
 }
 @media screen and (min-width: 576px) {
   .footer_compact {
@@ -52,7 +55,7 @@
   .footer:not(.footer_compact) .footer__title {
     font-size: 38px;
     font-weight: 500;
-    color: var(--black, black);
+    color: var(--text-contrast-color, black);
     margin: 0 0 32px;
   }
   .footer__desc {
@@ -60,5 +63,6 @@
     padding-bottom: 60px;
     font-size: 16px;
     line-height: 24px;
+    color: var(--text-contrast-color, black);
   }
 }
