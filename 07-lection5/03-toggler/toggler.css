@@ -1,5 +1,4 @@
 .toggler {
-  display: inline-block;
   position: relative;
 }
 .toggler__input {
@@ -9,7 +8,7 @@
 }
 .toggler__state {
   display: inline-flex;
-  gap: 10px;
+  gap: 12px;
   align-items: center;
 }
 .toggler__input:not(:disabled) ~ .toggler__state {
@@ -29,6 +28,18 @@
   font-size: 16px;
   line-height: 24px;
   user-select: none;
+}
+.toggler__icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  color: var(--grey-3, #acb5bd);
+}
+.toggler__icon_contrast_onLight {
+  color: var(--text-contrastOnLight-color);
+}
+.toggler__icon_contrast_onDark {
+  color: var(--text-contrastOnDark-color);
 }
 .toggler__control:before {
   content: '';

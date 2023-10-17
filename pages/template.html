@@ -8,8 +8,9 @@
       rel="stylesheet"
       href="../components/componentDetail/componentDetail.css"
     />
-    <script src="../assets/js/fixOnloadAnimations.js"></script>
     <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
+    <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>
+    <script src="../assets/js/fixOnloadAnimations.js"></script>
     <title>Component page</title>
   </head>
   <body class="page page_component">
@@ -43,7 +44,26 @@
           <a class="header__menuItem" href="">About</a>
           <a class="header__menuItem" href="">Contact</a>
         </nav>
-        <div class="header__themeToggler">[toggler]</div>
+        <label class="toggler header__themeToggler">
+          <input id="theme-changer" type="checkbox" class="toggler__input" />
+          <span class="toggler__state">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="toggler__icon"
+              fill="currentColor"
+            >
+              <use href="../../assets/images/icons.svg#sun"></use>
+            </svg>
+            <span class="toggler__control"></span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="toggler__icon toggler__icon_contrast_onDark"
+              fill="currentColor"
+            >
+              <use href="../../assets/images/icons.svg#сrescent"></use>
+            </svg>
+          </span>
+        </label>
       </div>
     </header>
     <div class="page__container layoutContainer">

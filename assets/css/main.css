@@ -13,6 +13,7 @@
 @import '../../components/burgerMenuShowButton/burgerMenuShowButton.css';
 @import '../../components/tabs/tabs.css';
 @import '../../components/formField/formField.css';
+@import '../../07-lection5/03-toggler/toggler.css';
 
 :root {
   --white: #ffffff;
@@ -43,6 +44,8 @@
   
   --text-primary-color: var(--black);
   --text-contrast-color: var(--text-primary-color);
+  --text-contrastOnLight-color: var(--grey-4);
+  --text-contrastOnDark-color: var(--grey-3);
   --text-regular-color: var(--grey-4);
   --text-pale-color: var(--grey-3);
   --text-mute-color: var(--grey-2);
@@ -71,6 +74,7 @@
   --content-bg-color: var(--black);
   --text-primary-color: var(--white);
   --text-contrast-color: var(--grey-3);
+  --text-contrastOnDark-color: var(--grey-2);
   --text-regular-color: var(--grey-3);
 }
 html,
