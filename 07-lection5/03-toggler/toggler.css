@@ -11,6 +11,10 @@
   gap: 12px;
   align-items: center;
 }
+.toggler__state_inRow {
+  justify-content: space-between;
+  width: 100%;
+}
 .toggler__input:not(:disabled) ~ .toggler__state {
   cursor: pointer;
 }
