@@ -1,0 +1,11 @@
+.form__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form__submitButton {
+  min-width: 175px;
+}
+.form__fields+.form__submitButton {
+  margin-top: 20px;
+}

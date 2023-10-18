@@ -18,6 +18,9 @@
 .formField__field {
   position: relative;
 }
+.formField__field_fullWidth {
+  width: 100%;
+}
 .formField__title:has(+ .formField__field .formField__control:disabled) {
   cursor: default;
 }
