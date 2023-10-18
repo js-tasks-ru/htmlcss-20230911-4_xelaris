@@ -19,7 +19,7 @@
   cursor: pointer;
 }
 .toggler__control {
-  border: 1px solid var(--grey-2, #dde2e5);
+  border: 1px solid var(--control-border-color, #dde2e5);
   border-radius: 14px;
   width: 52px;
   height: 28px;
@@ -28,7 +28,7 @@
   transition: all 0.5s;
 }
 .toggler__title {
-  color: var(--grey-4, #495057);
+  color:  var(--control-color, #495057);
   font-size: 16px;
   line-height: 24px;
   user-select: none;
@@ -37,7 +37,7 @@
   display: inline-block;
   width: 24px;
   height: 24px;
-  color: var(--grey-3, #acb5bd);
+  color: var(--text-pale-color, #dde2e5);
 }
 .toggler__icon_contrast_onLight {
   color: var(--text-contrastOnLight-color);
@@ -52,12 +52,12 @@
   height: 24px;
   margin: 1px;
   display: inline-block;
-  background: var(--grey-2, #dde2e5);
+  background: var(--control-border-color, #dde2e5);
   transition: all 0.5s;
 }
 .toggler__input:checked ~ .toggler__state .toggler__control {
-  border-color: var(--primary, var(--blue, #4263eb));
-  background: var(--primary, var(--blue, #4263eb));
+  border-color: var(--control-checked-color, var(--blue, #4263eb));
+  background: var(--control-checked-color, var(--blue, #4263eb));
 }
 .toggler__input:checked ~ .toggler__state .toggler__control:before {
   background: var(--white, white);
@@ -67,24 +67,24 @@
   text-decoration: underline;
 }
 .toggler__input:active ~ .toggler__state .toggler__control {
-  border-color: var(--grey-3, #acb5bd);
-  background: var(--grey-1, #f8f9fa);
+  border-color: var(--control-active-border-color, #acb5bd);
+  background: var(--control-active-bg-color, #f8f9fa);
 }
 .toggler__input:active:not(:checked)
   ~ .toggler__state
   .toggler__control:before {
-  background: var(--grey-3, #acb5bd);
+  background: var(--control-active-border-color, #acb5bd);
 }
 .toggler__input:checked:active:not(:disabled)
   ~ .toggler__state
   .toggler__control {
-  border-color: var(--primary-active, var(--blue-darker, #2342c0));
-  background: var(--primary-active, var(--blue-darker, #2342c0));
+  border-color: var(--control-checked-active-color, var(--blue-darker, #2342c0));
+  background: var(--control-checked-active-color, var(--blue-darker, #2342c0));
 }
 .toggler__input:disabled ~ .toggler__state .toggler__control {
-  border-color: var(--grey-2, #dde2e5);
-  background: var(--grey-2, #dde2e5);
+  border-color: var(--control-disabled-border-color, #dde2e5);
+  background: var(--control-disabled-color, #dde2e5);   
 }
 .toggler__input:disabled ~ .toggler__state .toggler__control:before {
-  background: var(--grey-3, #acb5bd);
+  background: var(--control-disabled-bg-color, #dde2e5);   
 }

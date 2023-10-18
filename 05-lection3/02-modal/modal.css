@@ -1,9 +1,9 @@
 .modal {
-  --title-color: #334d6e;
   background: rgba(196, 196, 196, 0.5);
   display: none;
   position: fixed;
   inset: 0;
+  z-index: 1;
 }
 .modal_opened {
   display: block;
@@ -13,21 +13,21 @@
   width: 348px;
   padding: 30px 40px 33px;
   border-radius: 8px;
-  background: var(--white, white);
+  background: var(--content-bg-color, white);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
 .modal__title {
-  color: var(--title-color);
+  color: var(--text-contrast-color, #334d6e);
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
   margin: 0;
 }
 .modal__content {
-  color: var(--grey-4, #495057);
+  color: var(--text-regular-color, #495057);
   font-size: 16px;
   line-height: 24px;
   margin: 0;
@@ -44,7 +44,8 @@
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 0;
+  font-size: 0;  
+  color: var(--text-contrast-color, #334d6e);
 }
 .modal__closeButtonIcon {
   width: 16px;

@@ -1,5 +1,5 @@
 .histogram {
-  border: 1px solid var(--border-color, #acb5bd);
+  border: 1px solid var(--content-border-color, #acb5bd);
   font-size: 16px;
   border-radius: 0.5em;
   padding: 1em 1.5em 1.5em;

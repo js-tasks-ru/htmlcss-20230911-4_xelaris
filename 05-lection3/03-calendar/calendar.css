@@ -1,8 +1,8 @@
 .calendar {
-  --calendar-grey-dark: #334d6e;
-  --calendar-grey-light: #90a0b7;
+  --calendar-grey-dark: var(--text-regular-color, #334d6e);
+  --calendar-grey-light: var(--text-pale-color, #90a0b7);
   font-size: 16px;
-  border: 1px solid var(--border-color, #acb5bd);
+  border: 1px solid var(--content-border-color, #acb5bd);
   border-radius: 0.5em;
   padding: 1.2em 1.63em 2em;
 }
