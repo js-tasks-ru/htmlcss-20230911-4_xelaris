@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="../components/componentDetail/componentDetail.css"
+    />
+    <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
+    <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>
+    <script src="../assets/js/fixOnloadAnimations.js"></script>
+    <title>Histogram component</title>
+  </head>
+  <body class="page page_component">
+    <header class="header header_compact page__header">
+      <div class="header__panel layoutContainer">
+        <button
+          id="burger-menu-open"
+          class="burgerMenuShowButton header__burgerMenuButton"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="burgerMenuShowButton__icon"
+            fill="currentColor"
+          >
+            <use href="../../assets/images/icons.svg#burger"></use>
+          </svg>
+        </button>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="header__logo"
+          fill="currentColor"
+        >
+          <rect y="1" width="30" height="30" />
+          <rect x="38" width="32" height="32" rx="16" />
+          <path d="M78 0L110 32H78V0Z" />
+        </svg>
+        <nav class="header__menu">
+          <a class="header__menuItem header__menuItem_active" href=""
+            >Components</a
+          >
+          <a class="header__menuItem" href="">About</a>
+          <a class="header__menuItem" href="">Contact</a>
+        </nav>
+        <label class="toggler header__themeToggler">
+          <input id="theme-changer" type="checkbox" class="toggler__input" />
+          <span class="toggler__state">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="toggler__icon toggler__icon_contrast_onLight"
+              fill="currentColor"
+            >
+              <use href="../../assets/images/icons.svg#sun"></use>
+            </svg>
+            <span class="toggler__control"></span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="toggler__icon toggler__icon_contrast_onDark"
+              fill="currentColor"
+            >
+              <use href="../../assets/images/icons.svg#сrescent"></use>
+            </svg>
+          </span>
+        </label>
+      </div>
+    </header>
+    <div class="page__container layoutContainer">
+      <div id="burger-menu" class="burgerMenu burgerMenu_onDesktopAvailiable burgerMenu_forHeaderTransparent">
+        <button id="burger-menu-close" class="burgerMenu__closeButton">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="burgerMenu__closeButtonIcon"
+            fill="currentColor"
+          >
+            <use href="../../assets/images/icons.svg#cross"></use>
+          </svg>
+        </button>
+        <div class="burgerMenu__content">
+          <div class="burgerMenu__themeTogglerBox">
+            <div class="burgerMenu__contentGroup">
+              <div class="burgerMenu__themeToggler">
+                <label for="theme-changer-alt" class="burgerMenu__themeTogglerLabel">
+                  Dark mode
+                </label>
+                <label class="toggler">
+                  <input id="theme-changer-alt" type="checkbox" class="toggler__input" />
+                  <span class="toggler__state">
+                    <span class="toggler__control"></span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <aside class="menu burgerMenu__menu">
+            <section class="burgerMenu__contentGroup">
+              <div class="menu__group">
+                <h4 class="menu__title">Elements</h4>
+                <nav class="menu__list">
+                  <a class="menu__item" href="">Avatar</a>
+                  <a
+                    class="menu__item menu__item_active"
+                    href=""
+                  >
+                    Custom form elements
+                  </a>
+                  <a class="menu__item" href="">Button</a>
+                  <a class="menu__item" href="">Avatar</a>
+                  <a class="menu__item" href=""
+                    >Custom form elements</a
+                  >
+                  <a class="menu__item" href="">Button</a>
+                </nav>
+              </div>
+            </section>
+            <section class="burgerMenu__contentGroup">
+              <div class="menu__group">
+                <h4 class="menu__title">Containers</h4>
+                <nav class="menu__list">
+                  <a class="menu__item" href="">Avatar</a>
+                  <a class="menu__item" href=""
+                    >Custom form elements</a
+                  >
+                  <a class="menu__item" href="">Button</a>
+                  <a class="menu__item" href="">Avatar</a>
+                  <a class="menu__item" href=""
+                    >Custom form elements</a
+                  >
+                  <a class="menu__item" href="">Button</a>
+                </nav>
+              </div>
+            </section>
+            <section class="burgerMenu__contentGroup">
+              <div class="menu__group">
+                <h4 class="menu__title">Templates</h4>
+                <nav class="menu__list">
+                  <a class="menu__item" href="">Avatar</a>
+                  <a class="menu__item" href=""
+                    >Custom form elements</a
+                  >
+                  <a class="menu__item" href="">Button</a>
+                  <a class="menu__item" href="">Avatar</a>
+                  <a class="menu__item" href=""
+                    >Custom form elements</a
+                  >
+                  <a class="menu__item" href="">Button</a>
+                </nav>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </div>
+      <main class="page__content">
+        <div class="componentDetail">
+          <h1 class="page__title">Histogram component</h1>
+          <div class="componentDetail__component">
+            <div class="histogram">
+              <div class="histogram__info">
+                <div class="histogram__score">
+                  <div class="histogram__scoreCaption">Total orders</div>
+                  <div class="histogram__scoreValue">50254</div>
+                </div>
+                <a href="" class="histogram__showAll">View all</a>
+              </div>
+              <div class="histogram__columns">
+                <div class="histogram__column" style="height: 100%"></div>
+                <div class="histogram__column" style="height: 50%"></div>
+                <div class="histogram__column" style="height: 30%"></div>
+                <div class="histogram__column" style="height: 90%"></div>
+                <div class="histogram__column" style="height: 80%"></div>
+                <div class="histogram__column" style="height: 20%"></div>
+                <div class="histogram__column" style="height: 35%"></div>
+                <div class="histogram__column" style="height: 55%"></div>
+                <div class="histogram__column" style="height: 23%"></div>
+                <div class="histogram__column" style="height: 50%"></div>
+                <div class="histogram__column" style="height: 30%"></div>
+                <div class="histogram__column" style="height: 98%"></div>
+                <div class="histogram__column" style="height: 80%"></div>
+                <div class="histogram__column" style="height: 20%"></div>
+                <div class="histogram__column" style="height: 35%"></div>
+                <div class="histogram__column" style="height: 100%"></div>
+                <div class="histogram__column" style="height: 50%"></div>
+                <div class="histogram__column" style="height: 30%"></div>
+                <div class="histogram__column" style="height: 100%"></div>
+                <div class="histogram__column" style="height: 80%"></div>
+                <div class="histogram__column" style="height: 20%"></div>
+                <div class="histogram__column" style="height: 35%"></div>
+                <div class="histogram__column" style="height: 55%"></div>
+                <div class="histogram__column" style="height: 23%"></div>
+                <div class="histogram__column" style="height: 20%"></div>
+                <div class="histogram__column" style="height: 35%"></div>
+                <div class="histogram__column" style="height: 55%"></div>
+                <div class="histogram__column" style="height: 23%"></div>
+                <div class="histogram__column" style="height: 50%"></div>
+                <div class="histogram__column" style="height: 30%"></div>
+                <div class="histogram__column" style="height: 95%"></div>
+                <div class="histogram__column" style="height: 80%"></div>
+                <div class="histogram__column" style="height: 20%"></div>
+                <div class="histogram__column" style="height: 35%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="tabs componentDetail__tabs">
+            <input
+              class="tabs__tabControl tabs__tabControl_tabNum_1"
+              type="radio"
+              id="#html-tab"
+              name="tabs"
+              checked="checked"
+            />
+            <input
+              class="tabs__tabControl tabs__tabControl_tabNum_2"
+              type="radio"
+              id="#css-tab"
+              name="tabs"
+            />
+            <div class="tabs__nav">
+              <label class="tabs__tab" for="#html-tab">
+                <span class="tabs__tabTitle tabs__tabTitle_tabNum_1"
+                  >HTML</span
+                ></label
+              >
+              <label class="tabs__tab" for="#css-tab"
+                ><span class="tabs__tabTitle tabs__tabTitle_tabNum_2"
+                  >CSS</span
+                ></label
+              >
+            </div>
+            <div class="tabs__content tabs__content_tabNum_1">
+              <div class="componentDetail__tabContent">
+                html code here
+              </div>              
+            </div>
+            <div class="tabs__content tabs__content_tabNum_2">
+              <div class="componentDetail__tabContent">
+                css code here
+              </div>              
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="footer footer_compact page__footer">
+      <div class="layoutContainer">
+        <h5 class="footer__title">Reusable component library</h5>
+      </div>
+    </footer>
+  </body>
+</html>
