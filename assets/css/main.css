@@ -9,8 +9,10 @@
 @import '../../components/previewCard/previewCard.css';
 @import '../../components/menu/menu.css';
 @import '../../03-lection1/01-button/button.css';
-@import '../../components/formField/formField.css';
+@import '../../09-lection7/01-burger-menu/burger-menu.css';
+@import '../../components/burgerMenuShowButton/burgerMenuShowButton.css';
 @import '../../components/tabs/tabs.css';
+@import '../../components/formField/formField.css';
 
 :root {
   --white: #ffffff;
@@ -51,6 +53,12 @@ body {
   font-style: normal;
   color: var(--black, black);
 }
+body:has(.burgerMenu[data-open]) {
+  overflow: hidden;
+}
+body:has(.burgerMenu[data-open]) .burgerMenuShowButton {
+  opacity: 0;
+}  
 .preload ._noAnimateOnload {
   transition: none !important;
   animation-duration: 0s !important;

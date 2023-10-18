@@ -14,6 +14,12 @@
   display: flex;
   gap: 36px;
   align-items: center;
+  justify-content: space-between;
+}
+.header__burgerMenuButton {
+  position: absolute;
+  top: 16px;
+  left: 16px;
 }
 .header__logo {
   width: 110px;
@@ -51,21 +57,27 @@
     padding-bottom: 24px;
     gap: 56px;
   }
+  .header__burgerMenuButton {
+    top: 24px;
+  }
   .header__logo {
-    margin: 0;
-    flex: 1 0 auto;
+    margin: 0 0 0 49px;
   }
   .header__menu {
     display: flex;
-  }
-  .header__themeToggler {
-    display: block;
   }
 }
 @media screen and (min-width: 768px) {
   .header {
     border-bottom-width: 2px;
   }
+  .header__logo {
+    margin: 0;
+    flex: 1 0 auto;
+  }  
+  .header__themeToggler {
+    display: block;
+  }  
 }
 @media screen and (min-width: 992px) {
   .header:not(.header_compact) {

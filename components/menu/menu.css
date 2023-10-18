@@ -1,5 +1,5 @@
 .menu {
-  display: none;
+  display: grid;
   grid-auto-flow: row;
   row-gap: 32px;
   align-content: start;
@@ -29,8 +29,18 @@
 .menu__item:visited:not(.menu__item_active, :hover) {
   color: var(--black, black);
 }
-@media screen and (min-width: 768px) {
-  .menu {
-    display: grid;
+@media screen and (max-width: 768px) {
+  /* .menu__group {
+    padding: 24px 0;
+  } */
+  .menu__title {
+    color: var(--grey-3, #acb5bd);
+  }
+  .menu__list {
+    row-gap: 16px;
+  }
+  .menu__item {
+    font-size: 16px;
+    line-height: 24px;
   }
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./components/previewCards/previewCards.css" />
+    <script defer src="./09-lection7/01-burger-menu/burger-menu.js"></script>
     <script src="./assets/js/fixOnloadAnimations.js"></script>
     <title>Reusable component library</title>
   </head>
@@ -12,6 +13,18 @@
     <header class="header page__header">
       <div class="layoutContainer">
         <div class="header__panel">
+          <button
+            id="burger-menu-open"
+            class="burgerMenuShowButton header__burgerMenuButton"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="burgerMenuShowButton__icon"
+              fill="currentColor"
+            >
+              <use href="../../assets/images/icons.svg#burger"></use>
+            </svg>
+          </button>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="header__logo"
@@ -33,6 +46,80 @@
         <h1 class="header__title">Reusable component library</h1>
       </div>
     </header>
+    <div id="burger-menu" class="burgerMenu burgerMenu_forHeaderTransparent burgerMenu_noTopSeparator">
+      <button id="burger-menu-close" class="burgerMenu__closeButton">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="burgerMenu__closeButtonIcon"
+          fill="currentColor"
+        >
+          <use href="../../assets/images/icons.svg#cross"></use>
+        </svg>
+      </button>
+      <div class="burgerMenu__content">
+        <div class="burgerMenu__themeToggler">
+          <div class="burgerMenu__contentGroup">
+            [theme toggler]
+          </div>
+        </div>
+        <aside class="menu burgerMenu__menu">
+          <section class="burgerMenu__contentGroup">
+            <div class="menu__group">
+              <h4 class="menu__title">Elements</h4>
+              <nav class="menu__list">
+                <a class="menu__item" href="">Avatar</a>
+                <a
+                  class="menu__item menu__item_active"
+                  href=""
+                >
+                  Custom form elements
+                </a>
+                <a class="menu__item" href="">Button</a>
+                <a class="menu__item" href="">Avatar</a>
+                <a class="menu__item" href=""
+                  >Custom form elements</a
+                >
+                <a class="menu__item" href="">Button</a>
+              </nav>
+            </div>
+          </section>
+          <section class="burgerMenu__contentGroup">
+            <div class="menu__group">
+              <h4 class="menu__title">Containers</h4>
+              <nav class="menu__list">
+                <a class="menu__item" href="">Avatar</a>
+                <a class="menu__item" href=""
+                  >Custom form elements</a
+                >
+                <a class="menu__item" href="">Button</a>
+                <a class="menu__item" href="">Avatar</a>
+                <a class="menu__item" href=""
+                  >Custom form elements</a
+                >
+                <a class="menu__item" href="">Button</a>
+              </nav>
+            </div>
+          </section>
+          <section class="burgerMenu__contentGroup">
+            <div class="menu__group">
+              <h4 class="menu__title">Templates</h4>
+              <nav class="menu__list">
+                <a class="menu__item" href="">Avatar</a>
+                <a class="menu__item" href=""
+                  >Custom form elements</a
+                >
+                <a class="menu__item" href="">Button</a>
+                <a class="menu__item" href="">Avatar</a>
+                <a class="menu__item" href=""
+                  >Custom form elements</a
+                >
+                <a class="menu__item" href="">Button</a>
+              </nav>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </div>    
     <main class="page__content previewCards">
       <div class="layoutContainer">
         <div class="tabs previewCards__tabs">
