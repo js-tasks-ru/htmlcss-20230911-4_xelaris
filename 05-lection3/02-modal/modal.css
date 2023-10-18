@@ -9,6 +9,9 @@
   display: block;
   position: absolute;
 }
+.modal_noViel {
+  background: transparent;
+}
 .modal__window {
   width: 348px;
   padding: 30px 40px 33px;

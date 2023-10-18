@@ -1,5 +1,6 @@
 .histogram {
   border: 1px solid var(--content-border-color, #acb5bd);
+  color: var(--text-contrast-color, black);
   font-size: 16px;
   border-radius: 0.5em;
   padding: 1em 1.5em 1.5em;
@@ -21,6 +22,7 @@
 }
 .histogram_compact .histogram__scoreValue {
   font-weight: 600;
+  color: var(--text-primary-color, black);
 }
 .histogram__showAll {
   color: var(--primary, #374fc7);
