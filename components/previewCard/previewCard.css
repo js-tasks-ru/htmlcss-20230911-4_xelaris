@@ -1,7 +1,7 @@
 .previewCard {
   padding: 8px;
   border-radius: 8px;
-  background: var(--white, white);
+  background: var(--content-bg-color, white);
   box-shadow: 0px 2px 4px 0px rgba(33, 36, 41, 0.05);
   box-sizing: border-box;
   text-decoration: none;
@@ -15,7 +15,7 @@
   align-items: center;
   padding: 8px;
   margin: -8px -8px 0;
-  border-bottom: 1px solid var(--grey-2, #dde2e5);
+  border-bottom: 1px solid var(--text-mute-color, #dde2e5);
   box-sizing: border-box;
 }
 .previewCard__placeholder_noPaddings {
@@ -45,11 +45,12 @@
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
+  color: var(--text-contrast-color, black);
 }
 .previewCard__desc {
   margin: 4px 0;
   text-align: center;
-  color: var(--grey-3, #acb5bd);
+  color: var(--text-pale-color, #acb5bd);
   font-size: 14px;
   font-family: Roboto;
   line-height: normal;
