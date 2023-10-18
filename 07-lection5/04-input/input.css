@@ -9,6 +9,12 @@
   box-sizing: border-box;
   transition: border-color 0.3s;
 }
+.textInput_compact {
+  padding: 10px 48px 8px 24px;
+}
+.textInput_fullWidth {
+  width: 100%;
+}
 .textInput::placeholder {
   color: var(--grey-2, #dde2e5);
 }
