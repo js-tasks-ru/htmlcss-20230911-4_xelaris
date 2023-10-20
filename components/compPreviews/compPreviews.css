@@ -14,6 +14,10 @@
 .compPreviews__previewFormField {
   gap: 14px;
 }
+.compPreviews__previewAccordion {
+  font-size: 9px;
+  width: 100%;
+}
 .compPreviews__previewAvatar {
   width: 116px;
   height: 116px;
@@ -42,6 +46,9 @@
   margin: 64px auto 0;
 }
 @media screen and (min-width: 576px) {
+  .compPreviews__previewAccordion {
+    font-size: 11px;
+  }
   .compPreviews__previewCalendar {
     font-size: 10px;
     width: 202px;
@@ -61,6 +68,9 @@
   .compPreviews__tabs {
     margin-top: -63px;
   }
+  .compPreviews__previewAccordion {
+    font-size: 12px;
+  }
   .compPreviews__previewAvatar {
     width: 160px;
     height: 160px;
@@ -78,6 +88,7 @@
   }
 }
 @media screen and (min-width: 992px) {
+  
   .compPreviews__tabContent {
     padding-top: 32px;
   }
@@ -96,5 +107,8 @@
 @media screen and (min-width: 1175px) {
   .compPreviews__tabContent {
     padding-top: 68px;
+  }
+  .compPreviews__previewAccordion {
+    font-size: 14px;
   }
 }
