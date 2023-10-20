@@ -8,12 +8,15 @@
       rel="stylesheet"
       href="../components/componentDetail/componentDetail.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-light.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
     <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>
     <script src="../assets/js/fixOnloadAnimations.js"></script>
+    <script defer>hljs.highlightAll()</script>
     <title>Button component</title>
   </head>
-  <body class="page page_component">
+  <body class="page page_component preload">
     <header class="header header_compact page__header">
       <div class="header__panel layoutContainer">
         <button
@@ -155,19 +158,23 @@
       <main class="page__content">
         <div class="componentDetail">
           <h1 class="page__title">Button component</h1>
-          <div class="componentDetail__component">
-            <button class="button button_var_primary">Primary</button>
-            <button class="button button_var_primary" disabled="disabled">
-              Primary disabled
-            </button>
-            <button class="button button_var_secondary">Secondary</button>
-            <button class="button button_var_secondary" disabled="disabled">
-              Secondary disabled
-            </button>
-            <button class="button button_var_alternate">Alternate</button>
-            <button class="button button_var_alternate" disabled="disabled">
-              Alternate disabled
-            </button>
+          <div class="componentDetail__component componentDetail__component_columns">
+            <div class="componentDetail__componentColumn">
+              <button class="button button_var_primary componentDetail__button">Primary</button>
+              <button class="button button_var_secondary componentDetail__button">Secondary</button>
+              <button class="button button_var_alternate componentDetail__button">Alternate</button>
+            </div>
+            <div class="componentDetail__componentColumn">
+              <button class="button button_var_primary componentDetail__button" disabled="disabled">
+                Primary disabled
+              </button>
+              <button class="button button_var_secondary componentDetail__button" disabled="disabled">
+                Secondary disabled
+              </button>
+              <button class="button button_var_alternate componentDetail__button" disabled="disabled">
+                Alternate disabled
+              </button>
+            </div>
           </div>
           <div class="tabs componentDetail__tabs">
             <input
@@ -198,18 +205,21 @@
             <div class="tabs__content tabs__content_tabNum_1">
               <div class="componentDetail__tabContent">
                 <pre class="sourceCode sourceCode_syntax_html">
+                  <code class="sourceCode__inner language-html">
 &lt;button class=&quot;button button_var_primary&quot;&gt;Primary&lt;/button&gt;
 &lt;button class=&quot;button button_var_primary&quot; disabled=&quot;disabled&quot;&gt;Primary disabled&lt;/button&gt;
 &lt;button class=&quot;button button_var_secondary&quot;&gt;Secondary&lt;/button&gt;
 &lt;button class=&quot;button button_var_secondary&quot; disabled=&quot;disabled&quot;&gt;Secondary disabled&lt;/button&gt;
 &lt;button class=&quot;button button_var_alternate&quot;&gt;Alternate&lt;/button&gt;
 &lt;button class=&quot;button button_var_alternate&quot; disabled=&quot;disabled&quot;&gt;Alternate disabled&lt;/button&gt;
+                  </code>
                 </pre>
               </div>              
             </div>
             <div class="tabs__content tabs__content_tabNum_2">
               <div class="componentDetail__tabContent">
                 <pre class="sourceCode sourceCode_syntax_css">
+                  <code class="sourceCode__inner language-css">
 .button {
   height: 3em;
   line-height: normal;
@@ -262,7 +272,8 @@
 .button:disabled {
   opacity: 0.5;
   pointer-events: none;
-}                      
+}
+                  </code>                      
                 </pre>
               </div>              
             </div>

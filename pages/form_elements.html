@@ -8,12 +8,15 @@
       rel="stylesheet"
       href="../components/componentDetail/componentDetail.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-light.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
     <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>
     <script src="../assets/js/fixOnloadAnimations.js"></script>
+    <script defer>hljs.highlightAll()</script>
     <title>Custom form elements</title>
   </head>
-  <body class="page page_component">
+  <body class="page page_component preload">
     <header class="header header_compact page__header">
       <div class="header__panel layoutContainer">
         <button
@@ -155,182 +158,194 @@
       <main class="page__content">
         <div class="componentDetail">
           <h1 class="page__title">Custom form elements</h1>
-          <div class="componentDetail__component">
-            <form action="" class="form">
-              <div class="form__fields">
-                <div class="formField form__field">
-                  <label class="checkbox">
-                    <input type="checkbox" class="checkbox__input" />
-                    <span class="checkbox__state">
-                      <span class="checkbox__control _noAnimateOnload">
-                        <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg">
-                          <use href="../../assets/images/icons.svg#check"></use>
-                        </svg>
-                      </span>
-                      <span class="checkbox__title">Default</span>
+          <form class="componentDetail__component componentDetail__component_columns form">
+            <div class="componentDetail__componentColumn componentDetail__componentColumn_fullWidth">
+              <div class="formField form__field">
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__input" />
+                  <span class="checkbox__state">
+                    <span class="checkbox__control _noAnimateOnload">
+                      <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg">
+                        <use href="../../assets/images/icons.svg#check"></use>
+                      </svg>
                     </span>
-                  </label>
-                </div>                
-                <div class="formField form__field">
-                  <label class="checkbox">
-                    <input type="checkbox" class="checkbox__input" checked="checked" />
-                    <span class="checkbox__state">
-                      <span class="checkbox__control _noAnimateOnload">
-                        <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg">
-                          <use href="../../assets/images/icons.svg#check"></use>
-                        </svg>
-                      </span>
-                      <span class="checkbox__title">Checked</span>
+                    <span class="checkbox__title">Default</span>
+                  </span>
+                </label>
+              </div>                
+              <div class="formField form__field">
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__input" checked="checked" />
+                  <span class="checkbox__state">
+                    <span class="checkbox__control _noAnimateOnload">
+                      <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg">
+                        <use href="../../assets/images/icons.svg#check"></use>
+                      </svg>
                     </span>
-                  </label>
-                </div>                
-                <div class="formField form__field">
-                  <label class="checkbox">
-                    <input type="checkbox" class="checkbox__input" disabled="disabled" />
-                    <span class="checkbox__state">
-                      <span class="checkbox__control _noAnimateOnload">
-                        <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg">
-                          <use href="../../assets/images/icons.svg#check"></use>
-                        </svg>
-                      </span>
-                      <span class="checkbox__title">Disabled</span>
+                    <span class="checkbox__title">Checked</span>
+                  </span>
+                </label>
+              </div>                
+              <div class="formField form__field">
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__input" disabled="disabled" />
+                  <span class="checkbox__state">
+                    <span class="checkbox__control _noAnimateOnload">
+                      <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg">
+                        <use href="../../assets/images/icons.svg#check"></use>
+                      </svg>
                     </span>
-                  </label>
-                </div>
-                <div class="formField form__field">
-                  <label class="radio">
-                    <input type="radio" class="radio__input" name="radio" />
-                    <span class="radio__state">
-                      <span class="radio__control"></span>
-                      <span class="radio__title">Default</span>
-                    </span>
-                  </label>
-                </div>                
-                <div class="formField form__field">
-                  <label class="radio">
-                    <input type="radio" class="radio__input" name="radio" checked="checked" />
-                    <span class="radio__state">
-                      <span class="radio__control"></span>
-                      <span class="radio__title">Selected</span>
-                    </span>
-                  </label>
-                </div>                
-                <div class="formField form__field">
-                  <label class="radio">
-                    <input type="radio" class="radio__input" disabled="disabled" name="radio" />
-                    <span class="radio__state">
-                      <span class="radio__control"></span>
-                      <span class="radio__title">Disabled</span>
-                    </span>
-                  </label>
-                </div>                
-                <div class="formField form__field">
-                  <label class="toggler">
-                    <input type="checkbox" class="toggler__input" />
-                    <span class="toggler__state">
-                      <span class="toggler__control"></span>
-                      <span class="toggler__title">Default</span>
-                    </span>
-                  </label>
-                </div>
-                <div class="formField form__field">
-                  <label class="toggler">
-                    <input type="checkbox" class="toggler__input" checked="checked" />
-                    <span class="toggler__state">
-                      <span class="toggler__control"></span>
-                      <span class="toggler__title">Default</span>
-                    </span>
-                  </label>
-                </div>
-                <div class="formField form__field">
-                  <label class="toggler">
-                    <input
-                      type="checkbox"
-                      class="toggler__input"
-                      checked="checked"
-                      disabled="disabled"
-                    />
-                    <span class="toggler__state">
-                      <span class="toggler__control"></span>
-                      <span class="toggler__title">Disabled</span>
-                    </span>
-                  </label>
-                </div>
-                <div class="formField form__field">
-                  <label for="default_input" class="formField__title">Label</label>
-                  <div class="formField__field">
-                    <input
-                      id="default_input"
-                      type="text"
-                      class="textInput formField__control formField__control_type_textInput"
-                      placeholder="Placeholder"
-                    />
-                    <svg class="formField__icon formField__icon_error" xmlns="http://www.w3.org/2000/svg">
-                      <use href="../../assets/images/icons.svg#warning"></use>
-                    </svg>
-                    <svg class="formField__icon formField__icon_success" xmlns="http://www.w3.org/2000/svg">
-                      <use href="../../assets/images/icons.svg#checkInCircle"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="formField formField_validity_success form__field">
-                  <label for="success_input" class="formField__title">Success</label>
-                  <div class="formField__field">
-                    <input
-                      id="success_input"
-                      type="text"
-                      class="textInput formField__control formField__control_type_textInput"
-                      placeholder="Placeholder"
-                      value="Value" 
-                    />
-                    <svg class="formField__icon formField__icon_error" xmlns="http://www.w3.org/2000/svg">
-                      <use href="../../assets/images/icons.svg#warning"></use>
-                    </svg>
-                    <svg class="formField__icon formField__icon_success" xmlns="http://www.w3.org/2000/svg">
-                      <use href="../../assets/images/icons.svg#checkInCircle"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="formField formField_validity_error form__field">
-                  <label for="error_input" class="formField__title">Error</label>
-                  <div class="formField__field">
-                    <input
-                      id="error_input"
-                      type="text"
-                      class="textInput formField__control formField__control_type_textInput"
-                      placeholder="Placeholder"
-                      value="Value" 
-                    />
-                    <svg class="formField__icon formField__icon_error" xmlns="http://www.w3.org/2000/svg">
-                      <use href="../../assets/images/icons.svg#warning"></use>
-                    </svg>
-                    <svg class="formField__icon formField__icon_success" xmlns="http://www.w3.org/2000/svg">
-                      <use href="../../assets/images/icons.svg#checkInCircle"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="formField form__field">
-                  <label for="disabled_input" class="formField__title">Disabled</label>
-                  <div class="formField__field">
-                    <input
-                      id="disabled_input"
-                      type="text"
-                      class="textInput formField__control formField__control_type_textInput"
-                      placeholder="Placeholder"
-                      disabled="disabled"
-                      value="Value" 
-                    />
-                    <svg class="formField__icon formField__icon_error" xmlns="http://www.w3.org/2000/svg">
-                      <use href="../../assets/images/icons.svg#warning"></use>
-                    </svg>
-                    <svg class="formField__icon formField__icon_success" xmlns="http://www.w3.org/2000/svg">
-                      <use href="../../assets/images/icons.svg#checkInCircle"></use>
-                    </svg>
-                  </div>
-                </div>
+                    <span class="checkbox__title">Disabled</span>
+                  </span>
+                </label>
               </div>
-            </form>
-          </div>
+            </div>
+            <div class="componentDetail__componentColumn componentDetail__componentColumn_fullWidth">
+              <div class="formField form__field">
+                <label class="radio">
+                  <input type="radio" class="radio__input" name="radio" />
+                  <span class="radio__state">
+                    <span class="radio__control"></span>
+                    <span class="radio__title">Default</span>
+                  </span>
+                </label>
+              </div>                
+              <div class="formField form__field">
+                <label class="radio">
+                  <input type="radio" class="radio__input" name="radio" checked="checked" />
+                  <span class="radio__state">
+                    <span class="radio__control"></span>
+                    <span class="radio__title">Selected</span>
+                  </span>
+                </label>
+              </div>                
+              <div class="formField form__field">
+                <label class="radio">
+                  <input type="radio" class="radio__input" disabled="disabled" name="radio" />
+                  <span class="radio__state">
+                    <span class="radio__control"></span>
+                    <span class="radio__title">Disabled</span>
+                  </span>
+                </label>
+              </div>  
+            </div>
+            <div class="componentDetail__componentColumn componentDetail__componentColumn_fullWidth">
+              <div class="formField form__field">
+                <label class="toggler">
+                  <input type="checkbox" class="toggler__input" />
+                  <span class="toggler__state">
+                    <span class="toggler__control"></span>
+                    <span class="toggler__title">Off</span>
+                  </span>
+                </label>
+              </div>
+              <div class="formField form__field">
+                <label class="toggler">
+                  <input type="checkbox" class="toggler__input" checked="checked" />
+                  <span class="toggler__state">
+                    <span class="toggler__control"></span>
+                    <span class="toggler__title">On</span>
+                  </span>
+                </label>
+              </div>
+              <div class="formField form__field">
+                <label class="toggler">
+                  <input
+                    type="checkbox"
+                    class="toggler__input"
+                    checked="checked"
+                    disabled="disabled"
+                  />
+                  <span class="toggler__state">
+                    <span class="toggler__control"></span>
+                    <span class="toggler__title">Disabled</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </form>
+          <form class="componentDetail__component componentDetail__component_columns form">
+            <div class="componentDetail__componentColumn componentDetail__componentColumn_fullWidth">
+              <div class="formField form__field">
+                <label for="default_input" class="formField__title">Label</label>
+                <div class="formField__field formField__field_fullWidth">
+                  <input
+                    id="default_input"
+                    type="text"
+                    class="textInput textInput_fullWidth formField__control formField__control_type_textInput"
+                    placeholder="Placeholder"
+                  />                  
+                  <svg class="formField__icon formField__icon_error" xmlns="http://www.w3.org/2000/svg">
+                    <use href="../../assets/images/icons.svg#warning"></use>
+                  </svg>
+                  <svg class="formField__icon formField__icon_success" xmlns="http://www.w3.org/2000/svg">
+                    <use href="../../assets/images/icons.svg#checkInCircle"></use>
+                  </svg>
+                </div>
+                <div class="formField__status">Some status</div>
+              </div>
+              <div class="formField formField_disabled form__field">
+                <label for="disabled_input" class="formField__title">Disabled</label>
+                <div class="formField__field formField__field_fullWidth">
+                  <input
+                    id="disabled_input"
+                    type="text"
+                    class="textInput textInput_fullWidth formField__control formField__control_type_textInput"
+                    placeholder="Placeholder"
+                    disabled="disabled"
+                    value="Value" 
+                  />
+                  <svg class="formField__icon formField__icon_error" xmlns="http://www.w3.org/2000/svg">
+                    <use href="../../assets/images/icons.svg#warning"></use>
+                  </svg>
+                  <svg class="formField__icon formField__icon_success" xmlns="http://www.w3.org/2000/svg">
+                    <use href="../../assets/images/icons.svg#checkInCircle"></use>
+                  </svg>
+                </div>
+                <div class="formField__status">Some status</div>
+              </div>
+            </div>
+            <div class="componentDetail__componentColumn componentDetail__componentColumn_fullWidth">
+              <div class="formField formField_validity_success form__field">
+                <label for="success_input" class="formField__title">Success</label>
+                <div class="formField__field formField__field_fullWidth">
+                  <input
+                    id="success_input"
+                    type="text"
+                    class="textInput textInput_fullWidth formField__control formField__control_type_textInput"
+                    placeholder="Placeholder"
+                    value="Value" 
+                  />
+                  <svg class="formField__icon formField__icon_error" xmlns="http://www.w3.org/2000/svg">
+                    <use href="../../assets/images/icons.svg#warning"></use>
+                  </svg>
+                  <svg class="formField__icon formField__icon_success" xmlns="http://www.w3.org/2000/svg">
+                    <use href="../../assets/images/icons.svg#checkInCircle"></use>
+                  </svg>
+                </div>
+                <div class="formField__status">Some status</div>
+              </div>
+              <div class="formField formField_validity_error form__field">
+                <label for="error_input" class="formField__title">Error</label>
+                <div class="formField__field formField__field_fullWidth">
+                  <input
+                    id="error_input"
+                    type="text"
+                    class="textInput textInput_fullWidth formField__control formField__control_type_textInput"
+                    placeholder="Placeholder"
+                    value="Value" 
+                  />
+                  <svg class="formField__icon formField__icon_error" xmlns="http://www.w3.org/2000/svg">
+                    <use href="../../assets/images/icons.svg#warning"></use>
+                  </svg>
+                  <svg class="formField__icon formField__icon_success" xmlns="http://www.w3.org/2000/svg">
+                    <use href="../../assets/images/icons.svg#checkInCircle"></use>
+                  </svg>
+                </div>
+                <div class="formField__status">Some status</div>
+              </div>
+            </div>           
+          </form>
           <div class="tabs componentDetail__tabs">
             <input
               class="tabs__tabControl tabs__tabControl_tabNum_1"
@@ -360,6 +375,7 @@
             <div class="tabs__content tabs__content_tabNum_1">
               <div class="componentDetail__tabContent">
                 <pre class="sourceCode sourceCode_syntax_html">
+                  <code class="sourceCode__inner language-html">
 &lt;!---------- checkbox ----------&gt;                  
 &lt;div class=&quot;formField form__field&quot;&gt;
   &lt;label class=&quot;checkbox&quot;&gt;
@@ -534,12 +550,14 @@
     &lt;/svg&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+                  </code>
                 </pre>
               </div>              
             </div>
             <div class="tabs__content tabs__content_tabNum_2">
               <div class="componentDetail__tabContent">
                 <pre class="sourceCode sourceCode_syntax_css">
+                  <code class="sourceCode__inner language-css">
 /* ---------- form field ---------- */                  
 .formField {
   display: flex;
@@ -862,7 +880,8 @@
 }
 .textInput:focus {
   border-color: var(--control-checked-color, var(--blue, #4263eb));
-}                  
+}
+                  </code>                  
                 </pre>
               </div>              
             </div>

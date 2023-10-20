@@ -1,6 +1,13 @@
 .sourceCode {
   width: 100%;
   overflow: auto;
-  font-family: monospace;
   white-space: pre-wrap;
+  box-sizing: border-box;
+  margin: 0;
+}
+.sourceCode__inner {
+  padding: 0 1em;
+}
+.sourceCode code.sourceCode__inner {
+  padding: 0;
 }

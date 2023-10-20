@@ -8,12 +8,15 @@
       rel="stylesheet"
       href="../components/componentDetail/componentDetail.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-light.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
     <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>
     <script src="../assets/js/fixOnloadAnimations.js"></script>
+    <script defer>hljs.highlightAll()</script>
     <title>Histogram component</title>
   </head>
-  <body class="page page_component">
+  <body class="page page_component preload">
     <header class="header header_compact page__header">
       <div class="header__panel layoutContainer">
         <button
@@ -156,7 +159,7 @@
         <div class="componentDetail">
           <h1 class="page__title">Histogram component</h1>
           <div class="componentDetail__component">
-            <div class="histogram">
+            <div class="histogram componentDetail__histogram">
               <div class="histogram__info">
                 <div class="histogram__score">
                   <div class="histogram__scoreCaption">Total orders</div>
@@ -231,6 +234,7 @@
             <div class="tabs__content tabs__content_tabNum_1">
               <div class="componentDetail__tabContent">
                 <pre class="sourceCode sourceCode_syntax_html">
+                  <code class="sourceCode__inner language-html">
 &lt;div class=&quot;histogram&quot;&gt;
   &lt;div class=&quot;histogram__info&quot;&gt;
     &lt;div class=&quot;histogram__score&quot;&gt;
@@ -276,12 +280,14 @@
     &lt;div class=&quot;histogram__column&quot; style=&quot;height: 35%&quot;&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+                  </code>
                 </pre>
               </div>              
             </div>
             <div class="tabs__content tabs__content_tabNum_2">
               <div class="componentDetail__tabContent">
                 <pre class="sourceCode sourceCode_syntax_css">
+                  <code class="sourceCode__inner language-css">
 .histogram {
   border: 1px solid var(--content-border-color, #acb5bd);
   color: var(--text-contrast-color, black);
@@ -341,7 +347,8 @@
   to {
     transform: scaleY(1);
   }
-}                  
+}
+                  </code>                  
                 </pre>
               </div>              
             </div>

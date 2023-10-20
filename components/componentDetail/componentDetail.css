@@ -1,10 +1,11 @@
 
 .componentDetail {
   color: var(--text-contrast-color, black);
+  font-size: 16px;
 }
 .componentDetail__tabs {
-  --tabs-padding-top: 22px;
-  margin-top: 52px;
+  --tabs-padding-top: 0.38em;
+  margin-top: 2.25em;
 }
 .componentDetail__tabs .componentDetail__tabContent {
   padding-top: var(--tabs-padding-top);
@@ -19,11 +20,44 @@
   left: 0;
   margin-top: calc(-1 * var(--tabs-padding-top));
 }
+.componentDetail__component + .componentDetail__component {
+  margin-top: 1em;
+}
+.componentDetail__component_columns {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+}
+.componentDetail__componentColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.componentDetail__componentColumn_fullWidth {
+  flex-grow: 1;
+}
+.componentDetail__button {
+  width: 200px;
+}
+.componentDetail__accordion {
+  max-width: 340px;
+}
+.componentDetail__histogram {
+  max-width: 340px;
+}
+.componentDetail__openModalButton {
+  width: 150px;
+}
+@media screen and (min-width: 576px) {
+  .componentDetail__component_columns {
+    flex-direction: row;
+  }
+}
 @media screen and (min-width: 768px) {
   .componentDetail {
-    --tabs-padding-top: 50px;
+    --tabs-padding-top: 2.13em;
   }
   .componentDetail__tabs {
-    margin-top: 64px;
+    margin-top: 3em;
   }
 }

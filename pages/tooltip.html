@@ -8,12 +8,15 @@
       rel="stylesheet"
       href="../components/componentDetail/componentDetail.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-light.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
     <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>
     <script src="../assets/js/fixOnloadAnimations.js"></script>
+    <script defer>hljs.highlightAll()</script>
     <title>Tooltip component</title>
   </head>
-  <body class="page page_component">
+  <body class="page page_component preload">
     <header class="header header_compact page__header">
       <div class="header__panel layoutContainer">
         <button
@@ -192,18 +195,21 @@
             <div class="tabs__content tabs__content_tabNum_1">
               <div class="componentDetail__tabContent">
                 <pre class="sourceCode sourceCode_syntax_html">
+                  <code class="sourceCode__inner language-html">
 &lt;span class=&quot;tooltip&quot;&gt;
   &lt;svg class=&quot;tooltip__trigger&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
     &lt;use href=&quot;../assets/images/icons.svg#question&quot;&gt;&lt;/use&gt;
   &lt;/svg&gt;
   &lt;span class=&quot;tooltip__bubble tooltip__bubble_primary tooltip__bubble_pos_right&quot;&gt;Helper text&lt;/span&gt;
 &lt;/span&gt;
+                  </code>
                 </pre>
               </div>              
             </div>
             <div class="tabs__content tabs__content_tabNum_2">
               <div class="componentDetail__tabContent">
                 <pre class="sourceCode sourceCode_syntax_css">
+                  <code class="sourceCode__inner language-css">
 .tooltip {
   display: inline-block;
   vertical-align: baseline;
@@ -297,7 +303,8 @@
   top: 50%;
   left: -6px;
   transform: translateY(-50%);
-}                                    
+}
+                  </code>                                    
                 </pre>
               </div>              
             </div>

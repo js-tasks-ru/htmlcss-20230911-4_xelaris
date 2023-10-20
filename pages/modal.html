@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="stylesheet" href="../components/componentDetail/componentDetail.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-light.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
     <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>
     <script defer src="../05-lection3/02-modal/index.js"></script>
     <script src="../assets/js/fixOnloadAnimations.js"></script>
+    <script defer>hljs.highlightAll()</script>
     <title>Modal component</title>
   </head>
-  <body class="page page_component">
+  <body class="page page_component preload">
     <header class="header header_compact page__header">
       <div class="header__panel layoutContainer">
         <button id="burger-menu-open" class="burgerMenuShowButton header__burgerMenuButton">
@@ -134,7 +137,7 @@
         <div class="componentDetail">
           <h1 class="page__title">Modal component</h1>
           <div class="componentDetail__component">
-            <button id="modal-open" class="button button_var_primary">
+            <button id="modal-open" class="button button_var_primary componentDetail__openModalButton">
               Show modal
             </button>
             <div id="modal" class="modal">
@@ -201,6 +204,7 @@
             <div class="tabs__content tabs__content_tabNum_1">
               <div class="componentDetail__tabContent">
                 <pre class="sourceCode sourceCode_syntax_html">
+                  <code class="sourceCode__inner language-html">
 &lt;button id=&quot;modal-open&quot; class=&quot;button button_var_primary&quot;&gt;
   Show modal
 &lt;/button&gt;
@@ -254,12 +258,14 @@
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+                  </code>
                 </pre>
               </div>
             </div>
             <div class="tabs__content tabs__content_tabNum_2">
               <div class="componentDetail__tabContent">
                 <pre class="sourceCode sourceCode_syntax_css">
+                  <code class="sourceCode__inner language-css">
 .modal {
   background: rgba(196, 196, 196, 0.5);
   display: none;
@@ -315,7 +321,8 @@
 .modal__closeButtonIcon {
   width: 16px;
   height: 16px;
-}                  
+}
+                  </code>                  
                 </pre>
               </div>
             </div>

@@ -8,12 +8,15 @@
       rel="stylesheet"
       href="../components/componentDetail/componentDetail.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-light.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
     <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>
     <script src="../assets/js/fixOnloadAnimations.js"></script>
+    <script defer>hljs.highlightAll()</script>
     <title>Skeleton component</title>
   </head>
-  <body class="page page_component">
+  <body class="page page_component preload">
     <header class="header header_compact page__header">
       <div class="header__panel layoutContainer">
         <button
@@ -199,6 +202,7 @@
             <div class="tabs__content tabs__content_tabNum_1">
               <div class="componentDetail__tabContent">
                 <pre class="sourceCode sourceCode_syntax_html">
+                  <code class="sourceCode__inner language-html">
 &lt;div class=&quot;skeleton&quot;&gt;
   &lt;div class=&quot;skeleton__header&quot;&gt;
     &lt;div class=&quot;skeleton__picture&quot;&gt;&lt;/div&gt;
@@ -212,12 +216,14 @@
     &lt;div class=&quot;skeleton__textline skeleton__textline_length_middle&quot;&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+                  </code>
                 </pre>
               </div>              
             </div>
             <div class="tabs__content tabs__content_tabNum_2">
               <div class="componentDetail__tabContent">
                 <pre class="sourceCode sourceCode_syntax_css">
+                  <code class="sourceCode__inner language-css">
 .skeleton {
   border: 1px solid var(--content-border-color, #acb5bd);
   font-size: 16px;
@@ -279,6 +285,7 @@
     background-position: -100%;
   }
 }
+                  </code>
                 </pre>   
               </div>              
             </div>
