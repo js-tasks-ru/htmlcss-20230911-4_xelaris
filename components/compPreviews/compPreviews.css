@@ -14,23 +14,27 @@
 .compPreviews__previewFormField {
   gap: 14px;
 }
+.compPreviews__previewAvatar {
+  width: 116px;
+  height: 116px;
+}
 .compPreviews__previewCalendar {
   width: 164px;
   box-sizing: border-box;
   font-size: 9px;
   border: 0;
 }
+.compPreviews__previewHistogram {
+  font-size: 9px;
+}
 .compPreviews__previewModalWindow {
   width: 240px;
   transform: translateX(-50%) translateY(-50%) scale(0.6);
   padding: 25px;
 }
-.compPreviews__previewHistogram {
-  font-size: 9px;
-}
-.compPreviews__previewAvatar {
-  width: 116px;
-  height: 116px;
+.compPreviews__previewSkeleton {
+  padding: 0;
+  font-size: 10px
 }
 .compPreviews__loadMoreBtn {
   width: 182px;
@@ -43,43 +47,50 @@
     width: 202px;
     border: 1px solid var(--border-color, #acb5bd);
   }
-  .compPreviews__previewModalWindow {
-    width: 100%;
-  }
   .compPreviews__previewHistogram {
     font-size: 12px;
+  }
+  .compPreviews__previewModalWindow {
+    width: 100%;
+  }  
+  .compPreviews__previewSkeleton {
+    padding: 1em 2em 1.5em 1em;
   }
 }
 @media screen and (min-width: 768px) {
   .compPreviews__tabs {
     margin-top: -63px;
   }
+  .compPreviews__previewAvatar {
+    width: 160px;
+    height: 160px;
+  }
   .compPreviews__previewFormFields {
     padding: 14px;
     width: 100%;
     box-sizing: border-box;
   }
+  .compPreviews__previewHistogram {
+    font-size: 13px;
+  }  
   .compPreviews__previewModalWindow {
     padding: 30px 40px 33px;
   }
-  .compPreviews__previewHistogram {
-    font-size: 13px;
-  }
-  .compPreviews__previewAvatar {
-    width: 160px;
-    height: 160px;
-  }
 }
 @media screen and (min-width: 992px) {
-  .compPreviews__previewHistogram {
-    font-size: 14px;
-    margin: 0 -7px;
-  }
   .compPreviews__tabContent {
     padding-top: 32px;
   }
   .compPreviews__previewFormFields {
     gap: 42px;
+  }
+  .compPreviews__previewHistogram {
+    font-size: 14px;
+    margin: 0 -7px;
+  }
+  .compPreviews__previewSkeleton {
+    font-size: 12px;
+    padding: 0;
   }
 }
 @media screen and (min-width: 1175px) {
