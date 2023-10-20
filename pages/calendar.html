@@ -241,12 +241,144 @@
             </div>
             <div class="tabs__content tabs__content_tabNum_1">
               <div class="componentDetail__tabContent">
-                html code here
+                <pre class="sourceCode sourceCode_syntax_html">
+&lt;div class=&quot;calendar calendar_length_6weeks&quot;&gt;
+  &lt;div class=&quot;calendar__wrapper&quot;&gt;
+    &lt;div class=&quot;calendar__days&quot;&gt;
+      &lt;div class=&quot;calendar__month&quot;&gt;October 2020&lt;/div&gt;
+      &lt;span class=&quot;calendar__day calendar__day_ofweek&quot;&gt;Mon&lt;/span&gt;
+      &lt;span class=&quot;calendar__day calendar__day_ofweek&quot;&gt;Tue&lt;/span&gt;
+      &lt;span class=&quot;calendar__day calendar__day_ofweek&quot;&gt;Wed&lt;/span&gt;
+      &lt;span class=&quot;calendar__day calendar__day_ofweek&quot;&gt;Thu&lt;/span&gt;
+      &lt;span class=&quot;calendar__day calendar__day_ofweek&quot;&gt;Fri&lt;/span&gt;
+      &lt;span class=&quot;calendar__day calendar__day_ofweek&quot;&gt;Sat&lt;/span&gt;
+      &lt;span class=&quot;calendar__day calendar__day_ofweek&quot;&gt;Sun&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;1&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;2&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;3&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;4&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;5&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;6&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;7&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;8&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;9&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;10&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;11&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;12&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;13&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;14&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;15&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;16&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;17&lt;/span&gt;
+      &lt;span class=&quot;calendar__day calendar__day_period_edge&quot;&gt;18&lt;/span&gt;
+      &lt;span class=&quot;calendar__day calendar__day_period_inside&quot;&gt;19&lt;/span&gt;
+      &lt;span class=&quot;calendar__day calendar__day_period_inside&quot;&gt;20&lt;/span&gt;
+      &lt;span class=&quot;calendar__day calendar__day_period_inside&quot;&gt;21&lt;/span&gt;
+      &lt;span class=&quot;calendar__day calendar__day_period_inside&quot;&gt;22&lt;/span&gt;
+      &lt;span class=&quot;calendar__day calendar__day_period_edge&quot;&gt;23&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;24&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;25&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;26&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;27&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;28&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;29&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;30&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;31&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;calendar__day&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                </pre>
               </div>              
             </div>
             <div class="tabs__content tabs__content_tabNum_2">
               <div class="componentDetail__tabContent">
-                css code here
+                <pre class="sourceCode sourceCode_syntax_css">
+.calendar {
+  --calendar-grey-dark: var(--text-regular-color, #334d6e);
+  --calendar-grey-light: var(--text-pale-color, #90a0b7);
+  font-size: 16px;
+  border: 1px solid var(--content-border-color, #acb5bd);
+  border-radius: 0.5em;
+  padding: 1.2em 1.63em 2em;
+}
+.calendar__month {
+  color: var(--calendar-grey-dark, #334d6e);
+  font-size: 1.25em;
+  font-weight: 600;
+  line-height: 1.5em;
+  grid-column: 1 / 8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calendar__wrapper {
+  padding-bottom: 100%;
+  position: relative;
+}
+.calendar__days {
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(7, 1fr);
+  position: absolute;
+  inset: 0;
+}
+.calendar_length_4weeks .calendar__wrapper {
+  padding-bottom: calc(6 / 7 * 100%);
+}
+.calendar_length_4weeks .calendar__days {
+  grid-template-rows: repeat(6, 1fr);
+}
+.calendar_length_5weeks .calendar__wrapper {
+  padding-bottom: 100%;
+}
+.calendar_length_5weeks .calendar__days {
+  grid-template-rows: repeat(7, 1fr);
+}
+.calendar_length_6weeks .calendar__wrapper {
+  padding-bottom: calc(8 / 7 * 100%);
+}
+.calendar_length_6weeks .calendar__days {
+  grid-template-rows: repeat(8, 1fr);
+}
+.calendar__day {
+  color: var(--calendar-grey-dark, #334d6e);
+  font-size: 1em;
+  font-family: 'source-sans-pro', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calendar__day:hover:not(.calendar__day_ofweek, :empty) {
+  cursor: pointer;
+}
+.calendar__day_ofweek {
+  color: var(--calendar-grey-light, #90a0b7);
+  font-family: 'Inter', sans-serif;
+}
+.calendar__day_period_edge {
+  color: var(--white, white);
+  background: var(--primary, #4263eb);
+}
+.calendar__day_period_inside,
+.calendar__day:hover:not(
+    .calendar__day_period_edge,
+    .calendar__day_ofweek,
+    :empty
+  ) {
+  background: var(--blue-light, #bac4de);
+}                  
+                </pre>
               </div>              
             </div>
           </div>

@@ -230,12 +230,119 @@
             </div>
             <div class="tabs__content tabs__content_tabNum_1">
               <div class="componentDetail__tabContent">
-                html code here
+                <pre class="sourceCode sourceCode_syntax_html">
+&lt;div class=&quot;histogram&quot;&gt;
+  &lt;div class=&quot;histogram__info&quot;&gt;
+    &lt;div class=&quot;histogram__score&quot;&gt;
+      &lt;div class=&quot;histogram__scoreCaption&quot;&gt;Total orders&lt;/div&gt;
+      &lt;div class=&quot;histogram__scoreValue&quot;&gt;50254&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;a href=&quot;&quot; class=&quot;histogram__showAll&quot;&gt;View all&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;histogram__columns&quot;&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 100%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 50%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 30%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 90%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 80%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 20%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 35%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 55%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 23%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 50%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 30%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 98%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 80%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 20%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 35%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 100%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 50%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 30%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 100%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 80%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 20%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 35%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 55%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 23%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 20%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 35%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 55%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 23%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 50%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 30%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 95%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 80%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 20%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__column&quot; style=&quot;height: 35%&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                </pre>
               </div>              
             </div>
             <div class="tabs__content tabs__content_tabNum_2">
               <div class="componentDetail__tabContent">
-                css code here
+                <pre class="sourceCode sourceCode_syntax_css">
+.histogram {
+  border: 1px solid var(--content-border-color, #acb5bd);
+  color: var(--text-contrast-color, black);
+  font-size: 16px;
+  border-radius: 0.5em;
+  padding: 1em 1.5em 1.5em;
+}
+.histogram__info {
+  display: flex;
+}
+.histogram__score {
+  flex-grow: 1;
+}
+.histogram__scoreCaption {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.histogram__scoreValue {
+  font-size: 1.25em;
+  line-height: 1.63em;
+  margin-top: 0.38em;
+}
+.histogram_compact .histogram__scoreValue {
+  font-weight: 600;
+  color: var(--text-primary-color, black);
+}
+.histogram__showAll {
+  color: var(--primary, #374fc7);
+  text-decoration: none;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 0.19em;
+  flex-shrink: 0;
+}
+.histogram__columns {
+  display: flex;
+  align-items: flex-end;
+  height: 3.13em;
+  gap: 1px;
+  margin-top: 2.44em;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  animation: 0.3s forwards histogramGrow;
+}
+.histogram_compact .histogram__columns {
+  margin-top: 1.25em;
+  height: 2.25em;
+} 
+.histogram__column {
+  background: var(--primary, #374fc7);
+  flex-grow: 1;
+}
+@keyframes histogramGrow {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}                  
+                </pre>
               </div>              
             </div>
           </div>

@@ -191,12 +191,114 @@
             </div>
             <div class="tabs__content tabs__content_tabNum_1">
               <div class="componentDetail__tabContent">
-                html code here
+                <pre class="sourceCode sourceCode_syntax_html">
+&lt;span class=&quot;tooltip&quot;&gt;
+  &lt;svg class=&quot;tooltip__trigger&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+    &lt;use href=&quot;../assets/images/icons.svg#question&quot;&gt;&lt;/use&gt;
+  &lt;/svg&gt;
+  &lt;span class=&quot;tooltip__bubble tooltip__bubble_primary tooltip__bubble_pos_right&quot;&gt;Helper text&lt;/span&gt;
+&lt;/span&gt;
+                </pre>
               </div>              
             </div>
             <div class="tabs__content tabs__content_tabNum_2">
               <div class="componentDetail__tabContent">
-                css code here
+                <pre class="sourceCode sourceCode_syntax_css">
+.tooltip {
+  display: inline-block;
+  vertical-align: baseline;
+  position: relative;
+  color: var(--text-contrast-color, black);
+}
+.tooltip_opened {
+  text-align: center;
+}
+.tooltip__trigger {
+  width: 24px;
+  height: 24px;
+}
+.tooltip__bubble {
+  --tooltip-bubble-color: var(--text-contrast-color, black);
+  display: none;
+  border-radius: 10px;
+  background: var(--tooltip-bubble-color, black);
+  box-shadow: 0px 2px 4px 0px rgba(33, 36, 41, 0.05);
+  color: var(--grey-2, #dde2e5);
+  text-align: center;
+  font-size: 16px;
+  min-height: 24px;
+  position: absolute;
+  padding: 13px 21px 8px;
+  width: 87px;
+}
+.tooltip_opened .tooltip__bubble {
+  position: relative;
+  transform: none;
+  left: auto;
+  margin-bottom: 6px;
+}
+.tooltip__bubble::after {
+  content: '';
+  border-color: transparent;
+  border-style: solid;
+  position: absolute;
+}
+.tooltip__trigger:hover ~ .tooltip__bubble,
+.tooltip_opened .tooltip__bubble {
+  display: block;
+}
+.tooltip__bubble_primary {
+  --tooltip-bubble-color: var(--primary, var(--blue, #4263eb));
+}
+.tooltip__bubble_pos_top {
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tooltip__bubble_pos_top::after {
+  border-width: 6px 7px 0;
+  border-top-color: var(--tooltip-bubble-color, black);
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tooltip__bubble_pos_bottom {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tooltip__bubble_pos_bottom::after {
+  border-width: 0 6px 7px;
+  border-bottom-color: var(--tooltip-bubble-color, black);
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tooltip__bubble_pos_left {
+  top: 50%;
+  right: calc(100% + 7px);
+  transform: translateY(-50%);
+}
+.tooltip__bubble_pos_left::after {
+  border-width: 7px 0 7px 6px;
+  border-left-color: var(--tooltip-bubble-color, black);
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+}
+.tooltip__bubble_pos_right {
+  top: 50%;
+  left: calc(100% + 7px);
+  transform: translateY(-50%);
+}
+.tooltip__bubble_pos_right::after {
+  border-width: 7px 6px 7px 0;
+  border-right-color: var(--tooltip-bubble-color, black);
+  top: 50%;
+  left: -6px;
+  transform: translateY(-50%);
+}                                    
+                </pre>
               </div>              
             </div>
           </div>

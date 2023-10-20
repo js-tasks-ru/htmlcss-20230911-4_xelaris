@@ -236,12 +236,83 @@
             </div>
             <div class="tabs__content tabs__content_tabNum_1">
               <div class="componentDetail__tabContent">
-                html code here
+                <pre class="sourceCode sourceCode_syntax_html">
+&lt;div class=&quot;accordion&quot;&gt;
+  &lt;details class=&quot;accordion__item&quot;&gt;
+    &lt;summary class=&quot;accordion__itemSummary&quot;&gt;
+      Accordion item #1
+      &lt;svg class=&quot;accordion__itemSummaryMarker&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+        &lt;use href=&quot;../../assets/images/icons.svg#arrow&quot;&gt;&lt;/use&gt;
+      &lt;/svg&gt;
+    &lt;/summary&gt;
+    &lt;p class=&quot;accordion__itemDetails&quot;&gt;
+      Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+      sint. Velit officia consequat duis enim velit mollit. Exercitation
+      veniam consequat sunt nostrud amet.
+    &lt;/p&gt;
+  &lt;/details&gt;
+  &lt;details class=&quot;accordion__item&quot;&gt;
+    &lt;summary class=&quot;accordion__itemSummary&quot;&gt;
+      Accordion item #2
+      &lt;svg class=&quot;accordion__itemSummaryMarker&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+        &lt;use href=&quot;../../assets/images/icons.svg#arrow&quot;&gt;&lt;/use&gt;
+      &lt;/svg&gt;
+    &lt;/summary&gt;
+    &lt;p class=&quot;accordion__itemDetails&quot;&gt;
+      Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+      sint. Velit officia consequat duis enim velit mollit. Exercitation
+      veniam consequat sunt nostrud amet.
+    &lt;/p&gt;
+  &lt;/details&gt;
+&lt;/div&gt;
+                </pre>
               </div>              
             </div>
             <div class="tabs__content tabs__content_tabNum_2">
               <div class="componentDetail__tabContent">
-                css code here
+                <pre class="sourceCode sourceCode_syntax_css">
+.accordion {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+.accordion__item {
+  border: 1px solid var(--content-border-color, #acb5bd);
+  background: var(--content-bg-color, white);
+  border-radius: 0.5em;
+}
+.accordion__item:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+.accordion__itemSummary {
+  display: flex;
+  gap: 0.63em;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 2em;
+  color: var(--text-contrast-color, black);
+  cursor: pointer;
+  user-select: none;
+}
+.accordion__itemSummaryMarker {
+  width: 1em;
+  height: 0.5em;
+  display: inline-block;
+  color: var(--text-regular-color, #495057);
+  flex-shrink: 0;
+}
+.accordion__item[open] .accordion__itemSummary {
+  padding-bottom: 1em;
+}
+.accordion__item[open] .accordion__itemSummaryMarker {
+  transform: rotate(180deg);
+}
+.accordion__itemDetails {
+  margin: 0;
+  padding: 0 2em 2em;
+  color: var(--text-regular-color, #495057);
+}                  
+                </pre>
               </div>              
             </div>
           </div>

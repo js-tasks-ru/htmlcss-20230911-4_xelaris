@@ -25,6 +25,7 @@
 @import '../../components/tabs/tabs.css';
 @import '../../components/formField/formField.css';
 @import '../../components/form/form.css';
+@import '../../components/sourceCode/sourceCode.css';
 
 :root {
   --white: #ffffff;

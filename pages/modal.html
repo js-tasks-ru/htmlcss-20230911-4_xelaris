@@ -200,12 +200,123 @@
             </div>
             <div class="tabs__content tabs__content_tabNum_1">
               <div class="componentDetail__tabContent">
-                html code here
+                <pre class="sourceCode sourceCode_syntax_html">
+&lt;button id=&quot;modal-open&quot; class=&quot;button button_var_primary&quot;&gt;
+  Show modal
+&lt;/button&gt;
+&lt;div id=&quot;modal&quot; class=&quot;modal&quot;&gt;
+  &lt;div class=&quot;modal__window&quot;&gt;
+    &lt;h5 class=&quot;modal__title&quot;&gt;Modal title&lt;/h5&gt;
+    &lt;div class=&quot;modal__content&quot;&gt;
+      &lt;p&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit architecto animi.&lt;/p&gt;                    
+      &lt;form action=&quot;&quot; class=&quot;form&quot;&gt;
+        &lt;div class=&quot;form__fields&quot;&gt;
+          &lt;div class=&quot;formField form__field&quot;&gt;
+            &lt;label for=&quot;name&quot; class=&quot;formField__title&quot;&gt;Name&lt;/label&gt;
+            &lt;div class=&quot;formField__field formField__field_fullWidth&quot;&gt;
+              &lt;input id=&quot;name&quot; type=&quot;text&quot;
+                class=&quot;textInput textInput_compact textInput_fullWidth formField__control formField__control_type_textInput&quot;
+                placeholder=&quot;Placeholder&quot; /&gt;
+              &lt;svg class=&quot;formField__icon formField__icon_error&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;use href=&quot;../../assets/images/icons.svg#warning&quot;&gt;&lt;/use&gt;
+              &lt;/svg&gt;
+              &lt;svg class=&quot;formField__icon formField__icon_success&quot;
+                xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;use href=&quot;../../assets/images/icons.svg#checkInCircle&quot;&gt;&lt;/use&gt;
+              &lt;/svg&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;formField form__field&quot;&gt;
+            &lt;label for=&quot;email&quot; class=&quot;formField__title&quot;&gt;Email&lt;/label&gt;
+            &lt;div class=&quot;formField__field formField__field_fullWidth&quot;&gt;
+              &lt;input id=&quot;email&quot; type=&quot;text&quot;
+                class=&quot;textInput textInput_compact textInput_fullWidth formField__control formField__control_type_textInput&quot;
+                placeholder=&quot;Placeholder&quot; /&gt;
+              &lt;svg class=&quot;formField__icon formField__icon_error&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;use href=&quot;../../assets/images/icons.svg#warning&quot;&gt;&lt;/use&gt;
+              &lt;/svg&gt;
+              &lt;svg class=&quot;formField__icon formField__icon_success&quot;
+                xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;use href=&quot;../../assets/images/icons.svg#checkInCircle&quot;&gt;&lt;/use&gt;
+              &lt;/svg&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;button class=&quot;button button_var_primary form__submitButton&quot;&gt;
+          Submit
+        &lt;/button&gt;
+      &lt;/form&gt;  
+    &lt;/div&gt;
+    &lt;button id=&quot;modal-close&quot; class=&quot;modal__closeButton&quot;&gt;
+      &lt;svg class=&quot;modal__closeButtonIcon&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+        &lt;use href=&quot;../../assets/images/icons.svg#cross&quot;&gt;&lt;/use&gt;
+      &lt;/svg&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                </pre>
               </div>
             </div>
             <div class="tabs__content tabs__content_tabNum_2">
               <div class="componentDetail__tabContent">
-                css code here
+                <pre class="sourceCode sourceCode_syntax_css">
+.modal {
+  background: rgba(196, 196, 196, 0.5);
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+}
+.modal_opened {
+  display: block;
+  position: absolute;
+}
+.modal_noViel {
+  background: transparent;
+}
+.modal__window {
+  width: 348px;
+  padding: 30px 40px 33px;
+  border-radius: 8px;
+  background: var(--content-bg-color, white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.modal__title {
+  color: var(--text-contrast-color, #334d6e);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0;
+}
+.modal__content {
+  color: var(--text-regular-color, #495057);
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+}
+.modal__title + .modal__content {
+  margin-top: 14px;
+}
+.modal__closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+  background: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 0;  
+  color: var(--text-contrast-color, #334d6e);
+}
+.modal__closeButtonIcon {
+  width: 16px;
+  height: 16px;
+}                  
+                </pre>
               </div>
             </div>
           </div>
