@@ -1,16 +1,17 @@
 .formField {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 0.31em;
   align-items: flex-start;
+  font-size: 16px;
 }
 .formField__title {
   display: inline-block;
   color: var(--grey-3, #acb5bd);
-  font-size: 12px;
+  font-size: 0.75em;
   font-weight: 500;
-  line-height: 18px;
-  letter-spacing: 0.48px;
+  line-height: 1.13em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   cursor: pointer;
   user-select: none;
@@ -26,12 +27,12 @@
 }
 .formField__icon {
   display: none;
-  width: 24px;
-  height: 24px;
+  width: 1.5em;
+  height: 1.5em;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 16px;
+  right: 1em;
 }
 .formField_validity_error .formField__icon_error {
   display: inline-block;
