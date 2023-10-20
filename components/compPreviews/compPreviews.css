@@ -22,6 +22,17 @@
   width: 116px;
   height: 116px;
 }
+.compPreviews__previewButtonsBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;  
+  width: 100%;
+}
+.compPreviews__previewButton {
+  font-size: 12px;
+  width: 75%;
+}
 .compPreviews__previewCalendar {
   width: 164px;
   box-sizing: border-box;
@@ -49,6 +60,12 @@
   .compPreviews__previewAccordion {
     font-size: 11px;
   }
+  .compPreviews__previewButtonsBox {
+    gap: 6px;
+  }
+  .compPreviews__previewButton {
+    font-size: 14px;
+  }
   .compPreviews__previewCalendar {
     font-size: 10px;
     width: 202px;
@@ -74,6 +91,12 @@
   .compPreviews__previewAvatar {
     width: 160px;
     height: 160px;
+  }
+  .compPreviews__previewButtonsBox {
+    gap: 16px;
+  }
+  .compPreviews__previewButton {
+    font-size: 16px;
   }
   .compPreviews__previewFormFields {
     padding: 14px;
