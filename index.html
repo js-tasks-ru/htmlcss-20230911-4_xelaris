@@ -1,48 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./assets/css/main.css" />
-  <link rel="stylesheet" href="./components/compPreviews/compPreviews.css" />
-  <script defer src="./09-lection7/01-burger-menu/burger-menu.js"></script>
-  <script src="./assets/js/fixOnloadAnimations.js"></script>
-  <title>Reusable component library</title>
-</head>
-<body class="page page_main preload">
-  <header class="header page__header">
-    <div class="layoutContainer">
-      <div class="header__panel">
-        <button id="burger-menu-open" class="burgerMenuShowButton header__burgerMenuButton">
-          <svg xmlns="http://www.w3.org/2000/svg" class="burgerMenuShowButton__icon" fill="currentColor">
-            <use href="../../assets/images/icons.svg#burger"></use>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./components/compPreviews/compPreviews.css" />
+    <script defer src="./09-lection7/01-burger-menu/burger-menu.js"></script>
+    <script defer src="./10-lection8/01-theme-changer/theme-changer.js"></script>
+    <script src="./assets/js/fixOnloadAnimations.js"></script>
+    <title>Reusable component library</title>
+  </head>
+  <body class="page page_main preload">
+    <header class="header page__header">
+      <div class="layoutContainer">
+        <div class="header__panel">
+          <button
+            id="burger-menu-open"
+            class="burgerMenuShowButton header__burgerMenuButton"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="burgerMenuShowButton__icon"
+              fill="currentColor"
+            >
+              <use href="../../assets/images/icons.svg#burger"></use>
+            </svg>
+          </button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="header__logo"
+            fill="currentColor"
+          >
+            <rect y="1" width="30" height="30" />
+            <rect x="38" width="32" height="32" rx="16" />
+            <path d="M78 0L110 32H78V0Z" />
           </svg>
-        </button>
-        <svg xmlns="http://www.w3.org/2000/svg" class="header__logo" fill="currentColor">
-          <rect y="1" width="30" height="30" />
-          <rect x="38" width="32" height="32" rx="16" />
-          <path d="M78 0L110 32H78V0Z" />
-        </svg>
-        <nav class="header__menu">
-          <a class="header__menuItem header__menuItem_active" href="">Components</a>
-          <a class="header__menuItem" href="">About</a>
-          <a class="header__menuItem" href="">Contact</a>
-        </nav>
-        <div class="header__themeToggler">[toggler]</div>
+          <nav class="header__menu">
+            <a class="header__menuItem header__menuItem_active" href=""
+              >Components</a
+            >
+            <a class="header__menuItem" href="">About</a>
+            <a class="header__menuItem" href="">Contact</a>
+          </nav>
+          <label class="toggler header__themeToggler">
+            <input id="theme-changer" type="checkbox" class="toggler__input" />
+            <span class="toggler__state">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="toggler__icon toggler__icon_contrast_onLight"
+                fill="currentColor"
+              >
+                <use href="../../assets/images/icons.svg#sun"></use>
+              </svg>
+              <span class="toggler__control"></span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="toggler__icon toggler__icon_contrast_onDark"
+                fill="currentColor"
+              >
+                <use href="../../assets/images/icons.svg#сrescent"></use>
+              </svg>
+            </span>
+          </label>
+        </div>
+        <h1 class="header__title">Reusable component library</h1>
       </div>
-      <h1 class="header__title">Reusable component library</h1>
-    </div>
-  </header>
-  <div id="burger-menu" class="burgerMenu burgerMenu_forHeaderTransparent burgerMenu_noTopSeparator">
-    <button id="burger-menu-close" class="burgerMenu__closeButton">
-      <svg xmlns="http://www.w3.org/2000/svg" class="burgerMenu__closeButtonIcon" fill="currentColor">
-        <use href="../../assets/images/icons.svg#cross"></use>
-      </svg>
-    </button>
-    <div class="burgerMenu__content">
-      <div class="burgerMenu__themeToggler">
-        <div class="burgerMenu__contentGroup">
-          [theme toggler]
+    </header>
+    <div id="burger-menu" class="burgerMenu burgerMenu_forHeaderTransparent burgerMenu_noTopSeparator">
+      <button id="burger-menu-close" class="burgerMenu__closeButton">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="burgerMenu__closeButtonIcon"
+          fill="currentColor"
+        >
+          <use href="../../assets/images/icons.svg#cross"></use>
+        </svg>
+      </button>
+      <div class="burgerMenu__content">
+        <div class="burgerMenu__themeTogglerBox">
+          <div class="burgerMenu__contentGroup">
+            <div class="burgerMenu__themeToggler">
+              <label for="theme-changer-alt" class="burgerMenu__themeTogglerLabel">
+                Dark mode
+              </label>
+              <label class="toggler">
+                <input id="theme-changer-alt" type="checkbox" class="toggler__input" />
+                <span class="toggler__state">
+                  <span class="toggler__control"></span>
+                </span>
+              </label>
+            </div>
+          </div>
         </div>
       </div>
       <aside class="menu burgerMenu__menu">

@@ -9,7 +9,9 @@
 @import '../../components/previewCard/previewCard.css';
 @import '../../components/menu/menu.css';
 @import '../../03-lection1/01-button/button.css';
+@import '../../03-lection1/02-accordion/accordion.css';
 @import '../../04-lection2/01-histogram/histogram.css';
+@import '../../04-lection2/02-skeleton/skeleton.css';
 @import '../../05-lection3/01-tooltip/tooltip.css';
 @import '../../05-lection3/03-calendar/calendar.css';
 @import '../../05-lection3/02-modal/modal.css';
@@ -40,6 +42,7 @@
   --grey-2: #dde2e5;
   --grey-3: #acb5bd;
   --grey-4: #495057;
+  --grey-4-lighter: #59616a;
 
   --error: var(--red);
   --success: var(--blue);
@@ -47,11 +50,54 @@
 
   --primary: var(--blue);
   --secondary: var(--purple);
+  --alternate: var(--orange); 
   --primary-active: var(--blue-darker);
   --secondary-active: var(--purple-darker);
 
-  --border-color: var(--grey-3);
   --bg-color: var(--grey-0);
+  --border-color: var(--grey-3);
+  --page-bg-color: var(--bg-color);
+  
+  --text-primary-color: var(--black);
+  --text-contrast-color: var(--text-primary-color);
+  --text-contrastOnLight-color: var(--grey-4);
+  --text-contrastOnDark-color: var(--grey-3);
+  --text-regular-color: var(--grey-4);
+  --text-pale-color: var(--grey-3);
+  --text-mute-color: var(--grey-2);  
+
+  --content-color: var(--grey-2);
+  --content-bg-color: var(--white);
+  --content-border-color: var(--border-color);
+
+  --control-color: var(--grey-4);
+  --control-bg-color: var(--white);
+  --control-border-color: var(--grey-2);
+  --control-active-border-color: var(--grey-3);
+  --control-active-bg-color: var(--grey-1);
+  --control-checked-color: var(--primary);
+  --control-checked-active-color: var(--primary-active);
+  --control-disabled-color: var(--grey-2);
+  --control-disabled-border-color: var(--grey-2);
+  --control-disabled-bg-color: var(--grey-1);
+}
+:root[data-theme-dark] {
+  --bg-color: var(--grey-4);
+  --content-bg-color: var(--black);
+
+  --text-primary-color: var(--white);
+  --text-contrast-color: var(--grey-3);
+  --text-contrastOnLight-color: var(--grey-3);
+  --text-contrastOnDark-color: var(--grey-2);
+  --text-regular-color: var(--grey-3);
+  --text-mute-color: var(--grey-4);
+
+  --control-color: var(--white);
+  --control-active-border-color: var(--white);
+  --control-active-bg-color: var(--grey-4-lighter);
+  --control-disabled-color: var(--grey-4-lighter);
+  --control-disabled-border-color: var(--grey-4);
+  --control-disabled-bg-color: var(--grey-4);
 }
 html,
 body {

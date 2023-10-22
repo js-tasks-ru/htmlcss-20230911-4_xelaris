@@ -1,5 +1,5 @@
 .skeleton {
-  border: 1px solid var(--border-color, #acb5bd);
+  border: 1px solid var(--content-border-color, #acb5bd);
   border-radius: 8px;
   padding: 24px 40px 32px 24px;
 }
@@ -20,7 +20,7 @@
 }
 .skeleton__picture,
 .skeleton__textline {
-  background: var(--grey-2, #dde2e5);
+  background: var(--content-color, #dde2e5);
   background: linear-gradient(
     90deg,
     #dde2e5 6.44%,

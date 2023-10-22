@@ -2,6 +2,7 @@
   display: inline-block;
   vertical-align: baseline;
   position: relative;
+  color: var(--text-contrast-color, black);
 }
 .tooltip_opened {
   text-align: center;
@@ -11,7 +12,7 @@
   height: 24px;
 }
 .tooltip__bubble {
-  --tooltip-bubble-color: var(--black, black);
+  --tooltip-bubble-color: var(--text-contrast-color, black);
   display: none;
   border-radius: 10px;
   background: var(--tooltip-bubble-color, black);

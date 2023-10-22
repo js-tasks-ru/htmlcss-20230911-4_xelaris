@@ -27,9 +27,20 @@
   width: 24px;
   height: 24px;
 }
-.burgerMenu__themeToggler {
+.burgerMenu__themeTogglerBox {
   margin-top: 16px;
   display: none;
+}
+.burgerMenu__themeToggler {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.burgerMenu__themeTogglerLabel {
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-contrast-color, black);
 }
 @media screen and (max-width: 767px) {
   .burgerMenu {
@@ -38,7 +49,7 @@
     width: 100%;
     inset: 0;
     padding-top: 64px;
-    background: var(--bg-color, var(--grey-0, #f9fafc));
+    background: var(--page-bg-color, var(--grey-0, #f9fafc));
     transform: translateX(-100vw);
     transition: transform 0.25s linear;
     z-index: 1;
@@ -59,22 +70,22 @@
     box-sizing: border-box;
   }
   .burgerMenu_forHeaderTransparent .burgerMenu__content {
-    background: var(--bg-color, var(--grey-0, #f9fafc));
+    background: var(--page-bg-color, var(--grey-0, #f9fafc));
   }
   .burgerMenu__closeButton {
     display: inline-block;
   }
-  .burgerMenu__themeToggler {
+  .burgerMenu__themeTogglerBox {
     display: block;
   }
-  .burgerMenu_noTopSeparator .burgerMenu__themeToggler {
+  .burgerMenu_noTopSeparator .burgerMenu__themeTogglerBox {
     margin-top: 0;
   }
   .burgerMenu__contentGroup {
     padding: 24px 0;
     border-top: 1px solid var(--grey-2, #dde2e5);
   }
-  .burgerMenu_noTopSeparator .burgerMenu__themeToggler .burgerMenu__contentGroup {
+  .burgerMenu_noTopSeparator .burgerMenu__themeTogglerBox .burgerMenu__contentGroup {
     border-top: 0;
   }
   .burgerMenu__menu {
@@ -85,7 +96,7 @@
   .burgerMenu_noTopSeparator {
     padding-top: 64px;
   }
-  .burgerMenu_noTopSeparator .burgerMenu__themeToggler {
+  .burgerMenu_noTopSeparator .burgerMenu__themeTogglerBox {
     margin-top: 16px;
   }
   .burgerMenu_forHeaderTransparent .burgerMenu__closeButton {

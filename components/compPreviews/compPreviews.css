@@ -3,6 +3,7 @@
 }
 .compPreviews__tabContent {
   padding-top: 16px;
+  color: var(--text-contrast-color, black);
 }
 .compPreviews__previewFormFields {
   display: flex;

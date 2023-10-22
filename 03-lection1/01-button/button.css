@@ -39,13 +39,13 @@
 }
 .button_var_alternate {
   background: transparent;
-  border: 1px solid var(--border-color, #acb5bd);
-  color: var(--grey-4, #495057);
+  border: 1px solid var(--text-pale-color, #acb5bd);
+  color: var(--text-regular-color, #495057);
 }
 .button_var_alternate:hover,
 .button_var_alternate:active {
-  border-color: var(--black, black);
-  color: var(--black, black);
+  border-color: var(--text-primary-color, black);
+  color: var(--text-contrast-color, black);
 }
 .button:disabled {
   opacity: 0.5;

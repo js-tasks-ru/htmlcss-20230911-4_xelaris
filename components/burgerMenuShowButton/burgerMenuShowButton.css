@@ -18,6 +18,7 @@
 .burgerMenuShowButton__icon {
   width: 24px;
   height: 24px;
+  color: var(--text-contrast-color, black)
 }
 @media screen and (max-width: 768px) {
   .burgerMenuShowButton {
