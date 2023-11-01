@@ -13,6 +13,9 @@
   font-size: 9px;
   border: 0;
 }
+.calendar_width_340 {
+  width: 340px;
+}
 .calendar__month {
   color: var(--calendar-grey-dark, #334d6e);
   font-size: 1.25em;

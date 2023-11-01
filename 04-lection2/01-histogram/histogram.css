@@ -9,6 +9,9 @@
 .histogram_compact {
   font-size: 9px;
 }
+.histogram_width_340 {
+  width: 340px;
+}
 .histogram__info {
   display: flex;
 }

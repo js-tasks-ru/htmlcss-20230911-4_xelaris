@@ -21,6 +21,12 @@
   font-size: 12px;
   width: 75%;
 }
+.button_width_150 {
+  width: 150px;
+}
+.button_width_200 {
+  width: 200px;
+}
 .button:active {
   transform: translateY(1px);
 }
