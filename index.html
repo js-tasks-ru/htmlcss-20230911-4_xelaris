@@ -179,7 +179,7 @@
                 <div
                   class="previewCard__placeholder">
                   <div class="previewCard__preview previewCard__preview_fullWidth">
-                    <div class="accordion compPreviews__previewAccordion">
+                    <div class="accordion accordion_compact accordion_fullWidth">
                       <details class="accordion__item" open="open">
                         <summary class="accordion__itemSummary">
                           Accordion item #1
@@ -211,22 +211,6 @@
                           veniam consequat sunt nostrud amet.
                         </p>
                       </details>
-                      <!-- <details class="accordion__item">
-                        <summary class="accordion__itemSummary">
-                          Accordion item #3
-                          <svg
-                            class="accordion__itemSummaryMarker"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <use href="./assets/images/icons.svg#arrow"></use>
-                          </svg>
-                        </summary>
-                        <p class="accordion__itemDetails">
-                          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                          sint. Velit officia consequat duis enim velit mollit. Exercitation
-                          veniam consequat sunt nostrud amet.
-                        </p>
-                      </details> -->
                     </div>
                   </div>
                 </div>
@@ -236,7 +220,7 @@
               <a href="/pages/avatar.html" class="previewCard tileList__item">
                 <div class="previewCard__placeholder">
                   <div class="previewCard__preview">
-                    <div class="avatar compPreviews__previewAvatar">
+                    <div class="avatar avatar_onPreviewCard">
                       <img src="./assets/images/avatar-200.jpg" alt="Аватар пользователя Anonimus"
                         class="avatar__img" />
                     </div>
@@ -248,10 +232,10 @@
               <a href="/pages/button.html" class="previewCard tileList__item">
                 <div class="previewCard__placeholder">
                   <div class="previewCard__preview previewCard__preview_fullWidth">
-                    <div class="compPreviews__previewButtonsBox">
-                      <button class="button button_var_primary compPreviews__previewButton">Primary</button>
-                      <button class="button button_var_secondary compPreviews__previewButton">Secondary</button>
-                      <button class="button button_var_alternate compPreviews__previewButton">Alternate</button>
+                    <div class="itemsStack">
+                      <button class="button button_var_primary button_inStack">Primary</button>
+                      <button class="button button_var_secondary button_inStack">Secondary</button>
+                      <button class="button button_var_alternate button_inStack">Alternate</button>
                     </div>
                   </div>
                 </div>
@@ -261,7 +245,7 @@
               <a href="/pages/calendar.html" class="previewCard tileList__item">
                 <div class="previewCard__placeholder previewCard__placeholder_noPaddings">
                   <div class="previewCard__preview">
-                    <div class="calendar calendar_length_5weeks compPreviews__previewCalendar">
+                    <div class="calendar calendar_length_5weeks calendar_compact">
                       <div class="calendar__wrapper">
                         <div class="calendar__days">
                           <div class="calendar__month">October 2019</div>
@@ -318,66 +302,68 @@
               <a href="/pages/form_elements.html" class="previewCard tileList__item">
                 <div class="previewCard__placeholder">
                   <div class="previewCard__preview previewCard__preview_scaledForMobile">
-                    <div class="compPreviews__previewFormFields">
-                      <div class="formField compPreviews__previewFormField">
-                        <label class="checkbox">
-                          <input type="checkbox" class="checkbox__input" />
-                          <span class="checkbox__state">
-                            <span class="checkbox__control _noAnimateOnload">
-                              <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg">
-                                <use href="./assets/images/icons.svg#check"></use>
-                              </svg>
+                    <form action="" class="form">
+                      <div class="form__cols">
+                        <div class="formField form__feild">
+                          <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input" />
+                            <span class="checkbox__state">
+                              <span class="checkbox__control _noAnimateOnload">
+                                <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg">
+                                  <use href="./assets/images/icons.svg#check"></use>
+                                </svg>
+                              </span>
+                              <span class="checkbox__title">Default</span>
                             </span>
-                            <span class="checkbox__title">Default</span>
-                          </span>
-                        </label>
-                        <label class="checkbox">
-                          <input type="checkbox" class="checkbox__input" checked="checked" />
-                          <span class="checkbox__state">
-                            <span class="checkbox__control _noAnimateOnload">
-                              <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg">
-                                <use href="./assets/images/icons.svg#check"></use>
-                              </svg>
+                          </label>
+                          <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input" checked="checked" />
+                            <span class="checkbox__state">
+                              <span class="checkbox__control _noAnimateOnload">
+                                <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg">
+                                  <use href="./assets/images/icons.svg#check"></use>
+                                </svg>
+                              </span>
+                              <span class="checkbox__title">Checked</span>
                             </span>
-                            <span class="checkbox__title">Checked</span>
-                          </span>
-                        </label>
-                        <label class="checkbox">
-                          <input type="checkbox" class="checkbox__input" disabled="disabled" />
-                          <span class="checkbox__state">
-                            <span class="checkbox__control _noAnimateOnload">
-                              <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg">
-                                <use href="./assets/images/icons.svg#check"></use>
-                              </svg>
+                          </label>
+                          <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input" disabled="disabled" />
+                            <span class="checkbox__state">
+                              <span class="checkbox__control _noAnimateOnload">
+                                <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg">
+                                  <use href="./assets/images/icons.svg#check"></use>
+                                </svg>
+                              </span>
+                              <span class="checkbox__title">Disabled</span>
                             </span>
-                            <span class="checkbox__title">Disabled</span>
-                          </span>
-                        </label>
+                          </label>
+                        </div>
+                        <div class="formField form__feild">
+                          <label class="radio">
+                            <input type="radio" class="radio__input" name="radio1" />
+                            <span class="radio__state">
+                              <span class="radio__control"></span>
+                              <span class="radio__title">Default</span>
+                            </span>
+                          </label>
+                          <label class="radio">
+                            <input type="radio" class="radio__input" name="radio1" checked="checked" />
+                            <span class="radio__state">
+                              <span class="radio__control"></span>
+                              <span class="radio__title">Selected</span>
+                            </span>
+                          </label>
+                          <label class="radio">
+                            <input type="radio" class="radio__input" disabled="disabled" name="radio1" />
+                            <span class="radio__state">
+                              <span class="radio__control"></span>
+                              <span class="radio__title">Disabled</span>
+                            </span>
+                          </label>
+                        </div>
                       </div>
-                      <div class="formField compPreviews__previewFormField">
-                        <label class="radio">
-                          <input type="radio" class="radio__input" name="radio" />
-                          <span class="radio__state">
-                            <span class="radio__control"></span>
-                            <span class="radio__title">Default</span>
-                          </span>
-                        </label>
-                        <label class="radio">
-                          <input type="radio" class="radio__input" name="radio1" checked="checked" />
-                          <span class="radio__state">
-                            <span class="radio__control"></span>
-                            <span class="radio__title">Selected</span>
-                          </span>
-                        </label>
-                        <label class="radio">
-                          <input type="radio" class="radio__input" disabled="disabled" name="radio1" />
-                          <span class="radio__state">
-                            <span class="radio__control"></span>
-                            <span class="radio__title">Disabled</span>
-                          </span>
-                        </label>
-                      </div>
-                    </div>
+                    </form>
                   </div>
                 </div>
                 <h2 class="previewCard__title">Custom form elements</h2>
@@ -386,19 +372,19 @@
               <a href="/pages/histogram.html" class="previewCard tileList__item">
                 <div class="previewCard__placeholder">
                   <div class="previewCard__preview previewCard__preview_fullWidth">
-                    <div class="histogram histogram_compact compPreviews__previewHistogram">
+                    <div class="histogram histogram_compact">
                       <div class="histogram__info">
                         <div class="histogram__score">
-                          <div class="histogram__scoreCaption compPreviews__previewHistogramScoreCap">
+                          <div class="histogram__scoreCaption">
                             Total orders
                           </div>
-                          <div class="histogram__scoreValue compPreviews__previewHistogramScoreVal">
+                          <div class="histogram__scoreValue">
                             50254
                           </div>
                         </div>
-                        <span class="histogram__showAll compPreviews__previewHistogramShowAll">View all</span>
+                        <span class="histogram__showAll">View all</span>
                       </div>
-                      <div class="histogram__columns compPreviews__previewHistogramCols">
+                      <div class="histogram__columns">
                         <div class="histogram__column" style="height: 100%"></div>
                         <div class="histogram__column" style="height: 50%"></div>
                         <div class="histogram__column" style="height: 30%"></div>
@@ -434,8 +420,8 @@
                 <div
                   class="previewCard__placeholder previewCard__placeholder_noPaddings previewCard__placeholder_noBorder">
                   <div class="previewCard__preview previewCard__preview_fullSize">
-                    <div id="modal" class="modal modal_opened compPreviews__previewModal">
-                      <div class="modal__window compPreviews__previewModalWindow">
+                    <div id="modal" class="modal modal_opened modal_compact compPreviews__previewModal">
+                      <div class="modal__window">
                         <div class="modal__content">
                           <form action="" class="form">
                             <div class="form__fields">
@@ -485,7 +471,7 @@
               <a href="/pages/skeleton.html" class="previewCard tileList__item">
                 <div class="previewCard__placeholder">
                   <div class="previewCard__preview previewCard__preview_fullWidth">
-                    <div class="skeleton skeleton_noBorder compPreviews__previewSkeleton">
+                    <div class="skeleton skeleton_noBorder skeleton_compact">
                       <div class="skeleton__header">
                         <div class="skeleton__picture"></div>
                         <div class="skeleton__title">
@@ -531,7 +517,7 @@
               <a href="/pages/avatar.html" class="previewCard tileList__item">
                 <div class="previewCard__placeholder">
                   <div class="previewCard__preview">
-                    <div class="avatar compPreviews__previewAvatar">
+                    <div class="avatar avatar_onPreviewCard">
                       <img src="./assets/images/avatar-200.jpg" alt="Аватар пользователя Anonimus"
                         class="avatar__img" />
                     </div>
@@ -542,10 +528,10 @@
               <a href="/pages/button.html" class="previewCard tileList__item">
                 <div class="previewCard__placeholder">
                   <div class="previewCard__preview previewCard__preview_fullWidth">
-                    <div class="compPreviews__previewButtonsBox">
-                      <button class="button button_var_primary compPreviews__previewButton">Primary</button>
-                      <button class="button button_var_secondary compPreviews__previewButton">Secondary</button>
-                      <button class="button button_var_alternate compPreviews__previewButton">Alternate</button>
+                    <div class="itemsStack">
+                      <button class="button button_var_primary button_inStack">Primary</button>
+                      <button class="button button_var_secondary button_inStack">Secondary</button>
+                      <button class="button button_var_alternate button_inStack">Alternate</button>
                     </div>
                   </div>
                 </div>
@@ -554,66 +540,68 @@
               <a href="/pages/form_elements.html" class="previewCard tileList__item">
                 <div class="previewCard__placeholder">
                   <div class="previewCard__preview previewCard__preview_scaledForMobile">
-                    <div class="compPreviews__previewFormFields">
-                      <div class="formField compPreviews__previewFormField">
-                        <label class="checkbox">
-                          <input type="checkbox" class="checkbox__input" />
-                          <span class="checkbox__state">
-                            <span class="checkbox__control _noAnimateOnload">
-                              <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg">
-                                <use href="./assets/images/icons.svg#check"></use>
-                              </svg>
+                    <form action="" class="form">
+                      <div class="form__cols">
+                        <div class="formField form__feild">
+                          <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input" />
+                            <span class="checkbox__state">
+                              <span class="checkbox__control _noAnimateOnload">
+                                <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg">
+                                  <use href="./assets/images/icons.svg#check"></use>
+                                </svg>
+                              </span>
+                              <span class="checkbox__title">Default</span>
                             </span>
-                            <span class="checkbox__title">Default</span>
-                          </span>
-                        </label>
-                        <label class="checkbox">
-                          <input type="checkbox" class="checkbox__input" checked="checked" />
-                          <span class="checkbox__state">
-                            <span class="checkbox__control _noAnimateOnload">
-                              <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg">
-                                <use href="./assets/images/icons.svg#check"></use>
-                              </svg>
+                          </label>
+                          <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input" checked="checked" />
+                            <span class="checkbox__state">
+                              <span class="checkbox__control _noAnimateOnload">
+                                <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg">
+                                  <use href="./assets/images/icons.svg#check"></use>
+                                </svg>
+                              </span>
+                              <span class="checkbox__title">Checked</span>
                             </span>
-                            <span class="checkbox__title">Checked</span>
-                          </span>
-                        </label>
-                        <label class="checkbox">
-                          <input type="checkbox" class="checkbox__input" disabled="disabled" />
-                          <span class="checkbox__state">
-                            <span class="checkbox__control _noAnimateOnload">
-                              <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg">
-                                <use href="./assets/images/icons.svg#check"></use>
-                              </svg>
+                          </label>
+                          <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input" disabled="disabled" />
+                            <span class="checkbox__state">
+                              <span class="checkbox__control _noAnimateOnload">
+                                <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg">
+                                  <use href="./assets/images/icons.svg#check"></use>
+                                </svg>
+                              </span>
+                              <span class="checkbox__title">Disabled</span>
                             </span>
-                            <span class="checkbox__title">Disabled</span>
-                          </span>
-                        </label>
+                          </label>
+                        </div>
+                        <div class="formField form__feild">
+                          <label class="radio">
+                            <input type="radio" class="radio__input" name="radio2" />
+                            <span class="radio__state">
+                              <span class="radio__control"></span>
+                              <span class="radio__title">Default</span>
+                            </span>
+                          </label>
+                          <label class="radio">
+                            <input type="radio" class="radio__input" name="radio2" checked="checked" />
+                            <span class="radio__state">
+                              <span class="radio__control"></span>
+                              <span class="radio__title">Selected</span>
+                            </span>
+                          </label>
+                          <label class="radio">
+                            <input type="radio" class="radio__input" disabled="disabled" name="radio2" />
+                            <span class="radio__state">
+                              <span class="radio__control"></span>
+                              <span class="radio__title">Disabled</span>
+                            </span>
+                          </label>
+                        </div>
                       </div>
-                      <div class="formField compPreviews__previewFormField">
-                        <label class="radio">
-                          <input type="radio" class="radio__input" name="radio" />
-                          <span class="radio__state">
-                            <span class="radio__control"></span>
-                            <span class="radio__title">Default</span>
-                          </span>
-                        </label>
-                        <label class="radio">
-                          <input type="radio" class="radio__input" name="radio2" checked="checked" />
-                          <span class="radio__state">
-                            <span class="radio__control"></span>
-                            <span class="radio__title">Selected</span>
-                          </span>
-                        </label>
-                        <label class="radio">
-                          <input type="radio" class="radio__input" disabled="disabled" name="radio2" />
-                          <span class="radio__state">
-                            <span class="radio__control"></span>
-                            <span class="radio__title">Disabled</span>
-                          </span>
-                        </label>
-                      </div>
-                    </div>
+                    </form>
                   </div>
                 </div>
                 <h2 class="previewCard__title">Custom form elements</h2>
@@ -642,7 +630,7 @@
               <a href="/pages/calendar.html" class="previewCard tileList__item">
                 <div class="previewCard__placeholder previewCard__placeholder_noPaddings">
                   <div class="previewCard__preview">
-                    <div class="calendar calendar_length_5weeks compPreviews__previewCalendar">
+                    <div class="calendar calendar_length_5weeks calendar_compact">
                       <div class="calendar__wrapper">
                         <div class="calendar__days">
                           <div class="calendar__month">October 2019</div>
@@ -698,10 +686,10 @@
               <a href="/pages/form_elements.html" class="previewCard tileList__item">
                 <div class="previewCard__placeholder">
                   <div class="previewCard__preview previewCard__preview_fullWidth">
-                    <div class="compPreviews__previewInputsBox">
-                      <div class="formField compPreviews__previewInputFieldBox">
+                    <div class="itemsStack">
+                      <div class="formField formField_onPreviewCard">
                         <label for="default_input" class="formField__title">Label</label>
-                        <div class="formField__field compPreviews__previewInputField">
+                        <div class="formField__field">
                           <input
                             id="default_input"
                             type="text"
@@ -716,9 +704,9 @@
                           </svg>
                         </div>
                       </div>
-                      <div class="formField formField_validity_success compPreviews__previewInputFieldBox">
+                      <div class="formField formField_validity_success formField_onPreviewCard">
                         <label for="success_input" class="formField__title">Success</label>
-                        <div class="formField__field compPreviews__previewInputField">
+                        <div class="formField__field">
                           <input
                             id="success_input"
                             type="text"
@@ -734,9 +722,9 @@
                           </svg>
                         </div>
                       </div>
-                      <div class="formField formField_validity_error compPreviews__previewInputFieldBox">
+                      <div class="formField formField_validity_error formField_onPreviewCard">
                         <label for="error_input" class="formField__title">Error</label>
-                        <div class="formField__field compPreviews__previewInputField">
+                        <div class="formField__field">
                           <input
                             id="error_input"
                             type="text"
@@ -760,7 +748,7 @@
               <a href="/pages/skeleton.html" class="previewCard tileList__item">
                 <div class="previewCard__placeholder">
                   <div class="previewCard__preview previewCard__preview_fullWidth">
-                    <div class="skeleton skeleton_noBorder compPreviews__previewSkeleton">
+                    <div class="skeleton skeleton_noBorder skeleton_compact">
                       <div class="skeleton__header">
                         <div class="skeleton__picture"></div>
                         <div class="skeleton__title">
@@ -787,7 +775,7 @@
                 <div
                   class="previewCard__placeholder">
                   <div class="previewCard__preview previewCard__preview_fullWidth">
-                    <div class="accordion compPreviews__previewAccordion">
+                    <div class="accordion accordion_compact accordion_fullWidth">
                       <details class="accordion__item" open="open">
                         <summary class="accordion__itemSummary">
                           Accordion item #1
@@ -819,22 +807,6 @@
                           veniam consequat sunt nostrud amet.
                         </p>
                       </details>
-                      <!-- <details class="accordion__item">
-                        <summary class="accordion__itemSummary">
-                          Accordion item #3
-                          <svg
-                            class="accordion__itemSummaryMarker"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <use href="./assets/images/icons.svg#arrow"></use>
-                          </svg>
-                        </summary>
-                        <p class="accordion__itemDetails">
-                          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                          sint. Velit officia consequat duis enim velit mollit. Exercitation
-                          veniam consequat sunt nostrud amet.
-                        </p>
-                      </details> -->
                     </div>
                   </div>
                 </div>
@@ -843,19 +815,19 @@
               <a href="/pages/histogram.html" class="previewCard tileList__item">
                 <div class="previewCard__placeholder">
                   <div class="previewCard__preview previewCard__preview_fullWidth">
-                    <div class="histogram histogram_compact compPreviews__previewHistogram">
+                    <div class="histogram histogram_compact">
                       <div class="histogram__info">
                         <div class="histogram__score">
-                          <div class="histogram__scoreCaption compPreviews__previewHistogramScoreCap">
+                          <div class="histogram__scoreCaption">
                             Total orders
                           </div>
-                          <div class="histogram__scoreValue compPreviews__previewHistogramScoreVal">
+                          <div class="histogram__scoreValue">
                             50254
                           </div>
                         </div>
-                        <span class="histogram__showAll compPreviews__previewHistogramShowAll">View all</span>
+                        <span class="histogram__showAll">View all</span>
                       </div>
-                      <div class="histogram__columns compPreviews__previewHistogramCols">
+                      <div class="histogram__columns">
                         <div class="histogram__column" style="height: 100%"></div>
                         <div class="histogram__column" style="height: 50%"></div>
                         <div class="histogram__column" style="height: 30%"></div>
@@ -890,8 +862,8 @@
                 <div
                   class="previewCard__placeholder previewCard__placeholder_noPaddings previewCard__placeholder_noBorder">
                   <div class="previewCard__preview previewCard__preview_fullSize">
-                    <div id="modal" class="modal modal_opened compPreviews__previewModal">
-                      <div class="modal__window compPreviews__previewModalWindow">
+                    <div id="modal" class="modal modal_opened modal_compact compPreviews__previewModal">
+                      <div class="modal__window">
                         <div class="modal__content">
                           <form action="" class="form">
                             <div class="form__fields">

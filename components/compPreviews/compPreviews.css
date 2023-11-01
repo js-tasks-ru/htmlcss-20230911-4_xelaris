@@ -5,157 +5,23 @@
   padding-top: 16px;
   color: var(--text-contrast-color, black);
 }
-.compPreviews__previewFormFields {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 14px;
-}
-.compPreviews__previewFormField {
-  gap: 14px;
-}
-.compPreviews__previewAccordion {
-  font-size: 9px;
-  width: 100%;
-}
-.compPreviews__previewAvatar {
-  width: 116px;
-  height: 116px;
-}
-.compPreviews__previewButtonsBox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3px;  
-  width: 100%;
-}
-.compPreviews__previewButton {
-  font-size: 12px;
-  width: 75%;
-}
-.compPreviews__previewCalendar {
-  width: 164px;
-  box-sizing: border-box;
-  font-size: 9px;
-  border: 0;
-}
-.compPreviews__previewHistogram {
-  font-size: 9px;
-}
-.compPreviews__previewModalWindow {
-  width: 240px;
-  transform: translateX(-50%) translateY(-50%) scale(0.6);
-  padding: 25px;
-}
-.compPreviews__previewSkeleton {
-  padding: 0;
-  font-size: 10px
-}
-.compPreviews__previewInputsBox {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  align-items: center;
-}
-.compPreviews__previewInputFieldBox {
-  font-size: 10px;
-  width: 90%;
-}
-.compPreviews__previewInputField {
-  width: 100%;
-}
-.compPreviews__previewInput {
-  font-size: 1.25em;
-}
 .compPreviews__loadMoreBtn {
   width: 182px;
   display: block;
   margin: 64px auto 0;
 }
-@media screen and (min-width: 576px) {
-  .compPreviews__previewAccordion {
-    font-size: 11px;
-  }
-  .compPreviews__previewButtonsBox {
-    gap: 6px;
-  }
-  .compPreviews__previewButton {
-    font-size: 14px;
-  }
-  .compPreviews__previewCalendar {
-    font-size: 10px;
-    width: 202px;
-    border: 1px solid var(--border-color, #acb5bd);
-  }
-  .compPreviews__previewHistogram {
-    font-size: 12px;
-  }
-  .compPreviews__previewModalWindow {
-    width: 100%;
-  }  
-  .compPreviews__previewSkeleton {
-    padding: 1em 2em 1.5em 1em;
-  }
-  .compPreviews__previewInputFieldBox {
-    font-size: 12px;
-  }
-}
 @media screen and (min-width: 768px) {
   .compPreviews__tabs {
     margin-top: -63px;
-  }
-  .compPreviews__previewAccordion {
-    font-size: 12px;
-  }
-  .compPreviews__previewAvatar {
-    width: 160px;
-    height: 160px;
-  }
-  .compPreviews__previewButtonsBox {
-    gap: 16px;
-  }
-  .compPreviews__previewButton {
-    font-size: 16px;
-  }
-  .compPreviews__previewFormFields {
-    padding: 14px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  .compPreviews__previewHistogram {
-    font-size: 13px;
-  }  
-  .compPreviews__previewModalWindow {
-    padding: 30px 40px 33px;
   }
 }
 @media screen and (min-width: 992px) {  
   .compPreviews__tabContent {
     padding-top: 32px;
   }
-  .compPreviews__previewFormFields {
-    gap: 42px;
-  }
-  .compPreviews__previewHistogram {
-    font-size: 14px;
-    margin: 0 -7px;
-  }
-  .compPreviews__previewSkeleton {
-    font-size: 12px;
-    padding: 0;
-  }
-  .compPreviews__previewInputsBox {
-    gap: 12px;
-  }
-  .compPreviews__previewInputFieldBox {
-    width: 100%;
-  }
 }
 @media screen and (min-width: 1175px) {
   .compPreviews__tabContent {
     padding-top: 68px;
-  }
-  .compPreviews__previewAccordion {
-    font-size: 13px;
   }
 }

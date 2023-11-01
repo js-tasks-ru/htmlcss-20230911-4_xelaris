@@ -5,6 +5,10 @@
   align-items: flex-start;
   font-size: 16px;
 }
+.formField_onPreviewCard {
+  font-size: 10px;
+  width: 90%;
+}
 .formField__title {
   display: inline-block;
   color: var(--grey-3, #acb5bd);
@@ -18,6 +22,9 @@
 }
 .formField__field {
   position: relative;
+}
+.formField_onPreviewCard .formField__field {
+  width: 100%;
 }
 .formField__field_fullWidth {
   width: 100%;
@@ -63,4 +70,14 @@
 }
 .formField_disabled .formField__status {
   color: var(--text-mute-color, #dde2e5)
+}
+@media screen and (min-width: 576px) {
+  .formField_onPreviewCard {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 992px) {  
+  .formField_onPreviewCard {
+    width: 100%;
+  }
 }
