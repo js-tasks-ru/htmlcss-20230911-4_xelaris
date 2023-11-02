@@ -36,18 +36,6 @@
 .componentDetail__componentColumn_fullWidth {
   flex-grow: 1;
 }
-.componentDetail__button {
-  width: 200px;
-}
-.componentDetail__accordion {
-  max-width: 340px;
-}
-.componentDetail__histogram {
-  max-width: 340px;
-}
-.componentDetail__openModalButton {
-  width: 150px;
-}
 @media screen and (min-width: 576px) {
   .componentDetail__component_columns {
     flex-direction: row;

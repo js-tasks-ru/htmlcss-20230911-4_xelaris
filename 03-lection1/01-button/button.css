@@ -17,6 +17,16 @@
   white-space: nowrap;
   transition: transform 0.2s linear;
 }
+.button_inStack {
+  font-size: 12px;
+  width: 75%;
+}
+.button_width_150 {
+  width: 150px;
+}
+.button_width_200 {
+  width: 200px;
+}
 .button:active {
   transform: translateY(1px);
 }
@@ -50,4 +60,14 @@
 .button:disabled {
   opacity: 0.5;
   pointer-events: none;
+}
+@media screen and (min-width: 576px) {
+  .button_inStack {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .button_inStack {
+    font-size: 16px;
+  }
 }

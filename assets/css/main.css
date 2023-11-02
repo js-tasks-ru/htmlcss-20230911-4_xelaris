@@ -8,6 +8,12 @@
 @import '../../components/compPreviews/compPreviews.css';
 @import '../../components/previewCard/previewCard.css';
 @import '../../components/menu/menu.css';
+@import '../../components/burgerMenuShowButton/burgerMenuShowButton.css';
+@import '../../components/tabs/tabs.css';
+@import '../../components/formField/formField.css';
+@import '../../components/form/form.css';
+@import '../../components/sourceCode/sourceCode.css';
+@import '../../components/itemsStack/itemsStack.css';
 @import '../../03-lection1/01-button/button.css';
 @import '../../03-lection1/02-accordion/accordion.css';
 @import '../../04-lection2/01-histogram/histogram.css';
@@ -21,11 +27,6 @@
 @import '../../07-lection5/03-toggler/toggler.css';
 @import '../../07-lection5/04-input/input.css';
 @import '../../09-lection7/01-burger-menu/burger-menu.css';
-@import '../../components/burgerMenuShowButton/burgerMenuShowButton.css';
-@import '../../components/tabs/tabs.css';
-@import '../../components/formField/formField.css';
-@import '../../components/form/form.css';
-@import '../../components/sourceCode/sourceCode.css';
 
 :root {
   --white: #ffffff;

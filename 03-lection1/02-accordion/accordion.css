@@ -3,6 +3,12 @@
   font-size: 16px;
   line-height: 1.5em;
 }
+.accordion_compact {
+  font-size: 9px;
+}
+.accordion_fullWidth {
+  width: 100%;
+}
 .accordion__item {
   border: 1px solid var(--content-border-color, #acb5bd);
   background: var(--content-bg-color, white);
@@ -38,4 +44,19 @@
   margin: 0;
   padding: 0 2em 2em;
   color: var(--text-regular-color, #495057);
+}
+@media screen and (min-width: 576px) {
+  .accordion_compact {
+    font-size: 11px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .accordion_compact {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1175px) {
+  .accordion_compact {
+    font-size: 13px;
+  }
 }
