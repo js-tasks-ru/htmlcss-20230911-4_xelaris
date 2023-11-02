@@ -1,0 +1,73 @@
+.button {
+  height: 3em;
+  line-height: normal;
+  padding: 0.94em 0.94em 0.88;
+  box-sizing: border-box;
+  border-radius: 0.5em;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  border: 0;
+  transition: opacity 200ms ease-in-out, background-color 200ms ease-in-out,
+    border-color 200ms ease-in-out, color 200ms ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: transform 0.2s linear;
+}
+.button_inStack {
+  font-size: 12px;
+  width: 75%;
+}
+.button_width_150 {
+  width: 150px;
+}
+.button_width_200 {
+  width: 200px;
+}
+.button:active {
+  transform: translateY(1px);
+}
+.button_var_primary {
+  background: var(--primary, #4263eb);
+  color: var(--white, white);
+}
+.button_var_primary:hover,
+.button_var_primary:active {
+  background: var(--primary-active, #4263eb);
+}
+.button_var_secondary {
+  background: var(--secondary, #4263eb);
+  color: var(--white, white);
+}
+.button_var_secondary:hover,
+.button_var_secondary:active {
+  background: var(--secondary-active, #4263eb);
+  color: var(--white, white);
+}
+.button_var_alternate {
+  background: transparent;
+  border: 1px solid var(--text-pale-color, #acb5bd);
+  color: var(--text-regular-color, #495057);
+}
+.button_var_alternate:hover,
+.button_var_alternate:active {
+  border-color: var(--text-primary-color, black);
+  color: var(--text-contrast-color, black);
+}
+.button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+@media screen and (min-width: 576px) {
+  .button_inStack {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .button_inStack {
+    font-size: 16px;
+  }
+}

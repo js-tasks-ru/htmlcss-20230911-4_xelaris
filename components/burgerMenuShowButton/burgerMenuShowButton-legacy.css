@@ -1,0 +1,27 @@
+.burgerMenuShowButton {
+  display: none;
+  cursor: pointer;
+  background: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  opacity: 1;
+  transition: opacity 0.25s linear;
+}
+.burgerMenuShowButton:hover {
+  background: var(--grey-2, #acb5bd);
+}
+.burgerMenuShowButton__icon {
+  width: 24px;
+  height: 24px;
+  color: var(--text-contrast-color, black)
+}
+@media screen and (max-width: 768px) {
+  .burgerMenuShowButton {
+    display: inline-block;
+  }
+}

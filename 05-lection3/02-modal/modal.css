@@ -1,69 +1,60 @@
+@import '../../src/vars';
+@import '../../src/mixins';
+@import '../../src/main';
+
 .modal {
   background: rgba(196, 196, 196, 0.5);
   display: none;
   position: fixed;
   inset: 0;
   z-index: 1;
-}
-.modal_opened {
-  display: block;
-  position: absolute;
-}
-.modal_noViel {
-  background: transparent;
-}
-.modal__window {
-  width: 90%;
-  min-width: 304px;
-  padding: 30px 40px 33px;
-  border-radius: 8px;
-  background: var(--content-bg-color, white);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  box-sizing: border-box;
-}
-.modal_compact .modal__window {
-  width: 240px;
-  transform: translateX(-50%) translateY(-50%) scale(0.6);
-  padding: 25px;
-}
-.modal__title {
-  color: var(--text-contrast-color, #334d6e);
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 24px;
-  margin: 0;
-}
-.modal__content {
-  color: var(--text-regular-color, #495057);
-  font-size: 16px;
-  line-height: 24px;
-  margin: 0;
-}
-.modal__title + .modal__content {
-  margin-top: 14px;
-}
-.modal__closeButton {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  cursor: pointer;
-  background: none;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 0;  
-  color: var(--text-contrast-color, #334d6e);
-}
-.modal__closeButtonIcon {
-  width: 16px;
-  height: 16px;
-}
-@media screen and (min-width: 576px) {
-  .modal__window {
-    width: 428px;
+
+  &_opened {
+    display: block;
+    position: absolute;
+  }
+  &_noVeil {
+    background: transparent;
+  }
+
+  &__window {
+    width: 90%;
+    min-width: 304px;
+    padding: 30px 40px 33px;
+    border-radius: 8px;
+    background: var(--content-bg-color, white);
+    box-sizing: border-box;
+    @util center;
+
+    @media screen and (min-width: 576px) {
+      width: 428px;
+    }
+  }
+  &__content {
+    color: var(--text-regular-color, #495057);
+    margin: 0;
+    @include font-def();
+  }
+  &__title {
+    color: var(--text-contrast-color, #334d6e);
+    margin: 0;
+    @include font(20px, 600);
+    /* @include font(20px, 600, null, 24px); */
+
+    + .modal__content {
+      margin-top: 14px;
+    }
+  }    
+  &__closeButton {
+    color: var(--text-contrast-color, #334d6e);
+    cursor: pointer;
+    background: none;
+    font-size: 0; 
+    @include reset-geometry();
+    @util position(absolute, 12px 12px null null);
+  }
+  &__closeButtonIcon {
+    @util size(16px);
   }
 }
 @media screen and (min-width: 768px) {

@@ -1,0 +1,27 @@
+.compPreviews__tabs {
+  margin-top: -62px;
+}
+.compPreviews__tabContent {
+  padding-top: 16px;
+  color: var(--text-contrast-color, black);
+}
+.compPreviews__loadMoreBtn {
+  width: 182px;
+  display: block;
+  margin: 64px auto 0;
+}
+@media screen and (min-width: 768px) {
+  .compPreviews__tabs {
+    margin-top: -63px;
+  }
+}
+@media screen and (min-width: 992px) {  
+  .compPreviews__tabContent {
+    padding-top: 32px;
+  }
+}
+@media screen and (min-width: 1175px) {
+  .compPreviews__tabContent {
+    padding-top: 68px;
+  }
+}
