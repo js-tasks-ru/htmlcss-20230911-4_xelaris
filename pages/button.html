@@ -8,10 +8,13 @@
       rel="stylesheet"
       href="../components/componentDetail/componentDetail.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-light.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
     <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>
     <script src="../assets/js/fixOnloadAnimations.js"></script>
-    <title>Component page</title>
+    <script defer>hljs.highlightAll()</script>
+    <title>Button component</title>
   </head>
   <body class="page page_component preload">
     <header class="header header_compact page__header">
@@ -102,7 +105,7 @@
                 <nav class="menu__list">
                   <a class="menu__item" href="/pages/accordion.html">Accordion</a>
                   <a class="menu__item" href="/pages/avatar.html">Avatar</a>
-                  <a class="menu__item" href="/pages/button.html">Button</a>
+                  <a class="menu__item menu__item_active" href="/pages/button.html">Button</a>
                   <a class="menu__item" href="/pages/calendar.html">Calendar</a>
                   <a class="menu__item" href="/pages/form_elements.html"
                     >Custom form elements</a
@@ -119,7 +122,7 @@
                 <h4 class="menu__title">Atoms</h4>
                 <nav class="menu__list">
                   <a class="menu__item" href="/pages/avatar.html">Avatar</a>
-                  <a class="menu__item" href="/pages/button.html">Button</a>
+                  <a class="menu__item menu__item_active" href="/pages/button.html">Button</a>
                   <a class="menu__item" href="/pages/form_elements.html"
                     >Custom form elements</a
                   >
@@ -154,8 +157,25 @@
       </div>
       <main class="page__content">
         <div class="componentDetail">
-          <h1 class="page__title">Component page</h1>
-          <div class="componentDetail__component">component here</div>
+          <h1 class="page__title">Button component</h1>
+          <div class="componentDetail__component componentDetail__component_columns">
+            <div class="componentDetail__componentColumn">
+              <button class="button button_var_primary button_width_200">Primary</button>
+              <button class="button button_var_secondary button_width_200">Secondary</button>
+              <button class="button button_var_alternate button_width_200">Alternate</button>
+            </div>
+            <div class="componentDetail__componentColumn">
+              <button class="button button_var_primary button_width_200" disabled="disabled">
+                Primary disabled
+              </button>
+              <button class="button button_var_secondary button_width_200" disabled="disabled">
+                Secondary disabled
+              </button>
+              <button class="button button_var_alternate button_width_200" disabled="disabled">
+                Alternate disabled
+              </button>
+            </div>
+          </div>
           <div class="tabs componentDetail__tabs">
             <input
               class="tabs__tabControl tabs__tabControl_tabNum_1"
@@ -184,12 +204,77 @@
             </div>
             <div class="tabs__content tabs__content_tabNum_1">
               <div class="componentDetail__tabContent">
-                html code here
+                <pre class="sourceCode sourceCode_syntax_html">
+                  <code class="sourceCode__inner language-html">
+&lt;button class=&quot;button button_var_primary&quot;&gt;Primary&lt;/button&gt;
+&lt;button class=&quot;button button_var_primary&quot; disabled=&quot;disabled&quot;&gt;Primary disabled&lt;/button&gt;
+&lt;button class=&quot;button button_var_secondary&quot;&gt;Secondary&lt;/button&gt;
+&lt;button class=&quot;button button_var_secondary&quot; disabled=&quot;disabled&quot;&gt;Secondary disabled&lt;/button&gt;
+&lt;button class=&quot;button button_var_alternate&quot;&gt;Alternate&lt;/button&gt;
+&lt;button class=&quot;button button_var_alternate&quot; disabled=&quot;disabled&quot;&gt;Alternate disabled&lt;/button&gt;
+                  </code>
+                </pre>
               </div>              
             </div>
             <div class="tabs__content tabs__content_tabNum_2">
               <div class="componentDetail__tabContent">
-                css code here
+                <pre class="sourceCode sourceCode_syntax_css">
+                  <code class="sourceCode__inner language-css">
+.button {
+  height: 3em;
+  line-height: normal;
+  padding: 0.94em 0.94em 0.88;
+  box-sizing: border-box;
+  border-radius: 0.5em;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  border: 0;
+  transition: opacity 200ms ease-in-out, background-color 200ms ease-in-out,
+    border-color 200ms ease-in-out, color 200ms ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: transform 0.2s linear;
+}
+.button:active {
+  transform: translateY(1px);
+}
+.button_var_primary {
+  background: var(--primary, #4263eb);
+  color: var(--white, white);
+}
+.button_var_primary:hover,
+.button_var_primary:active {
+  background: var(--primary-active, #4263eb);
+}
+.button_var_secondary {
+  background: var(--secondary, #4263eb);
+  color: var(--white, white);
+}
+.button_var_secondary:hover,
+.button_var_secondary:active {
+  background: var(--secondary-active, #4263eb);
+  color: var(--white, white);
+}
+.button_var_alternate {
+  background: transparent;
+  border: 1px solid var(--text-pale-color, #acb5bd);
+  color: var(--text-regular-color, #495057);
+}
+.button_var_alternate:hover,
+.button_var_alternate:active {
+  border-color: var(--text-primary-color, black);
+  color: var(--text-contrast-color, black);
+}
+.button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+                  </code>                      
+                </pre>
               </div>              
             </div>
           </div>

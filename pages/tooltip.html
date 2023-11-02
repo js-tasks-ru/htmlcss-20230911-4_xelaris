@@ -8,10 +8,13 @@
       rel="stylesheet"
       href="../components/componentDetail/componentDetail.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-light.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
     <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>
     <script src="../assets/js/fixOnloadAnimations.js"></script>
-    <title>Component page</title>
+    <script defer>hljs.highlightAll()</script>
+    <title>Tooltip component</title>
   </head>
   <body class="page page_component preload">
     <header class="header header_compact page__header">
@@ -110,7 +113,7 @@
                   <a class="menu__item" href="/pages/histogram.html">Histogram</a>
                   <a class="menu__item" href="/pages/modal.html">Modal</a>
                   <a class="menu__item" href="/pages/skeleton.html">Skeleton</a>
-                  <a class="menu__item" href="/pages/tooltip.html">Tooltip</a>
+                  <a class="menu__item menu__item_active" href="/pages/tooltip.html">Tooltip</a>
                 </nav>
               </div>
             </section>
@@ -123,7 +126,7 @@
                   <a class="menu__item" href="/pages/form_elements.html"
                     >Custom form elements</a
                   >
-                  <a class="menu__item" href="/pages/tooltip.html">Tooltip</a>
+                  <a class="menu__item menu__item_active" href="/pages/tooltip.html">Tooltip</a>
                 </nav>
               </div>
             </section>
@@ -154,8 +157,15 @@
       </div>
       <main class="page__content">
         <div class="componentDetail">
-          <h1 class="page__title">Component page</h1>
-          <div class="componentDetail__component">component here</div>
+          <h1 class="page__title">Tooltip component</h1>
+          <div class="componentDetail__component">
+            <span class="tooltip">
+              <svg class="tooltip__trigger" xmlns="http://www.w3.org/2000/svg">
+                <use href="../assets/images/icons.svg#question"></use>
+              </svg>
+              <span class="tooltip__bubble tooltip__bubble_primary tooltip__bubble_pos_right">Helper text</span>
+            </span>
+          </div>
           <div class="tabs componentDetail__tabs">
             <input
               class="tabs__tabControl tabs__tabControl_tabNum_1"
@@ -184,12 +194,118 @@
             </div>
             <div class="tabs__content tabs__content_tabNum_1">
               <div class="componentDetail__tabContent">
-                html code here
+                <pre class="sourceCode sourceCode_syntax_html">
+                  <code class="sourceCode__inner language-html">
+&lt;span class=&quot;tooltip&quot;&gt;
+  &lt;svg class=&quot;tooltip__trigger&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+    &lt;use href=&quot;../assets/images/icons.svg#question&quot;&gt;&lt;/use&gt;
+  &lt;/svg&gt;
+  &lt;span class=&quot;tooltip__bubble tooltip__bubble_primary tooltip__bubble_pos_right&quot;&gt;Helper text&lt;/span&gt;
+&lt;/span&gt;
+                  </code>
+                </pre>
               </div>              
             </div>
             <div class="tabs__content tabs__content_tabNum_2">
               <div class="componentDetail__tabContent">
-                css code here
+                <pre class="sourceCode sourceCode_syntax_css">
+                  <code class="sourceCode__inner language-css">
+.tooltip {
+  display: inline-block;
+  vertical-align: baseline;
+  position: relative;
+  color: var(--text-contrast-color, black);
+}
+.tooltip_opened {
+  text-align: center;
+}
+.tooltip__trigger {
+  width: 24px;
+  height: 24px;
+}
+.tooltip__bubble {
+  --tooltip-bubble-color: var(--text-contrast-color, black);
+  display: none;
+  border-radius: 10px;
+  background: var(--tooltip-bubble-color, black);
+  box-shadow: 0px 2px 4px 0px rgba(33, 36, 41, 0.05);
+  color: var(--grey-2, #dde2e5);
+  text-align: center;
+  font-size: 16px;
+  min-height: 24px;
+  position: absolute;
+  padding: 13px 21px 8px;
+  width: 87px;
+}
+.tooltip_opened .tooltip__bubble {
+  position: relative;
+  transform: none;
+  left: auto;
+  margin-bottom: 6px;
+}
+.tooltip__bubble::after {
+  content: '';
+  border-color: transparent;
+  border-style: solid;
+  position: absolute;
+}
+.tooltip__trigger:hover ~ .tooltip__bubble,
+.tooltip_opened .tooltip__bubble {
+  display: block;
+}
+.tooltip__bubble_primary {
+  --tooltip-bubble-color: var(--primary, var(--blue, #4263eb));
+}
+.tooltip__bubble_pos_top {
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tooltip__bubble_pos_top::after {
+  border-width: 6px 7px 0;
+  border-top-color: var(--tooltip-bubble-color, black);
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tooltip__bubble_pos_bottom {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tooltip__bubble_pos_bottom::after {
+  border-width: 0 6px 7px;
+  border-bottom-color: var(--tooltip-bubble-color, black);
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tooltip__bubble_pos_left {
+  top: 50%;
+  right: calc(100% + 7px);
+  transform: translateY(-50%);
+}
+.tooltip__bubble_pos_left::after {
+  border-width: 7px 0 7px 6px;
+  border-left-color: var(--tooltip-bubble-color, black);
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+}
+.tooltip__bubble_pos_right {
+  top: 50%;
+  left: calc(100% + 7px);
+  transform: translateY(-50%);
+}
+.tooltip__bubble_pos_right::after {
+  border-width: 7px 6px 7px 0;
+  border-right-color: var(--tooltip-bubble-color, black);
+  top: 50%;
+  left: -6px;
+  transform: translateY(-50%);
+}
+                  </code>                                    
+                </pre>
               </div>              
             </div>
           </div>

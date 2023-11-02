@@ -5,6 +5,16 @@
   border: 1px solid var(--content-border-color, #acb5bd);
   border-radius: 0.5em;
   padding: 1.2em 1.63em 2em;
+  box-sizing: border-box;
+}
+.calendar_compact {
+  width: 164px;
+  box-sizing: border-box;
+  font-size: 9px;
+  border: 0;
+}
+.calendar_width_340 {
+  width: 340px;
 }
 .calendar__month {
   color: var(--calendar-grey-dark, #334d6e);
@@ -71,4 +81,11 @@
     :empty
   ) {
   background: var(--blue-light, #bac4de);
+}
+@media screen and (min-width: 576px) {
+  .calendar_compact {
+    font-size: 10px;
+    width: 202px;
+    border: 1px solid var(--border-color, #acb5bd);
+  }
 }

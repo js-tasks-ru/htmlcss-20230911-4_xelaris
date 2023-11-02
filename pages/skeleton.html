@@ -8,10 +8,13 @@
       rel="stylesheet"
       href="../components/componentDetail/componentDetail.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-light.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
     <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>
     <script src="../assets/js/fixOnloadAnimations.js"></script>
-    <title>Component page</title>
+    <script defer>hljs.highlightAll()</script>
+    <title>Skeleton component</title>
   </head>
   <body class="page page_component preload">
     <header class="header header_compact page__header">
@@ -109,7 +112,7 @@
                   >
                   <a class="menu__item" href="/pages/histogram.html">Histogram</a>
                   <a class="menu__item" href="/pages/modal.html">Modal</a>
-                  <a class="menu__item" href="/pages/skeleton.html">Skeleton</a>
+                  <a class="menu__item menu__item_active" href="/pages/skeleton.html">Skeleton</a>
                   <a class="menu__item" href="/pages/tooltip.html">Tooltip</a>
                 </nav>
               </div>
@@ -135,7 +138,7 @@
                   <a class="menu__item" href="/pages/form_elements.html"
                     >Custom form elements</a
                   >
-                  <a class="menu__item" href="/pages/skeleton.html">Skeleton</a>
+                  <a class="menu__item menu__item_active" href="/pages/skeleton.html">Skeleton</a>
                 </nav>
               </div>
             </section>
@@ -154,8 +157,22 @@
       </div>
       <main class="page__content">
         <div class="componentDetail">
-          <h1 class="page__title">Component page</h1>
-          <div class="componentDetail__component">component here</div>
+          <h1 class="page__title">Skeleton component</h1>
+          <div class="componentDetail__component">
+            <div class="skeleton">
+              <div class="skeleton__header">
+                <div class="skeleton__picture"></div>
+                <div class="skeleton__title">
+                  <div class="skeleton__textline skeleton__textline_length_short"></div>
+                  <div class="skeleton__textline skeleton__textline_length_long"></div>
+                </div>
+              </div>
+              <div class="skeleton__content">
+                <div class="skeleton__textline skeleton__textline_length_long"></div>
+                <div class="skeleton__textline skeleton__textline_length_middle"></div>
+              </div>
+            </div>
+          </div>
           <div class="tabs componentDetail__tabs">
             <input
               class="tabs__tabControl tabs__tabControl_tabNum_1"
@@ -184,12 +201,92 @@
             </div>
             <div class="tabs__content tabs__content_tabNum_1">
               <div class="componentDetail__tabContent">
-                html code here
+                <pre class="sourceCode sourceCode_syntax_html">
+                  <code class="sourceCode__inner language-html">
+&lt;div class=&quot;skeleton&quot;&gt;
+  &lt;div class=&quot;skeleton__header&quot;&gt;
+    &lt;div class=&quot;skeleton__picture&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;skeleton__title&quot;&gt;
+      &lt;div class=&quot;skeleton__textline skeleton__textline_length_short&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;skeleton__textline skeleton__textline_length_long&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;skeleton__content&quot;&gt;
+    &lt;div class=&quot;skeleton__textline skeleton__textline_length_long&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;skeleton__textline skeleton__textline_length_middle&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                  </code>
+                </pre>
               </div>              
             </div>
             <div class="tabs__content tabs__content_tabNum_2">
               <div class="componentDetail__tabContent">
-                css code here
+                <pre class="sourceCode sourceCode_syntax_css">
+                  <code class="sourceCode__inner language-css">
+.skeleton {
+  border: 1px solid var(--content-border-color, #acb5bd);
+  font-size: 16px;
+  border-radius: 0.5em;
+  padding: 1.5em 2.5em 2em 1.5em;
+}
+.skeleton_noBorder {
+  border: 0;
+}
+.skeleton__header {
+  display: flex;
+  align-items: center;
+}
+.skeleton__picture {
+  width: 4em;
+  height: 4em;
+  border-radius: 2em;
+  margin-right: 1em;
+  flex-shrink: 0;
+}
+.skeleton__textline {
+  height: 1.25em;
+  margin: 0.5em 0;
+}
+.skeleton__picture,
+.skeleton__textline {
+  background: var(--content-color, #dde2e5);
+  background: linear-gradient(
+    90deg,
+    #dde2e5 6.44%,
+    #e2e6e8 38.47%,
+    #f3f5f5 56.48%,
+    #e3e7ea 77.5%,
+    #dde2e5 102.52%
+  );
+  background-size: 200%;
+  animation: 1.5s linear infinite forwards skeletonLoadAnimation;
+}
+.skeleton__textline_length_short {
+  width: 65%;
+}
+.skeleton__textline_length_middle {
+  width: 90%;
+}
+.skeleton__textline_length_long {
+  width: 100%;
+}
+.skeleton__title {
+  flex-grow: 1;
+}
+.skeleton__content {
+  margin-top: 1.5em;
+}
+@keyframes skeletonLoadAnimation {
+  from {
+    background-position: 100%;
+  }
+  to {
+    background-position: -100%;
+  }
+}
+                  </code>
+                </pre>   
               </div>              
             </div>
           </div>

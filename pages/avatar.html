@@ -8,10 +8,13 @@
       rel="stylesheet"
       href="../components/componentDetail/componentDetail.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-light.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
-    <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>
+    <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>    
     <script src="../assets/js/fixOnloadAnimations.js"></script>
-    <title>Component page</title>
+    <script defer>hljs.highlightAll()</script>
+    <title>Avatar component</title>
   </head>
   <body class="page page_component preload">
     <header class="header header_compact page__header">
@@ -101,7 +104,12 @@
                 <h4 class="menu__title">Components</h4>
                 <nav class="menu__list">
                   <a class="menu__item" href="/pages/accordion.html">Accordion</a>
-                  <a class="menu__item" href="/pages/avatar.html">Avatar</a>
+                  <a
+                    class="menu__item menu__item_active"
+                    href="/pages/avatar.html"
+                  >
+                    Avatar
+                  </a>
                   <a class="menu__item" href="/pages/button.html">Button</a>
                   <a class="menu__item" href="/pages/calendar.html">Calendar</a>
                   <a class="menu__item" href="/pages/form_elements.html"
@@ -118,7 +126,7 @@
               <div class="menu__group">
                 <h4 class="menu__title">Atoms</h4>
                 <nav class="menu__list">
-                  <a class="menu__item" href="/pages/avatar.html">Avatar</a>
+                  <a class="menu__item menu__item_active" href="/pages/avatar.html">Avatar</a>
                   <a class="menu__item" href="/pages/button.html">Button</a>
                   <a class="menu__item" href="/pages/form_elements.html"
                     >Custom form elements</a
@@ -154,8 +162,12 @@
       </div>
       <main class="page__content">
         <div class="componentDetail">
-          <h1 class="page__title">Component page</h1>
-          <div class="componentDetail__component">component here</div>
+          <h1 class="page__title">Avatar component</h1>
+          <div class="componentDetail__component">
+            <div class="avatar avatar_size_huge">
+              <img src="../assets/images/avatar-200.jpg" alt="Аватар пользователя Anonimus" class="avatar__img" />
+            </div>
+          </div>
           <div class="tabs componentDetail__tabs">
             <input
               class="tabs__tabControl tabs__tabControl_tabNum_1"
@@ -184,14 +196,51 @@
             </div>
             <div class="tabs__content tabs__content_tabNum_1">
               <div class="componentDetail__tabContent">
-                html code here
+                <pre class="sourceCode sourceCode_syntax_html">
+                  <code class="sourceCode__inner language-html">
+&lt;div class=&quot;avatar avatar_size_huge&quot;&gt;
+  &lt;img src=&quot;../assets/images/avatar-200.jpg&quot; alt=&quot;Аватар пользователя Anonimus&quot; class=&quot;avatar__img&quot; /&gt;
+&lt;/div&gt;
+                  </code>
+                </pre>
               </div>              
             </div>
             <div class="tabs__content tabs__content_tabNum_2">
               <div class="componentDetail__tabContent">
-                css code here
+                <pre class="sourceCode sourceCode_syntax_css">
+                  <code class="sourceCode__inner language-css">
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.avatar_size_small {
+  width: 102px;
+  height: 102px;
+}
+.avatar_size_normal {
+  width: 116px;
+  height: 116px;
+}
+.avatar_size_big {
+  width: 160px;
+  height: 160px;
+}
+.avatar_size_huge {
+  width: 200px;
+  height: 200px;
+}
+.avatar__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}       
+                  </code>
+                </pre>
               </div>              
-            </div>
+            </div>            
           </div>
         </div>
       </main>

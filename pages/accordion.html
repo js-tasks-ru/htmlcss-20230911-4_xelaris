@@ -8,10 +8,13 @@
       rel="stylesheet"
       href="../components/componentDetail/componentDetail.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-light.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
     <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>
     <script src="../assets/js/fixOnloadAnimations.js"></script>
-    <title>Component page</title>
+    <script defer>hljs.highlightAll()</script>
+    <title>Accordion component</title>
   </head>
   <body class="page page_component preload">
     <header class="header header_compact page__header">
@@ -100,7 +103,7 @@
               <div class="menu__group">
                 <h4 class="menu__title">Components</h4>
                 <nav class="menu__list">
-                  <a class="menu__item" href="/pages/accordion.html">Accordion</a>
+                  <a class="menu__item menu__item_active" href="/pages/accordion.html">Accordion</a>
                   <a class="menu__item" href="/pages/avatar.html">Avatar</a>
                   <a class="menu__item" href="/pages/button.html">Button</a>
                   <a class="menu__item" href="/pages/calendar.html">Calendar</a>
@@ -143,7 +146,7 @@
               <div class="menu__group">
                 <h4 class="menu__title">Organisms</h4>
                 <nav class="menu__list">
-                  <a class="menu__item" href="/pages/accordion.html">Accordion</a>
+                  <a class="menu__item menu__item_active" href="/pages/accordion.html">Accordion</a>
                   <a class="menu__item" href="/pages/histogram.html">Histogram</a>
                   <a class="menu__item" href="/pages/modal.html">Modal</a>
                 </nav>
@@ -154,8 +157,60 @@
       </div>
       <main class="page__content">
         <div class="componentDetail">
-          <h1 class="page__title">Component page</h1>
-          <div class="componentDetail__component">component here</div>
+          <h1 class="page__title">Accordion component</h1>
+          <div class="componentDetail__component">
+            <div class="accordion">
+              <details class="accordion__item">
+                <summary class="accordion__itemSummary">
+                  Accordion item #1 with long long long long long long long long long
+                  long long long long long long long tilte
+                  <svg
+                    class="accordion__itemSummaryMarker"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use href="../../assets/images/icons.svg#arrow"></use>
+                  </svg>
+                </summary>
+                <p class="accordion__itemDetails">
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+                  sint. Velit officia consequat duis enim velit mollit. Exercitation
+                  veniam consequat sunt nostrud amet.
+                </p>
+              </details>
+              <details class="accordion__item">
+                <summary class="accordion__itemSummary">
+                  Accordion item #2
+                  <svg
+                    class="accordion__itemSummaryMarker"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use href="../../assets/images/icons.svg#arrow"></use>
+                  </svg>
+                </summary>
+                <p class="accordion__itemDetails">
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+                  sint. Velit officia consequat duis enim velit mollit. Exercitation
+                  veniam consequat sunt nostrud amet.
+                </p>
+              </details>
+              <details class="accordion__item">
+                <summary class="accordion__itemSummary">
+                  Accordion item #3
+                  <svg
+                    class="accordion__itemSummaryMarker"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use href="../../assets/images/icons.svg#arrow"></use>
+                  </svg>
+                </summary>
+                <p class="accordion__itemDetails">
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+                  sint. Velit officia consequat duis enim velit mollit. Exercitation
+                  veniam consequat sunt nostrud amet.
+                </p>
+              </details>
+            </div>
+          </div>
           <div class="tabs componentDetail__tabs">
             <input
               class="tabs__tabControl tabs__tabControl_tabNum_1"
@@ -184,12 +239,87 @@
             </div>
             <div class="tabs__content tabs__content_tabNum_1">
               <div class="componentDetail__tabContent">
-                html code here
+                <pre class="sourceCode sourceCode_syntax_html">
+                  <code class="sourceCode__inner language-html">
+&lt;div class=&quot;accordion&quot;&gt;
+  &lt;details class=&quot;accordion__item&quot;&gt;
+    &lt;summary class=&quot;accordion__itemSummary&quot;&gt;
+      Accordion item #1
+      &lt;svg class=&quot;accordion__itemSummaryMarker&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+        &lt;use href=&quot;../../assets/images/icons.svg#arrow&quot;&gt;&lt;/use&gt;
+      &lt;/svg&gt;
+    &lt;/summary&gt;
+    &lt;p class=&quot;accordion__itemDetails&quot;&gt;
+      Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+      sint. Velit officia consequat duis enim velit mollit. Exercitation
+      veniam consequat sunt nostrud amet.
+    &lt;/p&gt;
+  &lt;/details&gt;
+  &lt;details class=&quot;accordion__item&quot;&gt;
+    &lt;summary class=&quot;accordion__itemSummary&quot;&gt;
+      Accordion item #2
+      &lt;svg class=&quot;accordion__itemSummaryMarker&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+        &lt;use href=&quot;../../assets/images/icons.svg#arrow&quot;&gt;&lt;/use&gt;
+      &lt;/svg&gt;
+    &lt;/summary&gt;
+    &lt;p class=&quot;accordion__itemDetails&quot;&gt;
+      Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+      sint. Velit officia consequat duis enim velit mollit. Exercitation
+      veniam consequat sunt nostrud amet.
+    &lt;/p&gt;
+  &lt;/details&gt;
+&lt;/div&gt;
+                  </code>
+                </pre>
               </div>              
             </div>
             <div class="tabs__content tabs__content_tabNum_2">
               <div class="componentDetail__tabContent">
-                css code here
+                <pre class="sourceCode sourceCode_syntax_css">
+                  <code class="sourceCode__inner language-css">
+.accordion {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+.accordion__item {
+  border: 1px solid var(--content-border-color, #acb5bd);
+  background: var(--content-bg-color, white);
+  border-radius: 0.5em;
+}
+.accordion__item:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+.accordion__itemSummary {
+  display: flex;
+  gap: 0.63em;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 2em;
+  color: var(--text-contrast-color, black);
+  cursor: pointer;
+  user-select: none;
+}
+.accordion__itemSummaryMarker {
+  width: 1em;
+  height: 0.5em;
+  display: inline-block;
+  color: var(--text-regular-color, #495057);
+  flex-shrink: 0;
+}
+.accordion__item[open] .accordion__itemSummary {
+  padding-bottom: 1em;
+}
+.accordion__item[open] .accordion__itemSummaryMarker {
+  transform: rotate(180deg);
+}
+.accordion__itemDetails {
+  margin: 0;
+  padding: 0 2em 2em;
+  color: var(--text-regular-color, #495057);
+}                  
+                  </code>
+                </pre>
               </div>              
             </div>
           </div>

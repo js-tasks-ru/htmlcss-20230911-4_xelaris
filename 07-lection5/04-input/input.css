@@ -1,17 +1,17 @@
 .textInput {
   border: 1px solid var(--control-border-color, #dde2e5);
-  border-radius: 8px;
+  border-radius: 0.4em;
   color: var(--text-contrast-color, #334d6e);
-  padding: 17px 48px 13px 24px;
-  font-size: 20px;
-  line-height: 26px;
+  padding: 0.85em 2.4em 0.65em 1.2em;
+  font-size: 1.25em;
+  line-height: 1.3em;
   outline: none;
   box-sizing: border-box;
   transition: border-color 0.3s;
   background: transparent;
 }
 .textInput_compact {
-  padding: 10px 48px 8px 24px;
+  padding: 0.5em 2.4em 0.4em 1.2em;
 }
 .textInput_fullWidth {
   width: 100%;

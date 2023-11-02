@@ -52,7 +52,7 @@
     background: var(--page-bg-color, var(--grey-0, #f9fafc));
     transform: translateX(-100vw);
     transition: transform 0.25s linear;
-    z-index: 1;
+    z-index: 2;
   }
   .burgerMenu_noTopSeparator {
     padding-top: 80px;

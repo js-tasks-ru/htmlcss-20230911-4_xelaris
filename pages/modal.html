@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../components/componentDetail/componentDetail.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-light.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
+    <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>
+    <script defer src="../05-lection3/02-modal/index.js"></script>
+    <script src="../assets/js/fixOnloadAnimations.js"></script>
+    <script defer>hljs.highlightAll()</script>
+    <title>Modal component</title>
+  </head>
+  <body class="page page_component preload">
+    <header class="header header_compact page__header">
+      <div class="header__panel layoutContainer">
+        <button id="burger-menu-open" class="burgerMenuShowButton header__burgerMenuButton">
+          <svg xmlns="http://www.w3.org/2000/svg" class="burgerMenuShowButton__icon" fill="currentColor">
+            <use href="../../assets/images/icons.svg#burger"></use>
+          </svg>
+        </button>
+        <a class="header__logo" href="/" title="To main page">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="header__logoIcon"
+            fill="currentColor"
+          >
+            <rect y="1" width="30" height="30" />
+            <rect x="38" width="32" height="32" rx="16" />
+            <path d="M78 0L110 32H78V0Z" />
+          </svg>
+        </a>
+        <nav class="header__menu">
+          <a class="header__menuItem header__menuItem_active" href="">Components</a>
+          <a class="header__menuItem" href="">About</a>
+          <a class="header__menuItem" href="">Contact</a>
+        </nav>
+        <label class="toggler header__themeToggler">
+          <input id="theme-changer" type="checkbox" class="toggler__input" />
+          <span class="toggler__state">
+            <svg xmlns="http://www.w3.org/2000/svg" class="toggler__icon toggler__icon_contrast_onLight" fill="currentColor">
+              <use href="../../assets/images/icons.svg#sun"></use>
+            </svg>
+            <span class="toggler__control"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="toggler__icon toggler__icon_contrast_onDark"
+              fill="currentColor">
+              <use href="../../assets/images/icons.svg#сrescent"></use>
+            </svg>
+          </span>
+        </label>
+      </div>
+    </header>
+    <div class="page__container layoutContainer">
+      <div id="burger-menu" class="burgerMenu burgerMenu_onDesktopAvailiable burgerMenu_forHeaderTransparent">
+        <button id="burger-menu-close" class="burgerMenu__closeButton">
+          <svg xmlns="http://www.w3.org/2000/svg" class="burgerMenu__closeButtonIcon" fill="currentColor">
+            <use href="../../assets/images/icons.svg#cross"></use>
+          </svg>
+        </button>
+        <div class="burgerMenu__content">
+          <div class="burgerMenu__themeTogglerBox">
+            <div class="burgerMenu__contentGroup">
+              <div class="burgerMenu__themeToggler">
+                <label for="theme-changer-alt" class="burgerMenu__themeTogglerLabel">
+                  Dark mode
+                </label>
+                <label class="toggler">
+                  <input id="theme-changer-alt" type="checkbox" class="toggler__input" />
+                  <span class="toggler__state">
+                    <span class="toggler__control"></span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <aside class="menu burgerMenu__menu">
+            <section class="burgerMenu__contentGroup">
+              <div class="menu__group">
+                <h4 class="menu__title">Components</h4>
+                <nav class="menu__list">
+                  <a class="menu__item" href="/pages/accordion.html">Accordion</a>
+                  <a class="menu__item" href="/pages/avatar.html">Avatar</a>
+                  <a class="menu__item" href="/pages/button.html">Button</a>
+                  <a class="menu__item" href="/pages/calendar.html">Calendar</a>
+                  <a class="menu__item" href="/pages/form_elements.html"
+                    >Custom form elements</a
+                  >
+                  <a class="menu__item" href="/pages/histogram.html">Histogram</a>
+                  <a class="menu__item menu__item_active" href="/pages/modal.html">Modal</a>
+                  <a class="menu__item" href="/pages/skeleton.html">Skeleton</a>
+                  <a class="menu__item" href="/pages/tooltip.html">Tooltip</a>
+                </nav>
+              </div>
+            </section>
+            <section class="burgerMenu__contentGroup">
+              <div class="menu__group">
+                <h4 class="menu__title">Atoms</h4>
+                <nav class="menu__list">
+                  <a class="menu__item" href="/pages/avatar.html">Avatar</a>
+                  <a class="menu__item" href="/pages/button.html">Button</a>
+                  <a class="menu__item" href="/pages/form_elements.html"
+                    >Custom form elements</a
+                  >
+                  <a class="menu__item" href="/pages/tooltip.html">Tooltip</a>
+                </nav>
+              </div>
+            </section>
+            <section class="burgerMenu__contentGroup">
+              <div class="menu__group">
+                <h4 class="menu__title">Molecules</h4>
+                <nav class="menu__list">
+                  <a class="menu__item" href="/pages/calendar.html">Calendar</a>
+                  <a class="menu__item" href="/pages/form_elements.html"
+                    >Custom form elements</a
+                  >
+                  <a class="menu__item" href="/pages/skeleton.html">Skeleton</a>
+                </nav>
+              </div>
+            </section>
+            <section class="burgerMenu__contentGroup">
+              <div class="menu__group">
+                <h4 class="menu__title">Organisms</h4>
+                <nav class="menu__list">
+                  <a class="menu__item" href="/pages/accordion.html">Accordion</a>
+                  <a class="menu__item" href="/pages/histogram.html">Histogram</a>
+                  <a class="menu__item menu__item_active" href="/pages/modal.html">Modal</a>
+                </nav>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </div>
+      <main class="page__content">
+        <div class="componentDetail">
+          <h1 class="page__title">Modal component</h1>
+          <div class="componentDetail__component">
+            <button id="modal-open" class="button button_var_primary button_width_150">
+              Show modal
+            </button>
+            <div id="modal" class="modal">
+              <div class="modal__window">
+                <h5 class="modal__title">Modal title</h5>
+                <div class="modal__content">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit architecto animi.</p>                    
+                  <form action="" class="form">
+                    <div class="form__fields">
+                      <div class="formField form__field">
+                        <label for="name" class="formField__title">Name</label>
+                        <div class="formField__field formField__field_fullWidth">
+                          <input id="name" type="text"
+                            class="textInput textInput_compact textInput_fullWidth formField__control formField__control_type_textInput"
+                            placeholder="Placeholder" />
+                          <svg class="formField__icon formField__icon_error" xmlns="http://www.w3.org/2000/svg">
+                            <use href="../../assets/images/icons.svg#warning"></use>
+                          </svg>
+                          <svg class="formField__icon formField__icon_success"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <use href="../../assets/images/icons.svg#checkInCircle"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="formField form__field">
+                        <label for="email" class="formField__title">Email</label>
+                        <div class="formField__field formField__field_fullWidth">
+                          <input id="email" type="text"
+                            class="textInput textInput_compact textInput_fullWidth formField__control formField__control_type_textInput"
+                            placeholder="Placeholder" />
+                          <svg class="formField__icon formField__icon_error" xmlns="http://www.w3.org/2000/svg">
+                            <use href="../../assets/images/icons.svg#warning"></use>
+                          </svg>
+                          <svg class="formField__icon formField__icon_success"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <use href="../../assets/images/icons.svg#checkInCircle"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="button button_var_primary form__submitButton">
+                      Submit
+                    </button>
+                  </form>  
+                </div>
+                <button id="modal-close" class="modal__closeButton">
+                  <svg class="modal__closeButtonIcon" xmlns="http://www.w3.org/2000/svg">
+                    <use href="../../assets/images/icons.svg#cross"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="tabs componentDetail__tabs">
+            <input class="tabs__tabControl tabs__tabControl_tabNum_1" type="radio" id="#html-tab" name="tabs"
+              checked="checked" />
+            <input class="tabs__tabControl tabs__tabControl_tabNum_2" type="radio" id="#css-tab" name="tabs" />
+            <div class="tabs__nav">
+              <label class="tabs__tab" for="#html-tab">
+                <span class="tabs__tabTitle tabs__tabTitle_tabNum_1">HTML</span></label>
+              <label class="tabs__tab" for="#css-tab"><span
+                  class="tabs__tabTitle tabs__tabTitle_tabNum_2">CSS</span></label>
+            </div>
+            <div class="tabs__content tabs__content_tabNum_1">
+              <div class="componentDetail__tabContent">
+                <pre class="sourceCode sourceCode_syntax_html">
+                  <code class="sourceCode__inner language-html">
+&lt;button id=&quot;modal-open&quot; class=&quot;button button_var_primary&quot;&gt;
+  Show modal
+&lt;/button&gt;
+&lt;div id=&quot;modal&quot; class=&quot;modal&quot;&gt;
+  &lt;div class=&quot;modal__window&quot;&gt;
+    &lt;h5 class=&quot;modal__title&quot;&gt;Modal title&lt;/h5&gt;
+    &lt;div class=&quot;modal__content&quot;&gt;
+      &lt;p&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit architecto animi.&lt;/p&gt;                    
+      &lt;form action=&quot;&quot; class=&quot;form&quot;&gt;
+        &lt;div class=&quot;form__fields&quot;&gt;
+          &lt;div class=&quot;formField form__field&quot;&gt;
+            &lt;label for=&quot;name&quot; class=&quot;formField__title&quot;&gt;Name&lt;/label&gt;
+            &lt;div class=&quot;formField__field formField__field_fullWidth&quot;&gt;
+              &lt;input id=&quot;name&quot; type=&quot;text&quot;
+                class=&quot;textInput textInput_compact textInput_fullWidth formField__control formField__control_type_textInput&quot;
+                placeholder=&quot;Placeholder&quot; /&gt;
+              &lt;svg class=&quot;formField__icon formField__icon_error&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;use href=&quot;../../assets/images/icons.svg#warning&quot;&gt;&lt;/use&gt;
+              &lt;/svg&gt;
+              &lt;svg class=&quot;formField__icon formField__icon_success&quot;
+                xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;use href=&quot;../../assets/images/icons.svg#checkInCircle&quot;&gt;&lt;/use&gt;
+              &lt;/svg&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;formField form__field&quot;&gt;
+            &lt;label for=&quot;email&quot; class=&quot;formField__title&quot;&gt;Email&lt;/label&gt;
+            &lt;div class=&quot;formField__field formField__field_fullWidth&quot;&gt;
+              &lt;input id=&quot;email&quot; type=&quot;text&quot;
+                class=&quot;textInput textInput_compact textInput_fullWidth formField__control formField__control_type_textInput&quot;
+                placeholder=&quot;Placeholder&quot; /&gt;
+              &lt;svg class=&quot;formField__icon formField__icon_error&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;use href=&quot;../../assets/images/icons.svg#warning&quot;&gt;&lt;/use&gt;
+              &lt;/svg&gt;
+              &lt;svg class=&quot;formField__icon formField__icon_success&quot;
+                xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;use href=&quot;../../assets/images/icons.svg#checkInCircle&quot;&gt;&lt;/use&gt;
+              &lt;/svg&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;button class=&quot;button button_var_primary form__submitButton&quot;&gt;
+          Submit
+        &lt;/button&gt;
+      &lt;/form&gt;  
+    &lt;/div&gt;
+    &lt;button id=&quot;modal-close&quot; class=&quot;modal__closeButton&quot;&gt;
+      &lt;svg class=&quot;modal__closeButtonIcon&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+        &lt;use href=&quot;../../assets/images/icons.svg#cross&quot;&gt;&lt;/use&gt;
+      &lt;/svg&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+            <div class="tabs__content tabs__content_tabNum_2">
+              <div class="componentDetail__tabContent">
+                <pre class="sourceCode sourceCode_syntax_css">
+                  <code class="sourceCode__inner language-css">
+.modal {
+  background: rgba(196, 196, 196, 0.5);
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+}
+.modal_opened {
+  display: block;
+  position: absolute;
+}
+.modal_noViel {
+  background: transparent;
+}
+.modal__window {
+  width: 348px;
+  padding: 30px 40px 33px;
+  border-radius: 8px;
+  background: var(--content-bg-color, white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.modal__title {
+  color: var(--text-contrast-color, #334d6e);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0;
+}
+.modal__content {
+  color: var(--text-regular-color, #495057);
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+}
+.modal__title + .modal__content {
+  margin-top: 14px;
+}
+.modal__closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+  background: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 0;  
+  color: var(--text-contrast-color, #334d6e);
+}
+.modal__closeButtonIcon {
+  width: 16px;
+  height: 16px;
+}
+                  </code>                  
+                </pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="footer footer_compact page__footer">
+      <div class="layoutContainer">
+        <h5 class="footer__title">Reusable component library</h5>
+      </div>
+    </footer>
+  </body>
+</html>

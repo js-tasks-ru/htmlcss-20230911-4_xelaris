@@ -13,7 +13,8 @@
   background: transparent;
 }
 .modal__window {
-  width: 348px;
+  width: 90%;
+  min-width: 304px;
   padding: 30px 40px 33px;
   border-radius: 8px;
   background: var(--content-bg-color, white);
@@ -21,6 +22,12 @@
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+  box-sizing: border-box;
+}
+.modal_compact .modal__window {
+  width: 240px;
+  transform: translateX(-50%) translateY(-50%) scale(0.6);
+  padding: 25px;
 }
 .modal__title {
   color: var(--text-contrast-color, #334d6e);
@@ -53,4 +60,14 @@
 .modal__closeButtonIcon {
   width: 16px;
   height: 16px;
+}
+@media screen and (min-width: 576px) {
+  .modal__window {
+    width: 428px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal_compact .modal__window {
+    padding: 30px 40px 33px;
+  }
 }

@@ -1,9 +1,9 @@
 .button {
-  height: 48px;
+  height: 3em;
   line-height: normal;
-  padding: 15px 15px 14px;
+  padding: 0.94em 0.94em 0.88;
   box-sizing: border-box;
-  border-radius: 8px;
+  border-radius: 0.5em;
   text-align: center;
   font-family: Roboto;
   font-size: 16px;
@@ -16,6 +16,16 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   transition: transform 0.2s linear;
+}
+.button_inStack {
+  font-size: 12px;
+  width: 75%;
+}
+.button_width_150 {
+  width: 150px;
+}
+.button_width_200 {
+  width: 200px;
 }
 .button:active {
   transform: translateY(1px);
@@ -50,4 +60,14 @@
 .button:disabled {
   opacity: 0.5;
   pointer-events: none;
+}
+@media screen and (min-width: 576px) {
+  .button_inStack {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .button_inStack {
+    font-size: 16px;
+  }
 }
