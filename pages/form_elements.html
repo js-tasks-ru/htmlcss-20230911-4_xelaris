@@ -565,7 +565,7 @@
 }
 .formField__title {
   display: inline-block;
-  color: var(--grey-3, #acb5bd);
+  color: #acb5bd;
   font-size: 0.75em;
   font-weight: 500;
   line-height: 1.13em;
@@ -594,19 +594,19 @@
 }
 .formField_validity_error .formField__icon_error {
   display: inline-block;
-  color: var(--error, var(--red, #f03d3e));
+  color: #f03d3e;
 }
 .formField_validity_success .formField__icon_success {
   display: inline-block;
-  color: var(--success, var(--blue, #4263eb));
+  color: #4263eb;
 }
 .formField_validity_success .formField__control_type_textInput,
 .formField_validity_success .formField__control_type_textInput:focus {
-  border-color: var(--success, var(--blue, #4263eb));
+  border-color: #4263eb;
 }
 .formField_validity_error .formField__control_type_textInput,
 .formField_validity_error .formField__control_type_textInput:focus {
-  border-color: var(--error, var(--red, #f03d3e));
+  border-color: #f03d3e;
 }
 /* ---------- checkbox ---------- */
 .checkbox {
@@ -642,14 +642,14 @@
 }
 .checkbox__icon {
   visibility: hidden;
-  color: var(--white, white);
+  color: #ffffff;
   margin: auto;
   width: 15px;
   height: 13px;
 }
 .checkbox__input:checked ~ .checkbox__state .checkbox__control {
-  border-color: var(--control-checked-color, var(--blue, #4263eb));
-  background: var(--control-checked-color, var(--blue, #4263eb));
+  border-color: var(--control-checked-color, #4263eb);
+  background: var(--control-checked-color, #4263eb);
 }
 .checkbox__input:checked ~ .checkbox__state .checkbox__icon {
   visibility: visible;
@@ -667,8 +667,8 @@
 .checkbox__input:checked:active:not(:disabled)
   ~ .checkbox__state
   .checkbox__control {
-  border-color: var(--control-checked-active-color, var(--blue-darker, #2342c0));
-  background: var(--control-checked-active-color, var(--blue-darker, #2342c0));
+  border-color: var(--control-checked-active-color, #4263eb-darker);
+  background: var(--control-checked-active-color, #4263eb-darker);
 }
 .checkbox__input:disabled ~ .checkbox__state .checkbox__control {
   background-color: var(--control-disabled-border-color, #dde2e5);   
@@ -727,10 +727,10 @@
 }
 .radio__input:checked ~ .radio__state .radio__control {
   border-width: 2px;
-  border-color: var(--control-checked-color, var(--blue, #4263eb));
+  border-color: var(--control-checked-color, #4263eb);
 }
 .radio__input:checked ~ .radio__state .radio__control:before {
-  background: var(--control-checked-color, var(--blue, #4263eb));
+  background: var(--control-checked-color, #4263eb);
 }
 .radio__input:focus ~ .radio__state .radio__title {
   text-decoration: underline;
@@ -740,12 +740,12 @@
   background: var(--control-active-bg-color, #f8f9fa);
 }
 .radio__input:checked:active:not(:disabled) ~ .radio__state .radio__control {
-  border-color: var(--control-checked-active-color, var(--blue-darker, #2342c0));
+  border-color: var(--control-checked-active-color, #4263eb-darker);
 }
 .radio__input:checked:active:not(:disabled)
   ~ .radio__state
   .radio__control:before {
-  background: var(--control-checked-active-color, var(--blue-darker, #2342c0));
+  background: var(--control-checked-active-color, #4263eb-darker);
 }
 .radio__input:disabled ~ .radio__state .radio__control {
   border-color: var(--control-disabled-border-color, #dde2e5);   
@@ -816,11 +816,11 @@
   transition: all 0.5s;
 }
 .toggler__input:checked ~ .toggler__state .toggler__control {
-  border-color: var(--control-checked-color, var(--blue, #4263eb));
-  background: var(--control-checked-color, var(--blue, #4263eb));
+  border-color: var(--control-checked-color, #4263eb);
+  background: var(--control-checked-color, #4263eb);
 }
 .toggler__input:checked ~ .toggler__state .toggler__control:before {
-  background: var(--white, white);
+  background: #ffffff;
   transform: translateX(24px);
 }
 .toggler__input:focus ~ .toggler__state .toggler__title {
@@ -838,8 +838,8 @@
 .toggler__input:checked:active:not(:disabled)
   ~ .toggler__state
   .toggler__control {
-  border-color: var(--control-checked-active-color, var(--blue-darker, #2342c0));
-  background: var(--control-checked-active-color, var(--blue-darker, #2342c0));
+  border-color: var(--control-checked-active-color, #4263eb-darker);
+  background: var(--control-checked-active-color, #4263eb-darker);
 }
 .toggler__input:disabled ~ .toggler__state .toggler__control {
   border-color: var(--control-disabled-border-color, #dde2e5);
@@ -876,7 +876,7 @@
   border-color: var(--control-disabled-border-color, #dde2e5);
 }
 .textInput:focus {
-  border-color: var(--control-checked-color, var(--blue, #4263eb));
+  border-color: var(--control-checked-color, #4263eb);
 }
                   </code>                  
                 </pre>
