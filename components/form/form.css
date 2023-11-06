@@ -18,14 +18,14 @@
 .form__fields+.form__submitButton {
   margin-top: 20px;
 }
-@media screen and (min-width: 768px) {
+@media (--layout-mf-md) {
   .form__cols {
     padding: 14px;
     width: 100%;
     box-sizing: border-box;
   }
 }
-@media screen and (min-width: 992px) {  
+@media (--layout-mf-lg) {  
   .form__cols {
     gap: 42px;
   }

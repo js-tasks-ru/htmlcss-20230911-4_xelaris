@@ -11,12 +11,12 @@
   width: max(164px, calc(50% - var(--tiles-gap)));
   font-size: 1rem;
 }
-@media screen and (min-width: 768px) {
+@media (--layout-mf-md) {
   .tileList__item {
     width: min(350px, calc(33.33% - var(--tiles-gap)));
   }
 }
-@media screen and (min-width: 992px) {
+@media (--layout-mf-lg) {
   .tileList {
     --tiles-gap: 30px;
   }

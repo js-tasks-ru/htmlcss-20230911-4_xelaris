@@ -11,7 +11,7 @@
 }
 .formField__title {
   display: inline-block;
-  color: var(--grey-3, #acb5bd);
+  color: $grey-3;
   font-size: 0.75em;
   font-weight: 500;
   line-height: 1.13em;
@@ -43,19 +43,19 @@
 }
 .formField_validity_error .formField__icon_error {
   display: inline-block;
-  color: var(--error, var(--red, #f03d3e));
+  color: $error;
 }
 .formField_validity_success .formField__icon_success {
   display: inline-block;
-  color: var(--success, var(--blue, #4263eb));
+  color: $success;
 }
 .formField_validity_success .formField__control_type_textInput,
 .formField_validity_success .formField__control_type_textInput:focus {
-  border-color: var(--success, var(--blue, #4263eb));
+  border-color: $success;
 }
 .formField_validity_error .formField__control_type_textInput,
 .formField_validity_error .formField__control_type_textInput:focus {
-  border-color: var(--error, var(--red, #f03d3e));
+  border-color: $error;
 }
 .formField__status {
   font-weight: 500;
@@ -63,20 +63,20 @@
   line-height: 1.2;
 }
 .formField_validity_success .formField__status { 
-  color: var(--success, var(--blue, #4263eb));
+  color: $success;
 }
 .formField_validity_error .formField__status { 
-  color: var(--error, var(--red, #f03d3e));
+  color: $error;
 }
 .formField_disabled .formField__status {
-  color: var(--text-mute-color, #dde2e5)
+  color: var(--text-mute-color, $grey-2)
 }
-@media screen and (min-width: 576px) {
+@media (--layout-mf-sm) {
   .formField_onPreviewCard {
     font-size: 12px;
   }
 }
-@media screen and (min-width: 992px) {  
+@media (--layout-mf-lg) {  
   .formField_onPreviewCard {
     width: 100%;
   }

@@ -4,17 +4,17 @@
   align-items: center;
   gap: 6px;  
 }
-@media screen and (min-width: 576px) {
+@media (--layout-mf-sm) {
   .itemsStack {
     gap: 8px;
   }
 }
-@media screen and (min-width: 768px) {
+@media (--layout-mf-md) {
   .itemsStack {
     gap: 12px;
   }
 }
-@media screen and (min-width: 992px) {  
+@media (--layout-mf-lg) {  
   .itemsStack {
     gap: 16px;
   }

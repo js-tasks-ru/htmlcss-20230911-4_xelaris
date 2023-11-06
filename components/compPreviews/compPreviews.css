@@ -10,17 +10,17 @@
   display: block;
   margin: 64px auto 0;
 }
-@media screen and (min-width: 768px) {
+@media (--layout-mf-md) {
   .compPreviews__tabs {
     margin-top: -63px;
   }
 }
-@media screen and (min-width: 992px) {  
+@media (--layout-mf-lg) {  
   .compPreviews__tabContent {
     padding-top: 32px;
   }
 }
-@media screen and (min-width: 1175px) {
+@media (--layout-mf-xl) {
   .compPreviews__tabContent {
     padding-top: 68px;
   }

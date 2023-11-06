@@ -16,7 +16,7 @@
   cursor: pointer;
 }
 .radio__control {
-  border: 1px solid var(--control-border-color, #dde2e5);
+  border: 1px solid var(--control-border-color, $grey-2);
   border-radius: 14px;
   width: 28px;
   height: 28px;
@@ -24,7 +24,7 @@
   display: flex;
 }
 .radio__title {
-  color: var(--control-color, #495057);
+  color: var(--control-color, $grey-4);
   font-size: 16px;
   line-height: 24px;
   user-select: none;
@@ -39,29 +39,29 @@
 }
 .radio__input:checked ~ .radio__state .radio__control {
   border-width: 2px;
-  border-color: var(--control-checked-color, var(--blue, #4263eb));
+  border-color: var(--control-checked-color, $blue);
 }
 .radio__input:checked ~ .radio__state .radio__control:before {
-  background: var(--control-checked-color, var(--blue, #4263eb));
+  background: var(--control-checked-color, $blue);
 }
 .radio__input:focus ~ .radio__state .radio__title {
   text-decoration: underline;
 }
 .radio__input:active ~ .radio__state .radio__control {
-  border-color: var(--control-active-border-color, #acb5bd);
-  background: var(--control-active-bg-color, #f8f9fa);
+  border-color: var(--control-active-border-color, $grey-3);
+  background: var(--control-active-bg-color, $grey-1);
 }
 .radio__input:checked:active:not(:disabled) ~ .radio__state .radio__control {
-  border-color: var(--control-checked-active-color, var(--blue-darker, #2342c0));
+  border-color: var(--control-checked-active-color, $blue-darker);
 }
 .radio__input:checked:active:not(:disabled)
   ~ .radio__state
   .radio__control:before {
-  background: var(--control-checked-active-color, var(--blue-darker, #2342c0));
+  background: var(--control-checked-active-color, $blue-darker);
 }
 .radio__input:disabled ~ .radio__state .radio__control {
-  border-color: var(--control-disabled-border-color, #dde2e5);   
-  background: var(--control-disabled-border-color, #dde2e5);   
+  border-color: var(--control-disabled-border-color, $grey-2);   
+  background: var(--control-disabled-border-color, $grey-2);   
 }
 .radio__input:checked:disabled ~ .radio__state .radio__control:before {
   background: var(--control-disabled-color, #59616a);

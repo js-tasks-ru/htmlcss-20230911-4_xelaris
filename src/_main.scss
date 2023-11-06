@@ -1,33 +1,17 @@
+@use 'sass:map';
+
+@custom-media --layout-mf-min screen and (width >= map-get($layout-breakpoints, min));
+@custom-media --layout-mf-sm screen and (width >= map-get($layout-breakpoints, sm));
+@custom-media --layout-mf-md screen and (width >= map-get($layout-breakpoints, md));
+@custom-media --layout-mf-lg screen and (width >= map-get($layout-breakpoints, lg));
+@custom-media --layout-mf-xl screen and (width >= map-get($layout-breakpoints, xl));
+@custom-media --layout-df-min screen and (width < map-get($layout-breakpoints, min));
+@custom-media --layout-df-sm screen and (width < map-get($layout-breakpoints, sm));
+@custom-media --layout-df-md screen and (width < map-get($layout-breakpoints, md));
+@custom-media --layout-df-lg screen and (width < map-get($layout-breakpoints, lg));
+@custom-media --layout-df-xl screen and (width < map-get($layout-breakpoints, xl));
+
 :root {
-  /* ---- @depricated, for legacy */
-  --white: #ffffff;
-  --black: #212429;
-  --pink: #f784ad;
-  --purple: #7048e8;
-  --blue: #4263eb;
-  --blue-darker: darken(--blue, 15%); 
-  --purple-darker: darken(--purple, 15%); 
-  --blue-light: rgba(160, 177, 245, 0.2);
-  --red: #f03d3e;
-  --orange: #d84910;
-  --grey-0: #f9fafc;
-  --grey-1: #f8f9fa;
-  --grey-2: #dde2e5;
-  --grey-3: #acb5bd;
-  --grey-4: #495057;
-  --grey-4-lighter: lighten(--grey-4, 10%); 
-
-  --error: var(--red);
-  --success: var(--blue);
-  --notification: var(--orange);
-
-  --primary: var(--blue);
-  --secondary: var(--purple);
-  --alternate: var(--orange); 
-  --primary-active: var(--blue-darker);
-  --secondary-active: var(--purple-darker);
-  /* ---- */
-
   --bg-color: #{$grey-0};
   --border-color: #{$grey-3};
   --page-bg-color: var(--bg-color);

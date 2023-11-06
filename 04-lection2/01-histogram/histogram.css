@@ -1,5 +1,5 @@
 .histogram {
-  border: 1px solid var(--content-border-color, #acb5bd);
+  border: 1px solid var(--content-border-color, $grey-3);
   color: var(--text-contrast-color, black);
   font-size: 16px;
   border-radius: 0.5em;
@@ -32,7 +32,7 @@
   color: var(--text-primary-color, black);
 }
 .histogram__showAll {
-  color: var(--primary, #374fc7);
+  color: $primary;
   text-decoration: none;
   font-size: 1em;
   line-height: 1.5em;
@@ -54,20 +54,20 @@
   height: 2.25em;
 } 
 .histogram__column {
-  background: var(--primary, #374fc7);
+  background: $primary;
   flex-grow: 1;
 }
-@media screen and (min-width: 576px) {
+@media (--layout-mf-sm) {
   .histogram_compact {
     font-size: 12px;
   }
 }
-@media screen and (min-width: 768px) {
+@media (--layout-mf-md) {
   .histogram_compact {
     font-size: 13px;
   } 
 }
-@media screen and (min-width: 992px) {  
+@media (--layout-mf-lg) {  
   .histogram_compact {
     font-size: 14px;
     margin: 0 -7px;

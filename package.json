@@ -4,7 +4,11 @@
   "description": "Course Materials",
   "scripts": {
     "test": "cross-env NODE_ENV=test mocha --no-warnings --ignore=node_modules/** **/*.test.js",
-    "build": "cross-env DEBUG_CSS=true postcss src/index.scss -o dist/styles.css"
+    "build": "cross-env DEBUG_CSS=true postcss src/index.scss -o dist/styles.css",
+    "clear": "npm-run-all --parallel clear:*",
+    "clear:built": "rimraf dist/",
+    "clear:pkg": "rimraf node_modules/ ./package-lock.json",
+    "reinstall": "npm run clear && npm install"
   },
   "husky": {
     "hooks": {
@@ -21,29 +25,27 @@
   "author": "Sergey Zelenov",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "10.4.16",
     "chai": "4.2.0",
     "cross-env": "7.0.2",
     "cssnano": "6.0.1",
     "mocha": "7.1.2",
+    "npm-run-all": "^4.1.5",
     "postcss": "8.4.31",
-    "postcss-advanced-variables": "^3.0.1",
-    "postcss-at-debug": "^0.1.3",
-    "postcss-at-rules-variables": "^0.3.0",
+    "postcss-advanced-variables": "3.0.1",
+    "postcss-at-debug": "0.1.3",
     "postcss-cli": "10.1.0",
-    "postcss-colour-functions": "^1.5.2",
     "postcss-import": "15.1.0",
-    "postcss-import-url": "^7.2.0",
-    "postcss-inline-comment": "^3.0.0",
-    "postcss-nested": "6.0.1",
+    "postcss-import-url": "7.2.0",
+    "postcss-map-get": "0.3.0",
     "postcss-preset-env": "7.8.3",
+    "postcss-sass-color-functions": "1.1.0",
     "postcss-scss": "4.0.9",
-    "postcss-utilities": "^0.8.4",
-    "precss": "4.0.0"
+    "postcss-utilities": "0.8.4"
   },
   "dependencies": {
     "husky": "6.0.0",
     "lint-staged": "10.5.4",
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "rimraf": "^5.0.5"
   }
 }

@@ -1,4 +1,5 @@
 @import 'vars';
+@import 'mixins';
 
 @import '../assets/css/normalize.css';
 @import '../assets/fonts/fonts.css';
@@ -19,14 +20,15 @@
 @import '../components/form/form.css';
 @import '../components/sourceCode/sourceCode.css';
 @import '../components/itemsStack/itemsStack.css';
-
+@import '../components/compPreviews/compPreviews.css';
+@import '../components/componentDetail/componentDetail.css';
 @import '../03-lection1/01-button/button.css';
 @import '../03-lection1/02-accordion/accordion.css';
 @import '../04-lection2/01-histogram/histogram.css';
 @import '../04-lection2/02-skeleton/skeleton.css';
 @import '../05-lection3/01-tooltip/tooltip.css';
+@import '../05-lection3/02-modal/modal';
 @import '../05-lection3/03-calendar/calendar.css';
-@import '../05-lection3/02-modal/modal.css';
 @import '../06-lection4/01-avatar/avatar.css';
 @import '../07-lection5/01-checkbox/checkbox.css';
 @import '../07-lection5/02-radio/radio.css';

@@ -16,7 +16,7 @@
   cursor: pointer;
 }
 .checkbox__control {
-  border: 1px solid var(--control-border-color, #dde2e5);
+  border: 1px solid var(--control-border-color, $grey-2);
   border-radius: 4px;
   width: 28px;
   height: 28px;
@@ -24,21 +24,21 @@
   display: flex;
 }
 .checkbox__title {
-  color: var(--control-color, #495057);
+  color: var(--control-color, $grey-4);
   font-size: 16px;
   line-height: 24px;
   user-select: none;
 }
 .checkbox__icon {
   visibility: hidden;
-  color: var(--white, white);
+  color: $white;
   margin: auto;
   width: 15px;
   height: 13px;
 }
 .checkbox__input:checked ~ .checkbox__state .checkbox__control {
-  border-color: var(--control-checked-color, var(--blue, #4263eb));
-  background: var(--control-checked-color, var(--blue, #4263eb));
+  border-color: var(--control-checked-color, $blue);
+  background: var(--control-checked-color, $blue);
 }
 .checkbox__input:checked ~ .checkbox__state .checkbox__icon {
   visibility: visible;
@@ -47,8 +47,8 @@
   text-decoration: underline;
 }
 .checkbox__input:active ~ .checkbox__state .checkbox__control {
-  border-color: var(--control-active-border-color, #acb5bd);
-  background: var(--control-active-bg-color, #f8f9fa);
+  border-color: var(--control-active-border-color, $grey-3);
+  background: var(--control-active-bg-color, $grey-1);
 }
 .checkbox__input:checked:not(:disabled) ~ .checkbox__state .checkbox__control {
   animation: check-animation 0.5s;
@@ -56,12 +56,12 @@
 .checkbox__input:checked:active:not(:disabled)
   ~ .checkbox__state
   .checkbox__control {
-  border-color: var(--control-checked-active-color, var(--blue-darker, #2342c0));
-  background: var(--control-checked-active-color, var(--blue-darker, #2342c0));
+  border-color: var(--control-checked-active-color, $blue-darker);
+  background: var(--control-checked-active-color, $blue-darker);
 }
 .checkbox__input:disabled ~ .checkbox__state .checkbox__control {
-  background-color: var(--control-disabled-border-color, #dde2e5);   
-  border-color: var(--control-disabled-border-color, #dde2e5);
+  background-color: var(--control-disabled-border-color, $grey-2);   
+  border-color: var(--control-disabled-border-color, $grey-2);
 }
 .checkbox__input:disabled ~ .checkbox__state .checkbox__title {
   color: var(--control-disabled-color, #59616a);

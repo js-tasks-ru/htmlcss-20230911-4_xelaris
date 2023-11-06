@@ -31,26 +31,26 @@
   transform: translateY(1px);
 }
 .button_var_primary {
-  background: var(--primary, #4263eb);
-  color: var(--white, white);
+  background: $primary;
+  color: $white;
 }
 .button_var_primary:hover,
 .button_var_primary:active {
-  background: var(--primary-active, #4263eb);
+  background: $primary-active;
 }
 .button_var_secondary {
-  background: var(--secondary, #4263eb);
-  color: var(--white, white);
+  background: $secondary;
+  color: $white;
 }
 .button_var_secondary:hover,
 .button_var_secondary:active {
-  background: var(--secondary-active, #4263eb);
-  color: var(--white, white);
+  background: $secondary-active;
+  color: $white;
 }
 .button_var_alternate {
   background: transparent;
-  border: 1px solid var(--text-pale-color, #acb5bd);
-  color: var(--text-regular-color, #495057);
+  border: 1px solid var(--text-pale-color, $grey-3);
+  color: var(--text-regular-color, $grey-4);
 }
 .button_var_alternate:hover,
 .button_var_alternate:active {
@@ -61,12 +61,12 @@
   opacity: 0.5;
   pointer-events: none;
 }
-@media screen and (min-width: 576px) {
+@media (--layout-mf-sm) {
   .button_inStack {
     font-size: 14px;
   }
 }
-@media screen and (min-width: 768px) {
+@media (--layout-mf-md) {
   .button_inStack {
     font-size: 16px;
   }

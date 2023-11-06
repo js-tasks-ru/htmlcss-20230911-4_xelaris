@@ -25,14 +25,14 @@
 }
 .menu__item_active,
 .menu__item:hover {
-  color: var(--notification, #d84910);
+  color: $notification;
 }
 .menu__item:visited:not(.menu__item_active, :hover) {
   color: var(--text-contrast-color, black);
 }
-@media screen and (max-width: 768px) {
+@media (--layout-df-md) {
   .menu__title {
-    color: var(--text-pale-color, #acb5bd);
+    color: var(--text-pale-color, $grey-3);
   }
   .menu__list {
     row-gap: 16px;

@@ -15,13 +15,13 @@
   width: 32px;
   height: 32px;
   border-radius: 16px;
-  background: var(--grey-2, #dde2e5);
+  background: $grey-2;
   position: absolute;
   top: 24px;
   left: 16px;
 }
 .burgerMenu__closeButton:active {
-  background: var(--grey-3, #acb5bd);
+  background: $grey-3;
 }
 .burgerMenu__closeButtonIcon {
   width: 24px;
@@ -42,14 +42,14 @@
   line-height: 24px;
   color: var(--text-contrast-color, black);
 }
-@media screen and (max-width: 767px) {
+@media (--layout-df-md) {
   .burgerMenu {
     position: fixed;
     display: block;
     width: 100%;
     inset: 0;
     padding-top: 64px;
-    background: var(--page-bg-color, var(--grey-0, #f9fafc));
+    background: var(--page-bg-color, $grey-0);
     transform: translateX(-100vw);
     transition: transform 0.25s linear;
     z-index: 2;
@@ -70,7 +70,7 @@
     box-sizing: border-box;
   }
   .burgerMenu_forHeaderTransparent .burgerMenu__content {
-    background: var(--page-bg-color, var(--grey-0, #f9fafc));
+    background: var(--page-bg-color, $grey-0);
   }
   .burgerMenu__closeButton {
     display: inline-block;
@@ -83,7 +83,7 @@
   }
   .burgerMenu__contentGroup {
     padding: 24px 0;
-    border-top: 1px solid var(--grey-2, #dde2e5);
+    border-top: 1px solid $grey-2;
   }
   .burgerMenu_noTopSeparator .burgerMenu__themeTogglerBox .burgerMenu__contentGroup {
     border-top: 0;
@@ -92,7 +92,7 @@
     display: block;
   }
 }
-@media screen and (max-width: 576px) {
+@media (--layout-df-sm) {
   .burgerMenu_noTopSeparator {
     padding-top: 64px;
   }

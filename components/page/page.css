@@ -6,7 +6,7 @@
 .page_component {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background: var(--page-bg-color, #f9fafc);
+  background: var(--page-bg-color, $grey-0);
 }
 .page__container {
   width: 100%;
@@ -20,7 +20,7 @@
   position: relative;
 }
 .page__content {
-  background: var(--page-bg-color, #f9fafc);
+  background: var(--page-bg-color, $grey-0);
   padding: 24px 0 92px;
   flex-grow: 1;
 }
@@ -31,13 +31,13 @@
   box-sizing: border-box;
 }
 .page__title {
-  color: var(--text-contrast-color, #495057);
+  color: var(--text-contrast-color, $grey-4);
   font-size: 20px;
   font-weight: 400;
   line-height: 26px;
   margin: 0 0 32px;
 }
-@media screen and (min-width: 576px) {
+@media (--layout-mf-sm) {
   .page_component .page__container {
     background: transparent;
   }
@@ -49,7 +49,7 @@
     position: relative;
   }
 }
-@media screen and (min-width: 768px) {
+@media (--layout-mf-md) {
   .page_component {
     row-gap: 36px;
   }

@@ -10,7 +10,7 @@
   width: 100%;
 }
 .accordion__item {
-  border: 1px solid var(--content-border-color, #acb5bd);
+  border: 1px solid var(--content-border-color, $grey-3);
   background: var(--content-bg-color, white);
   border-radius: 0.5em;
 }
@@ -31,7 +31,7 @@
   width: 1em;
   height: 0.5em;
   display: inline-block;
-  color: var(--text-regular-color, #495057);
+  color: var(--text-regular-color, $grey-4);
   flex-shrink: 0;
 }
 .accordion__item[open] .accordion__itemSummary {
@@ -43,19 +43,19 @@
 .accordion__itemDetails {
   margin: 0;
   padding: 0 2em 2em;
-  color: var(--text-regular-color, #495057);
+  color: var(--text-regular-color, $grey-4);
 }
-@media screen and (min-width: 576px) {
+@media (--layout-mf-sm) {
   .accordion_compact {
     font-size: 11px;
   }
 }
-@media screen and (min-width: 768px) {
+@media (--layout-mf-md) {
   .accordion_compact {
     font-size: 12px;
   }
 }
-@media screen and (min-width: 1175px) {
+@media (--layout-mf-xl) {
   .accordion_compact {
     font-size: 13px;
   }
