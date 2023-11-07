@@ -4,10 +4,13 @@
   "description": "Course Materials",
   "scripts": {
     "test": "cross-env NODE_ENV=test mocha --no-warnings --ignore=node_modules/** **/*.test.js",
-    "build": "cross-env DEBUG_CSS=true postcss src/index.scss -o dist/styles.css",
+    "build": "npm-run-all build:*",
+    "build:sass": "sass src/highlightThemes.scss:dist/highlightThemes.css --style compressed --no-source-map --update",
+    "build:pcss": "cross-env DEBUG_CSS=true postcss src/index.scss -o dist/styles.css",
     "clear": "npm-run-all --parallel clear:*",
     "clear:built": "rimraf dist/",
     "clear:pkg": "rimraf node_modules/ ./package-lock.json",
+    "rebuild": "npm-run-all clear:built build",
     "reinstall": "npm run clear && npm install"
   },
   "husky": {
@@ -40,7 +43,8 @@
     "postcss-preset-env": "7.8.3",
     "postcss-sass-color-functions": "1.1.0",
     "postcss-scss": "4.0.9",
-    "postcss-utilities": "0.8.4"
+    "postcss-utilities": "0.8.4",
+    "sass": "^1.69.5"
   },
   "dependencies": {
     "husky": "6.0.0",

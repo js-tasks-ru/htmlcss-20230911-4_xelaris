@@ -61,6 +61,10 @@ html,
 body {
   height: 100%;
 }
+html[data-theme-dark] pre code.hljs {
+  background: var(--content-bg-color, $black);
+  padding: 0;
+}
 body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
