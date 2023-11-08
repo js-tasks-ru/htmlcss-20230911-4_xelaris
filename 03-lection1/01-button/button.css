@@ -27,26 +27,22 @@
   transform: translateY(1px);
 }
 .button_var_primary {
-  background: $primary;
-  color: $white;
+  color: $white $primary;
 }
 .button_var_primary:hover,
 .button_var_primary:active {
   background: $primary-active;
 }
 .button_var_secondary {
-  background: $secondary;
-  color: $white;
+  color: $white $secondary;
 }
 .button_var_secondary:hover,
 .button_var_secondary:active {
-  background: $secondary-active;
-  color: $white;
+  color: $white $secondary-active;
 }
 .button_var_alternate {
-  background: transparent;
   border: 1px solid var(--text-pale-color, $grey-3);
-  color: var(--text-regular-color, $grey-4);
+  color: var(--text-regular-color, $grey-4) transparent;
 }
 .button_var_alternate:hover,
 .button_var_alternate:active {

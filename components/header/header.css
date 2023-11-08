@@ -17,7 +17,7 @@
   @include box-aligning(36px);
 }
 .header__burgerMenuButton {
-  @util position(absolute, 16px null null 16px);
+  position: absolute 16px * * 16px;
 }
 .header__logo {
   display: inline-block;
@@ -25,8 +25,7 @@
 }
 .header__logoIcon {
   color: var(--text-primary-color, $black);
-
-  @util size(110px, 32px);
+  size: 110px 32px;
 }
 .header_compact .header__logoIcon {
   color: $black;

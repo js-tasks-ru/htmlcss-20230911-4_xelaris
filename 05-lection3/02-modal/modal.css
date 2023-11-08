@@ -43,14 +43,13 @@
 }
 .modal__closeButton {
   cursor: pointer;
-  background: none;
-  color: var(--text-contrast-color, $grey-4);
-
-  @util position(absolute, 12px 12px null null);
+  color: var(--text-contrast-color, $grey-4) none;
+  position: absolute 12px 12px * *;
+  
   @include reset-geometry(true);
 }
 .modal__closeButtonIcon {
-  @util size(16px);
+  size: 16px;
 }
 @media (--layout-mf-sm) {
   .modal__window {

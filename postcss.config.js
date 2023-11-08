@@ -11,6 +11,7 @@ module.exports = {
     }),
     require('postcss-import'),
     require('postcss-utilities'),
+    require('postcss-short'),
     require('postcss-extend'),
     require("postcss-sass-color-functions"),
     require('postcss-map-get'),

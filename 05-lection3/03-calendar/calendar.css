@@ -68,8 +68,7 @@
   font-family: 'Inter', sans-serif;
 }
 .calendar__day_period_edge {
-  color: $white;
-  background: $primary;
+  color: $white $primary;
 }
 .calendar__day_period_inside,
 .calendar__day:hover:not(

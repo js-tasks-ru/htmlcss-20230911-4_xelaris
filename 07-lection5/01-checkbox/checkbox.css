@@ -18,8 +18,7 @@
   border-radius: 4px;
   box-sizing: border-box;
   display: flex;
-
-  @util size(28px);
+  size: 28px;
 }
 .checkbox__title {
   color: var(--control-color, $grey-4);
@@ -31,8 +30,7 @@
   visibility: hidden;
   color: $white;
   margin: auto;
-
-  @util size(15px, 13px);
+  size: 15px 13px;
 }
 .checkbox__input:checked ~ .checkbox__state .checkbox__control {
   border-color: var(--control-checked-color, $blue);

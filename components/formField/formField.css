@@ -30,9 +30,8 @@
 .formField__icon {
   display: none;
   transform: translateY(-50%);
-
-  @util position(absolute, 50% 1em null null);
-  @util size(1.5em);
+  position: absolute 50% 1em * *;
+  size: 1.5em;
 }
 .formField_validity_error .formField__icon_error {
   display: inline-block;

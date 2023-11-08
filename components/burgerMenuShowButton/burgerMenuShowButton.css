@@ -12,8 +12,7 @@
 }
 .burgerMenuShowButton__icon {
   color: var(--text-contrast-color, $black);
-
-  @util size(24px);
+  size: 24px;
 }
 @media (--layout-df-md) {
   .burgerMenuShowButton {

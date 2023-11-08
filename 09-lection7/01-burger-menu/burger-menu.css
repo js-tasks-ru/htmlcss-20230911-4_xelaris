@@ -7,16 +7,16 @@
 .burgerMenu__closeButton {
   display: none;
   cursor: pointer;
+  position: absolute 24px * * 16px;
 
   @include reset-geometry(true);
-  @util position(absolute, 24px null null 16px);
   @util circle(32px, $grey-2);
 }
 .burgerMenu__closeButton:active {
   background: $grey-3;
 }
 .burgerMenu__closeButtonIcon {
-  @util size(24px);
+  size: 24px;
 }
 .burgerMenu__themeTogglerBox {
   margin-top: 16px;

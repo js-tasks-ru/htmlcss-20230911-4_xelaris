@@ -22,8 +22,7 @@
   box-sizing: border-box;
   text-align: left;
   transition: all 0.5s;
-
-  @util size(52px, 28px);
+  size: 52px 28px;
 }
 .toggler__title {
   color:  var(--control-color, $grey-4);
@@ -34,8 +33,7 @@
 .toggler__icon {
   display: inline-block;
   color: var(--text-pale-color, $grey-2);
-
-  @util size(24px);
+  size: 24px;
 }
 .toggler__icon_contrast_onLight {
   color: var(--text-contrastOnLight-color);

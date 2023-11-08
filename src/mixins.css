@@ -38,7 +38,7 @@
 }
 @mixin img-cover {
   object-fit: cover;
-  @util size(100%);
+  size: 100%;
 }
 @mixin box-covering($position: false, $z-index: false) {  
   inset: 0;

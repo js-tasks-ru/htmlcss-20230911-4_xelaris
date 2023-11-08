@@ -6,16 +6,16 @@
   @include box-centering();
 }
 .avatar_size_small {
-  @util size(102px);
+  size: 102px;
 }
 .avatar_size_normal {
-  @util size(116px);
+  size: 116px;
 }
 .avatar_size_big {
-  @util size(160px);
+  size: 160px;
 }
 .avatar_size_huge {
-  @util size(200px);
+  size: 200px;
 }
 .avatar_onPreviewCard {
   @extend .avatar_size_normal;

@@ -44,6 +44,7 @@
     "postcss-preset-env": "7.8.3",
     "postcss-sass-color-functions": "1.1.0",
     "postcss-scss": "4.0.9",
+    "postcss-short": "5.0.0",
     "postcss-utilities": "0.8.4",
     "sass": "^1.69.5"
   },
