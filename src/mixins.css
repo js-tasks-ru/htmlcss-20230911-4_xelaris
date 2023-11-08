@@ -77,3 +77,14 @@
     align-items: $align;
   }  
 }
+@mixin axis-centered($axis: false) {
+  position: absolute;
+
+  @if $axis == vertical {
+    top: 50%;
+    transform: translateY(-50%);
+  } @else {
+    left: 50%;
+    transform: translateX(-50%);
+  }  
+}

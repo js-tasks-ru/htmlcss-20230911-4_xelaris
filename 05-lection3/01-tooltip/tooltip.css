@@ -1,3 +1,11 @@
+$tipSize: 7px;
+$negativeTipSize: calc(-1 * $tipSize);
+$parentWithTipSize: calc(100% + $tipSize);
+
+@mixin tip($pos) {
+  @util triangle($tipSize, var(--tb-color, $black), $pos);
+}
+
 .tooltip {
   display: inline-block;
   vertical-align: baseline;
@@ -11,83 +19,74 @@
   size: 24px;
 }
 .tooltip__bubble {
-  --tooltip-bubble-color: var(--text-contrast-color, $black);
+  --tb-color: var(--text-contrast-color, $black);
   
   display: none;
   border-radius: 10px;
-  color: $grey-2 var(--tooltip-bubble-color, $black);
+  color: $grey-2 var(--tb-color, $black);
   box-shadow: 0px 2px 4px 0px rgba(33, 36, 41, 0.05);  
   text-align: center;
   font-size: 16px;
   min-height: 24px;
-  position: absolute;
   padding: 13px 21px 8px;
   width: 87px;
 }
 .tooltip_opened .tooltip__bubble {
-  position: relative;
+  position: relative * * * auto;
   transform: none;
-  left: auto;
-  margin-bottom: 6px;
+  margin-bottom: $tipSize;
 }
 .tooltip__bubble::after {
   content: '';
-  border-color: transparent;
-  border-style: solid;
-  position: absolute;
 }
 .tooltip__trigger:hover ~ .tooltip__bubble,
 .tooltip_opened .tooltip__bubble {
   display: block;
 }
 .tooltip__bubble_primary {
-  --tooltip-bubble-color: $primary;
+  --tb-color: $primary;
 }
 .tooltip__bubble_pos_top {
-  bottom: calc(100% + 6px);
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: $parentWithTipSize;
+
+  @include axis-centered(horizontal);
 }
 .tooltip__bubble_pos_top::after {
-  border-width: 6px 7px 0;
-  border-top-color: var(--tooltip-bubble-color, $black);
   top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+
+  @include tip(down);
+  @include axis-centered(horizontal);
 }
 .tooltip__bubble_pos_bottom {
   top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+
+  @include axis-centered(horizontal);
 }
 .tooltip__bubble_pos_bottom::after {
-  border-width: 0 6px 7px;
-  border-bottom-color: var(--tooltip-bubble-color, $black);
-  top: -6px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: $negativeTipSize;
+
+  @include tip(up);
+  @include axis-centered(horizontal);
 }
 .tooltip__bubble_pos_left {
-  top: 50%;
-  right: calc(100% + 7px);
-  transform: translateY(-50%);
+  right: $parentWithTipSize;
+
+  @include axis-centered(vertical);
 }
 .tooltip__bubble_pos_left::after {
-  border-width: 7px 0 7px 6px;
-  border-left-color: var(--tooltip-bubble-color, $black);
-  top: 50%;
   left: 100%;
-  transform: translateY(-50%);
+
+  @include tip(right);
+  @include axis-centered(vertical);
 }
 .tooltip__bubble_pos_right {
-  top: 50%;
-  left: calc(100% + 7px);
-  transform: translateY(-50%);
+  left: $parentWithTipSize;
+
+  @include axis-centered(vertical);
 }
 .tooltip__bubble_pos_right::after {
-  border-width: 7px 6px 7px 0;
-  border-right-color: var(--tooltip-bubble-color, $black);
-  top: 50%;
-  left: -6px;
-  transform: translateY(-50%);
+  left: $negativeTipSize;
+
+  @include tip(left);
+  @include axis-centered(vertical);
 }
