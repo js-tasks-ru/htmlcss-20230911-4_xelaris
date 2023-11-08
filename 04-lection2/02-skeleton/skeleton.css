@@ -1,3 +1,9 @@
+$skeleton-txt-sizes: (
+  short: 65%, 
+  middle: 90%, 
+  long: 100%
+);
+
 .skeleton {
   border: 1px solid var(--content-border-color, $grey-3);
   font-size: 16px;
@@ -39,14 +45,10 @@
   background-size: 200%;
   animation: 1.5s linear infinite forwards skeletonLoadAnimation;
 }
-.skeleton__textline_length_short {
-  width: 65%;
-}
-.skeleton__textline_length_middle {
-  width: 90%;
-}
-.skeleton__textline_length_long {
-  width: 100%;
+@each $size $name in $skeleton-txt-sizes {
+  .skeleton__textline_length_$name {
+    width: $size;
+  }
 }
 .skeleton__title {
   flex-grow: 1;

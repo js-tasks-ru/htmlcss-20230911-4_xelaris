@@ -1,13 +1,9 @@
-@custom-media --layout-mf-min screen and (width >= map-get($layout-breakpoints, min));
-@custom-media --layout-mf-sm screen and (width >= map-get($layout-breakpoints, sm));
-@custom-media --layout-mf-md screen and (width >= map-get($layout-breakpoints, md));
-@custom-media --layout-mf-lg screen and (width >= map-get($layout-breakpoints, lg));
-@custom-media --layout-mf-xl screen and (width >= map-get($layout-breakpoints, xl));
-@custom-media --layout-df-min screen and (width < map-get($layout-breakpoints, min));
-@custom-media --layout-df-sm screen and (width < map-get($layout-breakpoints, sm));
-@custom-media --layout-df-md screen and (width < map-get($layout-breakpoints, md));
-@custom-media --layout-df-lg screen and (width < map-get($layout-breakpoints, lg));
-@custom-media --layout-df-xl screen and (width < map-get($layout-breakpoints, xl));
+@each $breakpoint $name in $layout-breakpoints {
+  @custom-media --layout-mf-$name screen and (width >= $breakpoint);
+}
+@each $breakpoint $name in $layout-breakpoints {
+  @custom-media --layout-df-$name screen and (width < $breakpoint);
+}
 
 :root {
   --bg-color: #{$grey-0};
@@ -64,8 +60,8 @@ html[data-theme-dark] pre code.hljs {
   padding: 0;
 }
 body {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
+  font-family: $font-family-def;
+  font-weight: $font-weight-def;
   font-style: normal;
   color: $black;
 }

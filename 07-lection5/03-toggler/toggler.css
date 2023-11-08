@@ -44,8 +44,7 @@
 .toggler__control:before {
   content: '';
   border-radius: 12px;
-  width: 24px;
-  height: 24px;
+  size: 24px;
   margin: 1px;
   display: inline-block;
   background: var(--control-border-color, $grey-2);

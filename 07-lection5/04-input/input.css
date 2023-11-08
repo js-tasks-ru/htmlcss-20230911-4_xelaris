@@ -19,8 +19,7 @@
   color: var(--text-mute-color, $grey-2);
 }
 .textInput:disabled {
-  background-color: var(--control-disabled-bg-color, $grey-1); 
-  color: var(--control-disabled-color, #59616a);
+  color: var(--control-disabled-color, #59616a) var(--control-disabled-bg-color, $grey-1);
   border-color: var(--control-disabled-border-color, $grey-2);
 }
 .textInput:focus {

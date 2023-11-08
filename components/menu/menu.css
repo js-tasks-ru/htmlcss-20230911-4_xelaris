@@ -14,7 +14,7 @@
   color: var(--text-contrast-color, $black);
   margin: 0;
 
-  @include font(20px, 26px, 400);
+  @include font(20px, 26px, $font-weight-def);
 }
 .menu__item {
   color: var(--text-contrast-color, $black);

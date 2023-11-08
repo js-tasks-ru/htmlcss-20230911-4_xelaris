@@ -34,7 +34,7 @@
   color: var(--text-contrast-color, $grey-4);
   margin: 0 0 32px;
 
-  @include font(20px, 26px, 400);
+  @include font(20px, 26px, $font-weight-def);
 }
 @media (--layout-mf-sm) {
   .page_component .page__container {

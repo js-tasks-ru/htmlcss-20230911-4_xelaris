@@ -30,7 +30,7 @@
   color: var(--text-contrast-color, $grey-4);
   margin: 0;
 
-  @include font(20px, 24px, 600);
+  @include font(20px, 24px, $font-weight-bold);
 }
 .modal__content {
   color: var(--text-regular-color, $grey-4);

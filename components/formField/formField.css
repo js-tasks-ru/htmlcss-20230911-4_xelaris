@@ -13,7 +13,7 @@
   text-transform: uppercase;
 
   @include text-interactive();
-  @include font(0.75rem, 1.13, 500, false, 0.03em);
+  @include font(0.75rem, 1.13, $font-weight-bolder, false, 0.03em);
 }
 .formField__field {
   position: relative;
@@ -33,30 +33,21 @@
   position: absolute 50% 1em * *;
   size: 1.5em;
 }
-.formField_validity_error .formField__icon_error {
-  display: inline-block;
-  color: $error;
-}
-.formField_validity_success .formField__icon_success {
-  display: inline-block;
-  color: $success;
-}
-.formField_validity_success .formField__control_type_textInput,
-.formField_validity_success .formField__control_type_textInput:focus {
-  border-color: $success;
-}
-.formField_validity_error .formField__control_type_textInput,
-.formField_validity_error .formField__control_type_textInput:focus {
-  border-color: $error;
+@each $color $name in (error: $error, success: $success) {
+  .formField_validity_$name .formField__icon_$name {
+    display: inline-block;
+    color: $color;
+  }
+  .formField_validity_$name .formField__control_type_textInput,
+  .formField_validity_$name .formField__control_type_textInput:focus {
+    border-color: $color;
+  }
+  .formField_validity_$name .formField__status { 
+    color: $color;
+  }
 }
 .formField__status {
-  @include font(0.75rem, 1.2, 500);
-}
-.formField_validity_success .formField__status { 
-  color: $success;
-}
-.formField_validity_error .formField__status { 
-  color: $error;
+  @include font(0.75rem, 1.2, $font-weight-bolder);
 }
 .formField_disabled .formField__status {
   color: var(--text-mute-color, $grey-2)

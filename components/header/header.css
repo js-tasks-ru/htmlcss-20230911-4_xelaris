@@ -34,7 +34,7 @@
   margin: 24px 0 0;
   color: var(--text-regular-color, $grey-4);
 
-  @include font(28px, 38px, 400);
+  @include font(28px, 38px, $font-weight-def);
 }
 .header__menu {
   display: none;
@@ -89,6 +89,6 @@
     color: var(--text-contrast-color, $black);
     margin-top: 17px;
 
-    @include font(50px, 64px, 500);
+    @include font(50px, 64px, $font-weight-bolder);
   }
 }

@@ -21,7 +21,7 @@
   color: var(--calendar-grey-dark, $grey-4);
   grid-column: 1 / 8;
 
-  @include font(1.25em, 1.5em, 600);
+  @include font(1.25em, 1.5em, $font-weight-bold);
   @include box-centering();
 }
 .calendar__wrapper {
@@ -35,23 +35,13 @@
 
   @include box-covering();
 }
-.calendar_length_4weeks .calendar__wrapper {
-  padding-bottom: calc(6 / 7 * 100%);
-}
-.calendar_length_4weeks .calendar__days {
-  grid-template-rows: repeat(6, 1fr);
-}
-.calendar_length_5weeks .calendar__wrapper {
-  padding-bottom: 100%;
-}
-.calendar_length_5weeks .calendar__days {
-  grid-template-rows: repeat(7, 1fr);
-}
-.calendar_length_6weeks .calendar__wrapper {
-  padding-bottom: calc(8 / 7 * 100%);
-}
-.calendar_length_6weeks .calendar__days {
-  grid-template-rows: repeat(8, 1fr);
+@for $num from 4 through 6 {
+  .calendar_length_#{$num}weeks .calendar__wrapper {
+    padding-bottom: calc(($num + 2) / 7 * 100%);
+  }
+  .calendar_length_#{$num}weeks .calendar__days {
+    grid-template-rows: repeat(calc($num + 2), 1fr);
+  }
 }
 .calendar__day {
   color: var(--calendar-grey-dark, $grey-4);

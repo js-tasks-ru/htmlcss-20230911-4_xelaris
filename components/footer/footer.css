@@ -13,13 +13,13 @@
   margin: 0;
   color: var(--text-contrast-color, $black);
 
-  @include font(22px, false, 400);
+  @include font(22px, false, $font-weight-def);
 }
 .footer_compact .footer__title {
   color: $grey-3;
   text-transform: uppercase;
 
-  @include font(12px, 18px, 500, false, 0.48em);
+  @include font(12px, 18px, $font-weight-bolder, false, 0.48px);
 }
 .footer__desc {
   padding: 0 0 20px;
@@ -54,7 +54,7 @@
     color: var(--text-contrast-color, $black);
     margin: 0 0 32px;
 
-    @include font(38px, false, 500);
+    @include font(38px, false, $font-weight-bolder);
   }
   .footer__desc {
     margin-top: 32;

@@ -11,17 +11,16 @@
   cursor: pointer;
   transition: transform 0.2s linear;
 
-  @include font(16px, false, 500, Roboto);
+  @include font(16px, false, $font-weight-bolder, Roboto);
 }
 .button_inStack {
   font-size: 12px;
   width: 75%;
 }
-.button_width_150 {
-  width: 150px;
-}
-.button_width_200 {
-  width: 200px;
+@each $size in (150, 200) {
+  .button_width_$size {
+    width: #{$size}px;
+  }
 }
 .button:active {
   transform: translateY(1px);
