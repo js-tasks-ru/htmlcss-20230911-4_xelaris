@@ -1,13 +1,8 @@
 .form__cols {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 14px;
+  @include box-aligning(14px);
 }
 .form__fields {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  @include box-stack(10px);
 }
 .form__feild {
   gap: 14px;

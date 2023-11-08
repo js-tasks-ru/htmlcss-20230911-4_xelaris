@@ -19,25 +19,24 @@
   flex-grow: 1;
 }
 .histogram__scoreCaption {
-  font-size: 1em;
-  line-height: 1.5em;
+  @include font(1em, 1.5em);
 }
 .histogram__scoreValue {
-  font-size: 1.25em;
-  line-height: 1.63em;
   margin-top: 0.38em;
+
+  @include font(1.25em, 1.63em);
 }
 .histogram_compact .histogram__scoreValue {
   font-weight: 600;
-  color: var(--text-primary-color, black);
+  color: var(--text-primary-color, $black);
 }
 .histogram__showAll {
   color: $primary;
   text-decoration: none;
-  font-size: 1em;
-  line-height: 1.5em;
   margin-top: 0.19em;
   flex-shrink: 0;
+
+  @include font(1em, 1.5em);
 }
 .histogram__columns {
   display: flex;

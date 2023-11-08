@@ -1,9 +1,7 @@
 .formField {
-  display: flex;
-  flex-direction: column;
-  gap: 0.31em;
-  align-items: flex-start;
   font-size: 16px;
+
+  @include box-stack(0.31em, flex-start);
 }
 .formField_onPreviewCard {
   font-size: 10px;
@@ -12,13 +10,10 @@
 .formField__title {
   display: inline-block;
   color: $grey-3;
-  font-size: 0.75em;
-  font-weight: 500;
-  line-height: 1.13em;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
-  cursor: pointer;
-  user-select: none;
+
+  @include text-interactive();
+  @include font(0.75rem, 1.13, 500, false, 0.03em);
 }
 .formField__field {
   position: relative;
@@ -34,12 +29,10 @@
 }
 .formField__icon {
   display: none;
-  width: 1.5em;
-  height: 1.5em;
-  position: absolute;
-  top: 50%;
   transform: translateY(-50%);
-  right: 1em;
+
+  @util position(absolute, 50% 1em null null);
+  @util size(1.5em);
 }
 .formField_validity_error .formField__icon_error {
   display: inline-block;
@@ -58,9 +51,7 @@
   border-color: $error;
 }
 .formField__status {
-  font-weight: 500;
-  font-size: 0.75rem;
-  line-height: 1.2;
+  @include font(0.75rem, 1.2, 500);
 }
 .formField_validity_success .formField__status { 
   color: $success;

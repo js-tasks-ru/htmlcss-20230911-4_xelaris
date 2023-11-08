@@ -5,19 +5,18 @@ module.exports = {
   map: { inline: true },
   plugins: [
     require('postcss-at-debug')({ debug }),
-    require('postcss-advanced-variables'), 
+    require('postcss-advanced-variables'),
     require('postcss-import-url')({
       modernBrowser: true
     }),
     require('postcss-import'),
     require('postcss-utilities'),
+    require('postcss-extend'),
     require("postcss-sass-color-functions"),
     require('postcss-map-get'),
     require('postcss-preset-env')({
       features: {
-				'nesting-rules': {
-					noIsPseudoSelector: false,
-				},
+				'nesting-rules': false,
         'media-query-ranges': true,
         'custom-media-queries': true,
 			},

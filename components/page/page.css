@@ -1,7 +1,7 @@
 .page {
   height: 100%;
-  display: flex;
-  flex-direction: column;
+
+  @include box-stack();
 }
 .page_component {
   display: grid;
@@ -32,10 +32,9 @@
 }
 .page__title {
   color: var(--text-contrast-color, $grey-4);
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 26px;
   margin: 0 0 32px;
+
+  @include font(20px, 26px, 400);
 }
 @media (--layout-mf-sm) {
   .page_component .page__container {
@@ -60,8 +59,8 @@
     padding: 32px 48px;
   }
   .page__title {
-    font-size: 28px;
-    line-height: 38px;
     margin-bottom: 58px;
+
+    @include font(28px, 38px);
   }
 }

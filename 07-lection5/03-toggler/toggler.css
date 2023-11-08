@@ -2,9 +2,7 @@
   position: relative;
 }
 .toggler__input {
-  opacity: 0;
-  position: absolute;
-  left: -100vw;
+  @util hide-visually;
 }
 .toggler__state {
   display: inline-flex;
@@ -21,23 +19,23 @@
 .toggler__control {
   border: 1px solid var(--control-border-color, $grey-2);
   border-radius: 14px;
-  width: 52px;
-  height: 28px;
   box-sizing: border-box;
   text-align: left;
   transition: all 0.5s;
+
+  @util size(52px, 28px);
 }
 .toggler__title {
   color:  var(--control-color, $grey-4);
-  font-size: 16px;
-  line-height: 24px;
   user-select: none;
+
+  @include font-def(); 
 }
 .toggler__icon {
   display: inline-block;
-  width: 24px;
-  height: 24px;
   color: var(--text-pale-color, $grey-2);
+
+  @util size(24px);
 }
 .toggler__icon_contrast_onLight {
   color: var(--text-contrastOnLight-color);

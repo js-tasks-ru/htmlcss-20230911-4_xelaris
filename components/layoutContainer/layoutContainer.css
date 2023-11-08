@@ -1,8 +1,9 @@
 .layoutContainer {
   max-width: 1110px;
   min-width: 343px;
-  margin: 0 auto;
   padding: 0 16px;
+
+  @util center-block;
 }
 @media (--layout-mf-lg) {
   .layoutContainer {

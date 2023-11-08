@@ -1,5 +1,3 @@
-@use 'sass:map';
-
 @custom-media --layout-mf-min screen and (width >= map-get($layout-breakpoints, min));
 @custom-media --layout-mf-sm screen and (width >= map-get($layout-breakpoints, sm));
 @custom-media --layout-mf-md screen and (width >= map-get($layout-breakpoints, md));

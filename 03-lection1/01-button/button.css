@@ -5,17 +5,13 @@
   box-sizing: border-box;
   border-radius: 0.5em;
   text-align: center;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
   border: 0;
   transition: opacity 200ms ease-in-out, background-color 200ms ease-in-out,
     border-color 200ms ease-in-out, color 200ms ease-in-out;
   cursor: pointer;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   transition: transform 0.2s linear;
+
+  @include font(16px, false, 500, Roboto);
 }
 .button_inStack {
   font-size: 12px;
@@ -54,8 +50,8 @@
 }
 .button_var_alternate:hover,
 .button_var_alternate:active {
-  border-color: var(--text-primary-color, black);
-  color: var(--text-contrast-color, black);
+  border-color: var(--text-primary-color, $black);
+  color: var(--text-contrast-color, $black);
 }
 .button:disabled {
   opacity: 0.5;

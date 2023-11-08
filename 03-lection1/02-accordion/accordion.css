@@ -1,7 +1,5 @@
 .accordion {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  line-height: 1.5em;
+  @include font-def();
 }
 .accordion_compact {
   font-size: 9px;
@@ -18,21 +16,18 @@
   margin-bottom: 0.5em;
 }
 .accordion__itemSummary {
-  display: flex;
-  gap: 0.63em;
-  justify-content: space-between;
-  align-items: center;
   padding: 1.5em 2em;
-  color: var(--text-contrast-color, black);
-  cursor: pointer;
-  user-select: none;
+  color: var(--text-contrast-color, $black);
+
+  @include text-interactive();
+  @include box-aligning(0.63em);
 }
 .accordion__itemSummaryMarker {
-  width: 1em;
-  height: 0.5em;
   display: inline-block;
   color: var(--text-regular-color, $grey-4);
   flex-shrink: 0;
+
+  @util size(1em, 0.5em);
 }
 .accordion__item[open] .accordion__itemSummary {
   padding-bottom: 1em;

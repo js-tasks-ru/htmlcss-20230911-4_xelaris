@@ -1,8 +1,5 @@
 .itemsStack {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;  
+  @include box-stack(6px, center);
 }
 @media (--layout-mf-sm) {
   .itemsStack {

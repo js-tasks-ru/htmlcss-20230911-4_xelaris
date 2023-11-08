@@ -1,6 +1,7 @@
 .calendar {
   --calendar-grey-dark: var(--text-regular-color, $grey-4);
   --calendar-grey-light: var(--text-pale-color, #90a0b7);
+
   font-size: 16px;
   border: 1px solid var(--content-border-color, $grey-3);
   border-radius: 0.5em;
@@ -18,13 +19,10 @@
 }
 .calendar__month {
   color: var(--calendar-grey-dark, $grey-4);
-  font-size: 1.25em;
-  font-weight: 600;
-  line-height: 1.5em;
   grid-column: 1 / 8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  @include font(1.25em, 1.5em, 600);
+  @include box-centering();
 }
 .calendar__wrapper {
   padding-bottom: 100%;
@@ -34,8 +32,8 @@
   display: grid;
   grid-template-rows: repeat(8, 1fr);
   grid-template-columns: repeat(7, 1fr);
-  position: absolute;
-  inset: 0;
+
+  @include box-covering();
 }
 .calendar_length_4weeks .calendar__wrapper {
   padding-bottom: calc(6 / 7 * 100%);
@@ -59,12 +57,11 @@
   color: var(--calendar-grey-dark, $grey-4);
   font-size: 1em;
   font-family: 'source-sans-pro', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
+  @include box-centering();
 }
-.calendar__day:hover:not(.calendar__day_ofweek, :empty) {
-  cursor: pointer;
+.calendar__day:not(.calendar__day_ofweek, :empty) {
+  @include text-interactive();
 }
 .calendar__day_ofweek {
   color: var(--calendar-grey-light, #90a0b7);
