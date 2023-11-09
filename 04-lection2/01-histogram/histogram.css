@@ -5,71 +5,70 @@
   border-radius: 0.5em;
   padding: 1em 1.5em 1.5em;
   box-sizing: border-box;
-}
-.histogram_compact {
-  font-size: 9px;
-}
-.histogram_width_340 {
-  width: 340px;
-}
-.histogram__info {
-  display: flex;
-}
-.histogram__score {
-  flex-grow: 1;
-}
-.histogram__scoreCaption {
-  @include font(1em, 1.5em);
-}
-.histogram__scoreValue {
-  margin-top: 0.38em;
 
-  @include font(1.25em, 1.63em);
-}
-.histogram_compact .histogram__scoreValue {
-  font-weight: $font-weight-bold;
-  color: var(--text-primary-color, $black);
-}
-.histogram__showAll {
-  color: $primary;
-  text-decoration: none;
-  margin-top: 0.19em;
-  flex-shrink: 0;
+  &_compact {
+    font-size: 9px;
 
-  @include font(1em, 1.5em);
-}
-.histogram__columns {
-  display: flex;
-  align-items: flex-end;
-  height: 3.13em;
-  gap: 1px;
-  margin-top: 2.44em;
-  transform: scaleY(0);
-  transform-origin: bottom;
-  animation: 0.3s forwards histogramGrow;
-}
-.histogram_compact .histogram__columns {
-  margin-top: 1.25em;
-  height: 2.25em;
-} 
-.histogram__column {
-  background: $primary;
-  flex-grow: 1;
-}
-@media (--layout-mf-sm) {
-  .histogram_compact {
-    font-size: 12px;
+    @media (--layout-mf-sm) {
+      font-size: 12px;
+    }
+    @media (--layout-mf-md) {
+      font-size: 13px;
+    }
+    @media (--layout-mf-lg) {  
+      font-size: 14px;
+      margin: 0 -7px;
+    }
   }
-}
-@media (--layout-mf-md) {
-  .histogram_compact {
-    font-size: 13px;
-  } 
-}
-@media (--layout-mf-lg) {  
-  .histogram_compact {
-    font-size: 14px;
-    margin: 0 -7px;
+  &_width_340 {
+    width: 340px;
+  }
+
+  &__info {
+    display: flex;
+  }
+  &__score {
+    flex-grow: 1;
+  }
+  &__scoreCaption {
+    @include font(1em, 1.5em);
+  }
+  &__scoreValue {
+    margin-top: 0.38em;
+  
+    @include font(1.25em, 1.63em);
+  
+    .histogram_compact & {
+      font-weight: $font-weight-bold;
+      color: var(--text-primary-color, $black);
+    }
+  }
+  &__showAll {
+    color: $primary;
+    text-decoration: none;
+    margin-top: 0.19em;
+    flex-shrink: 0;
+  
+    @include font(1em, 1.5em);
+  }
+  &__columns {
+    display: flex;
+    align-items: flex-end;
+    height: 3.13em;
+    gap: 1px;
+    margin-top: 2.44em;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    animation: 0.3s forwards histogramGrow;
+    
+    .histogram_compact & {
+      margin-top: 1.25em;
+      height: 2.25em;
+    } 
+  }
+  &__column {
+    background: $primary;
+    flex-grow: 1;
   }
 }
 @keyframes histogramGrow {

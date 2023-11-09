@@ -41,6 +41,7 @@
     "postcss-import": "15.1.0",
     "postcss-import-url": "7.2.0",
     "postcss-map-get": "0.3.0",
+    "postcss-nested": "6.0.1",
     "postcss-preset-env": "7.8.3",
     "postcss-sass-color-functions": "1.1.0",
     "postcss-scss": "4.0.9",

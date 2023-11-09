@@ -4,9 +4,7 @@
   padding: 0 16px;
 
   @util center-block;
-}
-@media (--layout-mf-lg) {
-  .layoutContainer {
+  @media (--layout-mf-lg) {
     padding: 0 32px;
   }
 }

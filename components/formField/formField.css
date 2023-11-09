@@ -1,64 +1,82 @@
+$validity-status-colors: (
+  error: $error, 
+  success: $success
+);
+
 .formField {
   font-size: 16px;
 
   @include box-stack(0.31em, flex-start);
-}
-.formField_onPreviewCard {
-  font-size: 10px;
-  width: 90%;
-}
-.formField__title {
-  display: inline-block;
-  color: $grey-3;
-  text-transform: uppercase;
 
-  @include text-interactive();
-  @include font(0.75rem, 1.13, $font-weight-bolder, false, 0.03em);
-}
-.formField__field {
-  position: relative;
-}
-.formField_onPreviewCard .formField__field {
-  width: 100%;
-}
-.formField__field_fullWidth {
-  width: 100%;
-}
-.formField__title:has(+ .formField__field .formField__control:disabled) {
-  cursor: default;
-}
-.formField__icon {
-  display: none;
-  transform: translateY(-50%);
-  position: absolute 50% 1em * *;
-  size: 1.5em;
-}
-@each $color $name in (error: $error, success: $success) {
-  .formField_validity_$name .formField__icon_$name {
+  &_onPreviewCard {
+    font-size: 10px;
+    width: 90%;
+
+    @media (--layout-mf-sm) {
+      font-size: 12px;
+    }
+    @media (--layout-mf-lg) {  
+      width: 100%;
+    }
+  }
+  
+  &__title {
     display: inline-block;
-    color: $color;
+    color: $grey-3;
+    text-transform: uppercase;
+  
+    @include text-interactive();
+    @include font(0.75rem, 1.13, $font-weight-bolder, false, 0.03em);
+
+    &:has(+ .formField__field .formField__control:disabled) {
+      cursor: default;
+    }
   }
-  .formField_validity_$name .formField__control_type_textInput,
-  .formField_validity_$name .formField__control_type_textInput:focus {
-    border-color: $color;
+  &__field {
+    position: relative;
+
+    &_fullWidth {
+      width: 100%;
+    }
+
+    .formField_onPreviewCard & {
+      width: 100%;
+    }
   }
-  .formField_validity_$name .formField__status { 
-    color: $color;
+  &__icon {
+    display: none;
+    transform: translateY(-50%);
+    position: absolute 50% 1em * *;
+    size: 1.5em;
+
+    @each $color $name in $validity-status-colors {
+      .formField_validity_$name &_$name {
+        display: inline-block;
+        color: $color;
+      }
+    }
   }
-}
-.formField__status {
-  @include font(0.75rem, 1.2, $font-weight-bolder);
-}
-.formField_disabled .formField__status {
-  color: var(--text-mute-color, $grey-2)
-}
-@media (--layout-mf-sm) {
-  .formField_onPreviewCard {
-    font-size: 12px;
+  &__status {
+    @include font(0.75rem, 1.2, $font-weight-bolder);
+
+    @each $color $name in $validity-status-colors {
+      .formField_validity_$name & { 
+        color: $color;
+      }
+    }
+    
+    .formField_disabled & {
+      color: var(--text-mute-color, $grey-2)
+    }
   }
-}
-@media (--layout-mf-lg) {  
-  .formField_onPreviewCard {
-    width: 100%;
+  &__control {
+    &_type_textInput {
+      @each $color $name in $validity-status-colors {
+        .formField_validity_$name &,
+        .formField_validity_$name &:focus {
+          border-color: $color;
+        }
+      }
+    }
   }
 }

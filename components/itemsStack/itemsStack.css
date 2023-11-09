@@ -1,18 +1,12 @@
 .itemsStack {
   @include box-stack(6px, center);
-}
-@media (--layout-mf-sm) {
-  .itemsStack {
+  @media (--layout-mf-sm) {
     gap: 8px;
   }
-}
-@media (--layout-mf-md) {
-  .itemsStack {
+  @media (--layout-mf-md) {
     gap: 12px;
   }
-}
-@media (--layout-mf-lg) {  
-  .itemsStack {
+  @media (--layout-mf-lg) {  
     gap: 16px;
   }
 }

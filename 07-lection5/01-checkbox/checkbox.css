@@ -1,66 +1,71 @@
 .checkbox {
   display: inline-block;
   position: relative;
-}
-.checkbox__input {
-  @util hide-visually;
-}
-.checkbox__state {
-  display: inline-flex;
-  gap: 12px;
-  align-items: center;
-}
-.checkbox__input:not(:disabled) ~ .checkbox__state {
-  cursor: pointer;
-}
-.checkbox__control {
-  border: 1px solid var(--control-border-color, $grey-2);
-  border-radius: 4px;
-  box-sizing: border-box;
-  display: flex;
-  size: 28px;
-}
-.checkbox__title {
-  color: var(--control-color, $grey-4);
-  user-select: none;
 
-  @include font-def(); 
-}
-.checkbox__icon {
-  visibility: hidden;
-  color: $white;
-  margin: auto;
-  size: 15px 13px;
-}
-.checkbox__input:checked ~ .checkbox__state .checkbox__control {
-  border-color: var(--control-checked-color, $blue);
-  background: var(--control-checked-color, $blue);
-}
-.checkbox__input:checked ~ .checkbox__state .checkbox__icon {
-  visibility: visible;
-}
-.checkbox__input:focus ~ .checkbox__state .checkbox__title {
-  text-decoration: underline;
-}
-.checkbox__input:active ~ .checkbox__state .checkbox__control {
-  border-color: var(--control-active-border-color, $grey-3);
-  background: var(--control-active-bg-color, $grey-1);
-}
-.checkbox__input:checked:not(:disabled) ~ .checkbox__state .checkbox__control {
-  animation: check-animation 0.5s;
-}
-.checkbox__input:checked:active:not(:disabled)
-  ~ .checkbox__state
-  .checkbox__control {
-  border-color: var(--control-checked-active-color, $blue-darker);
-  background: var(--control-checked-active-color, $blue-darker);
-}
-.checkbox__input:disabled ~ .checkbox__state .checkbox__control {
-  background-color: var(--control-disabled-border-color, $grey-2);   
-  border-color: var(--control-disabled-border-color, $grey-2);
-}
-.checkbox__input:disabled ~ .checkbox__state .checkbox__title {
-  color: var(--control-disabled-color, #59616a);
+  &__input {
+    @util hide-visually;
+  }
+  &__state {
+    display: inline-flex;
+    gap: 12px;
+    align-items: center;
+    
+    .checkbox__input:not(:disabled) ~ & {
+      cursor: pointer;
+    }
+  }
+  &__control {
+    border: 1px solid var(--control-border-color, $grey-2);
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    size: 28px;
+
+    .checkbox__input:checked ~ .checkbox__state & {
+      border-color: var(--control-checked-color, $blue);
+      background: var(--control-checked-color, $blue);
+    }
+    .checkbox__input:active ~ .checkbox__state & {
+      border-color: var(--control-active-border-color, $grey-3);
+      background: var(--control-active-bg-color, $grey-1);
+    }
+    .checkbox__input:checked:not(:disabled) ~ .checkbox__state & {
+      animation: check-animation 0.5s;
+    }
+    .checkbox__input:checked:active:not(:disabled)
+      ~ .checkbox__state
+      & {
+      border-color: var(--control-checked-active-color, $blue-darker);
+      background: var(--control-checked-active-color, $blue-darker);
+    }
+    .checkbox__input:disabled ~ .checkbox__state & {
+      background-color: var(--control-disabled-border-color, $grey-2);   
+      border-color: var(--control-disabled-border-color, $grey-2);
+    }
+  }
+  &__title {
+    color: var(--control-color, $grey-4);
+    user-select: none;
+  
+    @include font-def(); 
+
+    .checkbox__input:focus ~ .checkbox__state & {
+      text-decoration: underline;
+    }
+    .checkbox__input:disabled ~ .checkbox__state & {
+      color: var(--control-disabled-color, #59616a);
+    }
+  }
+  &__icon {
+    visibility: hidden;
+    color: $white;
+    margin: auto;
+    size: 15px 13px;
+
+    .checkbox__input:checked ~ .checkbox__state & {
+      visibility: visible;
+    }
+  }
 }
 @keyframes check-animation {
   0% {

@@ -1,67 +1,71 @@
 .radio {
   display: inline-block;
   position: relative;
-}
-.radio__input {
-  @util hide-visually;
-}
-.radio__state {
-  display: inline-flex;
-  gap: 10px;
-  align-items: center;
-}
-.radio__input:not(:disabled) ~ .radio__state {
-  cursor: pointer;
-}
-.radio__control {
-  border: 1px solid var(--control-border-color, $grey-2);
-  box-sizing: border-box;
-  display: flex;
 
-  @include circled(28px);
-}
-.radio__title {
-  color: var(--control-color, $grey-4);
-  user-select: none;
+  &__input {
+    @util hide-visually;
+  }
+  &__state {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+  
+    .radio__input:not(:disabled) ~ & {
+      cursor: pointer;
+    }
+  }
+  &__control {
+    border: 1px solid var(--control-border-color, $grey-2);
+    box-sizing: border-box;
+    display: flex;
+  
+    @include circled(28px);
+  
+    &:before {
+      content: '';
+      margin: auto;
+      display: inline-block;
+    
+      @include circled(18px);
 
-  @include font-def();
-}
-.radio__control:before {
-  content: '';
-  margin: auto;
-  display: inline-block;
+      .radio__input:checked ~ .radio__state & {
+        background: var(--control-checked-color, $blue);
+      }
+      .radio__input:checked:active:not(:disabled) ~ .radio__state & {
+        background: var(--control-checked-active-color, $blue-darker);
+      }
+      .radio__input:checked:disabled ~ .radio__state & {
+        background: var(--control-disabled-color, #59616a);
+      }
+    }
 
-  @include circled(18px);
-}
-.radio__input:checked ~ .radio__state .radio__control {
-  border-width: 2px;
-  border-color: var(--control-checked-color, $blue);
-}
-.radio__input:checked ~ .radio__state .radio__control:before {
-  background: var(--control-checked-color, $blue);
-}
-.radio__input:focus ~ .radio__state .radio__title {
-  text-decoration: underline;
-}
-.radio__input:active ~ .radio__state .radio__control {
-  border-color: var(--control-active-border-color, $grey-3);
-  background: var(--control-active-bg-color, $grey-1);
-}
-.radio__input:checked:active:not(:disabled) ~ .radio__state .radio__control {
-  border-color: var(--control-checked-active-color, $blue-darker);
-}
-.radio__input:checked:active:not(:disabled)
-  ~ .radio__state
-  .radio__control:before {
-  background: var(--control-checked-active-color, $blue-darker);
-}
-.radio__input:disabled ~ .radio__state .radio__control {
-  border-color: var(--control-disabled-border-color, $grey-2);   
-  background: var(--control-disabled-border-color, $grey-2);   
-}
-.radio__input:checked:disabled ~ .radio__state .radio__control:before {
-  background: var(--control-disabled-color, #59616a);
-}
-.radio__input:disabled ~ .radio__state .radio__title {
-  color: var(--control-disabled-color, #59616a);
+    .radio__input:checked ~ .radio__state & {
+      border-width: 2px;
+      border-color: var(--control-checked-color, $blue);
+    }
+    .radio__input:active ~ .radio__state & {
+      border-color: var(--control-active-border-color, $grey-3);
+      background: var(--control-active-bg-color, $grey-1);
+    }
+    .radio__input:checked:active:not(:disabled) ~ .radio__state & {
+      border-color: var(--control-checked-active-color, $blue-darker);
+    }
+    .radio__input:disabled ~ .radio__state & {
+      border-color: var(--control-disabled-border-color, $grey-2);   
+      background: var(--control-disabled-border-color, $grey-2);   
+    }
+  }
+  &__title {
+    color: var(--control-color, $grey-4);
+    user-select: none;
+  
+    @include font-def();
+
+    .radio__input:focus ~ .radio__state & {
+      text-decoration: underline;
+    }
+    .radio__input:disabled ~ .radio__state & {
+      color: var(--control-disabled-color, #59616a);
+    }
+  }
 }

@@ -11,82 +11,90 @@ $parentWithTipSize: calc(100% + $tipSize);
   vertical-align: baseline;
   position: relative;
   color: var(--text-contrast-color, $black);
-}
-.tooltip_opened {
-  text-align: center;
-}
-.tooltip__trigger {
-  size: 24px;
-}
-.tooltip__bubble {
-  --tb-color: var(--text-contrast-color, $black);
-  
-  display: none;
-  border-radius: 10px;
-  color: $grey-2 var(--tb-color, $black);
-  box-shadow: 0px 2px 4px 0px rgba(33, 36, 41, 0.05);  
-  text-align: center;
-  font-size: 16px;
-  min-height: 24px;
-  padding: 13px 21px 8px;
-  width: 87px;
-}
-.tooltip_opened .tooltip__bubble {
-  position: relative * * * auto;
-  transform: none;
-  margin-bottom: $tipSize;
-}
-.tooltip__bubble::after {
-  content: '';
-}
-.tooltip__trigger:hover ~ .tooltip__bubble,
-.tooltip_opened .tooltip__bubble {
-  display: block;
-}
-.tooltip__bubble_primary {
-  --tb-color: $primary;
-}
-.tooltip__bubble_pos_top {
-  bottom: $parentWithTipSize;
 
-  @include axis-centered(horizontal);
-}
-.tooltip__bubble_pos_top::after {
-  top: 100%;
+  &_opened {
+    text-align: center;
+  }
+  &__trigger {
+    size: 24px;
+  }
+  &__bubble {
+    --tb-color: var(--text-contrast-color, $black);
+    
+    display: none;
+    border-radius: 10px;
+    color: $grey-2 var(--tb-color, $black);
+    box-shadow: 0px 2px 4px 0px rgba(33, 36, 41, 0.05);  
+    text-align: center;
+    font-size: 16px;
+    min-height: 24px;
+    padding: 13px 21px 8px;
+    width: 87px;
 
-  @include tip(down);
-  @include axis-centered(horizontal);
-}
-.tooltip__bubble_pos_bottom {
-  top: 100%;
+    &::after {
+      content: '';
+    }
 
-  @include axis-centered(horizontal);
-}
-.tooltip__bubble_pos_bottom::after {
-  top: $negativeTipSize;
+    &_primary {
+      --tb-color: $primary;
+    }
+    &_pos_top {
+      bottom: $parentWithTipSize;
+    
+      @include axis-centered(horizontal);
+    
+      &::after {
+        top: 100%;
+      
+        @include tip(down);
+        @include axis-centered(horizontal);
+      }
+    }
+    &_pos_bottom {
+      top: 100%;
+    
+      @include axis-centered(horizontal);
+    
+      &::after {
+        top: $negativeTipSize;
+      
+        @include tip(up);
+        @include axis-centered(horizontal);
+      }
+    }
+    &_pos_left {
+      right: $parentWithTipSize;
+    
+      @include axis-centered(vertical);
+    
+      &::after {
+        left: 100%;
+      
+        @include tip(right);
+        @include axis-centered(vertical);
+      }
+    }
+    &_pos_right {
+      left: $parentWithTipSize;
+    
+      @include axis-centered(vertical);
+    
+      &::after {
+        left: $negativeTipSize;
+      
+        @include tip(left);
+        @include axis-centered(vertical);
+      }
+    }
 
-  @include tip(up);
-  @include axis-centered(horizontal);
-}
-.tooltip__bubble_pos_left {
-  right: $parentWithTipSize;
-
-  @include axis-centered(vertical);
-}
-.tooltip__bubble_pos_left::after {
-  left: 100%;
-
-  @include tip(right);
-  @include axis-centered(vertical);
-}
-.tooltip__bubble_pos_right {
-  left: $parentWithTipSize;
-
-  @include axis-centered(vertical);
-}
-.tooltip__bubble_pos_right::after {
-  left: $negativeTipSize;
-
-  @include tip(left);
-  @include axis-centered(vertical);
+    .tooltip_opened & {
+      position: relative * * * auto;
+      transform: none;
+      margin-bottom: $tipSize;
+    }
+    .tooltip__trigger:hover ~ &,
+    .tooltip_opened & {
+      display: block;
+    }
+  }
 }

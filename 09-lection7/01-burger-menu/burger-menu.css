@@ -1,38 +1,7 @@
 .burgerMenu {
   display: none;
-}
-.burgerMenu_onDesktopAvailiable {
-  display: block;
-}
-.burgerMenu__closeButton {
-  display: none;
-  cursor: pointer;
-  position: absolute 24px * * 16px;
 
-  @include reset-geometry(true);
-  @util circle(32px, $grey-2);
-}
-.burgerMenu__closeButton:active {
-  background: $grey-3;
-}
-.burgerMenu__closeButtonIcon {
-  size: 24px;
-}
-.burgerMenu__themeTogglerBox {
-  margin-top: 16px;
-  display: none;
-}
-.burgerMenu__themeToggler {
-  @include box-aligning();
-}
-.burgerMenu__themeTogglerLabel {
-  color: var(--text-contrast-color, $black);
-
-  @include text-interactive();
-  @include font-def(); 
-}
-@media (--layout-df-md) {
-  .burgerMenu {
+  @media (--layout-df-md) {
     display: block;
     padding-top: 64px;
     background: var(--page-bg-color, $grey-0);
@@ -41,53 +10,112 @@
 
     @include box-covering(fixed, 2);
   }
-  .burgerMenu_noTopSeparator {
+
+  &[data-open] {
+    @media (--layout-df-md) {
+      transform: translateX(0);
+    }
+  }
+
+  &_onDesktopAvailiable {
+    display: block;
+  }
+  &_noTopSeparator {
     padding-top: 80px;
+
+    @media (--layout-df-md) {
+      padding-top: 80px;
+    }
+    @media (--layout-df-sm) {
+      padding-top: 64px;
+    }
   }
-  .burgerMenu_forHeaderTransparent {
-    background: transparent;
+  &_forHeaderTransparent {
+    @media (--layout-df-md) {
+      background: transparent;
+    }
   }
-  .burgerMenu[data-open] {
-    transform: translateX(0);
-  }  
-  .burgerMenu__content {
-    padding: 0 16px;
-    overflow: auto;
-    height: 100%;
-    box-sizing: border-box;
+
+  &__closeButton {
+    display: none;
+    cursor: pointer;
+    position: absolute 24px * * 16px;
+
+    &:active {
+      background: $grey-3;
+    }
+  
+    @include reset-geometry(true);
+    @util circle(32px, $grey-2);
+    @media (--layout-df-md) {
+      display: inline-block;
+    }
+
+    .burgerMenu_forHeaderTransparent & {
+      @media (--layout-df-sm) {
+        top: 16px;
+        left: 16px;
+      }
+    }
   }
-  .burgerMenu_forHeaderTransparent .burgerMenu__content {
-    background: var(--page-bg-color, $grey-0);
+  &__closeButtonIcon {
+    size: 24px;
   }
-  .burgerMenu__closeButton {
-    display: inline-block;
+  &__themeToggler {
+    @include box-aligning();
   }
-  .burgerMenu__themeTogglerBox {
-    display: block;
+  &__themeTogglerLabel {
+    color: var(--text-contrast-color, $black);
+  
+    @include text-interactive();
+    @include font-def(); 
   }
-  .burgerMenu_noTopSeparator .burgerMenu__themeTogglerBox {
-    margin-top: 0;
-  }
-  .burgerMenu__contentGroup {
-    padding: 24px 0;
-    border-top: 1px solid $grey-2;
-  }
-  .burgerMenu_noTopSeparator .burgerMenu__themeTogglerBox .burgerMenu__contentGroup {
-    border-top: 0;
-  }
-  .burgerMenu__menu {
-    display: block;
-  }
-}
-@media (--layout-df-sm) {
-  .burgerMenu_noTopSeparator {
-    padding-top: 64px;
-  }
-  .burgerMenu_noTopSeparator .burgerMenu__themeTogglerBox {
+  &__themeTogglerBox {
     margin-top: 16px;
+    display: none;
+
+    @media (--layout-df-md) {
+      display: block;
+    }
+
+    .burgerMenu_noTopSeparator & {
+      @media (--layout-df-md) {
+        margin-top: 0;
+      }
+      @media (--layout-df-sm) {
+        margin-top: 16px;
+      }      
+    }
   }
-  .burgerMenu_forHeaderTransparent .burgerMenu__closeButton {
-    top: 16px;
-    left: 16px;
+  &__content {
+    @media (--layout-df-md) {
+      padding: 0 16px;
+      overflow: auto;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    .burgerMenu_forHeaderTransparent & {
+      @media (--layout-df-md) {
+        background: var(--page-bg-color, $grey-0);
+      }
+    }
+  }
+  &__contentGroup {
+    @media (--layout-df-md) {
+      padding: 24px 0;
+      border-top: 1px solid $grey-2;
+    }
+
+    .burgerMenu_noTopSeparator .burgerMenu__themeTogglerBox & {
+      @media (--layout-df-md) {
+        border-top: 0;
+      }
+    }
+  }
+  &__menu {
+    @media (--layout-df-md) {
+      display: block;
+    }
   }
 }

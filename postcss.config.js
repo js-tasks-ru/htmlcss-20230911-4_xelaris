@@ -10,9 +10,10 @@ module.exports = {
       modernBrowser: true
     }),
     require('postcss-import'),
+    require('postcss-extend'),
+    require('postcss-nested'),
     require('postcss-utilities'),
     require('postcss-short'),
-    require('postcss-extend'),
     require("postcss-sass-color-functions"),
     require('postcss-map-get'),
     require('postcss-preset-env')({

@@ -1,3 +1,7 @@
+$weekDaysCount: 7;
+$minWeeksLength: 4;
+$maxWeeksLength: 6;
+
 .calendar {
   --calendar-grey-dark: var(--text-regular-color, $grey-4);
   --calendar-grey-light: var(--text-pale-color, #90a0b7);
@@ -7,71 +11,77 @@
   border-radius: 0.5em;
   padding: 1.2em 1.63em 2em;
   box-sizing: border-box;
-}
-.calendar_compact {
-  width: 164px;
-  box-sizing: border-box;
-  font-size: 9px;
-  border: 0;
-}
-.calendar_width_340 {
-  width: 340px;
-}
-.calendar__month {
-  color: var(--calendar-grey-dark, $grey-4);
-  grid-column: 1 / 8;
 
-  @include font(1.25em, 1.5em, $font-weight-bold);
-  @include box-centering();
-}
-.calendar__wrapper {
-  padding-bottom: 100%;
-  position: relative;
-}
-.calendar__days {
-  display: grid;
-  grid-template-rows: repeat(8, 1fr);
-  grid-template-columns: repeat(7, 1fr);
+  &_compact {
+    width: 164px;
+    box-sizing: border-box;
+    font-size: 9px;
+    border: 0;
 
-  @include box-covering();
-}
-@for $num from 4 through 6 {
-  .calendar_length_#{$num}weeks .calendar__wrapper {
-    padding-bottom: calc(($num + 2) / 7 * 100%);
+    @media (--layout-mf-sm) {
+      font-size: 10px;
+      width: 202px;
+      border: 1px solid var(--border-color, $grey-3);
+    }
   }
-  .calendar_length_#{$num}weeks .calendar__days {
-    grid-template-rows: repeat(calc($num + 2), 1fr);
+  &_width_340 {
+    width: 340px;
   }
-}
-.calendar__day {
-  color: var(--calendar-grey-dark, $grey-4);
-  font-size: 1em;
-  font-family: 'source-sans-pro', sans-serif;
+
+  &__month {
+    color: var(--calendar-grey-dark, $grey-4);
+    grid-column: 1 / 8;
   
-  @include box-centering();
-}
-.calendar__day:not(.calendar__day_ofweek, :empty) {
-  @include text-interactive();
-}
-.calendar__day_ofweek {
-  color: var(--calendar-grey-light, #90a0b7);
-  font-family: 'Inter', sans-serif;
-}
-.calendar__day_period_edge {
-  color: $white $primary;
-}
-.calendar__day_period_inside,
-.calendar__day:hover:not(
-    .calendar__day_period_edge,
-    .calendar__day_ofweek,
-    :empty
-  ) {
-  background: $blue-light;
-}
-@media (--layout-mf-sm) {
-  .calendar_compact {
-    font-size: 10px;
-    width: 202px;
-    border: 1px solid var(--border-color, $grey-3);
+    @include font(1.25em, 1.5em, $font-weight-bold);
+    @include box-centering();
+  }
+  &__wrapper {
+    padding-bottom: 100%;
+    position: relative;
+
+    @for $num from $minWeeksLength through $maxWeeksLength {
+      .calendar_length_#{$num}weeks & {
+        padding-bottom: calc(($num + 2) / $weekDaysCount * 100%);
+      }
+    }
+  }
+  &__days {
+    display: grid;
+    grid-template-rows: repeat(calc($maxWeeksLength + 2), 1fr);
+    grid-template-columns: repeat($weekDaysCount, 1fr);
+  
+    @include box-covering();
+
+    @for $num from $minWeeksLength through $maxWeeksLength {
+      .calendar_length_#{$num}weeks & {
+        grid-template-rows: repeat(calc($num + 2), 1fr);
+      }
+    }
+  }
+  &__day {
+    color: var(--calendar-grey-dark, $grey-4);
+    font-size: 1em;
+    font-family: 'source-sans-pro', sans-serif;
+    
+    @include box-centering();
+
+    &:not(.calendar__day_ofweek, :empty) {
+      @include text-interactive();
+    }
+    &_ofweek {
+      color: var(--calendar-grey-light, #90a0b7);
+      font-family: 'Inter', sans-serif;
+    }
+    &_period_edge {
+      color: $white $primary;
+    }
+    &_period_inside,
+    &:hover:not(
+        .calendar__day_period_edge,
+        .calendar__day_ofweek,
+        :empty
+      ) {
+      background: $blue-light;
+    }
   }
 }

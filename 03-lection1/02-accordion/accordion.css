@@ -1,56 +1,56 @@
 .accordion {
   @include font-def();
-}
-.accordion_compact {
-  font-size: 9px;
-}
-.accordion_fullWidth {
-  width: 100%;
-}
-.accordion__item {
-  border: 1px solid var(--content-border-color, $grey-3);
-  background: var(--content-bg-color, white);
-  border-radius: 0.5em;
-}
-.accordion__item:not(:last-child) {
-  margin-bottom: 0.5em;
-}
-.accordion__itemSummary {
-  padding: 1.5em 2em;
-  color: var(--text-contrast-color, $black);
 
-  @include text-interactive();
-  @include box-aligning(0.63em);
-}
-.accordion__itemSummaryMarker {
-  display: inline-block;
-  color: var(--text-regular-color, $grey-4);
-  flex-shrink: 0;
-  size: 1em 0.5em;
-}
-.accordion__item[open] .accordion__itemSummary {
-  padding-bottom: 1em;
-}
-.accordion__item[open] .accordion__itemSummaryMarker {
-  transform: rotate(180deg);
-}
-.accordion__itemDetails {
-  margin: 0;
-  padding: 0 2em 2em;
-  color: var(--text-regular-color, $grey-4);
-}
-@media (--layout-mf-sm) {
-  .accordion_compact {
-    font-size: 11px;
+  &_compact {
+    font-size: 9px;
+
+    @media (--layout-mf-sm) {
+      font-size: 11px;
+    }
+    @media (--layout-mf-md) {
+      font-size: 12px;
+    }
+    @media (--layout-mf-xl) {
+      font-size: 13px;
+    }
   }
-}
-@media (--layout-mf-md) {
-  .accordion_compact {
-    font-size: 12px;
+  &_fullWidth {
+    width: 100%;
   }
-}
-@media (--layout-mf-xl) {
-  .accordion_compact {
-    font-size: 13px;
+
+  &__item {
+    border: 1px solid var(--content-border-color, $grey-3);
+    background: var(--content-bg-color, white);
+    border-radius: 0.5em;
+  
+    &:not(:last-child) {
+      margin-bottom: 0.5em;
+    }
+  }
+  &__itemSummary {
+    padding: 1.5em 2em;
+    color: var(--text-contrast-color, $black);
+  
+    @include text-interactive();
+    @include box-aligning(0.63em);
+
+    .accordion__item[open] & {
+      padding-bottom: 1em;
+    }
+  }
+  &__itemSummaryMarker {
+    display: inline-block;
+    color: var(--text-regular-color, $grey-4);
+    flex-shrink: 0;
+    size: 1em 0.5em;
+
+    .accordion__item[open] & {
+      transform: rotate(180deg);
+    }
+  }
+  &__itemDetails {
+    margin: 0;
+    padding: 0 2em 2em;
+    color: var(--text-regular-color, $grey-4);
   }
 }

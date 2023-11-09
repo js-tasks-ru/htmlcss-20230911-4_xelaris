@@ -6,16 +6,16 @@
 
   @include reset-geometry(true);
   @util circle(32px, none);
-}
-.burgerMenuShowButton:hover {
-  background: var(--grey-2, $grey-3);
-}
-.burgerMenuShowButton__icon {
-  color: var(--text-contrast-color, $black);
-  size: 24px;
-}
-@media (--layout-df-md) {
-  .burgerMenuShowButton {
+  @media (--layout-df-md) {
     display: inline-block;
+  }
+
+  &:hover {
+    background: var(--grey-2, $grey-3);
+  }
+
+  &__icon {
+    color: var(--text-contrast-color, $black);
+    size: 24px;
   }
 }

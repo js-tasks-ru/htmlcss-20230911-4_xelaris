@@ -64,13 +64,14 @@ body {
   font-weight: $font-weight-def;
   font-style: normal;
   color: $black;
+  
+  &:has(.burgerMenu[data-open]) {
+    overflow: hidden;
+  }
+  &:has(.burgerMenu[data-open]) .burgerMenuShowButton {
+    opacity: 0;
+  }  
 }
-body:has(.burgerMenu[data-open]) {
-  overflow: hidden;
-}
-body:has(.burgerMenu[data-open]) .burgerMenuShowButton {
-  opacity: 0;
-}  
 .preload ._noAnimateOnload {
   transition: none !important;
   animation-duration: 0s !important;

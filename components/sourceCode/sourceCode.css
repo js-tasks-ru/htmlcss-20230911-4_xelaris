@@ -4,10 +4,12 @@
   white-space: pre-wrap;
   box-sizing: border-box;
   margin: 0;
-}
-.sourceCode__inner {
-  padding: 0 1em;
-}
-.sourceCode code.sourceCode__inner {
-  padding: 0;
+
+  &__inner {
+    padding: 0 1em;
+    
+    .sourceCode code& {
+      padding: 0;
+    }
+  }
 }

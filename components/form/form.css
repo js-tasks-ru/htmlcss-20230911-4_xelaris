@@ -1,27 +1,27 @@
-.form__cols {
-  @include box-aligning(14px);
-}
-.form__fields {
-  @include box-stack(10px);
-}
-.form__feild {
-  gap: 14px;
-}
-.form__submitButton {
-  min-width: 175px;
-}
-.form__fields+.form__submitButton {
-  margin-top: 20px;
-}
-@media (--layout-mf-md) {
-  .form__cols {
-    padding: 14px;
-    width: 100%;
-    box-sizing: border-box;
+.form {
+  &__cols {
+    @include box-aligning(14px);
+
+    @media (--layout-mf-lg) {  
+      gap: 42px;
+    }
+    @media (--layout-mf-md) {
+      padding: 14px;
+      width: 100%;
+      box-sizing: border-box;
+    }
   }
-}
-@media (--layout-mf-lg) {  
-  .form__cols {
-    gap: 42px;
+  &__fields {
+    @include box-stack(10px);
+  }
+  &__feild {
+    gap: 14px;
+  }
+  &__submitButton {
+    min-width: 175px;
+
+    .form__fields + & {
+      margin-top: 20px;
+    }
   }
 }

@@ -11,20 +11,21 @@ $avatar-sizes: (
   font-size: 16px;
 
   @include box-centering();
-}
-@each $size $name in $avatar-sizes {
-  .avatar_size_$name {
-    size: $size;
+
+  @each $size $name in $avatar-sizes {
+    &_size_$name {
+      size: $size;
+    }
   }
-}
-.avatar_onPreviewCard {
-  @extend .avatar_size_normal;
-}
-.avatar__img {
-  @include img-cover();
-}
-@media (--layout-mf-md) {
-  .avatar_onPreviewCard {
-    @extend .avatar_size_big;
+  &_onPreviewCard {
+    size: map-get($avatar-sizes, normal);
+
+    @media (--layout-mf-md) {
+      size: map-get($avatar-sizes, big);
+    }
+  }
+
+  &__img {
+    @include img-cover();
   }
 }

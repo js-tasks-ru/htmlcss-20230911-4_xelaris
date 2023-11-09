@@ -1,44 +1,51 @@
 .componentDetail {
   color: var(--text-contrast-color, black);
   font-size: 16px;
-}
-.componentDetail__tabs {
-  --tabs-padding-top: 0.38em;
-  margin-top: 2.25em;
-}
-.componentDetail__tabs .componentDetail__tabContent {
-  padding-top: var(--tabs-padding-top);
-}
-.componentDetail__tabs .componentDetail__tabContent::before {
-  content: '';
-  display: block;
-  background: $grey-2;
-  margin-top: calc(-1 * var(--tabs-padding-top));
-  position: absolute * * * 0;
-  size: 100% 1px;
-}
-.componentDetail__component + .componentDetail__component {
-  margin-top: 1em;
-}
-.componentDetail__component_columns {
-  @include box-stack(1em);
-}
-.componentDetail__componentColumn {
-  @include box-stack(1em);
-}
-.componentDetail__componentColumn_fullWidth {
-  flex-grow: 1;
-}
-@media (--layout-mf-sm) {
-  .componentDetail__component_columns {
-    flex-direction: row;
+
+  &__tabs {
+    --tabs-padding-top: 0.38em;
+
+    margin-top: 2.25em;
+
+    @media (--layout-mf-md) {
+      --tabs-padding-top: 2.13em;
+
+      margin-top: 3em;
+    }
   }
-}
-@media (--layout-mf-md) {
-  .componentDetail {
-    --tabs-padding-top: 2.13em;
+  &__tabContent {
+    &::before {
+      .componentDetail__tabs & {
+        content: '';
+        display: block;
+        background: $grey-2;
+        margin-top: calc(-1 * var(--tabs-padding-top));
+        position: absolute * * * 0;
+        size: 100% 1px;
+      }
+    }
+
+    .componentDetail__tabs & {
+      padding-top: var(--tabs-padding-top);
+    }
   }
-  .componentDetail__tabs {
-    margin-top: 3em;
+  &__component {
+    &_columns {
+      @include box-stack(1em);
+      @media (--layout-mf-sm) {
+        flex-direction: row;
+      }
+    }
+    
+    & + & {
+      margin-top: 1em;
+    }
+  }
+  &__componentColumn {
+    @include box-stack(1em);
+
+    &_fullWidth {
+      flex-grow: 1;
+    }
   }
 }

@@ -1,85 +1,91 @@
 .toggler {
   position: relative;
-}
-.toggler__input {
-  @util hide-visually;
-}
-.toggler__state {
-  display: inline-flex;
-  gap: 12px;
-  align-items: center;
-}
-.toggler__state_inRow {
-  justify-content: space-between;
-  width: 100%;
-}
-.toggler__input:not(:disabled) ~ .toggler__state {
-  cursor: pointer;
-}
-.toggler__control {
-  border: 1px solid var(--control-border-color, $grey-2);
-  border-radius: 14px;
-  box-sizing: border-box;
-  text-align: left;
-  transition: all 0.5s;
-  size: 52px 28px;
-}
-.toggler__title {
-  color:  var(--control-color, $grey-4);
-  user-select: none;
 
-  @include font-def(); 
-}
-.toggler__icon {
-  display: inline-block;
-  color: var(--text-pale-color, $grey-2);
-  size: 24px;
-}
-.toggler__icon_contrast_onLight {
-  color: var(--text-contrastOnLight-color);
-}
-.toggler__icon_contrast_onDark {
-  color: var(--text-contrastOnDark-color);
-}
-.toggler__control:before {
-  content: '';
-  border-radius: 12px;
-  size: 24px;
-  margin: 1px;
-  display: inline-block;
-  background: var(--control-border-color, $grey-2);
-  transition: all 0.5s;
-}
-.toggler__input:checked ~ .toggler__state .toggler__control {
-  border-color: var(--control-checked-color, $blue);
-  background: var(--control-checked-color, $blue);
-}
-.toggler__input:checked ~ .toggler__state .toggler__control:before {
-  background: $white;
-  transform: translateX(24px);
-}
-.toggler__input:focus ~ .toggler__state .toggler__title {
-  text-decoration: underline;
-}
-.toggler__input:active ~ .toggler__state .toggler__control {
-  border-color: var(--control-active-border-color, $grey-3);
-  background: var(--control-active-bg-color, $grey-1);
-}
-.toggler__input:active:not(:checked)
-  ~ .toggler__state
-  .toggler__control:before {
-  background: var(--control-active-border-color, $grey-3);
-}
-.toggler__input:checked:active:not(:disabled)
-  ~ .toggler__state
-  .toggler__control {
-  border-color: var(--control-checked-active-color, $blue-darker);
-  background: var(--control-checked-active-color, $blue-darker);
-}
-.toggler__input:disabled ~ .toggler__state .toggler__control {
-  border-color: var(--control-disabled-border-color, $grey-2);
-  background: var(--control-disabled-color, $grey-2);   
-}
-.toggler__input:disabled ~ .toggler__state .toggler__control:before {
-  background: var(--control-disabled-bg-color, $grey-2);   
+  &__input {
+    @util hide-visually;
+  }
+  &__state {
+    display: inline-flex;
+    gap: 12px;
+    align-items: center;
+  
+    &_inRow {
+      justify-content: space-between;
+      width: 100%;
+    }
+  
+    .toggler__input:not(:disabled) ~ & {
+      cursor: pointer;
+    }
+  }
+  &__control {
+    border: 1px solid var(--control-border-color, $grey-2);
+    border-radius: 14px;
+    box-sizing: border-box;
+    text-align: left;
+    transition: all 0.5s;
+    size: 52px 28px;
+  
+    &:before {
+      content: '';
+      border-radius: 12px;
+      size: 24px;
+      margin: 1px;
+      display: inline-block;
+      background: var(--control-border-color, $grey-2);
+      transition: all 0.5s;
+
+      .toggler__input:checked ~ .toggler__state & {
+        background: $white;
+        transform: translateX(24px);
+      }
+      .toggler__input:active:not(:checked)
+        ~ .toggler__state & {
+        background: var(--control-active-border-color, $grey-3);
+      }
+      .toggler__input:disabled ~ .toggler__state & {
+        background: var(--control-disabled-bg-color, $grey-2);   
+      }
+    }
+
+    .toggler__input:checked ~ .toggler__state & {
+      border-color: var(--control-checked-color, $blue);
+      background: var(--control-checked-color, $blue);
+    }
+    .toggler__input:active ~ .toggler__state & {
+      border-color: var(--control-active-border-color, $grey-3);
+      background: var(--control-active-bg-color, $grey-1);
+    }
+    .toggler__input:checked:active:not(:disabled)
+      ~ .toggler__state & {
+      border-color: var(--control-checked-active-color, $blue-darker);
+      background: var(--control-checked-active-color, $blue-darker);
+    }
+    .toggler__input:disabled ~ .toggler__state & {
+      border-color: var(--control-disabled-border-color, $grey-2);
+      background: var(--control-disabled-color, $grey-2);   
+    }
+  }
+  &__title {
+    color:  var(--control-color, $grey-4);
+    user-select: none;
+  
+    @include font-def(); 
+
+    .toggler__input:focus ~ .toggler__state & {
+      text-decoration: underline;
+    }
+  }
+  &__icon {
+    display: inline-block;
+    color: var(--text-pale-color, $grey-2);
+    size: 24px;
+  
+    &_contrast_onLight {
+      color: var(--text-contrastOnLight-color);
+    }
+    &_contrast_onDark {
+      color: var(--text-contrastOnDark-color);
+    }
+  }
 }

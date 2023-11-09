@@ -8,20 +8,22 @@
   transition: border-color 0.3s;
 
   @include font(1.25em, 1.3em);
-}
-.textInput_compact {
-  padding: 0.5em 2.4em 0.4em 1.2em;
-}
-.textInput_fullWidth {
-  width: 100%;
-}
-.textInput::placeholder {
-  color: var(--text-mute-color, $grey-2);
-}
-.textInput:disabled {
-  color: var(--control-disabled-color, #59616a) var(--control-disabled-bg-color, $grey-1);
-  border-color: var(--control-disabled-border-color, $grey-2);
-}
-.textInput:focus {
-  border-color: var(--control-checked-color, $blue);
+
+  &::placeholder {
+    color: var(--text-mute-color, $grey-2);
+  }
+  &:disabled {
+    color: var(--control-disabled-color, #59616a) var(--control-disabled-bg-color, $grey-1);
+    border-color: var(--control-disabled-border-color, $grey-2);
+  }
+  &:focus {
+    border-color: var(--control-checked-color, $blue);
+  }
+
+  &_compact {
+    padding: 0.5em 2.4em 0.4em 1.2em;
+  }
+  &_fullWidth {
+    width: 100%;
+  }
 }
