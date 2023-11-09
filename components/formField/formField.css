@@ -26,7 +26,7 @@ $validity-status-colors: (
     text-transform: uppercase;
   
     @include text-interactive();
-    @include font(0.75rem, 1.13, $font-weight-bolder, false, 0.03em);
+    @include font(0.75em, 1.13, $font-weight-bolder, false, 0.03em);
 
     &:has(+ .formField__field .formField__control:disabled) {
       cursor: default;

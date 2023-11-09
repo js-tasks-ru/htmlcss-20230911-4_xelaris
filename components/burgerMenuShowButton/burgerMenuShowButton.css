@@ -5,13 +5,13 @@
   transition: opacity 0.25s linear;
 
   @include reset-geometry(true);
-  @util circle(32px, none);
+  @util circle(32px, initial);
   @media (--layout-df-md) {
     display: inline-block;
   }
 
   &:hover {
-    background: var(--grey-2, $grey-3);
+    background: $grey-2;
   }
 
   &__icon {
