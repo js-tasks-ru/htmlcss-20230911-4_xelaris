@@ -36,7 +36,7 @@ $parentWithTipSize: calc(100% + $tipSize);
     }
 
     &_primary {
-      --tb-color: $primary;
+      --tb-color: $color-primary;
     }
     &_pos_top {
       bottom: $parentWithTipSize;

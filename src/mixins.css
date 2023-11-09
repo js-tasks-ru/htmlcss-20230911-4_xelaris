@@ -84,7 +84,11 @@
     top: 50%;
     transform: translateY(-50%);
   } @else {
-    left: 50%;
-    transform: translateX(-50%);
+    @if $axis == horizontal {
+      left: 50%;
+      transform: translateX(-50%);
+    } @else {
+      @util center;
+    }
   }  
 }

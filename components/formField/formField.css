@@ -1,6 +1,6 @@
 $validity-status-colors: (
-  error: $error, 
-  success: $success
+  error: $color-error, 
+  success: $color-success
 );
 
 .formField {

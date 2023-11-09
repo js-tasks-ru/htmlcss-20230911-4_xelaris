@@ -33,19 +33,19 @@
     }
   }
   &_var_primary {
-    color: $white $primary;
+    color: $white $color-primary;
 
     &:hover,
     &:active {
-      background: $primary-active;
+      background: $color-primary-active;
     }
   }
   &_var_secondary {
-    color: $white $secondary;
+    color: $white $color-secondary;
     
     &:hover,
     &:active {
-      color: $white $secondary-active;
+      color: $white $color-secondary-active;
     }
   }
   &_var_alternate {

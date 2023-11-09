@@ -44,7 +44,7 @@
     }
   }
   &__showAll {
-    color: $primary;
+    color: $color-primary;
     text-decoration: none;
     margin-top: 0.19em;
     flex-shrink: 0;
@@ -67,7 +67,7 @@
     } 
   }
   &__column {
-    background: $primary;
+    background: $color-primary;
     flex-grow: 1;
   }
 }

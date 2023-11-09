@@ -34,7 +34,7 @@
 
     &_active,
     &:hover {
-      color: $notification;
+      color: $color-notify;
     }
     &:visited:not(.menu__item_active, :hover) {
       color: var(--text-contrast-color, $black);

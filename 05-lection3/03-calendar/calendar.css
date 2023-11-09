@@ -73,7 +73,7 @@ $maxWeeksLength: 6;
       font-family: 'Inter', sans-serif;
     }
     &_period_edge {
-      color: $white $primary;
+      color: $white $color-primary;
     }
     &_period_inside,
     &:hover:not(

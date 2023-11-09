@@ -27,8 +27,8 @@
   --control-border-color: #{$grey-2};
   --control-active-border-color: #{$grey-3};
   --control-active-bg-color: #{$grey-1};
-  --control-checked-color: #{$primary};
-  --control-checked-active-color: #{$primary-active};
+  --control-checked-color: #{$color-primary};
+  --control-checked-active-color: #{$color-primary-active};
   --control-disabled-color: #{$grey-2};
   --control-disabled-border-color: #{$grey-2};
   --control-disabled-bg-color: #{$grey-1};
