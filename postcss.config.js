@@ -24,5 +24,6 @@ module.exports = {
 			},
     }),
     require('cssnano'),
+    require("postcss-reporter")({ clearReportedMessages: true }),
   ],
 }
