@@ -2,7 +2,7 @@
   border: 1px solid var(--content-border-color, $grey-3);
   color: var(--text-contrast-color, black);
   font-size: 16px;
-  border-radius: 0.5em;
+  border-radius: .5em;
   padding: 1em 1.5em 1.5em;
   box-sizing: border-box;
 
@@ -20,6 +20,7 @@
       margin: 0 -7px;
     }
   }
+
   &_width_340 {
     width: 340px;
   }
@@ -27,14 +28,17 @@
   &__info {
     display: flex;
   }
+
   &__score {
     flex-grow: 1;
   }
+
   &__scoreCaption {
     @include font(1em, 1.5em);
   }
+
   &__scoreValue {
-    margin-top: 0.38em;
+    margin-top: .38em;
   
     @include font(1.25em, 1.63em);
   
@@ -43,14 +47,16 @@
       color: var(--text-primary-color, $black);
     }
   }
+
   &__showAll {
     color: $color-primary;
     text-decoration: none;
-    margin-top: 0.19em;
+    margin-top: .19em;
     flex-shrink: 0;
   
     @include font(1em, 1.5em);
   }
+
   &__columns {
     display: flex;
     align-items: flex-end;
@@ -59,22 +65,24 @@
     margin-top: 2.44em;
     transform: scaleY(0);
     transform-origin: bottom;
-    animation: 0.3s forwards histogramGrow;
+    animation: .3s forwards histogram-grow;
     
     .histogram_compact & {
       margin-top: 1.25em;
       height: 2.25em;
     } 
   }
+
   &__column {
     background: $color-primary;
     flex-grow: 1;
   }
 }
-@keyframes histogramGrow {
+@keyframes histogram-grow {
   from {
     transform: scaleY(0);
   }
+
   to {
     transform: scaleY(1);
   }

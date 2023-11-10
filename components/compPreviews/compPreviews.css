@@ -6,6 +6,7 @@
       margin-top: -63px;
     }
   }
+
   &__tabContent {
     padding-top: 16px;
     color: var(--text-contrast-color, $black);
@@ -17,6 +18,7 @@
       padding-top: 68px;
     }
   }
+
   &__loadMoreBtn {
     width: 182px;
     display: block;

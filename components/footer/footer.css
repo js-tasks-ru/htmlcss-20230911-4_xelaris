@@ -38,8 +38,9 @@
       color: $grey-3;
       text-transform: uppercase;
     
-      @include font(12px, 18px, $font-weight-bolder, false, 0.48px);
+      @include font(12px, 18px, $font-weight-bolder, false, .48px);
     }
+
     .footer:not(.footer_compact) & {
       @media (--layout-mf-lg) {
         color: var(--text-contrast-color, $black);
@@ -49,6 +50,7 @@
       }
     }
   }
+
   &__desc {
     padding: 0 0 20px;
     margin: 18px auto 0;
@@ -64,7 +66,7 @@
       padding-bottom: 60px;
       color: var(--text-contrast-color, $black);
 
-      @include font-def();
+      @include font-def;
     }
   }
 }

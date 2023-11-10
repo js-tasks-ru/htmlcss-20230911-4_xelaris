@@ -1,9 +1,9 @@
-$tipSize: 7px;
-$negativeTipSize: calc(-1 * $tipSize);
-$parentWithTipSize: calc(100% + $tipSize);
+$tip-size: 7px;
+$negative-tip-size: calc(-1 * $tip-size);
+$parent-with-tip-size: calc(100% + $tip-size);
 
 @mixin tip($pos) {
-  @util triangle($tipSize, var(--tb-color, $black), $pos);
+  @util triangle($tip-size, var(--tb-color, $black), $pos);
 }
 
 .tooltip {
@@ -15,16 +15,18 @@ $parentWithTipSize: calc(100% + $tipSize);
   &_opened {
     text-align: center;
   }
+
   &__trigger {
     size: 24px;
   }
+
   &__bubble {
     --tb-color: var(--text-contrast-color, $black);
     
     display: none;
     border-radius: 10px;
     color: $grey-2 var(--tb-color, $black);
-    box-shadow: 0px 2px 4px 0px rgba(33, 36, 41, 0.05);  
+    box-shadow: 0 2px 4px 0 rgb(33 36 41 / 5%);  
     text-align: center;
     font-size: 16px;
     min-height: 24px;
@@ -38,8 +40,9 @@ $parentWithTipSize: calc(100% + $tipSize);
     &_primary {
       --tb-color: $color-primary;
     }
+
     &_pos_top {
-      bottom: $parentWithTipSize;
+      bottom: $parent-with-tip-size;
     
       @include axis-centered(horizontal);
     
@@ -50,20 +53,22 @@ $parentWithTipSize: calc(100% + $tipSize);
         @include axis-centered(horizontal);
       }
     }
+
     &_pos_bottom {
       top: 100%;
     
       @include axis-centered(horizontal);
     
       &::after {
-        top: $negativeTipSize;
+        top: $negative-tip-size;
       
         @include tip(up);
         @include axis-centered(horizontal);
       }
     }
+
     &_pos_left {
-      right: $parentWithTipSize;
+      right: $parent-with-tip-size;
     
       @include axis-centered(vertical);
     
@@ -74,13 +79,14 @@ $parentWithTipSize: calc(100% + $tipSize);
         @include axis-centered(vertical);
       }
     }
+
     &_pos_right {
-      left: $parentWithTipSize;
+      left: $parent-with-tip-size;
     
       @include axis-centered(vertical);
     
       &::after {
-        left: $negativeTipSize;
+        left: $negative-tip-size;
       
         @include tip(left);
         @include axis-centered(vertical);
@@ -90,10 +96,11 @@ $parentWithTipSize: calc(100% + $tipSize);
     .tooltip_opened & {
       position: relative * * * auto;
       transform: none;
-      margin-bottom: $tipSize;
+      margin-bottom: $tip-size;
     }
-    .tooltip__trigger:hover ~ &,
-    .tooltip_opened & {
+
+    .tooltip_opened &,
+    .tooltip__trigger:hover ~ & {
       display: block;
     }
   }

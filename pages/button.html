@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -7,9 +7,14 @@
     <link rel="stylesheet" href="../dist/styles.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
-    <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>
+    <script
+      defer
+      src="../10-lection8/01-theme-changer/theme-changer.js"
+    ></script>
     <script src="../assets/js/fixOnloadAnimations.js"></script>
-    <script defer>hljs.highlightAll()</script>
+    <script defer>
+      hljs.highlightAll();
+    </script>
     <title>Button component</title>
   </head>
   <body class="page page_component preload">
@@ -68,7 +73,10 @@
       </div>
     </header>
     <div class="page__container layoutContainer">
-      <div id="burger-menu" class="burgerMenu burgerMenu_onDesktopAvailiable burgerMenu_forHeaderTransparent">
+      <div
+        id="burger-menu"
+        class="burgerMenu burgerMenu_onDesktopAvailiable burgerMenu_forHeaderTransparent"
+      >
         <button id="burger-menu-close" class="burgerMenu__closeButton">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -82,11 +90,18 @@
           <div class="burgerMenu__themeTogglerBox">
             <div class="burgerMenu__contentGroup">
               <div class="burgerMenu__themeToggler">
-                <label for="theme-changer-alt" class="burgerMenu__themeTogglerLabel">
+                <label
+                  for="theme-changer-alt"
+                  class="burgerMenu__themeTogglerLabel"
+                >
                   Dark mode
                 </label>
                 <label class="toggler">
-                  <input id="theme-changer-alt" type="checkbox" class="toggler__input" />
+                  <input
+                    id="theme-changer-alt"
+                    type="checkbox"
+                    class="toggler__input"
+                  />
                   <span class="toggler__state">
                     <span class="toggler__control"></span>
                   </span>
@@ -99,14 +114,22 @@
               <div class="menu__group">
                 <h4 class="menu__title">Components</h4>
                 <nav class="menu__list">
-                  <a class="menu__item" href="/pages/accordion.html">Accordion</a>
+                  <a class="menu__item" href="/pages/accordion.html"
+                    >Accordion</a
+                  >
                   <a class="menu__item" href="/pages/avatar.html">Avatar</a>
-                  <a class="menu__item menu__item_active" href="/pages/button.html">Button</a>
+                  <a
+                    class="menu__item menu__item_active"
+                    href="/pages/button.html"
+                    >Button</a
+                  >
                   <a class="menu__item" href="/pages/calendar.html">Calendar</a>
                   <a class="menu__item" href="/pages/form_elements.html"
                     >Custom form elements</a
                   >
-                  <a class="menu__item" href="/pages/histogram.html">Histogram</a>
+                  <a class="menu__item" href="/pages/histogram.html"
+                    >Histogram</a
+                  >
                   <a class="menu__item" href="/pages/modal.html">Modal</a>
                   <a class="menu__item" href="/pages/skeleton.html">Skeleton</a>
                   <a class="menu__item" href="/pages/tooltip.html">Tooltip</a>
@@ -118,7 +141,11 @@
                 <h4 class="menu__title">Atoms</h4>
                 <nav class="menu__list">
                   <a class="menu__item" href="/pages/avatar.html">Avatar</a>
-                  <a class="menu__item menu__item_active" href="/pages/button.html">Button</a>
+                  <a
+                    class="menu__item menu__item_active"
+                    href="/pages/button.html"
+                    >Button</a
+                  >
                   <a class="menu__item" href="/pages/form_elements.html"
                     >Custom form elements</a
                   >
@@ -142,8 +169,12 @@
               <div class="menu__group">
                 <h4 class="menu__title">Organisms</h4>
                 <nav class="menu__list">
-                  <a class="menu__item" href="/pages/accordion.html">Accordion</a>
-                  <a class="menu__item" href="/pages/histogram.html">Histogram</a>
+                  <a class="menu__item" href="/pages/accordion.html"
+                    >Accordion</a
+                  >
+                  <a class="menu__item" href="/pages/histogram.html"
+                    >Histogram</a
+                  >
                   <a class="menu__item" href="/pages/modal.html">Modal</a>
                 </nav>
               </div>
@@ -154,20 +185,37 @@
       <main class="page__content">
         <div class="componentDetail">
           <h1 class="page__title">Button component</h1>
-          <div class="componentDetail__component componentDetail__component_columns">
+          <div
+            class="componentDetail__component componentDetail__component_columns"
+          >
             <div class="componentDetail__componentColumn">
-              <button class="button button_var_primary button_width_200">Primary</button>
-              <button class="button button_var_secondary button_width_200">Secondary</button>
-              <button class="button button_var_alternate button_width_200">Alternate</button>
+              <button class="button button_var_primary button_width_200">
+                Primary
+              </button>
+              <button class="button button_var_secondary button_width_200">
+                Secondary
+              </button>
+              <button class="button button_var_alternate button_width_200">
+                Alternate
+              </button>
             </div>
             <div class="componentDetail__componentColumn">
-              <button class="button button_var_primary button_width_200" disabled="disabled">
+              <button
+                class="button button_var_primary button_width_200"
+                disabled="disabled"
+              >
                 Primary disabled
               </button>
-              <button class="button button_var_secondary button_width_200" disabled="disabled">
+              <button
+                class="button button_var_secondary button_width_200"
+                disabled="disabled"
+              >
                 Secondary disabled
               </button>
-              <button class="button button_var_alternate button_width_200" disabled="disabled">
+              <button
+                class="button button_var_alternate button_width_200"
+                disabled="disabled"
+              >
                 Alternate disabled
               </button>
             </div>
@@ -210,7 +258,7 @@
 &lt;button class=&quot;button button_var_alternate&quot; disabled=&quot;disabled&quot;&gt;Alternate disabled&lt;/button&gt;
                   </code>
                 </pre>
-              </div>              
+              </div>
             </div>
             <div class="tabs__content tabs__content_tabNum_2">
               <div class="componentDetail__tabContent">
@@ -271,7 +319,7 @@
 }
                   </code>                      
                 </pre>
-              </div>              
+              </div>
             </div>
           </div>
         </div>

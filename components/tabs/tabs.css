@@ -1,4 +1,4 @@
-$maxTabsCnt: 5;
+$max-tabs-cnt: 5;
 
 .tabs {
   &__nav {
@@ -11,6 +11,7 @@ $maxTabsCnt: 5;
       gap: 40px;
     }
   }
+
   &__content {
     display: none;
 
@@ -18,17 +19,19 @@ $maxTabsCnt: 5;
       display: block;
     }
   }
+
   &__tabControl {
     @util hide-visually;
   }
+
   &__tabTitle {
     color: var(--text-pale-color, $grey-3);
     display: inline-block;
     border-bottom: 5px solid transparent;
     padding-bottom: 8px;
     
-    @include text-interactive();
-    @include font-def(); 
+    @include text-interactive;
+    @include font-def; 
   
     &:hover {
       color: var(--text-primary-color, $grey-4);
@@ -36,22 +39,23 @@ $maxTabsCnt: 5;
   }
 }
 
-%activeTab {
+%active-tab {
   color: var(--text-primary-color, $black);
   border-bottom-color: var(--text-primary-color, $black);
   cursor: default;
 }
+
 .tabs__tabControl[class~='tabs__tabControl_allTabs']:checked
   ~ .tabs__nav .tabs__tabTitle[class~='tabs__tabTitle_allTabs'] {
-    @extend %activeTab;
+    @extend %active-tab;
 }
-@for $num from 1 through $maxTabsCnt {
+@for $num from 1 through $max-tabs-cnt {
   .tabs__tabControl[class~='tabs__tabControl_tabNum_#{$num}']:checked
   ~ .tabs__content[class~='tabs__content_tabNum_#{$num}'] {
     display: block;
   }
   .tabs__tabControl[class~='tabs__tabControl_tabNum_#{$num}']:checked
   ~ .tabs__nav .tabs__tabTitle[class~='tabs__tabTitle_tabNum_#{$num}'] {
-    @extend %activeTab;
+    @extend %active-tab;
   }
 }

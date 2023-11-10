@@ -2,7 +2,7 @@
   display: none;
   cursor: pointer;
   opacity: 1;
-  transition: opacity 0.25s linear;
+  transition: opacity .25s linear;
 
   @include reset-geometry(true);
   @util circle(32px, initial);

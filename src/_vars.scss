@@ -1,11 +1,11 @@
-$white: #ffffff;
+$white: #fff;
 $black: #212429;
 $pink: #f784ad;
 $purple: #7048e8;
 $blue: #4263eb;
 $blue-darker: darken($blue, 15%); 
 $purple-darker: darken($purple, 15%); 
-$blue-light: rgba(160, 177, 245, 0.2);
+$blue-light: rgb(160 177 245 / 20%);
 $red: #f03d3e;
 $orange: #d84910;
 $grey-0: #f9fafc;

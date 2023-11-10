@@ -6,7 +6,7 @@
     padding-top: 64px;
     background: var(--page-bg-color, $grey-0);
     transform: translateX(-100vw);
-    transition: transform 0.25s linear;
+    transition: transform .25s linear;
 
     @include box-covering(fixed, 2);
   }
@@ -20,6 +20,7 @@
   &_onDesktopAvailiable {
     display: block;
   }
+
   &_noTopSeparator {
     padding-top: 80px;
 
@@ -30,6 +31,7 @@
       padding-top: 64px;
     }
   }
+
   &_forHeaderTransparent {
     @media (--layout-df-md) {
       background: transparent;
@@ -58,18 +60,22 @@
       }
     }
   }
+
   &__closeButtonIcon {
     size: 24px;
   }
+
   &__themeToggler {
-    @include box-aligning();
+    @include box-aligning;
   }
+
   &__themeTogglerLabel {
     color: var(--text-contrast-color, $black);
   
-    @include text-interactive();
-    @include font-def(); 
+    @include text-interactive;
+    @include font-def; 
   }
+
   &__themeTogglerBox {
     margin-top: 16px;
     display: none;
@@ -87,6 +93,7 @@
       }      
     }
   }
+
   &__content {
     @media (--layout-df-md) {
       padding: 0 16px;
@@ -101,6 +108,7 @@
       }
     }
   }
+
   &__contentGroup {
     @media (--layout-df-md) {
       padding: 24px 0;
@@ -113,6 +121,7 @@
       }
     }
   }
+
   &__menu {
     @media (--layout-df-md) {
       display: block;

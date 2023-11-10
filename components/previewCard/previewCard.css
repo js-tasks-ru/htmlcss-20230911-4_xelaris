@@ -1,7 +1,7 @@
 .previewCard {
   padding: 8px;
   border-radius: 8px;
-  box-shadow: 0px 2px 4px 0px rgba(33, 36, 41, 0.05);
+  box-shadow: 0 2px 4px 0 rgb(33 36 41 / 5%);
   box-sizing: border-box;
   text-decoration: none;
   color: inherit var(--content-bg-color, white);
@@ -21,7 +21,7 @@
     border-bottom: 1px solid var(--text-mute-color, $grey-2);
     box-sizing: border-box;
   
-    @include box-centering();
+    @include box-centering;
     @media (--layout-mf-sm) {
       height: 222px;
     }
@@ -34,10 +34,12 @@
     &_noPaddings {
       padding: 0;
     }
+
     &_noBorder {
       border-bottom: 0;
     }
   }
+
   &__preview {
     margin: auto;
     position: relative;
@@ -45,23 +47,26 @@
     &_fullWidth {
       width: 100%;
     }
+
     &_fullSize {
       size: 100%;
     }
+
     &_scaledForMobile {
-      transform: scale(0.6);
+      transform: scale(.6);
 
       @media (--layout-mf-sm) {
-        transform: scale(0.8);
+        transform: scale(.8);
       }
       @media (--layout-mf-md) {
-        transform: scale(0.9);
+        transform: scale(.9);
       }
       @media (--layout-mf-lg) {
         transform: scale(1);
       }
     }
   }
+
   &__title {
     margin: 12px 0 0;
     text-align: center;
@@ -72,6 +77,7 @@
       @include font(21px, false, $font-weight-bolder);
     }
   }
+
   &__desc {
     margin: 4px 0;
     text-align: center;

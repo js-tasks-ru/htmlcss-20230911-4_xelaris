@@ -11,12 +11,15 @@
       box-sizing: border-box;
     }
   }
+
   &__fields {
     @include box-stack(10px);
   }
+
   &__feild {
     gap: 14px;
   }
+
   &__submitButton {
     min-width: 175px;
 

@@ -6,7 +6,7 @@ $validity-status-colors: (
 .formField {
   font-size: 16px;
 
-  @include box-stack(0.31em, flex-start);
+  @include box-stack(.31em, flex-start);
 
   &_onPreviewCard {
     font-size: 10px;
@@ -25,13 +25,14 @@ $validity-status-colors: (
     color: $grey-3;
     text-transform: uppercase;
   
-    @include text-interactive();
-    @include font(0.75em, 1.13, $font-weight-bolder, false, 0.03em);
+    @include text-interactive;
+    @include font(.75em, 1.13, $font-weight-bolder, false, .03em);
 
     &:has(+ .formField__field .formField__control:disabled) {
       cursor: default;
     }
   }
+
   &__field {
     position: relative;
 
@@ -43,6 +44,7 @@ $validity-status-colors: (
       width: 100%;
     }
   }
+
   &__icon {
     display: none;
     transform: translateY(-50%);
@@ -56,8 +58,9 @@ $validity-status-colors: (
       }
     }
   }
+
   &__status {
-    @include font(0.75rem, 1.2, $font-weight-bolder);
+    @include font(.75rem, 1.2, $font-weight-bolder);
 
     @each $color $name in $validity-status-colors {
       .formField_validity_$name & { 
@@ -69,6 +72,7 @@ $validity-status-colors: (
       color: var(--text-mute-color, $grey-2)
     }
   }
+
   &__control {
     &_type_textInput {
       @each $color $name in $validity-status-colors {
