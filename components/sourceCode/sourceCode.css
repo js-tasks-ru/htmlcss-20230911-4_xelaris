@@ -7,9 +7,9 @@
 
   &__inner {
     padding: 0 1em;
-    
-    .sourceCode code& {
-      padding: 0;
-    }
+  }
+
+  & code&__inner {
+    padding: 0;
   }
 }

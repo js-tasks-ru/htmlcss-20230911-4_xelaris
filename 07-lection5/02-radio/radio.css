@@ -10,10 +10,10 @@
     display: inline-flex;
     gap: 10px;
     align-items: center;
-  
-    .radio__input:not(:disabled) ~ & {
-      cursor: pointer;
-    }
+  }
+
+  &__input:not(:disabled) ~ &__state {
+    cursor: pointer;
   }
 
   &__control {
@@ -29,38 +29,38 @@
       display: inline-block;
     
       @include circled(18px);
+    }  
+  }
 
-      .radio__input:checked ~ .radio__state & {
-        background: var(--control-checked-color, $blue);
-      }
+  &__input:checked ~ &__state &__control {
+    border-width: 2px;
+    border-color: var(--control-checked-color, $blue);
+  }
 
-      .radio__input:checked:disabled ~ .radio__state & {
-        background: var(--control-disabled-color, #59616a);
-      }
+  &__input:active ~ &__state &__control {
+    border-color: var(--control-active-border-color, $grey-3);
+    background: var(--control-active-bg-color, $grey-1);
+  }
+  
+  &__input:disabled ~ &__state &__control {
+    border-color: var(--control-disabled-border-color, $grey-2);   
+    background: var(--control-disabled-border-color, $grey-2);   
+  }
 
-      .radio__input:checked:active:not(:disabled) ~ .radio__state & {
-        background: var(--control-checked-active-color, $blue-darker);
-      }      
-    }
+  &__input:checked:active:not(:disabled) ~ &__state &__control {
+    border-color: var(--control-checked-active-color, $blue-darker);
+  }
 
-    .radio__input:checked ~ .radio__state & {
-      border-width: 2px;
-      border-color: var(--control-checked-color, $blue);
-    }
+  &__input:checked ~ &__state &__control::before {
+    background: var(--control-checked-color, $blue);
+  }
 
-    .radio__input:active ~ .radio__state & {
-      border-color: var(--control-active-border-color, $grey-3);
-      background: var(--control-active-bg-color, $grey-1);
-    }
-    
-    .radio__input:disabled ~ .radio__state & {
-      border-color: var(--control-disabled-border-color, $grey-2);   
-      background: var(--control-disabled-border-color, $grey-2);   
-    }
+  &__input:checked:disabled ~ &__state &__control::before {
+    background: var(--control-disabled-color, #59616a);
+  }
 
-    .radio__input:checked:active:not(:disabled) ~ .radio__state & {
-      border-color: var(--control-checked-active-color, $blue-darker);
-    }
+  &__input:checked:active:not(:disabled) ~ &__state &__control::before {
+    background: var(--control-checked-active-color, $blue-darker);
   }
 
   &__title {
@@ -68,13 +68,13 @@
     user-select: none;
   
     @include font-def;
+  }
 
-    .radio__input:focus ~ .radio__state & {
-      text-decoration: underline;
-    }
+  &__input:focus ~ &__state &__title {
+    text-decoration: underline;
+  }
 
-    .radio__input:disabled ~ .radio__state & {
-      color: var(--control-disabled-color, #59616a);
-    }
+  &__input:disabled ~ &__state &__title {
+    color: var(--control-disabled-color, #59616a);
   }
 }

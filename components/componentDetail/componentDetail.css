@@ -14,21 +14,17 @@
     }
   }
 
-  &__tabContent {
-    &::before {
-      .componentDetail__tabs & {
-        content: '';
-        display: block;
-        background: $grey-2;
-        margin-top: calc(-1 * var(--tabs-padding-top));
-        position: absolute * * * 0;
-        size: 100% 1px;
-      }
-    }
+  &__tabs &__tabContent {
+    padding-top: var(--tabs-padding-top);
+  }
 
-    .componentDetail__tabs & {
-      padding-top: var(--tabs-padding-top);
-    }
+  &__tabs &__tabContent::before {
+    content: '';
+    display: block;
+    background: $grey-2;
+    margin-top: calc(-1 * var(--tabs-padding-top));
+    position: absolute * * * 0;
+    size: 100% 1px;
   }
 
   &__component {

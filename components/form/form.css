@@ -23,8 +23,9 @@
   &__submitButton {
     min-width: 175px;
 
-    .form__fields + & {
-      margin-top: 20px;
-    }
+  }
+
+  &__fields + &__submitButton {
+    margin-top: 20px;
   }
 }

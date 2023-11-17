@@ -41,11 +41,11 @@
     margin-top: .38em;
   
     @include font(1.25em, 1.63em);
-  
-    .histogram_compact & {
-      font-weight: $font-weight-bold;
-      color: var(--text-primary-color, $black);
-    }
+  }
+
+  &_compact &__scoreValue {
+    font-weight: $font-weight-bold;
+    color: var(--text-primary-color, $black);
   }
 
   &__showAll {

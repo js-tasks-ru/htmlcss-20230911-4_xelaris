@@ -9,60 +9,58 @@
   &__state {
     display: inline-flex;
     gap: 12px;
-    align-items: center;
-    
-    .checkbox__input:not(:disabled) ~ & {
-      cursor: pointer;
-    }
+    align-items: center;    
   }
 
+  &__input:not(:disabled) ~ &__state {
+    cursor: pointer;
+  }
+  
   &__control {
     border: 1px solid var(--control-border-color, $grey-2);
     border-radius: 4px;
     box-sizing: border-box;
     display: flex;
     size: 28px;
-
-    .checkbox__input:checked ~ .checkbox__state & {
-      border-color: var(--control-checked-color, $blue);
-      background: var(--control-checked-color, $blue);
-    }
-
-    .checkbox__input:active ~ .checkbox__state & {
-      border-color: var(--control-active-border-color, $grey-3);
-      background: var(--control-active-bg-color, $grey-1);
-    }
-
-    .checkbox__input:disabled ~ .checkbox__state & {
-      background-color: var(--control-disabled-border-color, $grey-2);   
-      border-color: var(--control-disabled-border-color, $grey-2);
-    }
-
-    .checkbox__input:checked:not(:disabled) ~ .checkbox__state & {
-      animation: check-animation .5s;
-    }
-
-    .checkbox__input:checked:active:not(:disabled)
-      ~ .checkbox__state
-      & {
-      border-color: var(--control-checked-active-color, $blue-darker);
-      background: var(--control-checked-active-color, $blue-darker);
-    }    
   }
+
+  &__input:checked ~ &__state &__control {
+    border-color: var(--control-checked-color, $blue);
+    background: var(--control-checked-color, $blue);
+  }
+
+  &__input:active ~ &__state &__control {
+    border-color: var(--control-active-border-color, $grey-3);
+    background: var(--control-active-bg-color, $grey-1);
+  }
+
+  &__input:disabled ~ &__state &__control {
+    background-color: var(--control-disabled-border-color, $grey-2);   
+    border-color: var(--control-disabled-border-color, $grey-2);
+  }
+
+  &__input:checked:not(:disabled) ~ &__state &__control {
+    animation: check-animation .5s;
+  }
+
+  &__input:checked:active:not(:disabled) ~ &__state &__control {
+    border-color: var(--control-checked-active-color, $blue-darker);
+    background: var(--control-checked-active-color, $blue-darker);
+  }    
 
   &__title {
     color: var(--control-color, $grey-4);
     user-select: none;
   
     @include font-def; 
+  }
 
-    .checkbox__input:focus ~ .checkbox__state & {
-      text-decoration: underline;
-    }
+  &__input:focus ~ &__state &__title {
+    text-decoration: underline;
+  }
 
-    .checkbox__input:disabled ~ .checkbox__state & {
-      color: var(--control-disabled-color, #59616a);
-    }
+  &__input:disabled ~ &__state &__title {
+    color: var(--control-disabled-color, #59616a);
   }
 
   &__icon {
@@ -70,10 +68,10 @@
     color: $white;
     margin: auto;
     size: 15px 13px;
+  }
 
-    .checkbox__input:checked ~ .checkbox__state & {
-      visibility: visible;
-    }
+  &__input:checked ~ &__state &__icon {
+    visibility: visible;
   }
 }
 @keyframes check-animation {

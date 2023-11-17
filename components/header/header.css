@@ -7,7 +7,7 @@
     border-bottom-width: 2px;
   }
   
-  &:not(.header_compact) {
+  &:not(&_compact) {
     @media (--layout-mf-lg) {
       padding-bottom: 77px;
     }
@@ -56,11 +56,11 @@
 
   &__logoIcon {
     color: var(--text-primary-color, $black);
-    size: 110px 32px;
-    
-    .header_compact & {
-      color: $black;
-    }
+    size: 110px 32px;  
+  }
+
+  &_compact &__logoIcon {
+    color: $black;
   }
 
   &__title {

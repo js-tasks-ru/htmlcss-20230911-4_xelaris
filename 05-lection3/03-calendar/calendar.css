@@ -41,10 +41,11 @@ $max-weeks-length: 6;
     padding-bottom: 100%;
     position: relative;
 
-    @for $num from $min-weeks-length through $max-weeks-length {
-      .calendar_length_#{$num}weeks & {
-        padding-bottom: calc(($num + 2) / $week-days-count * 100%);
-      }
+  }
+
+  @for $num from $min-weeks-length through $max-weeks-length {
+    &_length_#{$num}weeks &__wrapper {
+      padding-bottom: calc(($num + 2) / $week-days-count * 100%);
     }
   }
 
@@ -54,11 +55,11 @@ $max-weeks-length: 6;
     grid-template-columns: repeat($week-days-count, 1fr);
   
     @include box-covering;
+  }
 
-    @for $num from $min-weeks-length through $max-weeks-length {
-      .calendar_length_#{$num}weeks & {
-        grid-template-rows: repeat(calc($num + 2), 1fr);
-      }
+  @for $num from $min-weeks-length through $max-weeks-length {
+    &_length_#{$num}weeks &__days {
+      grid-template-rows: repeat(calc($num + 2), 1fr);
     }
   }
 
@@ -69,10 +70,6 @@ $max-weeks-length: 6;
     
     @include box-centering;
 
-    &:not(.calendar__day_ofweek, :empty) {
-      @include text-interactive;
-    }
-
     &_ofweek {
       color: var(--calendar-grey-light, #90a0b7);
       font-family: Inter, sans-serif;
@@ -81,14 +78,18 @@ $max-weeks-length: 6;
     &_period_edge {
       color: $white $color-primary;
     }
+  }
 
-    &_period_inside,
-    &:hover:not(
-        .calendar__day_period_edge,
-        .calendar__day_ofweek,
-        :empty
-      ) {
-      background: $blue-light;
-    }
+  &__day:not(&__day_ofweek, :empty) {
+    @include text-interactive;
+  }
+
+  &__day_period_inside,
+  &__day:hover:not(
+      &__day_period_edge,
+      &__day_ofweek,
+      :empty
+    ) {
+    background: $blue-light;
   }
 }

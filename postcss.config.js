@@ -10,7 +10,6 @@ module.exports = {
       modernBrowser: true
     }),
     require('postcss-import'),
-    require('postcss-extend'),
     require('postcss-nested'),
     require('postcss-utilities'),
     require('postcss-short'),

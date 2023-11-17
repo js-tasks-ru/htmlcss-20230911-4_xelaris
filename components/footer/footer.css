@@ -9,7 +9,7 @@
     border-top-width: 2px;
   }
 
-  &:not(.footer_compact) {
+  &:not(&_compact) {
     @media (--layout-mf-lg) {
       padding: 72px 0;
     }
@@ -34,20 +34,21 @@
   
     @include font(22px, false, $font-weight-def);
 
-    .footer_compact & {
-      color: $grey-3;
-      text-transform: uppercase;
-    
-      @include font(12px, 18px, $font-weight-bolder, false, .48px);
-    }
+  }
 
-    .footer:not(.footer_compact) & {
-      @media (--layout-mf-lg) {
-        color: var(--text-contrast-color, $black);
-        margin: 0 0 32px;
+  &_compact &__title {
+    color: $grey-3;
+    text-transform: uppercase;
+  
+    @include font(12px, 18px, $font-weight-bolder, false, .48px);
+  }
 
-        @include font(38px, false, $font-weight-bolder);
-      }
+  &:not(&_compact) &__title {
+    @media (--layout-mf-lg) {
+      color: var(--text-contrast-color, $black);
+      margin: 0 0 32px;
+
+      @include font(38px, false, $font-weight-bolder);
     }
   }
 

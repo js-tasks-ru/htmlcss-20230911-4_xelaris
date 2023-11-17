@@ -92,16 +92,16 @@ $parent-with-tip-size: calc(100% + $tip-size);
         @include axis-centered(vertical);
       }
     }
+  }
 
-    .tooltip_opened & {
-      position: relative * * * auto;
-      transform: none;
-      margin-bottom: $tip-size;
-    }
+  &_opened &__bubble {
+    position: relative * * * auto;
+    transform: none;
+    margin-bottom: $tip-size;
+  }
 
-    .tooltip_opened &,
-    .tooltip__trigger:hover ~ & {
-      display: block;
-    }
+  &_opened &__bubble,
+  &__trigger:hover ~ &__bubble {
+    display: block;
   }
 }

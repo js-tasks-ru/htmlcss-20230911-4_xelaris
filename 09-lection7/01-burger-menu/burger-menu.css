@@ -52,12 +52,12 @@
     @media (--layout-df-md) {
       display: inline-block;
     }
+  }
 
-    .burgerMenu_forHeaderTransparent & {
-      @media (--layout-df-sm) {
-        top: 16px;
-        left: 16px;
-      }
+  &_forHeaderTransparent &__closeButton {
+    @media (--layout-df-sm) {
+      top: 16px;
+      left: 16px;
     }
   }
 
@@ -84,14 +84,15 @@
       display: block;
     }
 
-    .burgerMenu_noTopSeparator & {
-      @media (--layout-df-md) {
-        margin-top: 0;
-      }
-      @media (--layout-df-sm) {
-        margin-top: 16px;
-      }      
+  }
+
+  &_noTopSeparator &__themeTogglerBox {
+    @media (--layout-df-md) {
+      margin-top: 0;
     }
+    @media (--layout-df-sm) {
+      margin-top: 16px;
+    }      
   }
 
   &__content {
@@ -102,10 +103,11 @@
       box-sizing: border-box;
     }
 
-    .burgerMenu_forHeaderTransparent & {
-      @media (--layout-df-md) {
-        background: var(--page-bg-color, $grey-0);
-      }
+  }
+
+  &_forHeaderTransparent &__content {
+    @media (--layout-df-md) {
+      background: var(--page-bg-color, $grey-0);
     }
   }
 
@@ -114,11 +116,11 @@
       padding: 24px 0;
       border-top: 1px solid $grey-2;
     }
+  }
 
-    .burgerMenu_noTopSeparator .burgerMenu__themeTogglerBox & {
-      @media (--layout-df-md) {
-        border-top: 0;
-      }
+  &_noTopSeparator &__themeTogglerBox &__contentGroup {
+    @media (--layout-df-md) {
+      border-top: 0;
     }
   }
 
