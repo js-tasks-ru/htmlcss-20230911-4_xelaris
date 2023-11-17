@@ -3,12 +3,17 @@
   font-size: 16px;
 
   &__tabs {
-    --tabs-padding-top: .38em;
+    --tabs-padding-top: 1.5em;
 
     margin-top: 2.25em;
 
+    @media (--layout-mf-sm) {
+      --tabs-padding-top: 2em;
+
+      margin-top: 2em;
+    }
     @media (--layout-mf-md) {
-      --tabs-padding-top: 2.13em;
+      --tabs-padding-top: 3em;
 
       margin-top: 3em;
     }
