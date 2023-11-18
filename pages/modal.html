@@ -1,24 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <link rel="stylesheet" href="../components/componentDetail/componentDetail.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-light.min.css" />
+    <link rel="stylesheet" href="../dist/highlightThemes.css" />
+    <link rel="stylesheet" href="../dist/styles.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
-    <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>
+    <script
+      defer
+      src="../10-lection8/01-theme-changer/theme-changer.js"
+    ></script>
     <script defer src="../05-lection3/02-modal/index.js"></script>
     <script src="../assets/js/fixOnloadAnimations.js"></script>
-    <script defer>hljs.highlightAll()</script>
+    <script defer>
+      hljs.highlightAll();
+    </script>
     <title>Modal component</title>
   </head>
   <body class="page page_component preload">
     <header class="header header_compact page__header">
       <div class="header__panel layoutContainer">
-        <button id="burger-menu-open" class="burgerMenuShowButton header__burgerMenuButton">
-          <svg xmlns="http://www.w3.org/2000/svg" class="burgerMenuShowButton__icon" fill="currentColor">
+        <button
+          id="burger-menu-open"
+          class="burgerMenuShowButton header__burgerMenuButton"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="burgerMenuShowButton__icon"
+            fill="currentColor"
+          >
             <use href="../../assets/images/icons.svg#burger"></use>
           </svg>
         </button>
@@ -34,19 +45,28 @@
           </svg>
         </a>
         <nav class="header__menu">
-          <a class="header__menuItem header__menuItem_active" href="">Components</a>
+          <a class="header__menuItem header__menuItem_active" href=""
+            >Components</a
+          >
           <a class="header__menuItem" href="">About</a>
           <a class="header__menuItem" href="">Contact</a>
         </nav>
         <label class="toggler header__themeToggler">
           <input id="theme-changer" type="checkbox" class="toggler__input" />
           <span class="toggler__state">
-            <svg xmlns="http://www.w3.org/2000/svg" class="toggler__icon toggler__icon_contrast_onLight" fill="currentColor">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="toggler__icon toggler__icon_contrast_onLight"
+              fill="currentColor"
+            >
               <use href="../../assets/images/icons.svg#sun"></use>
             </svg>
             <span class="toggler__control"></span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="toggler__icon toggler__icon_contrast_onDark"
-              fill="currentColor">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="toggler__icon toggler__icon_contrast_onDark"
+              fill="currentColor"
+            >
               <use href="../../assets/images/icons.svg#сrescent"></use>
             </svg>
           </span>
@@ -54,9 +74,16 @@
       </div>
     </header>
     <div class="page__container layoutContainer">
-      <div id="burger-menu" class="burgerMenu burgerMenu_onDesktopAvailiable burgerMenu_forHeaderTransparent">
+      <div
+        id="burger-menu"
+        class="burgerMenu burgerMenu_onDesktopAvailiable burgerMenu_forHeaderTransparent"
+      >
         <button id="burger-menu-close" class="burgerMenu__closeButton">
-          <svg xmlns="http://www.w3.org/2000/svg" class="burgerMenu__closeButtonIcon" fill="currentColor">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="burgerMenu__closeButtonIcon"
+            fill="currentColor"
+          >
             <use href="../../assets/images/icons.svg#cross"></use>
           </svg>
         </button>
@@ -64,11 +91,18 @@
           <div class="burgerMenu__themeTogglerBox">
             <div class="burgerMenu__contentGroup">
               <div class="burgerMenu__themeToggler">
-                <label for="theme-changer-alt" class="burgerMenu__themeTogglerLabel">
+                <label
+                  for="theme-changer-alt"
+                  class="burgerMenu__themeTogglerLabel"
+                >
                   Dark mode
                 </label>
                 <label class="toggler">
-                  <input id="theme-changer-alt" type="checkbox" class="toggler__input" />
+                  <input
+                    id="theme-changer-alt"
+                    type="checkbox"
+                    class="toggler__input"
+                  />
                   <span class="toggler__state">
                     <span class="toggler__control"></span>
                   </span>
@@ -81,15 +115,23 @@
               <div class="menu__group">
                 <h4 class="menu__title">Components</h4>
                 <nav class="menu__list">
-                  <a class="menu__item" href="/pages/accordion.html">Accordion</a>
+                  <a class="menu__item" href="/pages/accordion.html"
+                    >Accordion</a
+                  >
                   <a class="menu__item" href="/pages/avatar.html">Avatar</a>
                   <a class="menu__item" href="/pages/button.html">Button</a>
                   <a class="menu__item" href="/pages/calendar.html">Calendar</a>
                   <a class="menu__item" href="/pages/form_elements.html"
                     >Custom form elements</a
                   >
-                  <a class="menu__item" href="/pages/histogram.html">Histogram</a>
-                  <a class="menu__item menu__item_active" href="/pages/modal.html">Modal</a>
+                  <a class="menu__item" href="/pages/histogram.html"
+                    >Histogram</a
+                  >
+                  <a
+                    class="menu__item menu__item_active"
+                    href="/pages/modal.html"
+                    >Modal</a
+                  >
                   <a class="menu__item" href="/pages/skeleton.html">Skeleton</a>
                   <a class="menu__item" href="/pages/tooltip.html">Tooltip</a>
                 </nav>
@@ -124,9 +166,17 @@
               <div class="menu__group">
                 <h4 class="menu__title">Organisms</h4>
                 <nav class="menu__list">
-                  <a class="menu__item" href="/pages/accordion.html">Accordion</a>
-                  <a class="menu__item" href="/pages/histogram.html">Histogram</a>
-                  <a class="menu__item menu__item_active" href="/pages/modal.html">Modal</a>
+                  <a class="menu__item" href="/pages/accordion.html"
+                    >Accordion</a
+                  >
+                  <a class="menu__item" href="/pages/histogram.html"
+                    >Histogram</a
+                  >
+                  <a
+                    class="menu__item menu__item_active"
+                    href="/pages/modal.html"
+                    >Modal</a
+                  >
                 </nav>
               </div>
             </section>
@@ -137,54 +187,95 @@
         <div class="componentDetail">
           <h1 class="page__title">Modal component</h1>
           <div class="componentDetail__component">
-            <button id="modal-open" class="button button_var_primary button_width_150">
+            <button
+              id="modal-open"
+              class="button button_var_primary button_width_150"
+            >
               Show modal
             </button>
             <div id="modal" class="modal">
               <div class="modal__window">
                 <h5 class="modal__title">Modal title</h5>
                 <div class="modal__content">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit architecto animi.</p>                    
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Suscipit architecto animi.
+                  </p>
                   <form action="" class="form">
                     <div class="form__fields">
                       <div class="formField form__field">
                         <label for="name" class="formField__title">Name</label>
-                        <div class="formField__field formField__field_fullWidth">
-                          <input id="name" type="text"
+                        <div
+                          class="formField__field formField__field_fullWidth"
+                        >
+                          <input
+                            id="name"
+                            type="text"
                             class="textInput textInput_compact textInput_fullWidth formField__control formField__control_type_textInput"
-                            placeholder="Placeholder" />
-                          <svg class="formField__icon formField__icon_error" xmlns="http://www.w3.org/2000/svg">
-                            <use href="../../assets/images/icons.svg#warning"></use>
+                            placeholder="Placeholder"
+                          />
+                          <svg
+                            class="formField__icon formField__icon_error"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <use
+                              href="../../assets/images/icons.svg#warning"
+                            ></use>
                           </svg>
-                          <svg class="formField__icon formField__icon_success"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <use href="../../assets/images/icons.svg#checkInCircle"></use>
+                          <svg
+                            class="formField__icon formField__icon_success"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <use
+                              href="../../assets/images/icons.svg#checkInCircle"
+                            ></use>
                           </svg>
                         </div>
                       </div>
                       <div class="formField form__field">
-                        <label for="email" class="formField__title">Email</label>
-                        <div class="formField__field formField__field_fullWidth">
-                          <input id="email" type="text"
+                        <label for="email" class="formField__title"
+                          >Email</label
+                        >
+                        <div
+                          class="formField__field formField__field_fullWidth"
+                        >
+                          <input
+                            id="email"
+                            type="text"
                             class="textInput textInput_compact textInput_fullWidth formField__control formField__control_type_textInput"
-                            placeholder="Placeholder" />
-                          <svg class="formField__icon formField__icon_error" xmlns="http://www.w3.org/2000/svg">
-                            <use href="../../assets/images/icons.svg#warning"></use>
+                            placeholder="Placeholder"
+                          />
+                          <svg
+                            class="formField__icon formField__icon_error"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <use
+                              href="../../assets/images/icons.svg#warning"
+                            ></use>
                           </svg>
-                          <svg class="formField__icon formField__icon_success"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <use href="../../assets/images/icons.svg#checkInCircle"></use>
+                          <svg
+                            class="formField__icon formField__icon_success"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <use
+                              href="../../assets/images/icons.svg#checkInCircle"
+                            ></use>
                           </svg>
                         </div>
                       </div>
                     </div>
-                    <button class="button button_var_primary form__submitButton">
+                    <button
+                      class="button button_var_primary form__submitButton"
+                    >
                       Submit
                     </button>
-                  </form>  
+                  </form>
                 </div>
                 <button id="modal-close" class="modal__closeButton">
-                  <svg class="modal__closeButtonIcon" xmlns="http://www.w3.org/2000/svg">
+                  <svg
+                    class="modal__closeButtonIcon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <use href="../../assets/images/icons.svg#cross"></use>
                   </svg>
                 </button>
@@ -192,20 +283,34 @@
             </div>
           </div>
           <div class="tabs componentDetail__tabs">
-            <input class="tabs__tabControl tabs__tabControl_tabNum_1" type="radio" id="#html-tab" name="tabs"
-              checked="checked" />
-            <input class="tabs__tabControl tabs__tabControl_tabNum_2" type="radio" id="#css-tab" name="tabs" />
+            <input
+              class="tabs__tabControl tabs__tabControl_tabNum_1"
+              type="radio"
+              id="#html-tab"
+              name="tabs"
+              checked="checked"
+            />
+            <input
+              class="tabs__tabControl tabs__tabControl_tabNum_2"
+              type="radio"
+              id="#css-tab"
+              name="tabs"
+            />
             <div class="tabs__nav">
               <label class="tabs__tab" for="#html-tab">
-                <span class="tabs__tabTitle tabs__tabTitle_tabNum_1">HTML</span></label>
-              <label class="tabs__tab" for="#css-tab"><span
-                  class="tabs__tabTitle tabs__tabTitle_tabNum_2">CSS</span></label>
+                <span class="tabs__tabTitle tabs__tabTitle_tabNum_1"
+                  >HTML</span
+                ></label
+              >
+              <label class="tabs__tab" for="#css-tab"
+                ><span class="tabs__tabTitle tabs__tabTitle_tabNum_2"
+                  >CSS</span
+                ></label
+              >
             </div>
             <div class="tabs__content tabs__content_tabNum_1">
               <div class="componentDetail__tabContent">
-                <pre class="sourceCode sourceCode_syntax_html">
-                  <code class="sourceCode__inner language-html">
-&lt;button id=&quot;modal-open&quot; class=&quot;button button_var_primary&quot;&gt;
+                <pre class="sourceCode sourceCode_syntax_html"><code class="sourceCode__inner language-html">&lt;button id=&quot;modal-open&quot; class=&quot;button button_var_primary&quot;&gt;
   Show modal
 &lt;/button&gt;
 &lt;div id=&quot;modal&quot; class=&quot;modal&quot;&gt;
@@ -257,16 +362,12 @@
       &lt;/svg&gt;
     &lt;/button&gt;
   &lt;/div&gt;
-&lt;/div&gt;
-                  </code>
-                </pre>
+&lt;/div&gt;</code></pre>
               </div>
             </div>
             <div class="tabs__content tabs__content_tabNum_2">
               <div class="componentDetail__tabContent">
-                <pre class="sourceCode sourceCode_syntax_css">
-                  <code class="sourceCode__inner language-css">
-.modal {
+                <pre class="sourceCode sourceCode_syntax_css"><code class="sourceCode__inner language-css">.modal {
   background: rgba(196, 196, 196, 0.5);
   display: none;
   position: fixed;
@@ -277,14 +378,14 @@
   display: block;
   position: absolute;
 }
-.modal_noViel {
+.modal_noVeil {
   background: transparent;
 }
 .modal__window {
   width: 348px;
   padding: 30px 40px 33px;
   border-radius: 8px;
-  background: var(--content-bg-color, white);
+  background: var(--content-bg-color, #ffffff);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -321,9 +422,7 @@
 .modal__closeButtonIcon {
   width: 16px;
   height: 16px;
-}
-                  </code>                  
-                </pre>
+}</code></pre>
               </div>
             </div>
           </div>

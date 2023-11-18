@@ -1,106 +1,132 @@
 .burgerMenu {
   display: none;
-}
-.burgerMenu_onDesktopAvailiable {
-  display: block;
-}
-.burgerMenu__closeButton {
-  display: none;
-  cursor: pointer;
-  background: none;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 0;
-  width: 32px;
-  height: 32px;
-  border-radius: 16px;
-  background: var(--grey-2, #dde2e5);
-  position: absolute;
-  top: 24px;
-  left: 16px;
-}
-.burgerMenu__closeButton:active {
-  background: var(--grey-3, #acb5bd);
-}
-.burgerMenu__closeButtonIcon {
-  width: 24px;
-  height: 24px;
-}
-.burgerMenu__themeTogglerBox {
-  margin-top: 16px;
-  display: none;
-}
-.burgerMenu__themeToggler {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.burgerMenu__themeTogglerLabel {
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 24px;
-  color: var(--text-contrast-color, black);
-}
-@media screen and (max-width: 767px) {
-  .burgerMenu {
-    position: fixed;
+
+  @media (--layout-df-md) {
     display: block;
-    width: 100%;
-    inset: 0;
     padding-top: 64px;
-    background: var(--page-bg-color, var(--grey-0, #f9fafc));
+    background: var(--page-bg-color, $grey-0);
     transform: translateX(-100vw);
-    transition: transform 0.25s linear;
-    z-index: 2;
+    transition: transform .25s linear;
+
+    @include box-covering(fixed, 2);
   }
-  .burgerMenu_noTopSeparator {
+
+  &[data-open] {
+    @media (--layout-df-md) {
+      transform: translateX(0);
+    }
+  }
+
+  &_onDesktopAvailiable {
+    display: block;
+  }
+
+  &_noTopSeparator {
     padding-top: 80px;
+
+    @media (--layout-df-md) {
+      padding-top: 80px;
+    }
+    @media (--layout-df-sm) {
+      padding-top: 64px;
+    }
   }
-  .burgerMenu_forHeaderTransparent {
-    background: transparent;
+
+  &_forHeaderTransparent {
+    @media (--layout-df-md) {
+      background: transparent;
+    }
   }
-  .burgerMenu[data-open] {
-    transform: translateX(0);
-  }  
-  .burgerMenu__content {
-    padding: 0 16px;
-    overflow: auto;
-    height: 100%;
-    box-sizing: border-box;
+
+  &__closeButton {
+    display: none;
+    cursor: pointer;
+    position: absolute 24px * * 16px;
+
+    &:active {
+      background: $grey-3;
+    }
+  
+    @include reset-geometry(true);
+    @util circle(32px, $grey-2);
+    @media (--layout-df-md) {
+      display: inline-block;
+    }
   }
-  .burgerMenu_forHeaderTransparent .burgerMenu__content {
-    background: var(--page-bg-color, var(--grey-0, #f9fafc));
+
+  &_forHeaderTransparent &__closeButton {
+    @media (--layout-df-sm) {
+      top: 16px;
+      left: 16px;
+    }
   }
-  .burgerMenu__closeButton {
-    display: inline-block;
+
+  &__closeButtonIcon {
+    size: 24px;
   }
-  .burgerMenu__themeTogglerBox {
-    display: block;
+
+  &__themeToggler {
+    @include box-aligning;
   }
-  .burgerMenu_noTopSeparator .burgerMenu__themeTogglerBox {
-    margin-top: 0;
+
+  &__themeTogglerLabel {
+    color: var(--text-contrast-color, $black);
+  
+    @include text-interactive;
+    @include font-def; 
   }
-  .burgerMenu__contentGroup {
-    padding: 24px 0;
-    border-top: 1px solid var(--grey-2, #dde2e5);
-  }
-  .burgerMenu_noTopSeparator .burgerMenu__themeTogglerBox .burgerMenu__contentGroup {
-    border-top: 0;
-  }
-  .burgerMenu__menu {
-    display: block;
-  }
-}
-@media screen and (max-width: 576px) {
-  .burgerMenu_noTopSeparator {
-    padding-top: 64px;
-  }
-  .burgerMenu_noTopSeparator .burgerMenu__themeTogglerBox {
+
+  &__themeTogglerBox {
     margin-top: 16px;
+    display: none;
+
+    @media (--layout-df-md) {
+      display: block;
+    }
+
   }
-  .burgerMenu_forHeaderTransparent .burgerMenu__closeButton {
-    top: 16px;
-    left: 16px;
+
+  &_noTopSeparator &__themeTogglerBox {
+    @media (--layout-df-md) {
+      margin-top: 0;
+    }
+    @media (--layout-df-sm) {
+      margin-top: 16px;
+    }      
+  }
+
+  &__content {
+    @media (--layout-df-md) {
+      padding: 0 16px;
+      overflow: auto;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+  }
+
+  &_forHeaderTransparent &__content {
+    @media (--layout-df-md) {
+      background: var(--page-bg-color, $grey-0);
+    }
+  }
+
+  &__contentGroup {
+    @media (--layout-df-md) {
+      padding: 24px 0;
+      border-top: 1px solid $grey-2;
+    }
+  }
+
+  &_noTopSeparator &__themeTogglerBox &__contentGroup {
+    @media (--layout-df-md) {
+      border-top: 0;
+    }
+  }
+
+  &__menu {
+    @media (--layout-df-md) {
+      display: block;
+    }
   }
 }

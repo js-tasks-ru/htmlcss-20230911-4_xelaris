@@ -1,19 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <link
-      rel="stylesheet"
-      href="../components/componentDetail/componentDetail.css"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-light.min.css" />
+    <link rel="stylesheet" href="../dist/highlightThemes.css" />
+    <link rel="stylesheet" href="../dist/styles.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
-    <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>
+    <script
+      defer
+      src="../10-lection8/01-theme-changer/theme-changer.js"
+    ></script>
     <script src="../assets/js/fixOnloadAnimations.js"></script>
-    <script defer>hljs.highlightAll()</script>
+    <script defer>
+      hljs.highlightAll();
+    </script>
     <title>Accordion component</title>
   </head>
   <body class="page page_component preload">
@@ -72,7 +73,10 @@
       </div>
     </header>
     <div class="page__container layoutContainer">
-      <div id="burger-menu" class="burgerMenu burgerMenu_onDesktopAvailiable burgerMenu_forHeaderTransparent">
+      <div
+        id="burger-menu"
+        class="burgerMenu burgerMenu_onDesktopAvailiable burgerMenu_forHeaderTransparent"
+      >
         <button id="burger-menu-close" class="burgerMenu__closeButton">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -86,11 +90,18 @@
           <div class="burgerMenu__themeTogglerBox">
             <div class="burgerMenu__contentGroup">
               <div class="burgerMenu__themeToggler">
-                <label for="theme-changer-alt" class="burgerMenu__themeTogglerLabel">
+                <label
+                  for="theme-changer-alt"
+                  class="burgerMenu__themeTogglerLabel"
+                >
                   Dark mode
                 </label>
                 <label class="toggler">
-                  <input id="theme-changer-alt" type="checkbox" class="toggler__input" />
+                  <input
+                    id="theme-changer-alt"
+                    type="checkbox"
+                    class="toggler__input"
+                  />
                   <span class="toggler__state">
                     <span class="toggler__control"></span>
                   </span>
@@ -103,14 +114,20 @@
               <div class="menu__group">
                 <h4 class="menu__title">Components</h4>
                 <nav class="menu__list">
-                  <a class="menu__item menu__item_active" href="/pages/accordion.html">Accordion</a>
+                  <a
+                    class="menu__item menu__item_active"
+                    href="/pages/accordion.html"
+                    >Accordion</a
+                  >
                   <a class="menu__item" href="/pages/avatar.html">Avatar</a>
                   <a class="menu__item" href="/pages/button.html">Button</a>
                   <a class="menu__item" href="/pages/calendar.html">Calendar</a>
                   <a class="menu__item" href="/pages/form_elements.html"
                     >Custom form elements</a
                   >
-                  <a class="menu__item" href="/pages/histogram.html">Histogram</a>
+                  <a class="menu__item" href="/pages/histogram.html"
+                    >Histogram</a
+                  >
                   <a class="menu__item" href="/pages/modal.html">Modal</a>
                   <a class="menu__item" href="/pages/skeleton.html">Skeleton</a>
                   <a class="menu__item" href="/pages/tooltip.html">Tooltip</a>
@@ -146,8 +163,14 @@
               <div class="menu__group">
                 <h4 class="menu__title">Organisms</h4>
                 <nav class="menu__list">
-                  <a class="menu__item menu__item_active" href="/pages/accordion.html">Accordion</a>
-                  <a class="menu__item" href="/pages/histogram.html">Histogram</a>
+                  <a
+                    class="menu__item menu__item_active"
+                    href="/pages/accordion.html"
+                    >Accordion</a
+                  >
+                  <a class="menu__item" href="/pages/histogram.html"
+                    >Histogram</a
+                  >
                   <a class="menu__item" href="/pages/modal.html">Modal</a>
                 </nav>
               </div>
@@ -162,8 +185,8 @@
             <div class="accordion">
               <details class="accordion__item">
                 <summary class="accordion__itemSummary">
-                  Accordion item #1 with long long long long long long long long long
-                  long long long long long long long tilte
+                  Accordion item #1 with long long long long long long long long
+                  long long long long long long long long tilte
                   <svg
                     class="accordion__itemSummaryMarker"
                     xmlns="http://www.w3.org/2000/svg"
@@ -172,9 +195,9 @@
                   </svg>
                 </summary>
                 <p class="accordion__itemDetails">
-                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                  sint. Velit officia consequat duis enim velit mollit. Exercitation
-                  veniam consequat sunt nostrud amet.
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                  amet sint. Velit officia consequat duis enim velit mollit.
+                  Exercitation veniam consequat sunt nostrud amet.
                 </p>
               </details>
               <details class="accordion__item">
@@ -188,9 +211,9 @@
                   </svg>
                 </summary>
                 <p class="accordion__itemDetails">
-                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                  sint. Velit officia consequat duis enim velit mollit. Exercitation
-                  veniam consequat sunt nostrud amet.
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                  amet sint. Velit officia consequat duis enim velit mollit.
+                  Exercitation veniam consequat sunt nostrud amet.
                 </p>
               </details>
               <details class="accordion__item">
@@ -204,9 +227,9 @@
                   </svg>
                 </summary>
                 <p class="accordion__itemDetails">
-                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                  sint. Velit officia consequat duis enim velit mollit. Exercitation
-                  veniam consequat sunt nostrud amet.
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                  amet sint. Velit officia consequat duis enim velit mollit.
+                  Exercitation veniam consequat sunt nostrud amet.
                 </p>
               </details>
             </div>
@@ -239,9 +262,7 @@
             </div>
             <div class="tabs__content tabs__content_tabNum_1">
               <div class="componentDetail__tabContent">
-                <pre class="sourceCode sourceCode_syntax_html">
-                  <code class="sourceCode__inner language-html">
-&lt;div class=&quot;accordion&quot;&gt;
+                <pre class="sourceCode sourceCode_syntax_html"><code class="sourceCode__inner language-html">&lt;div class=&quot;accordion&quot;&gt;
   &lt;details class=&quot;accordion__item&quot;&gt;
     &lt;summary class=&quot;accordion__itemSummary&quot;&gt;
       Accordion item #1
@@ -268,23 +289,19 @@
       veniam consequat sunt nostrud amet.
     &lt;/p&gt;
   &lt;/details&gt;
-&lt;/div&gt;
-                  </code>
-                </pre>
-              </div>              
+&lt;/div&gt;</code></pre>
+              </div>
             </div>
             <div class="tabs__content tabs__content_tabNum_2">
               <div class="componentDetail__tabContent">
-                <pre class="sourceCode sourceCode_syntax_css">
-                  <code class="sourceCode__inner language-css">
-.accordion {
+                <pre class="sourceCode sourceCode_syntax_css"><code class="sourceCode__inner language-css">.accordion {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   line-height: 1.5em;
 }
 .accordion__item {
   border: 1px solid var(--content-border-color, #acb5bd);
-  background: var(--content-bg-color, white);
+  background: var(--content-bg-color, #ffffff);
   border-radius: 0.5em;
 }
 .accordion__item:not(:last-child) {
@@ -296,7 +313,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.5em 2em;
-  color: var(--text-contrast-color, black);
+  color: var(--text-contrast-color, #000000);
   cursor: pointer;
   user-select: none;
 }
@@ -317,10 +334,8 @@
   margin: 0;
   padding: 0 2em 2em;
   color: var(--text-regular-color, #495057);
-}                  
-                  </code>
-                </pre>
-              </div>              
+}</code></pre>
+              </div>
             </div>
           </div>
         </div>

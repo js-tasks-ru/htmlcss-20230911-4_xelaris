@@ -1,19 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <link
-      rel="stylesheet"
-      href="../components/componentDetail/componentDetail.css"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-light.min.css" />
+    <link rel="stylesheet" href="../dist/highlightThemes.css" />
+    <link rel="stylesheet" href="../dist/styles.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
-    <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>
+    <script
+      defer
+      src="../10-lection8/01-theme-changer/theme-changer.js"
+    ></script>
     <script src="../assets/js/fixOnloadAnimations.js"></script>
-    <script defer>hljs.highlightAll()</script>
+    <script defer>
+      hljs.highlightAll();
+    </script>
     <title>Calendar component</title>
   </head>
   <body class="page page_component preload">
@@ -72,7 +73,10 @@
       </div>
     </header>
     <div class="page__container layoutContainer">
-      <div id="burger-menu" class="burgerMenu burgerMenu_onDesktopAvailiable burgerMenu_forHeaderTransparent">
+      <div
+        id="burger-menu"
+        class="burgerMenu burgerMenu_onDesktopAvailiable burgerMenu_forHeaderTransparent"
+      >
         <button id="burger-menu-close" class="burgerMenu__closeButton">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -86,11 +90,18 @@
           <div class="burgerMenu__themeTogglerBox">
             <div class="burgerMenu__contentGroup">
               <div class="burgerMenu__themeToggler">
-                <label for="theme-changer-alt" class="burgerMenu__themeTogglerLabel">
+                <label
+                  for="theme-changer-alt"
+                  class="burgerMenu__themeTogglerLabel"
+                >
                   Dark mode
                 </label>
                 <label class="toggler">
-                  <input id="theme-changer-alt" type="checkbox" class="toggler__input" />
+                  <input
+                    id="theme-changer-alt"
+                    type="checkbox"
+                    class="toggler__input"
+                  />
                   <span class="toggler__state">
                     <span class="toggler__control"></span>
                   </span>
@@ -103,14 +114,22 @@
               <div class="menu__group">
                 <h4 class="menu__title">Components</h4>
                 <nav class="menu__list">
-                  <a class="menu__item" href="/pages/accordion.html">Accordion</a>
+                  <a class="menu__item" href="/pages/accordion.html"
+                    >Accordion</a
+                  >
                   <a class="menu__item" href="/pages/avatar.html">Avatar</a>
                   <a class="menu__item" href="/pages/button.html">Button</a>
-                  <a class="menu__item menu__item_active" href="/pages/calendar.html">Calendar</a>
+                  <a
+                    class="menu__item menu__item_active"
+                    href="/pages/calendar.html"
+                    >Calendar</a
+                  >
                   <a class="menu__item" href="/pages/form_elements.html"
                     >Custom form elements</a
                   >
-                  <a class="menu__item" href="/pages/histogram.html">Histogram</a>
+                  <a class="menu__item" href="/pages/histogram.html"
+                    >Histogram</a
+                  >
                   <a class="menu__item" href="/pages/modal.html">Modal</a>
                   <a class="menu__item" href="/pages/skeleton.html">Skeleton</a>
                   <a class="menu__item" href="/pages/tooltip.html">Tooltip</a>
@@ -134,7 +153,11 @@
               <div class="menu__group">
                 <h4 class="menu__title">Molecules</h4>
                 <nav class="menu__list">
-                  <a class="menu__item menu__item_active" href="/pages/calendar.html">Calendar</a>
+                  <a
+                    class="menu__item menu__item_active"
+                    href="/pages/calendar.html"
+                    >Calendar</a
+                  >
                   <a class="menu__item" href="/pages/form_elements.html"
                     >Custom form elements</a
                   >
@@ -146,8 +169,12 @@
               <div class="menu__group">
                 <h4 class="menu__title">Organisms</h4>
                 <nav class="menu__list">
-                  <a class="menu__item" href="/pages/accordion.html">Accordion</a>
-                  <a class="menu__item" href="/pages/histogram.html">Histogram</a>
+                  <a class="menu__item" href="/pages/accordion.html"
+                    >Accordion</a
+                  >
+                  <a class="menu__item" href="/pages/histogram.html"
+                    >Histogram</a
+                  >
                   <a class="menu__item" href="/pages/modal.html">Modal</a>
                 </nav>
               </div>
@@ -192,12 +219,24 @@
                   <span class="calendar__day">15</span>
                   <span class="calendar__day">16</span>
                   <span class="calendar__day">17</span>
-                  <span class="calendar__day calendar__day_period_edge">18</span>
-                  <span class="calendar__day calendar__day_period_inside">19</span>
-                  <span class="calendar__day calendar__day_period_inside">20</span>
-                  <span class="calendar__day calendar__day_period_inside">21</span>
-                  <span class="calendar__day calendar__day_period_inside">22</span>
-                  <span class="calendar__day calendar__day_period_edge">23</span>
+                  <span class="calendar__day calendar__day_period_edge"
+                    >18</span
+                  >
+                  <span class="calendar__day calendar__day_period_inside"
+                    >19</span
+                  >
+                  <span class="calendar__day calendar__day_period_inside"
+                    >20</span
+                  >
+                  <span class="calendar__day calendar__day_period_inside"
+                    >21</span
+                  >
+                  <span class="calendar__day calendar__day_period_inside"
+                    >22</span
+                  >
+                  <span class="calendar__day calendar__day_period_edge"
+                    >23</span
+                  >
                   <span class="calendar__day">24</span>
                   <span class="calendar__day">25</span>
                   <span class="calendar__day">26</span>
@@ -244,9 +283,7 @@
             </div>
             <div class="tabs__content tabs__content_tabNum_1">
               <div class="componentDetail__tabContent">
-                <pre class="sourceCode sourceCode_syntax_html">
-                  <code class="sourceCode__inner language-html">
-&lt;div class=&quot;calendar calendar_length_6weeks&quot;&gt;
+                <pre class="sourceCode sourceCode_syntax_html"><code class="sourceCode__inner language-html">&lt;div class=&quot;calendar calendar_length_6weeks&quot;&gt;
   &lt;div class=&quot;calendar__wrapper&quot;&gt;
     &lt;div class=&quot;calendar__days&quot;&gt;
       &lt;div class=&quot;calendar__month&quot;&gt;October 2020&lt;/div&gt;
@@ -301,16 +338,12 @@
       &lt;span class=&quot;calendar__day&quot;&gt;&lt;/span&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;
-                  </code>
-                </pre>
-              </div>              
+&lt;/div&gt;</code></pre>
+              </div>
             </div>
             <div class="tabs__content tabs__content_tabNum_2">
               <div class="componentDetail__tabContent">
-                <pre class="sourceCode sourceCode_syntax_css">
-                  <code class="sourceCode__inner language-css">
-.calendar {
+                <pre class="sourceCode sourceCode_syntax_css"><code class="sourceCode__inner language-css">.calendar {
   --calendar-grey-dark: var(--text-regular-color, #334d6e);
   --calendar-grey-light: var(--text-pale-color, #90a0b7);
   font-size: 16px;
@@ -373,8 +406,8 @@
   font-family: 'Inter', sans-serif;
 }
 .calendar__day_period_edge {
-  color: var(--white, white);
-  background: var(--primary, #4263eb);
+  color: #ffffff;
+  background: #4263eb;
 }
 .calendar__day_period_inside,
 .calendar__day:hover:not(
@@ -382,11 +415,9 @@
     .calendar__day_ofweek,
     :empty
   ) {
-  background: var(--blue-light, #bac4de);
-}
-                  </code>                  
-                </pre>
-              </div>              
+  background: rgba(160, 177, 245, 0.2);
+}</code></pre>
+              </div>
             </div>
           </div>
         </div>

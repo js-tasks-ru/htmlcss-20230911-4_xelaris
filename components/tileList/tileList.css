@@ -1,23 +1,23 @@
 .tileList {
   --tiles-gap: 15px;
+  
   display: flex;
   flex-wrap: wrap;
   gap: var(--tiles-gap);
   margin-right: calc(
     -1 * var(--tiles-gap)
   ); /* gap on right side compensation */
-}
-.tileList__item {
-  width: max(164px, calc(50% - var(--tiles-gap)));
-  font-size: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .tileList__item {
-    width: min(350px, calc(33.33% - var(--tiles-gap)));
-  }
-}
-@media screen and (min-width: 992px) {
-  .tileList {
+
+  @media (--layout-mf-lg) {
     --tiles-gap: 30px;
+  }
+
+  &__item {
+    width: max(164px, calc(50% - var(--tiles-gap)));
+    font-size: 1rem;
+  
+    @media (--layout-mf-md) {
+      width: min(350px, calc(33.33% - var(--tiles-gap)));
+    }
   }
 }

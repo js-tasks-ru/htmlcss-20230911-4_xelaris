@@ -1,18 +1,18 @@
 body {
-  background: url(public/forest_400.jpg) center/cover no-repeat;
+  background: url('public/forest_400.jpg') center/cover no-repeat;
 }
-@media screen and (min-width: 401px) {
+@media screen and (width >= 401px) {
   body {
-    background-image: url(public/forest_768.jpg);
+    background-image: url('public/forest_768.jpg');
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (width >= 769px) {
   body {
-    background-image: url(public/forest_1024.jpg);
+    background-image: url('public/forest_1024.jpg');
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (width >= 1025px) {
   body {
-    background-image: url(public/forest_2560.jpg);
+    background-image: url('public/forest_2560.jpg');
   }
 }

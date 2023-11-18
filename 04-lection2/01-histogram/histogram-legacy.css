@@ -1,0 +1,83 @@
+.histogram {
+  border: 1px solid var(--content-border-color, #acb5bd);
+  color: var(--text-contrast-color, black);
+  font-size: 16px;
+  border-radius: 0.5em;
+  padding: 1em 1.5em 1.5em;
+  box-sizing: border-box;
+}
+.histogram_compact {
+  font-size: 9px;
+}
+.histogram_width_340 {
+  width: 340px;
+}
+.histogram__info {
+  display: flex;
+}
+.histogram__score {
+  flex-grow: 1;
+}
+.histogram__scoreCaption {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.histogram__scoreValue {
+  font-size: 1.25em;
+  line-height: 1.63em;
+  margin-top: 0.38em;
+}
+.histogram_compact .histogram__scoreValue {
+  font-weight: 600;
+  color: var(--text-primary-color, black);
+}
+.histogram__showAll {
+  color: var(--primary, #374fc7);
+  text-decoration: none;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 0.19em;
+  flex-shrink: 0;
+}
+.histogram__columns {
+  display: flex;
+  align-items: flex-end;
+  height: 3.13em;
+  gap: 1px;
+  margin-top: 2.44em;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  animation: 0.3s forwards histogramGrow;
+}
+.histogram_compact .histogram__columns {
+  margin-top: 1.25em;
+  height: 2.25em;
+} 
+.histogram__column {
+  background: var(--primary, #374fc7);
+  flex-grow: 1;
+}
+@media screen and (min-width: 576px) {
+  .histogram_compact {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .histogram_compact {
+    font-size: 13px;
+  } 
+}
+@media screen and (min-width: 992px) {  
+  .histogram_compact {
+    font-size: 14px;
+    margin: 0 -7px;
+  }
+}
+@keyframes histogramGrow {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}

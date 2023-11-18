@@ -1,75 +1,78 @@
+$skeleton-txt-sizes: (
+  short: 65%, 
+  middle: 90%, 
+  long: 100%
+);
+
 .skeleton {
-  border: 1px solid var(--content-border-color, #acb5bd);
+  border: 1px solid var(--content-border-color, $grey-3);
   font-size: 16px;
-  border-radius: 0.5em;
+  border-radius: .5em;
   padding: 1.5em 2.5em 2em 1.5em;
-}
-.skeleton_noBorder {
-  border: 0;
-}
-.skeleton_compact {
-  padding: 0;
-  font-size: 10px
-}
-.skeleton__header {
-  display: flex;
-  align-items: center;
-}
-.skeleton__picture {
-  width: 4em;
-  height: 4em;
-  border-radius: 2em;
-  margin-right: 1em;
-  flex-shrink: 0;
-}
-.skeleton__textline {
-  height: 1.25em;
-  margin: 0.5em 0;
-}
-.skeleton__picture,
-.skeleton__textline {
-  background: var(--content-color, #dde2e5);
-  background: linear-gradient(
-    90deg,
-    #dde2e5 6.44%,
-    #e2e6e8 38.47%,
-    #f3f5f5 56.48%,
-    #e3e7ea 77.5%,
-    #dde2e5 102.52%
-  );
-  background-size: 200%;
-  animation: 1.5s linear infinite forwards skeletonLoadAnimation;
-}
-.skeleton__textline_length_short {
-  width: 65%;
-}
-.skeleton__textline_length_middle {
-  width: 90%;
-}
-.skeleton__textline_length_long {
-  width: 100%;
-}
-.skeleton__title {
-  flex-grow: 1;
-}
-.skeleton__content {
-  margin-top: 1.5em;
-}
-@media screen and (min-width: 576px) {
-  .skeleton_compact {
-    padding: 1em 2em 1.5em 1em;
+
+  &_noBorder {
+    border: 0;
   }
-}
-@media screen and (min-width: 992px) {  
-  .skeleton_compact {
-    font-size: 12px;
+
+  &_compact {
     padding: 0;
+    font-size: 10px;
+
+    @media (--layout-mf-sm) {
+      padding: 1em 2em 1.5em 1em;
+    }
+    @media (--layout-mf-lg) {  
+      font-size: 12px;
+      padding: 0;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+
+  &__picture,
+  &__textline {
+    background: var(--content-color, $grey-2);
+    background: linear-gradient(
+      90deg, $grey-2 6.44%, #e2e6e8 38.47%, #f3f5f5 56.48%, #e3e7ea 77.5%, $grey-2 102.52%
+    );
+    background-size: 200%;
+    animation: 1.5s linear infinite forwards skeleton-load-animation;
+  }
+
+  &__picture {
+    margin-right: 1em;
+    flex-shrink: 0;
+  
+    @include circled(4em);
+  }
+
+  &__textline {
+    height: 1.25em;
+    margin: .5em 0;
+
+    @each $size $name in $skeleton-txt-sizes {
+      &_length_$name {
+        width: $size;
+      }
+    }
+  }
+
+  &__title {
+    flex-grow: 1;
+  }
+
+  &__content {
+    margin-top: 1.5em;
   }
 }
-@keyframes skeletonLoadAnimation {
+@keyframes skeleton-load-animation {
   from {
     background-position: 100%;
   }
+
   to {
     background-position: -100%;
   }

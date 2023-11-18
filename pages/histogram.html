@@ -1,19 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <link
-      rel="stylesheet"
-      href="../components/componentDetail/componentDetail.css"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-light.min.css" />
+    <link rel="stylesheet" href="../dist/highlightThemes.css" />
+    <link rel="stylesheet" href="../dist/styles.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
-    <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>
+    <script
+      defer
+      src="../10-lection8/01-theme-changer/theme-changer.js"
+    ></script>
     <script src="../assets/js/fixOnloadAnimations.js"></script>
-    <script defer>hljs.highlightAll()</script>
+    <script defer>
+      hljs.highlightAll();
+    </script>
     <title>Histogram component</title>
   </head>
   <body class="page page_component preload">
@@ -72,7 +73,10 @@
       </div>
     </header>
     <div class="page__container layoutContainer">
-      <div id="burger-menu" class="burgerMenu burgerMenu_onDesktopAvailiable burgerMenu_forHeaderTransparent">
+      <div
+        id="burger-menu"
+        class="burgerMenu burgerMenu_onDesktopAvailiable burgerMenu_forHeaderTransparent"
+      >
         <button id="burger-menu-close" class="burgerMenu__closeButton">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -86,11 +90,18 @@
           <div class="burgerMenu__themeTogglerBox">
             <div class="burgerMenu__contentGroup">
               <div class="burgerMenu__themeToggler">
-                <label for="theme-changer-alt" class="burgerMenu__themeTogglerLabel">
+                <label
+                  for="theme-changer-alt"
+                  class="burgerMenu__themeTogglerLabel"
+                >
                   Dark mode
                 </label>
                 <label class="toggler">
-                  <input id="theme-changer-alt" type="checkbox" class="toggler__input" />
+                  <input
+                    id="theme-changer-alt"
+                    type="checkbox"
+                    class="toggler__input"
+                  />
                   <span class="toggler__state">
                     <span class="toggler__control"></span>
                   </span>
@@ -103,14 +114,20 @@
               <div class="menu__group">
                 <h4 class="menu__title">Components</h4>
                 <nav class="menu__list">
-                  <a class="menu__item" href="/pages/accordion.html">Accordion</a>
+                  <a class="menu__item" href="/pages/accordion.html"
+                    >Accordion</a
+                  >
                   <a class="menu__item" href="/pages/avatar.html">Avatar</a>
                   <a class="menu__item" href="/pages/button.html">Button</a>
                   <a class="menu__item" href="/pages/calendar.html">Calendar</a>
                   <a class="menu__item" href="/pages/form_elements.html"
                     >Custom form elements</a
                   >
-                  <a class="menu__item menu__item_active" href="/pages/histogram.html">Histogram</a>
+                  <a
+                    class="menu__item menu__item_active"
+                    href="/pages/histogram.html"
+                    >Histogram</a
+                  >
                   <a class="menu__item" href="/pages/modal.html">Modal</a>
                   <a class="menu__item" href="/pages/skeleton.html">Skeleton</a>
                   <a class="menu__item" href="/pages/tooltip.html">Tooltip</a>
@@ -146,8 +163,14 @@
               <div class="menu__group">
                 <h4 class="menu__title">Organisms</h4>
                 <nav class="menu__list">
-                  <a class="menu__item" href="/pages/accordion.html">Accordion</a>
-                  <a class="menu__item menu__item_active" href="/pages/histogram.html">Histogram</a>
+                  <a class="menu__item" href="/pages/accordion.html"
+                    >Accordion</a
+                  >
+                  <a
+                    class="menu__item menu__item_active"
+                    href="/pages/histogram.html"
+                    >Histogram</a
+                  >
                   <a class="menu__item" href="/pages/modal.html">Modal</a>
                 </nav>
               </div>
@@ -233,9 +256,7 @@
             </div>
             <div class="tabs__content tabs__content_tabNum_1">
               <div class="componentDetail__tabContent">
-                <pre class="sourceCode sourceCode_syntax_html">
-                  <code class="sourceCode__inner language-html">
-&lt;div class=&quot;histogram&quot;&gt;
+                <pre class="sourceCode sourceCode_syntax_html"><code class="sourceCode__inner language-html">&lt;div class=&quot;histogram&quot;&gt;
   &lt;div class=&quot;histogram__info&quot;&gt;
     &lt;div class=&quot;histogram__score&quot;&gt;
       &lt;div class=&quot;histogram__scoreCaption&quot;&gt;Total orders&lt;/div&gt;
@@ -279,18 +300,14 @@
     &lt;div class=&quot;histogram__column&quot; style=&quot;height: 20%&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;histogram__column&quot; style=&quot;height: 35%&quot;&gt;&lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;
-                  </code>
-                </pre>
-              </div>              
+&lt;/div&gt;</code></pre>
+              </div>
             </div>
             <div class="tabs__content tabs__content_tabNum_2">
               <div class="componentDetail__tabContent">
-                <pre class="sourceCode sourceCode_syntax_css">
-                  <code class="sourceCode__inner language-css">
-.histogram {
+                <pre class="sourceCode sourceCode_syntax_css"><code class="sourceCode__inner language-css">.histogram {
   border: 1px solid var(--content-border-color, #acb5bd);
-  color: var(--text-contrast-color, black);
+  color: var(--text-contrast-color, #000000);
   font-size: 16px;
   border-radius: 0.5em;
   padding: 1em 1.5em 1.5em;
@@ -312,10 +329,10 @@
 }
 .histogram_compact .histogram__scoreValue {
   font-weight: 600;
-  color: var(--text-primary-color, black);
+  color: var(--text-primary-color, #000000);
 }
 .histogram__showAll {
-  color: var(--primary, #374fc7);
+  color: #4263eb;
   text-decoration: none;
   font-size: 1em;
   line-height: 1.5em;
@@ -337,7 +354,7 @@
   height: 2.25em;
 } 
 .histogram__column {
-  background: var(--primary, #374fc7);
+  background: #4263eb;
   flex-grow: 1;
 }
 @keyframes histogramGrow {
@@ -347,10 +364,8 @@
   to {
     transform: scaleY(1);
   }
-}
-                  </code>                  
-                </pre>
-              </div>              
+}</code></pre>
+              </div>
             </div>
           </div>
         </div>

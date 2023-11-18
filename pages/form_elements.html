@@ -1,19 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <link
-      rel="stylesheet"
-      href="../components/componentDetail/componentDetail.css"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-light.min.css" />
+    <link rel="stylesheet" href="../dist/highlightThemes.css" />
+    <link rel="stylesheet" href="../dist/styles.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
-    <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>
+    <script
+      defer
+      src="../10-lection8/01-theme-changer/theme-changer.js"
+    ></script>
     <script src="../assets/js/fixOnloadAnimations.js"></script>
-    <script defer>hljs.highlightAll()</script>
+    <script defer>
+      hljs.highlightAll();
+    </script>
     <title>Custom form elements</title>
   </head>
   <body class="page page_component preload">
@@ -72,7 +73,10 @@
       </div>
     </header>
     <div class="page__container layoutContainer">
-      <div id="burger-menu" class="burgerMenu burgerMenu_onDesktopAvailiable burgerMenu_forHeaderTransparent">
+      <div
+        id="burger-menu"
+        class="burgerMenu burgerMenu_onDesktopAvailiable burgerMenu_forHeaderTransparent"
+      >
         <button id="burger-menu-close" class="burgerMenu__closeButton">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -86,11 +90,18 @@
           <div class="burgerMenu__themeTogglerBox">
             <div class="burgerMenu__contentGroup">
               <div class="burgerMenu__themeToggler">
-                <label for="theme-changer-alt" class="burgerMenu__themeTogglerLabel">
+                <label
+                  for="theme-changer-alt"
+                  class="burgerMenu__themeTogglerLabel"
+                >
                   Dark mode
                 </label>
                 <label class="toggler">
-                  <input id="theme-changer-alt" type="checkbox" class="toggler__input" />
+                  <input
+                    id="theme-changer-alt"
+                    type="checkbox"
+                    class="toggler__input"
+                  />
                   <span class="toggler__state">
                     <span class="toggler__control"></span>
                   </span>
@@ -103,14 +114,20 @@
               <div class="menu__group">
                 <h4 class="menu__title">Components</h4>
                 <nav class="menu__list">
-                  <a class="menu__item" href="/pages/accordion.html">Accordion</a>
+                  <a class="menu__item" href="/pages/accordion.html"
+                    >Accordion</a
+                  >
                   <a class="menu__item" href="/pages/avatar.html">Avatar</a>
                   <a class="menu__item" href="/pages/button.html">Button</a>
                   <a class="menu__item" href="/pages/calendar.html">Calendar</a>
-                  <a class="menu__item menu__item_active" href="/pages/form_elements.html"
+                  <a
+                    class="menu__item menu__item_active"
+                    href="/pages/form_elements.html"
                     >Custom form elements</a
                   >
-                  <a class="menu__item" href="/pages/histogram.html">Histogram</a>
+                  <a class="menu__item" href="/pages/histogram.html"
+                    >Histogram</a
+                  >
                   <a class="menu__item" href="/pages/modal.html">Modal</a>
                   <a class="menu__item" href="/pages/skeleton.html">Skeleton</a>
                   <a class="menu__item" href="/pages/tooltip.html">Tooltip</a>
@@ -123,7 +140,9 @@
                 <nav class="menu__list">
                   <a class="menu__item" href="/pages/avatar.html">Avatar</a>
                   <a class="menu__item" href="/pages/button.html">Button</a>
-                  <a class="menu__item menu__item_active" href="/pages/form_elements.html"
+                  <a
+                    class="menu__item menu__item_active"
+                    href="/pages/form_elements.html"
                     >Custom form elements</a
                   >
                   <a class="menu__item" href="/pages/tooltip.html">Tooltip</a>
@@ -135,7 +154,9 @@
                 <h4 class="menu__title">Molecules</h4>
                 <nav class="menu__list">
                   <a class="menu__item" href="/pages/calendar.html">Calendar</a>
-                  <a class="menu__item menu__item_active" href="/pages/form_elements.html"
+                  <a
+                    class="menu__item menu__item_active"
+                    href="/pages/form_elements.html"
                     >Custom form elements</a
                   >
                   <a class="menu__item" href="/pages/skeleton.html">Skeleton</a>
@@ -146,8 +167,12 @@
               <div class="menu__group">
                 <h4 class="menu__title">Organisms</h4>
                 <nav class="menu__list">
-                  <a class="menu__item" href="/pages/accordion.html">Accordion</a>
-                  <a class="menu__item" href="/pages/histogram.html">Histogram</a>
+                  <a class="menu__item" href="/pages/accordion.html"
+                    >Accordion</a
+                  >
+                  <a class="menu__item" href="/pages/histogram.html"
+                    >Histogram</a
+                  >
                   <a class="menu__item" href="/pages/modal.html">Modal</a>
                 </nav>
               </div>
@@ -158,40 +183,61 @@
       <main class="page__content">
         <div class="componentDetail">
           <h1 class="page__title">Custom form elements</h1>
-          <form class="componentDetail__component componentDetail__component_columns form">
-            <div class="componentDetail__componentColumn componentDetail__componentColumn_fullWidth">
+          <form
+            class="componentDetail__component componentDetail__component_columns form"
+          >
+            <div
+              class="componentDetail__componentColumn componentDetail__componentColumn_fullWidth"
+            >
               <div class="formField form__field">
                 <label class="checkbox">
                   <input type="checkbox" class="checkbox__input" />
                   <span class="checkbox__state">
                     <span class="checkbox__control _noAnimateOnload">
-                      <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg">
+                      <svg
+                        class="checkbox__icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
                         <use href="../../assets/images/icons.svg#check"></use>
                       </svg>
                     </span>
                     <span class="checkbox__title">Default</span>
                   </span>
                 </label>
-              </div>                
+              </div>
               <div class="formField form__field">
                 <label class="checkbox">
-                  <input type="checkbox" class="checkbox__input" checked="checked" />
+                  <input
+                    type="checkbox"
+                    class="checkbox__input"
+                    checked="checked"
+                  />
                   <span class="checkbox__state">
                     <span class="checkbox__control _noAnimateOnload">
-                      <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg">
+                      <svg
+                        class="checkbox__icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
                         <use href="../../assets/images/icons.svg#check"></use>
                       </svg>
                     </span>
                     <span class="checkbox__title">Checked</span>
                   </span>
                 </label>
-              </div>                
+              </div>
               <div class="formField form__field">
                 <label class="checkbox">
-                  <input type="checkbox" class="checkbox__input" disabled="disabled" />
+                  <input
+                    type="checkbox"
+                    class="checkbox__input"
+                    disabled="disabled"
+                  />
                   <span class="checkbox__state">
                     <span class="checkbox__control _noAnimateOnload">
-                      <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg">
+                      <svg
+                        class="checkbox__icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
                         <use href="../../assets/images/icons.svg#check"></use>
                       </svg>
                     </span>
@@ -200,7 +246,9 @@
                 </label>
               </div>
             </div>
-            <div class="componentDetail__componentColumn componentDetail__componentColumn_fullWidth">
+            <div
+              class="componentDetail__componentColumn componentDetail__componentColumn_fullWidth"
+            >
               <div class="formField form__field">
                 <label class="radio">
                   <input type="radio" class="radio__input" name="radio" />
@@ -209,27 +257,39 @@
                     <span class="radio__title">Default</span>
                   </span>
                 </label>
-              </div>                
+              </div>
               <div class="formField form__field">
                 <label class="radio">
-                  <input type="radio" class="radio__input" name="radio" checked="checked" />
+                  <input
+                    type="radio"
+                    class="radio__input"
+                    name="radio"
+                    checked="checked"
+                  />
                   <span class="radio__state">
                     <span class="radio__control"></span>
                     <span class="radio__title">Selected</span>
                   </span>
                 </label>
-              </div>                
+              </div>
               <div class="formField form__field">
                 <label class="radio">
-                  <input type="radio" class="radio__input" disabled="disabled" name="radio" />
+                  <input
+                    type="radio"
+                    class="radio__input"
+                    disabled="disabled"
+                    name="radio"
+                  />
                   <span class="radio__state">
                     <span class="radio__control"></span>
                     <span class="radio__title">Disabled</span>
                   </span>
                 </label>
-              </div>  
+              </div>
             </div>
-            <div class="componentDetail__componentColumn componentDetail__componentColumn_fullWidth">
+            <div
+              class="componentDetail__componentColumn componentDetail__componentColumn_fullWidth"
+            >
               <div class="formField form__field">
                 <label class="toggler">
                   <input type="checkbox" class="toggler__input" />
@@ -241,7 +301,11 @@
               </div>
               <div class="formField form__field">
                 <label class="toggler">
-                  <input type="checkbox" class="toggler__input" checked="checked" />
+                  <input
+                    type="checkbox"
+                    class="toggler__input"
+                    checked="checked"
+                  />
                   <span class="toggler__state">
                     <span class="toggler__control"></span>
                     <span class="toggler__title">On</span>
@@ -264,28 +328,44 @@
               </div>
             </div>
           </form>
-          <form class="componentDetail__component componentDetail__component_columns form">
-            <div class="componentDetail__componentColumn componentDetail__componentColumn_fullWidth">
+          <form
+            class="componentDetail__component componentDetail__component_columns form"
+          >
+            <div
+              class="componentDetail__componentColumn componentDetail__componentColumn_fullWidth"
+            >
               <div class="formField form__field">
-                <label for="default_input" class="formField__title">Label</label>
+                <label for="default_input" class="formField__title"
+                  >Label</label
+                >
                 <div class="formField__field formField__field_fullWidth">
                   <input
                     id="default_input"
                     type="text"
                     class="textInput textInput_fullWidth formField__control formField__control_type_textInput"
                     placeholder="Placeholder"
-                  />                  
-                  <svg class="formField__icon formField__icon_error" xmlns="http://www.w3.org/2000/svg">
+                  />
+                  <svg
+                    class="formField__icon formField__icon_error"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <use href="../../assets/images/icons.svg#warning"></use>
                   </svg>
-                  <svg class="formField__icon formField__icon_success" xmlns="http://www.w3.org/2000/svg">
-                    <use href="../../assets/images/icons.svg#checkInCircle"></use>
+                  <svg
+                    class="formField__icon formField__icon_success"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use
+                      href="../../assets/images/icons.svg#checkInCircle"
+                    ></use>
                   </svg>
                 </div>
                 <div class="formField__status">Some status</div>
               </div>
               <div class="formField formField_disabled form__field">
-                <label for="disabled_input" class="formField__title">Disabled</label>
+                <label for="disabled_input" class="formField__title"
+                  >Disabled</label
+                >
                 <div class="formField__field formField__field_fullWidth">
                   <input
                     id="disabled_input"
@@ -293,34 +373,54 @@
                     class="textInput textInput_fullWidth formField__control formField__control_type_textInput"
                     placeholder="Placeholder"
                     disabled="disabled"
-                    value="Value" 
+                    value="Value"
                   />
-                  <svg class="formField__icon formField__icon_error" xmlns="http://www.w3.org/2000/svg">
+                  <svg
+                    class="formField__icon formField__icon_error"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <use href="../../assets/images/icons.svg#warning"></use>
                   </svg>
-                  <svg class="formField__icon formField__icon_success" xmlns="http://www.w3.org/2000/svg">
-                    <use href="../../assets/images/icons.svg#checkInCircle"></use>
+                  <svg
+                    class="formField__icon formField__icon_success"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use
+                      href="../../assets/images/icons.svg#checkInCircle"
+                    ></use>
                   </svg>
                 </div>
                 <div class="formField__status">Some status</div>
               </div>
             </div>
-            <div class="componentDetail__componentColumn componentDetail__componentColumn_fullWidth">
+            <div
+              class="componentDetail__componentColumn componentDetail__componentColumn_fullWidth"
+            >
               <div class="formField formField_validity_success form__field">
-                <label for="success_input" class="formField__title">Success</label>
+                <label for="success_input" class="formField__title"
+                  >Success</label
+                >
                 <div class="formField__field formField__field_fullWidth">
                   <input
                     id="success_input"
                     type="text"
                     class="textInput textInput_fullWidth formField__control formField__control_type_textInput"
                     placeholder="Placeholder"
-                    value="Value" 
+                    value="Value"
                   />
-                  <svg class="formField__icon formField__icon_error" xmlns="http://www.w3.org/2000/svg">
+                  <svg
+                    class="formField__icon formField__icon_error"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <use href="../../assets/images/icons.svg#warning"></use>
                   </svg>
-                  <svg class="formField__icon formField__icon_success" xmlns="http://www.w3.org/2000/svg">
-                    <use href="../../assets/images/icons.svg#checkInCircle"></use>
+                  <svg
+                    class="formField__icon formField__icon_success"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use
+                      href="../../assets/images/icons.svg#checkInCircle"
+                    ></use>
                   </svg>
                 </div>
                 <div class="formField__status">Some status</div>
@@ -333,18 +433,26 @@
                     type="text"
                     class="textInput textInput_fullWidth formField__control formField__control_type_textInput"
                     placeholder="Placeholder"
-                    value="Value" 
+                    value="Value"
                   />
-                  <svg class="formField__icon formField__icon_error" xmlns="http://www.w3.org/2000/svg">
+                  <svg
+                    class="formField__icon formField__icon_error"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <use href="../../assets/images/icons.svg#warning"></use>
                   </svg>
-                  <svg class="formField__icon formField__icon_success" xmlns="http://www.w3.org/2000/svg">
-                    <use href="../../assets/images/icons.svg#checkInCircle"></use>
+                  <svg
+                    class="formField__icon formField__icon_success"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use
+                      href="../../assets/images/icons.svg#checkInCircle"
+                    ></use>
                   </svg>
                 </div>
                 <div class="formField__status">Some status</div>
               </div>
-            </div>           
+            </div>
           </form>
           <div class="tabs componentDetail__tabs">
             <input
@@ -374,9 +482,7 @@
             </div>
             <div class="tabs__content tabs__content_tabNum_1">
               <div class="componentDetail__tabContent">
-                <pre class="sourceCode sourceCode_syntax_html">
-                  <code class="sourceCode__inner language-html">
-&lt;!---------- checkbox ----------&gt;                  
+                <pre class="sourceCode sourceCode_syntax_html"><code class="sourceCode__inner language-html">&lt;!---------- checkbox ----------&gt;                  
 &lt;div class=&quot;formField form__field&quot;&gt;
   &lt;label class=&quot;checkbox&quot;&gt;
     &lt;input type=&quot;checkbox&quot; class=&quot;checkbox__input&quot; /&gt;
@@ -549,16 +655,12 @@
       &lt;use href=&quot;../../assets/images/icons.svg#checkInCircle&quot;&gt;&lt;/use&gt;
     &lt;/svg&gt;
   &lt;/div&gt;
-&lt;/div&gt;
-                  </code>
-                </pre>
-              </div>              
+&lt;/div&gt;</code></pre>
+              </div>
             </div>
             <div class="tabs__content tabs__content_tabNum_2">
               <div class="componentDetail__tabContent">
-                <pre class="sourceCode sourceCode_syntax_css">
-                  <code class="sourceCode__inner language-css">
-/* ---------- form field ---------- */                  
+                <pre class="sourceCode sourceCode_syntax_css"><code class="sourceCode__inner language-css">/* ---------- form field ---------- */                  
 .formField {
   display: flex;
   flex-direction: column;
@@ -568,7 +670,7 @@
 }
 .formField__title {
   display: inline-block;
-  color: var(--grey-3, #acb5bd);
+  color: #acb5bd;
   font-size: 0.75em;
   font-weight: 500;
   line-height: 1.13em;
@@ -597,19 +699,19 @@
 }
 .formField_validity_error .formField__icon_error {
   display: inline-block;
-  color: var(--error, var(--red, #f03d3e));
+  color: #f03d3e;
 }
 .formField_validity_success .formField__icon_success {
   display: inline-block;
-  color: var(--success, var(--blue, #4263eb));
+  color: #4263eb;
 }
 .formField_validity_success .formField__control_type_textInput,
 .formField_validity_success .formField__control_type_textInput:focus {
-  border-color: var(--success, var(--blue, #4263eb));
+  border-color: #4263eb;
 }
 .formField_validity_error .formField__control_type_textInput,
 .formField_validity_error .formField__control_type_textInput:focus {
-  border-color: var(--error, var(--red, #f03d3e));
+  border-color: #f03d3e;
 }
 /* ---------- checkbox ---------- */
 .checkbox {
@@ -645,14 +747,14 @@
 }
 .checkbox__icon {
   visibility: hidden;
-  color: var(--white, white);
+  color: #ffffff;
   margin: auto;
   width: 15px;
   height: 13px;
 }
 .checkbox__input:checked ~ .checkbox__state .checkbox__control {
-  border-color: var(--control-checked-color, var(--blue, #4263eb));
-  background: var(--control-checked-color, var(--blue, #4263eb));
+  border-color: var(--control-checked-color, #4263eb);
+  background: var(--control-checked-color, #4263eb);
 }
 .checkbox__input:checked ~ .checkbox__state .checkbox__icon {
   visibility: visible;
@@ -670,8 +772,8 @@
 .checkbox__input:checked:active:not(:disabled)
   ~ .checkbox__state
   .checkbox__control {
-  border-color: var(--control-checked-active-color, var(--blue-darker, #2342c0));
-  background: var(--control-checked-active-color, var(--blue-darker, #2342c0));
+  border-color: var(--control-checked-active-color, #4263eb-darker);
+  background: var(--control-checked-active-color, #4263eb-darker);
 }
 .checkbox__input:disabled ~ .checkbox__state .checkbox__control {
   background-color: var(--control-disabled-border-color, #dde2e5);   
@@ -730,10 +832,10 @@
 }
 .radio__input:checked ~ .radio__state .radio__control {
   border-width: 2px;
-  border-color: var(--control-checked-color, var(--blue, #4263eb));
+  border-color: var(--control-checked-color, #4263eb);
 }
 .radio__input:checked ~ .radio__state .radio__control:before {
-  background: var(--control-checked-color, var(--blue, #4263eb));
+  background: var(--control-checked-color, #4263eb);
 }
 .radio__input:focus ~ .radio__state .radio__title {
   text-decoration: underline;
@@ -743,12 +845,12 @@
   background: var(--control-active-bg-color, #f8f9fa);
 }
 .radio__input:checked:active:not(:disabled) ~ .radio__state .radio__control {
-  border-color: var(--control-checked-active-color, var(--blue-darker, #2342c0));
+  border-color: var(--control-checked-active-color, #4263eb-darker);
 }
 .radio__input:checked:active:not(:disabled)
   ~ .radio__state
   .radio__control:before {
-  background: var(--control-checked-active-color, var(--blue-darker, #2342c0));
+  background: var(--control-checked-active-color, #4263eb-darker);
 }
 .radio__input:disabled ~ .radio__state .radio__control {
   border-color: var(--control-disabled-border-color, #dde2e5);   
@@ -819,11 +921,11 @@
   transition: all 0.5s;
 }
 .toggler__input:checked ~ .toggler__state .toggler__control {
-  border-color: var(--control-checked-color, var(--blue, #4263eb));
-  background: var(--control-checked-color, var(--blue, #4263eb));
+  border-color: var(--control-checked-color, #4263eb);
+  background: var(--control-checked-color, #4263eb);
 }
 .toggler__input:checked ~ .toggler__state .toggler__control:before {
-  background: var(--white, white);
+  background: #ffffff;
   transform: translateX(24px);
 }
 .toggler__input:focus ~ .toggler__state .toggler__title {
@@ -841,8 +943,8 @@
 .toggler__input:checked:active:not(:disabled)
   ~ .toggler__state
   .toggler__control {
-  border-color: var(--control-checked-active-color, var(--blue-darker, #2342c0));
-  background: var(--control-checked-active-color, var(--blue-darker, #2342c0));
+  border-color: var(--control-checked-active-color, #4263eb-darker);
+  background: var(--control-checked-active-color, #4263eb-darker);
 }
 .toggler__input:disabled ~ .toggler__state .toggler__control {
   border-color: var(--control-disabled-border-color, #dde2e5);
@@ -879,11 +981,9 @@
   border-color: var(--control-disabled-border-color, #dde2e5);
 }
 .textInput:focus {
-  border-color: var(--control-checked-color, var(--blue, #4263eb));
-}
-                  </code>                  
-                </pre>
-              </div>              
+  border-color: var(--control-checked-color, #4263eb);
+}</code></pre>
+              </div>
             </div>
           </div>
         </div>

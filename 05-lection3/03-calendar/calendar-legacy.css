@@ -1,0 +1,91 @@
+.calendar {
+  --calendar-grey-dark: var(--text-regular-color, #334d6e);
+  --calendar-grey-light: var(--text-pale-color, #90a0b7);
+  font-size: 16px;
+  border: 1px solid var(--content-border-color, #acb5bd);
+  border-radius: 0.5em;
+  padding: 1.2em 1.63em 2em;
+  box-sizing: border-box;
+}
+.calendar_compact {
+  width: 164px;
+  box-sizing: border-box;
+  font-size: 9px;
+  border: 0;
+}
+.calendar_width_340 {
+  width: 340px;
+}
+.calendar__month {
+  color: var(--calendar-grey-dark, #334d6e);
+  font-size: 1.25em;
+  font-weight: 600;
+  line-height: 1.5em;
+  grid-column: 1 / 8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calendar__wrapper {
+  padding-bottom: 100%;
+  position: relative;
+}
+.calendar__days {
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(7, 1fr);
+  position: absolute;
+  inset: 0;
+}
+.calendar_length_4weeks .calendar__wrapper {
+  padding-bottom: calc(6 / 7 * 100%);
+}
+.calendar_length_4weeks .calendar__days {
+  grid-template-rows: repeat(6, 1fr);
+}
+.calendar_length_5weeks .calendar__wrapper {
+  padding-bottom: 100%;
+}
+.calendar_length_5weeks .calendar__days {
+  grid-template-rows: repeat(7, 1fr);
+}
+.calendar_length_6weeks .calendar__wrapper {
+  padding-bottom: calc(8 / 7 * 100%);
+}
+.calendar_length_6weeks .calendar__days {
+  grid-template-rows: repeat(8, 1fr);
+}
+.calendar__day {
+  color: var(--calendar-grey-dark, #334d6e);
+  font-size: 1em;
+  font-family: 'source-sans-pro', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calendar__day:hover:not(.calendar__day_ofweek, :empty) {
+  cursor: pointer;
+}
+.calendar__day_ofweek {
+  color: var(--calendar-grey-light, #90a0b7);
+  font-family: 'Inter', sans-serif;
+}
+.calendar__day_period_edge {
+  color: var(--white, white);
+  background: var(--primary, #4263eb);
+}
+.calendar__day_period_inside,
+.calendar__day:hover:not(
+    .calendar__day_period_edge,
+    .calendar__day_ofweek,
+    :empty
+  ) {
+  background: var(--blue-light, #bac4de);
+}
+@media screen and (min-width: 576px) {
+  .calendar_compact {
+    font-size: 10px;
+    width: 202px;
+    border: 1px solid var(--border-color, #acb5bd);
+  }
+}

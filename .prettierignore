@@ -1,0 +1,6 @@
+dist
+*-legacy.css
+**/styles.css
+assets/css/*.css
+**/solution.html
+*lection*/**/index.html

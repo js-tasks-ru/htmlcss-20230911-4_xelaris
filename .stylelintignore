@@ -1,0 +1,4 @@
+dist
+*-legacy.css
+**/styles.css
+assets/css/*.css
